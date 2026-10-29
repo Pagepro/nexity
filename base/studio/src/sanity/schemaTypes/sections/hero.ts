@@ -154,7 +154,7 @@ export default defineType({
       {
         _key: "block_1",
         _type: "block",
-        style: "heading-1",
+        style: "section-heading-xl",
         children: [
           {
             _key: "block_1_span_1",

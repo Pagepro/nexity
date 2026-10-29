@@ -27,7 +27,7 @@ export default defineType({
       name: "content",
       title: "Content",
       description:
-        "Section heading and supporting copy. Use the heading-2 block style for the heading.",
+        "Section heading and supporting copy. Use the “Section Heading L” style for the heading.",
       type: "simpleRichText",
       group: "content",
     }),
@@ -91,7 +91,7 @@ export default defineType({
       {
         _key: "block_1",
         _type: "block",
-        style: "heading-2",
+        style: "section-heading-lg",
         children: [
           { _key: "block_1_span_1", _type: "span", text: "Questions, answered" },
         ],

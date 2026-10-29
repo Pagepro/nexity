@@ -42,7 +42,7 @@ export default defineType({
       name: "content",
       title: "Heading & body",
       description:
-        "Two-tone heading (use the heading-2 block style; colour the second clause with the Muted text colour) plus the supporting paragraph below it.",
+        "Two-tone heading (use the “Section Heading L” style; colour the second clause with the Muted text colour) plus the supporting paragraph below it.",
       type: "simpleRichText",
       group: "content",
     }),

@@ -27,7 +27,7 @@ export default defineType({
       name: "content",
       title: "Section title",
       description:
-        "Centered heading shown above the cards. Use the heading-2 block style.",
+        "Centered heading shown above the cards. Use the “Section Heading L” style.",
       type: "simpleRichText",
       group: "content",
     }),
