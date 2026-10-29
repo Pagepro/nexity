@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": {
     "version": "1.3.0",
-    "digest": "18c8c0d6259a2cfdd56dafe0c89331365c7bc01e51cf56fea8efcfeaf3beb706"
+    "digest": "f3bd502dd65a91ee3ed8a4ca1eb073c5ec1446792cbfdb800bb2915d7281f2f6"
   },
   "selected": [
     "create-section",
@@ -45,7 +45,7 @@
     ".agents/skills/pr-writeup/scripts/crop.py": "65206bb9bff243515a7c4ee5a6e8af1fcaf7aca2eee0056551c83e0dd5d0244f",
     ".agents/skills/pr-writeup/scripts/prepare.js": "3ca52160776176e7eb75c5c456d512b636b7dafaa912b235a0c0260305e7ee3f",
     ".agents/skills/pr-writeup/scripts/region.js": "40248d66a418d98cf063449601575fa666bf545ebea0515e272f80a89398b159",
-    ".agents/skills/project-setup/SKILL.md": "64b4131f2569d655aa8817e83a6c5cec4cbcd6c0b82a0d3042264fb3d2bffb1c",
+    ".agents/skills/project-setup/SKILL.md": "5627362f187bb58eb4ec8577404fd6c1f49af890deff30ef2f073df04a4388ee",
     ".agents/skills/sanity-module-catalog/SKILL.md": "352f69deeeb006f80d1b6403219de86aea789f13a6b27e92d9d01bfbfa762d4d",
     ".agents/skills/sanity-module-catalog/references/live-catalog.md": "5a3b48c831d8d653c96678a2092606c3bbb725b8fea1b49c0c19c30c1677c793",
     ".agents/skills/sanity-module-catalog/scripts/capture.mjs": "0a6c5fff88265808c303bbb111266a210f64341ddef3f2e75524afc50bcc0901",
@@ -61,7 +61,7 @@
     ".agents/skills/work-humanizer/tells.md": "073c69670ac8710da552d39d190a5c026ec329e062b30c45e34546a8c6d8db09",
     ".agents/tooling/cli.mjs": "cc024597449985a624108f287f5c26f68fdbbb95371e67f811f2aa7e9ee2e0c4",
     ".agents/tooling/distribution.mjs": "533c148fb32945b8c6633d76055fc96c0d6c3a7315c7d59def9714aa467a9e09",
-    ".agents/tooling/doctor.mjs": "5e951a48ce300659c51763fcd7da1c41d8e9ffd6aec5f78ceef179fa5b24ef17",
+    ".agents/tooling/doctor.mjs": "26b9c3ea8c62bcb9bf3f8c034b7445e2ab29e73fa0ab907598275e614491d913",
     ".agents/tooling/files.mjs": "da486ec8ec44d0dfb2fcabf8dc33b1420030b9e26e815b0a7ec05c5372fe6a56"
   }
 }

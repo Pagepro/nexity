@@ -6,7 +6,7 @@ import { draftMode } from "next/headers";
 
 import { client, previewClient } from "@/sanity/lib/client";
 import { GLOBAL_TAG, requestTagFor } from "@/sanity/lib/tags";
-import { token, browserToken } from "@/sanity/lib/token";
+import { token } from "@/sanity/lib/token";
 
 const PUBLISHED_REVALIDATE = 3600 * 24 * 30;
 
@@ -15,7 +15,7 @@ const PUBLISHED_REVALIDATE = 3600 * 24 * 30;
 export const { SanityLive } = defineLive({
   client: previewClient,
   serverToken: token,
-  browserToken: browserToken,
+  browserToken: token,
 });
 
 // Preview (uncached `drafts` perspective) must be driven ONLY by draft mode —
