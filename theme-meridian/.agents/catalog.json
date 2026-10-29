@@ -1,0 +1,46 @@
+{
+  "version": "1.3.0",
+  "skills": {
+    "create-section": {
+      "dependencies": [
+        "sanity-module-catalog"
+      ],
+      "reviewers": [
+        "content-model-architect",
+        "styling-fidelity-reviewer",
+        "sanity-schema-reviewer",
+        "groq-parity-reviewer",
+        "link-reviewer"
+      ]
+    },
+    "generate-alts": {
+      "reviewers": [
+        "alt-text-writer"
+      ]
+    },
+    "link-fix": {
+      "reviewers": [
+        "link-reviewer"
+      ]
+    },
+    "pr-writeup": {
+      "dependencies": [
+        "work-humanizer"
+      ]
+    },
+    "product-mock": {
+      "requires": "tools/product-mocks"
+    },
+    "project-setup": {},
+    "sanity-module-catalog": {},
+    "sanity-optimizations": {
+      "reviewers": [
+        "sanity-query-auditor",
+        "sanity-image-auditor",
+        "sanity-delivery-auditor",
+        "groq-parity-reviewer"
+      ]
+    },
+    "work-humanizer": {}
+  }
+}

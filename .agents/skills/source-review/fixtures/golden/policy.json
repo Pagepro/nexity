@@ -1,0 +1,929 @@
+{
+  "packs": [
+    "core",
+    "software",
+    "web-stack"
+  ],
+  "rows": [
+    {
+      "url": "https://ant.design/docs/react/introduce",
+      "canonical_url": "https://ant.design/docs/react/introduce",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://chakra-ui.com/docs/get-started/frameworks/vite",
+      "canonical_url": "https://chakra-ui.com/docs/get-started/frameworks/vite",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://cloud.google.com/docs",
+      "canonical_url": "https://cloud.google.com/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://data.worldbank.org/indicator",
+      "canonical_url": "https://data.worldbank.org/indicator",
+      "source_type": "general_web",
+      "weight": 0.4,
+      "min_confidence": 0.92,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://devblogs.microsoft.com/typescript/",
+      "canonical_url": "https://devblogs.microsoft.com/typescript",
+      "source_type": "official_blog",
+      "weight": 0.9,
+      "min_confidence": 0.75,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/",
+      "canonical_url": "https://devblogs.microsoft.com/typescript/announcing-typescript-5-5",
+      "source_type": "official_blog",
+      "weight": 0.9,
+      "min_confidence": 0.75,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
+      "canonical_url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections",
+      "canonical_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://developers.google.com/search/docs/appearance/page-experience",
+      "canonical_url": "https://developers.google.com/search/docs/appearance/page-experience",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects",
+      "canonical_url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://developers.google.com/search/docs/essentials",
+      "canonical_url": "https://developers.google.com/search/docs/essentials",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "canonical_url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://developers.google.com/search/docs/guides/intro-structured-data",
+      "canonical_url": "https://developers.google.com/search/docs/guides/intro-structured-data",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.astro.build/en/getting-started/",
+      "canonical_url": "https://docs.astro.build/en/getting-started",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.cypress.io/app/core-concepts/introduction-to-cypress",
+      "canonical_url": "https://docs.cypress.io/app/core-concepts/introduction-to-cypress",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.cypress.io/app/get-started/install-cypress",
+      "canonical_url": "https://docs.cypress.io/app/get-started/install-cypress",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.cypress.io/app/references/changelog",
+      "canonical_url": "https://docs.cypress.io/app/references/changelog",
+      "source_type": "official_release",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.cypress.io/app/references/migration-guide",
+      "canonical_url": "https://docs.cypress.io/app/references/migration-guide",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.expo.dev/versions/latest/",
+      "canonical_url": "https://docs.expo.dev/versions/latest",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.flutter.dev",
+      "canonical_url": "https://docs.flutter.dev/",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.flutter.dev/release/release-notes",
+      "canonical_url": "https://docs.flutter.dev/release/release-notes",
+      "source_type": "official_release",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.netlify.com",
+      "canonical_url": "https://docs.netlify.com/",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.python.org/3/whatsnew/",
+      "canonical_url": "https://docs.python.org/3/whatsnew",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.saleor.io",
+      "canonical_url": "https://docs.saleor.io/",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://docs.strapi.io",
+      "canonical_url": "https://docs.strapi.io/",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/databrowser/",
+      "canonical_url": "https://ec.europa.eu/eurostat/databrowser",
+      "source_type": "general_web",
+      "weight": 0.4,
+      "min_confidence": 0.92,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://endoflife.date/nodejs",
+      "canonical_url": "https://endoflife.date/nodejs",
+      "source_type": "industry_source",
+      "weight": 0.7,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://endoflife.date/python",
+      "canonical_url": "https://endoflife.date/python",
+      "source_type": "industry_source",
+      "weight": 0.7,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://expo.dev/changelog",
+      "canonical_url": "https://expo.dev/changelog",
+      "source_type": "official_release",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://fluent2.microsoft.design/",
+      "canonical_url": "https://fluent2.microsoft.design/",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://getbootstrap.com/docs/",
+      "canonical_url": "https://getbootstrap.com/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+      "canonical_url": "https://getbootstrap.com/docs/5.3/getting-started/introduction",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://github.com/cypress-io/cypress",
+      "canonical_url": "https://github.com/cypress-io/cypress",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://github.com/facebook/react-native/releases",
+      "canonical_url": "https://github.com/facebook/react-native/releases",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://github.com/facebook/react/releases",
+      "canonical_url": "https://github.com/facebook/react/releases",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://github.com/gatsbyjs/gatsby/releases",
+      "canonical_url": "https://github.com/gatsbyjs/gatsby/releases",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://github.com/microsoft/TypeScript/releases",
+      "canonical_url": "https://github.com/microsoft/TypeScript/releases",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://github.com/nodejs/node/blob/main/CHANGELOG.md",
+      "canonical_url": "https://github.com/nodejs/node/blob/main/CHANGELOG.md",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://github.com/random-person/fork",
+      "canonical_url": "https://github.com/random-person/fork",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://github.com/react-native-community/rn-diff-purge",
+      "canonical_url": "https://github.com/react-native-community/rn-diff-purge",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://github.com/storybookjs/storybook/releases",
+      "canonical_url": "https://github.com/storybookjs/storybook/releases",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://github.com/tailwindlabs/tailwindcss/releases",
+      "canonical_url": "https://github.com/tailwindlabs/tailwindcss/releases",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://github.com/vercel/next.js/releases",
+      "canonical_url": "https://github.com/vercel/next.js/releases",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://github.com/withastro/astro/releases",
+      "canonical_url": "https://github.com/withastro/astro/releases",
+      "source_type": "code_repository",
+      "weight": 0.6,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": true
+    },
+    {
+      "url": "https://graphql.org/learn/",
+      "canonical_url": "https://graphql.org/learn",
+      "source_type": "standards_body",
+      "weight": 0.95,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://ionicframework.com/docs",
+      "canonical_url": "https://ionicframework.com/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://jamstack.org/what-is-jamstack/",
+      "canonical_url": "https://jamstack.org/what-is-jamstack",
+      "source_type": "industry_source",
+      "weight": 0.7,
+      "min_confidence": 0.85,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://jhseoagency.com/blog/seo-site-speed-performance",
+      "canonical_url": "https://jhseoagency.com/blog/seo-site-speed-performance",
+      "source_type": "general_web",
+      "weight": 0.4,
+      "min_confidence": 0.92,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://kubernetes.io/blog/",
+      "canonical_url": "https://kubernetes.io/blog",
+      "source_type": "official_blog",
+      "weight": 0.9,
+      "min_confidence": 0.75,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://kubernetes.io/releases/",
+      "canonical_url": "https://kubernetes.io/releases",
+      "source_type": "official_release",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://m3.material.io/foundations",
+      "canonical_url": "https://m3.material.io/foundations",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://make.wordpress.org/core/",
+      "canonical_url": "https://make.wordpress.org/core",
+      "source_type": "official_blog",
+      "weight": 0.9,
+      "min_confidence": 0.75,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://mui.com/material-ui/getting-started/",
+      "canonical_url": "https://mui.com/material-ui/getting-started",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://nextjs.org/blog",
+      "canonical_url": "https://nextjs.org/blog",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://nodejs.org/en/about/previous-releases",
+      "canonical_url": "https://nodejs.org/en/about/previous-releases",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://nodejs.org/en/blog/release",
+      "canonical_url": "https://nodejs.org/en/blog/release",
+      "source_type": "official_blog",
+      "weight": 0.9,
+      "min_confidence": 0.75,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://playwright.dev/docs/release-notes",
+      "canonical_url": "https://playwright.dev/docs/release-notes",
+      "source_type": "official_release",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://react.dev/blog",
+      "canonical_url": "https://react.dev/blog",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://reactnative.dev/blog",
+      "canonical_url": "https://reactnative.dev/blog",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://reactnative.dev/blog/2025/08/12/react-native-0.81",
+      "canonical_url": "https://reactnative.dev/blog/2025/08/12/react-native-0.81",
+      "source_type": "official_blog",
+      "weight": 0.9,
+      "min_confidence": 0.75,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://reactnative.dev/blog/2025/10/08/react-native-0.82",
+      "canonical_url": "https://reactnative.dev/blog/2025/10/08/react-native-0.82",
+      "source_type": "official_blog",
+      "weight": 0.9,
+      "min_confidence": 0.75,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://reactnative.dev/docs/react-native-devtools",
+      "canonical_url": "https://reactnative.dev/docs/react-native-devtools",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://reactnative.dev/versions",
+      "canonical_url": "https://reactnative.dev/versions",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://remix.run/docs/en/main",
+      "canonical_url": "https://remix.run/docs/en/main",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://semantic-ui.com/introduction/getting-started.html",
+      "canonical_url": "https://semantic-ui.com/introduction/getting-started.html",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://shopify.dev/docs",
+      "canonical_url": "https://shopify.dev/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://stackoverflow.com/questions/1",
+      "canonical_url": "https://stackoverflow.com/questions/1",
+      "source_type": "user_generated",
+      "weight": 0.1,
+      "min_confidence": 1.01,
+      "allowed": false,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://storybook.js.org/docs",
+      "canonical_url": "https://storybook.js.org/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://strapi.io/pricing-self-hosted",
+      "canonical_url": "https://strapi.io/pricing-self-hosted",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://tailwindcss.com/docs",
+      "canonical_url": "https://tailwindcss.com/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://university.webflow.com",
+      "canonical_url": "https://university.webflow.com/",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://vercel.com/blog/isr-on-vercel-is-now-faster-and-more-cost-efficient",
+      "canonical_url": "https://vercel.com/blog/isr-on-vercel-is-now-faster-and-more-cost-efficient",
+      "source_type": "official_blog",
+      "weight": 0.9,
+      "min_confidence": 0.75,
+      "allowed": true,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://vercel.com/changelog",
+      "canonical_url": "https://vercel.com/changelog",
+      "source_type": "official_release",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://vercel.com/docs",
+      "canonical_url": "https://vercel.com/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://vercel.com/docs/fundamentals/what-is-compute",
+      "canonical_url": "https://vercel.com/docs/fundamentals/what-is-compute",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://vercel.com/docs/limits",
+      "canonical_url": "https://vercel.com/docs/limits",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://vercel.com/docs/pricing",
+      "canonical_url": "https://vercel.com/docs/pricing",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://vercel.com/pricing",
+      "canonical_url": "https://vercel.com/pricing",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://web.dev/articles/vitals",
+      "canonical_url": "https://web.dev/articles/vitals",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://webflow.com/pricing",
+      "canonical_url": "https://webflow.com/pricing",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://wordpress.org/documentation/wordpress-version/version-",
+      "canonical_url": "https://wordpress.org/documentation/wordpress-version/version-",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/semantic-ui-guide",
+      "canonical_url": "https://freecodecamp.org/news/semantic-ui-guide",
+      "source_type": "user_generated",
+      "weight": 0.1,
+      "min_confidence": 1.01,
+      "allowed": false,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.gatsbyjs.com/docs/",
+      "canonical_url": "https://gatsbyjs.com/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.google.com/search?q=node",
+      "canonical_url": "https://google.com/search?q=node",
+      "source_type": "user_generated",
+      "weight": 0.1,
+      "min_confidence": 1.01,
+      "allowed": false,
+      "living_document": false,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.netlify.com/pricing/",
+      "canonical_url": "https://netlify.com/pricing",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.postgresql.org/docs/release/",
+      "canonical_url": "https://postgresql.org/docs/release",
+      "source_type": "official_release",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.postgresql.org/docs/release/16.0/",
+      "canonical_url": "https://postgresql.org/docs/release/16.0",
+      "source_type": "official_release",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.postgresql.org/support/versioning/",
+      "canonical_url": "https://postgresql.org/support/versioning",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.python.org/downloads/",
+      "canonical_url": "https://python.org/downloads",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.sanity.io/docs",
+      "canonical_url": "https://sanity.io/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.sanity.io/pricing",
+      "canonical_url": "https://sanity.io/pricing",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    },
+    {
+      "url": "https://www.storyblok.com/docs",
+      "canonical_url": "https://storyblok.com/docs",
+      "source_type": "official_docs",
+      "weight": 1.0,
+      "min_confidence": 0.7,
+      "allowed": true,
+      "living_document": true,
+      "trusted_repository": false
+    }
+  ]
+}

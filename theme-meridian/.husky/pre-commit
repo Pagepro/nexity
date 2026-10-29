@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+echo "🔐 Scanning staged changes for secrets..."
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks git --staged --redact --no-banner || exit 1
+else
+  echo "⚠️  gitleaks is not installed, so the secret scan was skipped."
+  echo "   Install it to catch leaked keys and tokens before they are committed:"
+  echo "   brew install gitleaks  (other systems: https://github.com/gitleaks/gitleaks#installing)"
+fi
+
+echo "🧹 Running linter..."
+pnpm lint
+
+echo "✨ Checking code formatting..."
+pnpm format:check
+
+echo "🔍 Running type check..."
+pnpm typecheck
+
+echo "✅ Pre-commit checks completed successfully!"

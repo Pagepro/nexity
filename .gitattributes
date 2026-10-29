@@ -1,0 +1,3 @@
+# Snapshots written by `node .agents/export.mjs`; GitHub collapses them in PR diffs.
+base/.agents/** linguist-generated=true
+theme-meridian/.agents/** linguist-generated=true

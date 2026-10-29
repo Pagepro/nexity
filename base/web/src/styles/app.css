@@ -1,0 +1,539 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+/* No c15t stylesheet: with `inlineCss` it would land in every page's HTML.
+   The c15t v3 components inject their own rules. */
+
+/* Docs contain Figma class examples (`--text/sm/...`) whose `/` produces
+   invalid CSS and breaks the build. Path is relative to this file → repo root. */
+@source not "../../../**/*.md";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Fallback for the value header/Wrapper.tsx measures. Must equal the real bar
+     height (53px below lg, 65px from lg) or every page shifts after hydration. */
+  --header-height: 3.3125rem;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-card-muted: var(--card-muted);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Opaque in light: the header bar draws over the first section, where a
+     translucent `--foreground` wash can't read. `.dark` and `dark-palette` invert it. */
+  --color-button-ghost-hover: var(--button-ghost-hover);
+
+  /* Change corners here. `md` is for controls (buttons, inputs, tabs, nav items) and
+     stays rounded; every other step is for surfaces (cards, images, frames, panels)
+     and is 0 for square corners. `rounded-full` (badges, dots) is not on this scale. */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0.375rem;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-4xl: 0;
+}
+
+/* Light palette: Tailwind `neutral`. Swap for your design system (DESIGN.md). */
+:root {
+  --background: oklch(1 0 0); /* white */
+  --foreground: oklch(0.145 0 0); /* neutral-950 */
+  --card: oklch(1 0 0); /* white */
+  --card-foreground: oklch(0.145 0 0); /* neutral-950 */
+  --card-muted: oklch(0.985 0 0); /* neutral-50 */
+  --popover: oklch(1 0 0); /* white */
+  --popover-foreground: oklch(0.145 0 0); /* neutral-950 */
+  --primary: oklch(0.205 0 0); /* neutral-900 */
+  --primary-foreground: oklch(0.985 0 0); /* neutral-50 */
+  --secondary: oklch(0.97 0 0); /* neutral-100 */
+  --secondary-foreground: oklch(0.205 0 0); /* neutral-900 */
+  --muted: oklch(0.97 0 0); /* neutral-100 */
+  --muted-foreground: oklch(0.556 0 0); /* neutral-500 */
+  --accent: oklch(0.97 0 0); /* neutral-100 */
+  --accent-foreground: oklch(0.205 0 0); /* neutral-900 */
+  --destructive: oklch(0.577 0.245 27.325); /* red-600 */
+  --destructive-foreground: oklch(0.985 0 0); /* neutral-50 */
+  --border: oklch(0.922 0 0); /* neutral-200 */
+  --input: oklch(0.922 0 0); /* neutral-200 */
+  --ring: oklch(0.708 0 0); /* neutral-400 */
+  --chart-1: oklch(0.87 0 0); /* neutral-300 */
+  --chart-2: oklch(0.556 0 0); /* neutral-500 */
+  --chart-3: oklch(0.439 0 0); /* neutral-600 */
+  --chart-4: oklch(0.371 0 0); /* neutral-700 */
+  --chart-5: oklch(0.269 0 0); /* neutral-800 */
+  --sidebar: oklch(0.985 0 0); /* neutral-50 */
+  --sidebar-foreground: oklch(0.145 0 0); /* neutral-950 */
+  --sidebar-primary: oklch(0.205 0 0); /* neutral-900 */
+  --sidebar-primary-foreground: oklch(0.985 0 0); /* neutral-50 */
+  --sidebar-accent: oklch(0.97 0 0); /* neutral-100 */
+  --sidebar-accent-foreground: oklch(0.205 0 0); /* neutral-900 */
+  --sidebar-border: oklch(0.922 0 0); /* neutral-200 */
+  --sidebar-ring: oklch(0.708 0 0); /* neutral-400 */
+  --button-ghost-hover: oklch(0.97 0 0); /* neutral-100 */
+  --header-cta-glass: color-mix(in oklab, white 40%, transparent);
+}
+
+/* 65px from lg. Unlayered, so it wins over the theme-layer default. */
+@media (width >= 64rem) {
+  :root {
+    --header-height: 4.0625rem;
+  }
+}
+
+/* Two scopes share one token block so the header can never drift from the
+   sections: `.dark` sections, and the header bar while transparent over a dark
+   first section (`:has()`, so the server HTML is already right, no flash).
+   `dark:` variants still mean "inside a `.dark` section" only. */
+@custom-variant dark-palette {
+  &.dark {
+    @slot;
+  }
+
+  html:not(.header-open)
+    body:has(.dark > [data-first-module="true"][data-header-overlay="always"])
+    &.header-bar:not(.header-scrolled) {
+    @slot;
+  }
+
+  @media (width < 90rem) {
+    html:not(.header-open)
+      body:has(.dark > [data-first-module="true"][data-header-overlay="below-3xl"])
+      &.header-bar:not(.header-scrolled) {
+      @slot;
+    }
+  }
+}
+
+* {
+  @variant dark-palette {
+    --background: oklch(0.145 0 0); /* neutral-950 */
+    --foreground: oklch(0.985 0 0); /* neutral-50 */
+    --card: oklch(0.205 0 0); /* neutral-900 */
+    --card-foreground: oklch(0.985 0 0); /* neutral-50 */
+    --card-muted: oklch(0.269 0 0); /* neutral-800, one step above --card */
+    --popover: oklch(0.205 0 0); /* neutral-900 */
+    --popover-foreground: oklch(0.985 0 0); /* neutral-50 */
+    --primary: oklch(0.922 0 0); /* neutral-200 */
+    --primary-foreground: oklch(0.205 0 0); /* neutral-900 */
+    --secondary: oklch(0.269 0 0); /* neutral-800 */
+    --secondary-foreground: oklch(0.985 0 0); /* neutral-50 */
+    --muted: oklch(0.269 0 0); /* neutral-800 */
+    --muted-foreground: oklch(0.708 0 0); /* neutral-400 */
+    --accent: oklch(0.269 0 0); /* neutral-800 */
+    --accent-foreground: oklch(0.985 0 0); /* neutral-50 */
+    --destructive: oklch(0.704 0.191 22.216); /* red-400 */
+    --destructive-foreground: oklch(0.985 0 0); /* neutral-50 */
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0); /* neutral-500 */
+    --chart-1: oklch(0.87 0 0); /* neutral-300 */
+    --chart-2: oklch(0.556 0 0); /* neutral-500 */
+    --chart-3: oklch(0.439 0 0); /* neutral-600 */
+    --chart-4: oklch(0.371 0 0); /* neutral-700 */
+    --chart-5: oklch(0.269 0 0); /* neutral-800 */
+    --sidebar: oklch(0.205 0 0); /* neutral-900 */
+    --sidebar-foreground: oklch(0.985 0 0); /* neutral-50 */
+    --sidebar-primary: oklch(0.922 0 0); /* neutral-200 */
+    --sidebar-primary-foreground: oklch(0.205 0 0); /* neutral-900 */
+    --sidebar-accent: oklch(0.269 0 0); /* neutral-800 */
+    --sidebar-accent-foreground: oklch(0.985 0 0); /* neutral-50 */
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0); /* neutral-500 */
+    --button-ghost-hover: oklch(1 0 0 / 10%);
+    --header-cta-glass: color-mix(in oklab, white 12%, transparent);
+  }
+}
+
+@theme {
+  --breakpoint-3xl: 90rem;
+
+  --letter-spacing-none: 0;
+  --letter-spacing-wide: 2%;
+
+  --line-height-tight: 100%;
+  --line-height-normal: 110%;
+  --line-height-relaxed: 130%;
+  --line-height-loose: 150%;
+
+  --leading-tighter: 1.1;
+
+  --index-1: 1;
+  --index-2: 2;
+  --index-3: 3;
+  --index-4: 4;
+  --index-5: 5;
+  --index-6: 6;
+  --index-7: 7;
+  --index-8: 8;
+  --index-9: 9;
+
+  --text-10: 0.625rem; /* 10px */
+  --text-12: 0.75rem; /* 12px */
+  --text-14: 0.875rem; /* 14px */
+  --text-15: 0.9375rem; /* 15px */
+  --text-16: 1rem; /* 16px */
+  --text-18: 1.125rem; /* 18px */
+  --text-20: 1.25rem; /* 20px */
+  --text-22: 1.375rem; /* 22px */
+  --text-24: 1.5rem; /* 24px */
+  --text-28: 1.75rem; /* 28px */
+  --text-30: 1.875rem; /* 30px */
+  --text-32: 2rem; /* 32px */
+  --text-35: 2.1875rem; /* 35px */
+  --text-36: 2.25rem; /* 36px — section title */
+  --text-40: 2.5rem; /* 40px */
+  --text-44: 2.75rem; /* 44px — hero headline */
+  --text-45: 2.8125rem; /* 45px */
+  --text-60: 3.75rem; /* 60px */
+  --text-64: 4rem; /* 64px */
+  --text-80: 5rem; /* 80px */
+  --text-120: 7.5rem; /* 120px */
+
+  --default-transition-duration: 0.25s;
+
+  --tile-grid-row-height: 11.25rem; /* 180px */
+  --tile-grid-row-height-sm: 13.75rem; /* 220px */
+  --tile-grid-row-height-md: 18.75rem; /* 300px */
+  --tile-grid-row-height-lg: 25rem; /* 400px */
+
+  --hero-height: 25rem; /* 400px */
+  --hero-height-sm: 32.5rem; /* 520px */
+  --hero-height-md: 40rem; /* 640px */
+  --hero-height-lg: 45rem; /* 720px */
+
+  --hero-product-mobile-width: 40rem; /* 640px → 360px tall at 16:9 */
+
+  --cta-banner-min-height: 27.5rem; /* 440px */
+
+  --logo-bar-max-w: 8.75rem; /* 140px */
+  --logo-bar-max-w-sm: 10.625rem; /* 170px */
+  --logo-bar-max-w-md: 13.75rem; /* 220px */
+
+  --width-container: 80rem; /* 1280px */
+  --section-padding-inline: 1.25rem; /* 20px */
+  --section-padding-inline-desktop: 3.75rem; /* 60px */
+  --section-padding-y: 6rem; /* 96px — section vertical rhythm */
+}
+
+@layer base {
+  /* Let flex/grid children shrink below their content width (long words, code). */
+  * {
+    min-width: 0;
+  }
+
+  *,
+  ::before,
+  ::after {
+    border-color: var(--border);
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  :is(button, label, select, summary, [type="submit"]) {
+    cursor: pointer;
+  }
+
+  html {
+    overflow-x: hidden;
+    scroll-padding-top: var(--header-height);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  hr {
+    border-color: var(--border);
+  }
+}
+
+@layer components {
+  .pretitle {
+    @apply text-10 font-medium text-muted-foreground uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .episode-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "n n"
+      "main main"
+      "k side";
+    @variant md {
+      grid-template-columns: 10.5rem 1fr 9rem auto;
+      grid-template-areas: "n main k side";
+    }
+  }
+  .episode-row-n {
+    grid-area: n;
+  }
+  .episode-row-main {
+    grid-area: main;
+  }
+  .episode-row-k {
+    grid-area: k;
+  }
+  .episode-row-side {
+    grid-area: side;
+  }
+
+  /* Plain class, never `@utility`, and RAW tokens (`--foreground`), never the
+     `--color-*` bridge: that resolves once on `:root` as the light value, so a
+     `.dark` scope never reaches it. The same holds for every plain-CSS rule here. */
+  .header-cta-primary {
+    background-color: var(--header-cta-glass);
+    backdrop-filter: blur(2px);
+    color: var(--foreground);
+    border-color: transparent;
+    transition:
+      background-color 200ms ease,
+      color 200ms ease;
+  }
+
+  .header-scrolled .header-cta-primary,
+  .header-open .header-cta-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header-cta-primary {
+      backdrop-filter: none;
+      transition: none;
+    }
+  }
+
+  /* A band's own default surface. Never a bare `bg-card-muted` on the band's
+     `<section>`: it would override the editor's Color theme. `.section-themed`
+     on the wrapper switches it off. Plain classes, never `@utility`. */
+  .bg-section-surface {
+    background-color: var(--section-surface, var(--card-muted));
+  }
+
+  .bg-section-surface-muted {
+    background-color: var(--section-surface, var(--muted));
+  }
+
+  .section-themed {
+    --section-surface: transparent;
+  }
+
+  /* Animates grid-template-rows 0fr→1fr so the collapsed panel has zero height
+     and can't intercept taps. The grid child must be `overflow-hidden min-h-0`. */
+  .header-mobile-drawer {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition:
+      grid-template-rows 300ms ease,
+      opacity 200ms ease;
+  }
+
+  .header-open .header-mobile-drawer {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  /* The native range only takes `accent-color`, so it is redrawn. The component
+     sets `--range-fill` because WebKit can't paint the filled part itself. */
+  .range-hairline {
+    --range-fill: 0%;
+    appearance: none;
+    width: 100%;
+    height: 1.5rem;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .range-hairline::-webkit-slider-runnable-track {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--foreground) var(--range-fill),
+      var(--border) var(--range-fill)
+    );
+  }
+
+  .range-hairline::-moz-range-track {
+    height: 1px;
+    background: var(--border);
+  }
+
+  .range-hairline::-moz-range-progress {
+    height: 1px;
+    background: var(--foreground);
+  }
+
+  .range-hairline::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-top: -0.53125rem;
+    border-radius: 9999px;
+    background: var(--background);
+    box-shadow:
+      0 0 0 1px var(--border),
+      0 2px 6px -1px rgba(0, 0, 0, 0.12);
+    transition:
+      box-shadow 150ms ease,
+      scale 150ms ease;
+  }
+
+  .range-hairline::-moz-range-thumb {
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 0;
+    border-radius: 9999px;
+    background: var(--background);
+    box-shadow:
+      0 0 0 1px var(--border),
+      0 2px 6px -1px rgba(0, 0, 0, 0.12);
+  }
+
+  .range-hairline:hover::-webkit-slider-thumb,
+  .range-hairline:active::-webkit-slider-thumb {
+    box-shadow:
+      0 0 0 1px var(--foreground),
+      0 4px 10px -2px rgba(0, 0, 0, 0.16);
+    scale: 1.08;
+  }
+
+  .range-hairline:focus-visible {
+    outline: none;
+  }
+
+  .range-hairline:focus-visible::-webkit-slider-thumb {
+    box-shadow:
+      0 0 0 1px var(--foreground),
+      0 0 0 4px color-mix(in oklab, var(--foreground) 12%, transparent);
+  }
+}
+
+@utility section {
+  width: 100%;
+  max-width: var(--width-container);
+  margin-inline: auto;
+  padding-inline: var(--section-padding-inline);
+
+  @media (min-width: 1024px) {
+    padding-inline: var(--section-padding-inline-desktop);
+  }
+}
+
+@layer base {
+  .richtext {
+    @apply space-y-4 text-muted-foreground transition-colors ease-in-out;
+
+    p {
+      letter-spacing: var(--letter-spacing-none);
+      line-height: var(--line-height-loose);
+
+      display: block;
+      min-height: 1.25em;
+
+      @media (min-width: 768px) {
+        min-height: 1.5em;
+      }
+    }
+
+    strong {
+      color: var(--foreground);
+    }
+  }
+
+  /* The rhythm lives on RichText's own root because `.richtext` alone is also a
+     plain section wrapper. Embeds carry `.richtext-embed` and never set their own
+     outer margin. */
+  .richtext-flow > * {
+    margin-block: 0;
+  }
+
+  .richtext-flow > * + * {
+    margin-top: calc(var(--spacing) * 4);
+  }
+
+  .richtext-flow > :is(h1, h2, h3):not(:first-child) {
+    margin-top: calc(var(--spacing) * 12);
+
+    @media (min-width: 768px) {
+      margin-top: calc(var(--spacing) * 16);
+    }
+  }
+
+  .richtext-flow > :is(h4, h5, h6):not(:first-child) {
+    margin-top: calc(var(--spacing) * 8);
+  }
+
+  .richtext-flow > * + .richtext-embed,
+  .richtext-flow > .richtext-embed + * {
+    margin-top: calc(var(--spacing) * 8);
+  }
+
+  .richtext-flow > :is(h1, h2, h3, h4, h5, h6) + .richtext-embed {
+    margin-top: calc(var(--spacing) * 4);
+  }
+
+  .richtext-flow li > :is(ul, ol) {
+    margin-top: calc(var(--spacing) * 2.5);
+  }
+
+  /* A <br> can't take a margin, so the inline-block title does. Keep the <br>:
+     making the title a block left stray space at the start of the description. */
+  .richtext-titled-item > strong:first-child {
+    display: inline-block;
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+
+  .header-open body {
+    overflow: hidden;
+
+    @media (min-width: 1024px) {
+      overflow: visible;
+    }
+  }
+}

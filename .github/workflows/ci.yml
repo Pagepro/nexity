@@ -1,0 +1,80 @@
+# Lint, format, typecheck and build for both starters. Each starter is its own
+# pnpm monorepo, so every step runs inside `matrix.dir`.
+#
+# Sanity env vars come from repository secrets, with placeholders as fallback.
+# Never put real values in this file. Lint, format and typecheck run without
+# Sanity. `next build` reads the dataset (generateStaticParams, the root
+# layout's setup check), so it runs only when the SANITY_PROJECT_ID secret is
+# set. Secrets are not passed to pull requests from forks, so those skip the
+# build with a warning.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: check (${{ matrix.dir }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        dir: [base, theme-meridian]
+    defaults:
+      run:
+        working-directory: ${{ matrix.dir }}
+    env:
+      # Husky hooks are for local commits only.
+      HUSKY: "0"
+      NEXT_TELEMETRY_DISABLED: "1"
+      HAS_SANITY_PROJECT: ${{ secrets.SANITY_PROJECT_ID != '' }}
+      NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID || 'placeholder' }}
+      NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.SANITY_DATASET || 'production' }}
+      SANITY_STUDIO_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID || 'placeholder' }}
+      SANITY_STUDIO_DATASET: ${{ secrets.SANITY_DATASET || 'production' }}
+      # Optional: only needed if the CI dataset is private.
+      SANITY_API_READ_TOKEN: ${{ secrets.SANITY_API_READ_TOKEN }}
+      NEXT_PUBLIC_BASE_URL: http://localhost:3000
+    steps:
+      - uses: actions/checkout@v7
+
+      # Reads the pnpm version from the starter's `packageManager` field.
+      - uses: pnpm/action-setup@v6
+        with:
+          package_json_file: ${{ matrix.dir }}/package.json
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: ${{ matrix.dir }}/.nvmrc
+          cache: pnpm
+          cache-dependency-path: ${{ matrix.dir }}/pnpm-lock.yaml
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Format
+        run: pnpm format:check
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build
+        if: env.HAS_SANITY_PROJECT == 'true'
+        run: pnpm build
+
+      - name: Build skipped
+        if: env.HAS_SANITY_PROJECT != 'true'
+        run: echo "::warning title=Build skipped::SANITY_PROJECT_ID secret is not available (not set, or a pull request from a fork), so next build was not run for ${{ matrix.dir }}."

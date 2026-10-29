@@ -1,0 +1,33 @@
+{
+  "name": "nexity",
+  "description": "Pagepro's skills for marketers: brand kits, source checks, blog post reviews and updates, internal links. Any site, any CMS.",
+  "owner": {
+    "name": "Pagepro",
+    "url": "https://pagepro.co"
+  },
+  "plugins": [
+    {
+      "name": "marketing-skills",
+      "displayName": "Marketing skills",
+      "source": "./.agents/skills",
+      "description": "Brand kit from a URL, source checks for an article, a scored blog post review, a diagnosis and update plan for a post that dropped, and missing internal links. Read-only: they propose, a person publishes. Start with \"Help me setup these skills for marketers\".",
+      "author": {
+        "name": "Pagepro",
+        "url": "https://pagepro.co"
+      },
+      "homepage": "https://github.com/Pagepro/nexity/blob/main/MARKETING-SKILLS-README.md",
+      "repository": "https://github.com/Pagepro/nexity",
+      "license": "MIT",
+      "keywords": ["marketing", "content", "seo", "blog", "brand", "fact-checking"],
+      "skills": [
+        "./marketing-setup",
+        "./brand-kit",
+        "./blog-post-quality-review",
+        "./source-review",
+        "./internal-links",
+        "./blog-post-update",
+        "./work-humanizer"
+      ]
+    }
+  ]
+}

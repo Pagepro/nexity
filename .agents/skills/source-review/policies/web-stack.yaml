@@ -1,0 +1,296 @@
+# Web stack policy pack.
+#
+# This pack covers headless CMS platforms, front-end frameworks, ecommerce
+# platforms, and web performance. The topics come from a review of 190 blog
+# post addresses in a software agency's sitemap.
+#
+# Post counts from that review, for the gaps that this pack fills:
+#   sanity 10, contentful 4, webflow 3, gatsby 3, tailwind 2,
+#   storybook 1, graphql 1, shopify 1, saleor 1, astro 1, remix 1,
+#   flutter 1, ionic 1, drupal 1, prismic 1, payload 1, amplify 1
+# The pack also covers the two topic words with the highest counts:
+#   headless 14, jamstack 14.
+
+name: web-stack
+version: 1
+
+domains:
+  # Headless CMS.
+  - { pattern: "www.sanity.io", source_type: official_docs, priority: 30 }
+  - { pattern: "sanity.io", source_type: official_docs, priority: 30 }
+  - { pattern: "www.contentful.com", source_type: official_docs, priority: 30 }
+  - { pattern: "strapi.io", source_type: official_docs, priority: 30 }
+  - { pattern: "docs.strapi.io", source_type: official_docs, priority: 32 }
+  - { pattern: "www.storyblok.com", source_type: official_docs, priority: 30 }
+  - { pattern: "prismic.io", source_type: official_docs, priority: 30 }
+  - { pattern: "ghost.org", source_type: official_docs, priority: 30 }
+  - { pattern: "payloadcms.com", source_type: official_docs, priority: 30 }
+  - { pattern: "directus.io", source_type: official_docs, priority: 30 }
+  - { pattern: "www.drupal.org", source_type: official_docs, priority: 30 }
+
+  # Site builders and visual tools.
+  - { pattern: "webflow.com", source_type: official_docs, priority: 30 }
+  - { pattern: "university.webflow.com", source_type: official_docs, priority: 32 }
+
+  # Component libraries and design systems. An article that compares them
+  # needs the vendor page for each one.
+  - { pattern: "getbootstrap.com", source_type: official_docs, priority: 30 }
+  - { pattern: "mui.com", source_type: official_docs, priority: 30 }
+  - { pattern: "chakra-ui.com", source_type: official_docs, priority: 30 }
+  - { pattern: "semantic-ui.com", source_type: official_docs, priority: 30 }
+  - { pattern: "ant.design", source_type: official_docs, priority: 30 }
+  - { pattern: "m3.material.io", source_type: official_docs, priority: 32 }
+  - { pattern: "material.io", source_type: official_docs, priority: 30 }
+  - { pattern: "fluent2.microsoft.design", source_type: official_docs, priority: 30 }
+  - { pattern: "developers.google.com", source_type: official_docs, priority: 32 }
+  # Search Console Help is first-party Google documentation. A run blocked the
+  # official Rich Results Test page as non-authoritative because this line was
+  # absent.
+  - { pattern: "support.google.com", source_type: official_docs, priority: 32 }
+  - { pattern: "search.google.com", source_type: official_docs, priority: 32 }
+  - { pattern: "developer.apple.com", source_type: official_docs, priority: 32 }
+  - { pattern: "netflixtechblog.com", source_type: official_blog, priority: 28 }
+
+  # Front-end frameworks and libraries.
+  - { pattern: "www.gatsbyjs.com", source_type: official_docs, priority: 30 }
+  - { pattern: "astro.build", source_type: official_docs, priority: 30 }
+  - { pattern: "docs.astro.build", source_type: official_docs, priority: 32 }
+  - { pattern: "remix.run", source_type: official_docs, priority: 30 }
+  - { pattern: "nuxt.com", source_type: official_docs, priority: 30 }
+  - { pattern: "tailwindcss.com", source_type: official_docs, priority: 30 }
+  - { pattern: "storybook.js.org", source_type: official_docs, priority: 30 }
+  - { pattern: "redux.js.org", source_type: official_docs, priority: 30 }
+  - { pattern: "graphql.org", source_type: standards_body, priority: 30 }
+  - { pattern: "www.apollographql.com", source_type: official_docs, priority: 28 }
+
+  # Ecommerce.
+  - { pattern: "shopify.dev", source_type: official_docs, priority: 32 }
+  - { pattern: "www.shopify.com", source_type: official_blog, priority: 28 }
+  - { pattern: "saleor.io", source_type: official_docs, priority: 30 }
+  - { pattern: "docs.saleor.io", source_type: official_docs, priority: 32 }
+  - { pattern: "medusajs.com", source_type: official_docs, priority: 30 }
+  - { pattern: "stripe.com", source_type: official_docs, priority: 28 }
+
+  # Mobile, next to React Native.
+  - { pattern: "flutter.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "docs.flutter.dev", source_type: official_docs, priority: 32 }
+  - { pattern: "ionicframework.com", source_type: official_docs, priority: 30 }
+
+  # Cloud.
+  - { pattern: "docs.amplify.aws", source_type: official_docs, priority: 32 }
+
+  # Web performance and standards. A Core Web Vitals claim needs these.
+  - { pattern: "web.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "developer.chrome.com", source_type: official_docs, priority: 30 }
+  - { pattern: "jamstack.org", source_type: industry_source, priority: 25 }
+  - { pattern: "httparchive.org", source_type: industry_source, priority: 25 }
+  # Usage and market share of a CMS. The vendor states its own share, but the
+  # measurement that everyone quotes comes from here.
+  - { pattern: "w3techs.com", source_type: industry_source, priority: 25 }
+
+trusted_repo_owners:
+  - sanity-io
+  - contentful
+  - strapi
+  - storyblok
+  - payloadcms
+  - directus
+  - gatsbyjs
+  - withastro
+  - remix-run
+  - nuxt
+  - tailwindlabs
+  - storybookjs
+  - reduxjs
+  - graphql
+  - apollographql
+  - Shopify
+  - saleor
+  - medusajs
+  - stripe
+  - flutter
+  - ionic-team
+  - aws-amplify
+  - GoogleChrome
+
+subjects:
+  sanity:
+    aliases: ["sanity", "sanity.io", "sanity studio"]
+    domains: ["www.sanity.io", "github.com/sanity-io"]
+    direct_urls:
+      - "https://www.sanity.io/docs"
+      - "https://www.sanity.io/pricing"
+  contentful:
+    aliases: ["contentful"]
+    domains: ["www.contentful.com"]
+    direct_urls:
+      - "https://www.contentful.com/developers/docs/"
+      - "https://www.contentful.com/pricing/"
+  strapi:
+    aliases: ["strapi"]
+    domains: ["strapi.io", "docs.strapi.io", "github.com/strapi"]
+    direct_urls:
+      - "https://docs.strapi.io"
+      - "https://strapi.io/pricing-self-hosted"
+  storyblok:
+    aliases: ["storyblok"]
+    domains: ["www.storyblok.com"]
+    direct_urls:
+      - "https://www.storyblok.com/docs"
+  webflow:
+    aliases: ["webflow"]
+    domains: ["webflow.com", "university.webflow.com"]
+    direct_urls:
+      - "https://webflow.com/pricing"
+      - "https://university.webflow.com"
+  gatsby:
+    aliases: ["gatsby", "gatsbyjs"]
+    domains: ["www.gatsbyjs.com", "github.com/gatsbyjs"]
+    direct_urls:
+      - "https://www.gatsbyjs.com/docs/"
+      - "https://github.com/gatsbyjs/gatsby/releases"
+  astro:
+    aliases: ["astro", "astro.build"]
+    domains: ["astro.build", "docs.astro.build", "github.com/withastro"]
+    direct_urls:
+      - "https://docs.astro.build/en/getting-started/"
+      - "https://github.com/withastro/astro/releases"
+  remix:
+    aliases: ["remix", "remix.run"]
+    domains: ["remix.run", "github.com/remix-run"]
+    direct_urls:
+      - "https://remix.run/docs/en/main"
+  tailwind:
+    aliases: ["tailwind", "tailwind css", "tailwindcss"]
+    domains: ["tailwindcss.com", "github.com/tailwindlabs"]
+    direct_urls:
+      - "https://tailwindcss.com/docs"
+      - "https://github.com/tailwindlabs/tailwindcss/releases"
+  storybook:
+    aliases: ["storybook"]
+    domains: ["storybook.js.org", "github.com/storybookjs"]
+    direct_urls:
+      - "https://storybook.js.org/docs"
+      - "https://github.com/storybookjs/storybook/releases"
+  graphql:
+    aliases: ["graphql"]
+    domains: ["graphql.org", "github.com/graphql"]
+    direct_urls:
+      - "https://graphql.org/learn/"
+  shopify:
+    aliases: ["shopify", "shopify hydrogen"]
+    domains: ["shopify.dev", "www.shopify.com", "github.com/Shopify"]
+    direct_urls:
+      - "https://shopify.dev/docs"
+  saleor:
+    aliases: ["saleor"]
+    domains: ["saleor.io", "docs.saleor.io", "github.com/saleor"]
+    direct_urls:
+      - "https://docs.saleor.io"
+  flutter:
+    aliases: ["flutter"]
+    domains: ["flutter.dev", "docs.flutter.dev", "github.com/flutter"]
+    direct_urls:
+      - "https://docs.flutter.dev"
+      - "https://docs.flutter.dev/release/release-notes"
+  ionic:
+    aliases: ["ionic", "ionic framework"]
+    domains: ["ionicframework.com", "github.com/ionic-team"]
+    direct_urls:
+      - "https://ionicframework.com/docs"
+  core web vitals:
+    aliases: ["core web vitals", "web vitals", "largest contentful paint", "cumulative layout shift"]
+    domains: ["web.dev", "developer.chrome.com"]
+    direct_urls:
+      - "https://web.dev/articles/vitals"
+  bootstrap:
+    aliases: ["bootstrap"]
+    domains: ["getbootstrap.com", "github.com/twbs"]
+    direct_urls:
+      - "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+  mui:
+    aliases: ["mui", "mui core", "material ui", "material-ui"]
+    domains: ["mui.com", "github.com/mui"]
+    direct_urls:
+      - "https://mui.com/material-ui/getting-started/"
+  chakra ui:
+    aliases: ["chakra", "chakra ui", "chakra-ui"]
+    domains: ["chakra-ui.com", "github.com/chakra-ui"]
+    direct_urls:
+      - "https://chakra-ui.com/docs/get-started/frameworks/vite"
+  semantic ui:
+    aliases: ["semantic ui", "semantic-ui"]
+    domains: ["semantic-ui.com"]
+    direct_urls:
+      - "https://semantic-ui.com/introduction/getting-started.html"
+  ant design:
+    aliases: ["ant design", "antd"]
+    domains: ["ant.design", "github.com/ant-design"]
+    direct_urls:
+      - "https://ant.design/docs/react/introduce"
+  material design:
+    aliases: ["material design", "material 3", "material you"]
+    domains: ["m3.material.io", "material.io"]
+    direct_urls:
+      - "https://m3.material.io/foundations"
+  human interface guidelines:
+    aliases: ["human interface guidelines", "apple design system", "apple hig"]
+    domains: ["developer.apple.com"]
+    direct_urls:
+      - "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios"
+  fluent design:
+    aliases: ["fluent design", "fluent ui", "fluent design system"]
+    domains: ["fluent2.microsoft.design", "learn.microsoft.com"]
+    direct_urls:
+      - "https://fluent2.microsoft.design/"
+  # This subject covers many topics, so it states no direct address. A fixed
+  # list of pages cannot serve fourteen different questions: it sent the page
+  # experience page to a claim about schema markup. The domain routes the
+  # search, and the search finds the page for the claim.
+  google search:
+    aliases:
+      - "google search"
+      - "search engine rankings"
+      - "search ranking"
+      - "ranking signal"
+      - "ranking factor"
+      - "googlebot"
+      - "search console"
+      - "google index"
+      - "crawl budget"
+      - "canonical tag"
+      - "sitemap.xml"
+      - "robots.txt"
+    domains: ["developers.google.com", "support.google.com"]
+  page experience:
+    aliases: ["page experience", "core web vitals"]
+    domains: ["developers.google.com", "web.dev"]
+    direct_urls:
+      - "https://developers.google.com/search/docs/appearance/page-experience"
+  structured data:
+    aliases:
+      - "structured data"
+      - "schema markup"
+      - "schema.org"
+      - "json-ld"
+      - "microdata"
+      - "rich result"
+      - "rich results"
+      - "rich snippet"
+      - "rich results test"
+    domains: ["developers.google.com", "support.google.com", "schema.org"]
+    direct_urls:
+      - "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data"
+      - "https://developers.google.com/search/docs/appearance/structured-data"
+      - "https://developers.google.com/search/docs/appearance/structured-data/sd-policies"
+  http redirect:
+    aliases: ["301 redirect", "302 redirect", "308 redirect", "redirect chain", "http redirect"]
+    domains: ["developers.google.com", "developer.mozilla.org", "www.rfc-editor.org"]
+    direct_urls:
+      - "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+      - "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections"
+  jamstack:
+    aliases: ["jamstack", "jam stack"]
+    domains: ["jamstack.org"]
+    direct_urls:
+      - "https://jamstack.org/what-is-jamstack/"

@@ -1,0 +1,67 @@
+{
+  "version": "1.3.0",
+  "skills": {
+    "create-section": {
+      "dependencies": [
+        "sanity-module-catalog"
+      ],
+      "reviewers": [
+        "content-model-architect",
+        "styling-fidelity-reviewer",
+        "sanity-schema-reviewer",
+        "groq-parity-reviewer",
+        "link-reviewer"
+      ]
+    },
+    "generate-alts": {
+      "reviewers": [
+        "alt-text-writer"
+      ]
+    },
+    "link-fix": {
+      "reviewers": [
+        "link-reviewer"
+      ]
+    },
+    "pr-writeup": {
+      "dependencies": [
+        "work-humanizer"
+      ]
+    },
+    "product-mock": {
+      "requires": "tools/product-mocks"
+    },
+    "project-setup": {},
+    "sanity-module-catalog": {},
+    "sanity-optimizations": {
+      "reviewers": [
+        "sanity-query-auditor",
+        "sanity-image-auditor",
+        "sanity-delivery-auditor",
+        "groq-parity-reviewer"
+      ]
+    },
+    "work-humanizer": {}
+  },
+  "rootOnly": {
+    "blog-post-quality-review": {},
+    "blog-post-update": {
+      "dependencies": [
+        "blog-post-quality-review",
+        "source-review",
+        "work-humanizer"
+      ]
+    },
+    "brand-kit": {},
+    "internal-links": {},
+    "marketing-setup": {},
+    "source-review": {}
+  },
+  "renamed": {
+    "build-section": "create-section",
+    "internal-linking": "link-fix",
+    "sanity-optimization": "sanity-optimizations",
+    "section-thumbnails": "sanity-module-catalog",
+    "setup-project": "project-setup"
+  }
+}

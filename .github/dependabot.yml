@@ -1,0 +1,77 @@
+# Each starter is its own pnpm monorepo with its own lockfile, so each gets its
+# own npm entry. Grouping keeps the weekly run to a few pull requests per
+# starter: Sanity packages, c15t, Next.js + React, and the remaining minor/patch bumps.
+# A fix Dependabot opens for one starter usually needs the same bump in the
+# other one (see CONTRIBUTING.md).
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /base
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore(base)"
+    groups:
+      sanity:
+        patterns:
+          - "sanity"
+          - "sanity-plugin-*"
+          - "@sanity/*"
+          - "next-sanity"
+          - "groq"
+      c15t:
+        patterns:
+          - "@c15t/*"
+      next-react:
+        patterns:
+          - "next"
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+          - "babel-plugin-react-compiler"
+      minor-and-patch:
+        update-types: [minor, patch]
+
+  - package-ecosystem: npm
+    directory: /theme-meridian
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore(theme-meridian)"
+    groups:
+      sanity:
+        patterns:
+          - "sanity"
+          - "sanity-plugin-*"
+          - "@sanity/*"
+          - "next-sanity"
+          - "groq"
+      c15t:
+        patterns:
+          - "@c15t/*"
+      next-react:
+        patterns:
+          - "next"
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+          - "babel-plugin-react-compiler"
+      minor-and-patch:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: "chore(ci)"
+    groups:
+      actions:
+        patterns: ["*"]

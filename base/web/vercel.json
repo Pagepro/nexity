@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/cdn-sanity/:path*",
+      "headers": [{ "key": "x-vercel-enable-rewrite-caching", "value": "1" }]
+    }
+  ]
+}

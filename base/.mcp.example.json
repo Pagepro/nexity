@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "next-devtools": {
+      "command": "pnpm",
+      "args": ["dlx", "next-devtools-mcp@latest"]
+    },
+    "sanity": {
+      "type": "http",
+      "url": "https://mcp.sanity.io"
+    }
+  }
+}

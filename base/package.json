@@ -1,0 +1,43 @@
+{
+  "name": "nexity-workspace",
+  "version": "1.0.0",
+  "description": "Sanity & Next.js 16 Monorepo",
+  "author": "Pagepro (https://pagepro.co)",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "pnpm@12.15.0+sha512.b3951d6d6ff4a9f13dc7cf56cd28d2b8eb37dbcc9c68e52e1e1191873ea9f82a017287ab50baadc5ccc494f036c67c0e47eb13608c2fa36f47711b61ea128e61",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel -r dev",
+    "dev:web": "pnpm --filter @nexity/web dev",
+    "dev:web:next": "pnpm --filter @nexity/web dev:web",
+    "dev:studio": "pnpm --filter @nexity/studio dev",
+    "build": "pnpm --filter @nexity/web build",
+    "start": "pnpm --filter @nexity/web start",
+    "blueprints:plan": "sanity blueprints plan",
+    "blueprints:deploy": "sanity blueprints deploy",
+    "blueprints:info": "sanity blueprints info",
+    "lint": "oxlint && pnpm check:client",
+    "check:client": "pnpm --filter @nexity/web check:client",
+    "lint:fix": "oxlint --fix",
+    "lint:strict": "oxlint --type-aware",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check .",
+    "typecheck": "pnpm -r typecheck",
+    "prepare": "husky",
+    "agent:install": "node .agents/tooling/cli.mjs install",
+    "agent:update": "node .agents/tooling/cli.mjs update",
+    "agent:doctor": "node .agents/tooling/cli.mjs doctor"
+  },
+  "devDependencies": {
+    "@sanity/blueprints": "^0.29.0",
+    "@sanity/cli": "^8.22.1",
+    "dotenv": "^17.4.2",
+    "husky": "^9.1.7",
+    "oxfmt": "^0.74.0",
+    "oxlint": "~1.89.0",
+    "oxlint-tsgolint": "^7.0.2005"
+  }
+}

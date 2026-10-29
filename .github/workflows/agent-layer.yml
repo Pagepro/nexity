@@ -1,0 +1,25 @@
+name: Agent layer
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: base/.nvmrc
+      - name: Check distributed snapshots
+        run: node .agents/export.mjs --check
+      - name: Test installer and diagnostics
+        run: node --test .agents/tests/*.test.mjs
+      - name: Test skill scripts
+        run: node --test .agents/skills/*/scripts/*.test.mjs

@@ -1,0 +1,12 @@
+.DS_Store
+**/.env*.local
+node_modules/
+**/.next/
+module-catalog/
+/.claude/worktrees/
+
+# Working files of the marketing skills in .agents/ (crawls, snapshots, analytics, reports)
+/.internal-links/
+/.blog-updates/
+/.source-review/
+/.brand-kits/

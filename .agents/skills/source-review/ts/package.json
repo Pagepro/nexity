@@ -1,0 +1,30 @@
+{
+  "name": "source-review",
+  "version": "0.1.0",
+  "description": "Extract claims from an article. Find and verify a source for each claim.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "review": "tsx src/cli.ts",
+    "compare:fuzzy": "tsx scripts/compare-fuzzy.ts"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "defuddle": "^0.19.3",
+    "linkedom": "^0.18.13",
+    "pdfjs-dist": "^6.3.289",
+    "yaml": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsx": "^4.23.13",
+    "typescript": "^5.6.2",
+    "vitest": "^5.0.5"
+  }
+}

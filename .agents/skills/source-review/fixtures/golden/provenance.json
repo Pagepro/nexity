@@ -1,0 +1,13 @@
+{
+  "python_libraries": {
+    "trafilatura": "2.2.0",
+    "rapidfuzz": "3.14.5",
+    "selectolax": "0.4.11",
+    "httpx": "0.28.1",
+    "pydantic": "2.13.4"
+  },
+  "min_page_chars": 400,
+  "fabricated_quote": "The steering committee cancelled the release after a private vote in Reykjavik.",
+  "max_page_chars_for_judge": 6000,
+  "note": "The port must match every gate answer. The extracted text may differ, because two extractors never produce the same text."
+}

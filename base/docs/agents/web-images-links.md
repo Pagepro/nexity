@@ -1,0 +1,23 @@
+# Images and links
+
+How `web/` renders Sanity images and links. Indexed from [`web/AGENTS.md`](../../web/AGENTS.md); the short version of each rule is there, the full one is here.
+
+## Images & Links
+
+- **Always** use the `<Image>` component (`@/ui/components/image`, not `next/image` directly; handles Sanity image URL building, crop/hotspot, responsive sizes). Raster images go through the `next/image` component (kept for its optimizations, decision 20 Oct 2026); SVGs render as a plain `<img>` from `getImageProps` (see the SVG bullet below). Render it on the server; a client component gets it as a node (`check:client` rule 3).
+- **No blur placeholder by default.** Next's `placeholder="blur"` is an SVG with two Gaussian blurs that the compositor rasterised before the first frame, and its base64 data was a quarter of the homepage HTML. The only blur-up is the hero backdrop: its GROQ branch projects `lqip` only for opaque assets (`metadata.isOpaque`), and `<Image lqip>` passes it as a plain `data:` CSS background that next/image removes on load. Don't project `lqip` elsewhere, and never for an image with transparency (the thumbnail would show through it).
+- **Always** use `<BaseLink>` or its variants for links (handles internal/external/download/asset logic)
+- Update the `sizes` prop on `<Image>` if the image is narrower than full-width
+- **Preload is opt-in per call site, never from the CMS.** A Sanity `loading: "eager"` only means "don't lazy-load". Pass `preload` + `fetchPriority="high"` on the one LCP candidate (HeroSection does it for the first module's backdrop) and nothing else: parallel preloads starved the LCP image on mobile 4G.
+- **`urlFor` (`sanity/lib/image.ts`) is built from `projectId` + `dataset`, never from the Sanity `client`** — `<Image>` runs in client components, so a client-based builder ships all of `@sanity/client` to the browser.
+- **SVG assets bypass the optimizer automatically** (`isSvgAsset` in `components/image/utils.ts` → `unoptimized`, no srcset). Don't route SVGs through `/_next/image`. They load from the site's own origin, `/cdn-sanity/…` (`lib/sanity-cdn-proxy.ts`, a `next.config.ts` rewrite to `cdn.sanity.io`): a second origin costs a DNS + TCP + TLS setup inside the LCP window. **An external rewrite is cached by Vercel only with `x-vercel-enable-rewrite-caching: 1` on the route**, set in `web/vercel.json` (Vercel documents it there; the rewrite itself stays in `next.config.ts` so dev serves it): projects created before 6 April 2026 ignore the origin's `cache-control` otherwise, and without it production served every logo as `x-vercel-cache: MISS`. Add the same header to any new external rewrite whose responses may be cached; never to one that must stay fresh. `proxy.ts` skips the prefix and the Studio reserves it. Never reference `cdn.sanity.io` from markup the browser loads.
+- **Raster images are served as AVIF** (`images.formats`, WebP fallback by `Accept`).
+- **`<Image fill>` requires `relative` on parent container.** The component renders `<picture className="absolute size-full">` — without `relative` on the parent, images collapse to zero height. Always: `<div className="relative aspect-[...] overflow-hidden"><Image fill .../></div>`
+- **Full-bleed background `<Image fill>` needs its own `absolute inset-0` wrapper.** The rendered `<picture>` is `absolute size-full` but has **no explicit insets**, so on a section with `padding-*` its static position inherits that padding and the backdrop starts *below* the padding instead of at the section's top edge. Wrap it: `<div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden select-none"><Image fill … /></div>`. The `inset-0` pins it to the section's true top; `pointer-events-none`/`select-none` stop the decorative image from intercepting clicks/drags. (Putting `relative` on the section is *not* enough when the section has top padding.)
+- **GROQ image arrays must use `IMAGE_FRAGMENT`**, not `ASSET_IMG_QUERY`. Use `images[] { _key, ${IMAGE_FRAGMENT} }` for correct `ImageFragment` type compatibility.
+- Never nest `<a>` inside `BaseLink`
+- **`resolveUrl` normalizes internal hrefs to root-relative** (`ensureLeadingSlash`). Slugs may be stored without a leading slash; an href like `pricing` resolves relative to the current path (e.g. `/blog/pricing`) instead of `/pricing`. Always route internal links through `resolveUrl` — don't concatenate `BASE_URL + slug` by hand.
+
+### stegaClean
+
+When using string values from Sanity in UI logic (conditionals, CSS class names, etc.), wrap with `stegaClean()` to strip visual editing encoding. Only needed for string values used in conditions, not for rendering text content.

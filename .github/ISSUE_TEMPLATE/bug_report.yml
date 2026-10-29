@@ -1,0 +1,53 @@
+name: Bug report
+description: Something in a starter or a skill does not work as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Security problems go through SECURITY.md, not public issues.
+        Never paste Sanity tokens, project ids of private projects or other secrets.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part?
+      multiple: true
+      options:
+        - base
+        - theme-meridian
+        - agent layer (.agents/ skills and reviewers)
+        - CI / repository
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. `npm create sanity@latest -- --template ...`
+        2. `pnpm dev`
+        3. Open /admin and ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Terminal output, browser console errors, screenshots.
+      render: shell
+  - type: input
+    id: versions
+    attributes:
+      label: Environment
+      placeholder: "Node 22.12, pnpm 10.23, macOS 15, Chrome 140"
+  - type: input
+    id: commit
+    attributes:
+      label: Commit or date of the template you started from

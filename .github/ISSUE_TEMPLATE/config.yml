@@ -1,0 +1,10 @@
+# GitHub adds a "Report a security vulnerability" link here on its own
+# (SECURITY.md + private vulnerability reporting), so it is not repeated.
+blank_issues_enabled: false
+contact_links:
+  - name: Sanity documentation
+    url: https://www.sanity.io/docs
+    about: Questions about Sanity itself (Studio, GROQ, datasets).
+  - name: Next.js documentation
+    url: https://nextjs.org/docs
+    about: Questions about Next.js itself.

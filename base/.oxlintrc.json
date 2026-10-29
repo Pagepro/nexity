@@ -1,0 +1,84 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "eslint",
+    "typescript",
+    "react",
+    "jsx-a11y",
+    "import",
+    "nextjs",
+    "oxc",
+    "promise",
+    "unicorn"
+  ],
+  "categories": {
+    "correctness": "error"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2024": true
+  },
+  "settings": {
+    "react": {
+      "version": "19.2.1"
+    }
+  },
+  "rules": {
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error", "info"]
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-shadow": "error",
+    "typescript/no-explicit-any": "warn",
+    "typescript/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "typescript/ban-ts-comment": [
+      "error",
+      {
+        "ts-ignore": "allow-with-description",
+        "ts-nocheck": "allow-with-description"
+      }
+    ],
+    "react/no-array-index-key": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/prefer-tag-over-role": "warn",
+    "no-extra-boolean-cast": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["studio/**"],
+      "rules": {
+        "nextjs/no-img-element": "off"
+      }
+    }
+  ],
+  "ignorePatterns": [
+    "node_modules",
+    ".next",
+    "dist",
+    "vercel-app",
+    "/.impeccable",
+    "web/src/types",
+    "schema.json",
+    ".agents/skills",
+    ".agents/agents",
+    ".claude/skills",
+    ".claude/agents",
+    ".cursor/skills"
+  ]
+}

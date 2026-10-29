@@ -1,0 +1,245 @@
+{
+  "anchor_article": "Node.js 22 became the active long term support release in October 2024.\nThe team reports that   the   adoption   rate reached 63% of new projects.\nWe think the tooling is good.",
+  "anchors": [
+    {
+      "claim": "Node.js 22 became the active long term support release in October 2024.",
+      "method": "exact",
+      "span": {
+        "start": 0,
+        "end": 71
+      },
+      "matched_text": "Node.js 22 became the active long term support release in October 2024.",
+      "score_at_least": 90.0
+    },
+    {
+      "claim": "the adoption rate reached 63% of new projects",
+      "method": "normalized",
+      "span": {
+        "start": 96,
+        "end": 145
+      },
+      "matched_text": "the   adoption   rate reached 63% of new projects",
+      "score_at_least": 90.0
+    },
+    {
+      "claim": "Node.js 22 became the ACTIVE long term support release in October 2024.",
+      "method": "normalized",
+      "span": {
+        "start": 0,
+        "end": 71
+      },
+      "matched_text": "Node.js 22 became the active long term support release in October 2024.",
+      "score_at_least": 90.0
+    },
+    {
+      "claim": "Node.js 22 became the active long-term support release in October 2024.",
+      "method": "fuzzy",
+      "span": {
+        "start": 0,
+        "end": 71
+      },
+      "matched_text": "Node.js 22 became the active long term support release in October 2024.",
+      "score_at_least": 90.0
+    },
+    {
+      "claim": "Node.js 22 became the active long term support release in 2024.",
+      "method": "fuzzy",
+      "span": {
+        "start": 0,
+        "end": 58
+      },
+      "matched_text": "Node.js 22 became the active long term support release in ",
+      "score_at_least": 90.0
+    },
+    {
+      "claim": "Node.js 22 finally became the active long term support release in October 2024.",
+      "method": "fuzzy",
+      "span": {
+        "start": 0,
+        "end": 71
+      },
+      "matched_text": "Node.js 22 became the active long term support release in October 2024.",
+      "score_at_least": 90.0
+    },
+    {
+      "claim": "Node.js 22 became the activ long term suport release in October 2024.",
+      "method": "fuzzy",
+      "span": {
+        "start": 0,
+        "end": 69
+      },
+      "matched_text": "Node.js 22 became the active long term support release in October 202",
+      "score_at_least": 90.0
+    },
+    {
+      "claim": "Node.js 22 became the active long term support release",
+      "method": "exact",
+      "span": {
+        "start": 0,
+        "end": 54
+      },
+      "matched_text": "Node.js 22 became the active long term support release",
+      "score_at_least": 90.0
+    },
+    {
+      "claim": "Rust 1.80 removed the borrow checker in 2019.",
+      "method": "not_found",
+      "span": null,
+      "matched_text": null,
+      "score_at_least": 0.0
+    },
+    {
+      "claim": "Node.js 18 became the maintenance release in September 2019 for new teams.",
+      "method": "not_found",
+      "span": null,
+      "matched_text": null,
+      "score_at_least": 0.0
+    },
+    {
+      "claim": "",
+      "method": "not_found",
+      "span": null,
+      "matched_text": null,
+      "score_at_least": 0.0
+    }
+  ],
+  "quote_page": "Announcing TypeScript 5.5. This section was written by Dan Vanderkam, who implemented this feature. Many paragraphs of other text sit between the two passages. This works because TypeScript now infers a type predicate for the filter function.",
+  "quotes": [
+    {
+      "quote": "This section was written by Dan Vanderkam, who implemented this feature.",
+      "accepted": true
+    },
+    {
+      "quote": "This section was written by Dan Vanderkam who implemented this feature",
+      "accepted": true
+    },
+    {
+      "quote": "This section was writen by Dan Vanderkam, who implemented this featue.",
+      "accepted": true
+    },
+    {
+      "quote": "This section was written by Anna Nowak, who implemented this feature.",
+      "accepted": false
+    },
+    {
+      "quote": "infers a type predicate for the filter function",
+      "accepted": true
+    },
+    {
+      "quote": "This section was written by Dan Vanderkam, who implemented this feature. This works because TypeScript now infers a type predicate for the filter function.",
+      "accepted": true
+    },
+    {
+      "quote": "This section was written by Dan Vanderkam, who implemented this feature. The TypeScript board cancelled the release after a private vote.",
+      "accepted": false
+    },
+    {
+      "quote": "TypeScript 5.5 removed all type checking.",
+      "accepted": false
+    },
+    {
+      "quote": "Yes. No.",
+      "accepted": false
+    }
+  ],
+  "version_scope": [
+    {
+      "claim": "Next.js 14 added X.",
+      "page": "This page describes Next.js 13.",
+      "in_scope": false
+    },
+    {
+      "claim": "Next.js 14 added X.",
+      "page": "This page describes Next.js 15.",
+      "in_scope": true
+    },
+    {
+      "claim": "Next.js 14 added X.",
+      "page": "This page describes React 19.",
+      "in_scope": true
+    },
+    {
+      "claim": "The tool is fast.",
+      "page": "This page describes Next.js 13.",
+      "in_scope": true
+    },
+    {
+      "claim": "React Native 0.81 needs Node 20.19.4.",
+      "page": "React Native 0.83 release notes.",
+      "in_scope": true
+    }
+  ],
+  "plans": [
+    {
+      "id": "postgres-parallel-joins",
+      "text": "PostgreSQL 16 allows parallel execution of FULL and RIGHT joins.",
+      "required_values": [
+        "16"
+      ],
+      "required_terms": [
+        "PostgreSQL",
+        "FULL",
+        "RIGHT"
+      ]
+    },
+    {
+      "id": "rn-node-requirement",
+      "text": "React Native 0.81 raised the minimum requirements to Node.js 20.19.4 and Xcode 16.1.",
+      "required_values": [
+        "0.81",
+        "20.19.4",
+        "16.1"
+      ],
+      "required_terms": [
+        "React Native",
+        "Node.js",
+        "Xcode"
+      ]
+    },
+    {
+      "id": "typescript-predicates",
+      "text": "TypeScript 5.5 introduced inferred type predicates.",
+      "required_values": [
+        "5.5"
+      ],
+      "required_terms": [
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "vercel-usage-billing",
+      "text": "Vercel charges based on actual consumption rather than fixed monthly fees.",
+      "required_values": [],
+      "required_terms": [
+        "Vercel"
+      ]
+    },
+    {
+      "id": "cypress-node-version",
+      "text": "Cypress require above 12.0 of the engine node version.",
+      "required_values": [
+        "12.0"
+      ],
+      "required_terms": [
+        "Cypress"
+      ]
+    },
+    {
+      "id": "rn-diff-purge",
+      "text": "It utilizes the rn-diff-purge project internally to identify file changes.",
+      "required_values": [],
+      "required_terms": [
+        "React Native CLI",
+        "rn-diff-purge"
+      ]
+    },
+    {
+      "id": "no-value-pricing-rule",
+      "text": "Vercel does not charge per user.",
+      "required_values": [],
+      "required_terms": [
+        "Vercel"
+      ]
+    }
+  ]
+}

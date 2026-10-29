@@ -1,0 +1,56 @@
+# Keeps each starter installable with
+# `npm create sanity@latest -- --template <owner>/<repo>/<starter>`.
+# The validator is the same check `sanity init` runs before it downloads a
+# template: every workspace package with a Sanity dependency needs a
+# sanity.config + sanity.cli and an env template (.env.example) that names the
+# project id and dataset. Run it locally from OUTSIDE the repo (see the step
+# comment below), passing the starter path:
+#   cd /tmp && npx -p @sanity/template-validator@3.1.1 sanity-template-validate <repo-path>/base
+#
+# It runs the validator's CLI on the checkout, not the `sanity-io/template-validator`
+# action: the action fetches files from raw.githubusercontent.com by branch name,
+# so it sees nothing in a private repo and builds a broken URL on pull requests
+# (`refs/pull/N/merge`).
+#
+# `sanity init` downloads only the starter folder, so this workflow never
+# reaches the projects created from the template.
+name: Validate Sanity template
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: validate (${{ matrix.dir }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        dir: [base, theme-meridian]
+    defaults:
+      run:
+        working-directory: ${{ matrix.dir }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: ${{ matrix.dir }}/.nvmrc
+      # Overrides the default working directory on purpose and passes the
+      # starter folder as the path instead: inside the repo npx resolves the
+      # copy @sanity/cli already installs (same version, no linked bin) once
+      # node_modules exists, and fails with "command not found".
+      - name: Validate Sanity template
+        working-directory: ${{ runner.temp }}
+        env:
+          TEMPLATE_DIR: ${{ github.workspace }}/${{ matrix.dir }}
+        run: npx --yes -p @sanity/template-validator@3.1.1 sanity-template-validate "$TEMPLATE_DIR"

@@ -1,0 +1,63 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 90,
+  "tabWidth": 2,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "trailingComma": "all",
+  "endOfLine": "lf",
+  "semi": true,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "always",
+  "sortPackageJson": false,
+  "sortImports": {
+    "newlinesBetween": true,
+    "customGroups": [
+      {
+        "groupName": "meridian-workspace",
+        "elementNamePattern": ["@meridian/**"]
+      },
+      {
+        "groupName": "alias-internal",
+        "elementNamePattern": ["@/**", "$/**"]
+      }
+    ],
+    "groups": [
+      ["value-builtin", "value-external", "type-builtin", "type-external"],
+      {
+        "newlinesBetween": false
+      },
+      "meridian-workspace",
+      "alias-internal",
+      ["value-parent", "type-parent"],
+      ["value-sibling", "type-sibling", "value-index", "type-index"],
+      "unknown"
+    ]
+  },
+  "sortTailwindcss": {
+    "stylesheet": "./web/src/styles/app.css",
+    "functions": ["clsx", "cn", "twMerge"]
+  },
+  "ignorePatterns": [
+    "node_modules",
+    ".next",
+    "dist",
+    "vercel-app",
+    "/tools/product-mocks/out",
+    "/.impeccable",
+    "/package.json",
+    "web/src/types",
+    "web/public",
+    "schema.json",
+    "**/*.md",
+    ".agents/skills",
+    ".agents/agents",
+    ".claude/skills",
+    ".claude/agents",
+    ".cursor/skills",
+    ".agents/catalog.json",
+    ".agents/install-lock.json"
+  ]
+}
