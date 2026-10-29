@@ -62,7 +62,7 @@ create command.) The CLI already made the project and dataset, the localhost COR
 origins, a read token (`SANITY_API_READ_TOKEN`, plus a write token when the template
 asks for one), wrote `web/.env.local` and `studio/.env`, and installed the
 dependencies. Mark Steps 1–2 done, fill the gaps `envs:validate` names in Step 3
-(usually `SANITY_REVALIDATE_SECRET` and `SANITY_PREVIEW_TOKEN`), then go on to Step 4.
+(usually `SANITY_REVALIDATE_SECRET`), then go on to Step 4.
 
 Then say which step you start at.
 
@@ -107,7 +107,6 @@ them and pastes each when you ask (Step 3 writes them):
 | Token | Permission | Variable | Why |
 |---|---|---|---|
 | Read token | **Viewer** | `SANITY_API_READ_TOKEN` | Recommended. Draft mode, the visual editor, a private dataset. Without it the site runs on a public dataset with draft mode off (`/api/draft-mode/enable` answers 500 with the reason) |
-| Preview token | **Viewer** | `SANITY_PREVIEW_TOKEN` | Optional. Live updates in the visual editor; without it the preview still renders, it just needs a reload |
 | Write token | **Editor** | `SANITY_API_WRITE_TOKEN` | Only for scripts that write content (`pnpm seed`, a skill's `--apply` step). The older name `SANITY_API_TOKEN` still works. Revoke it when no script needs it |
 
 **Done when:** the user has the project ID, the dataset exists and the tokens they
@@ -141,7 +140,6 @@ screen. An empty value (`KEY=`) counts as unset.
 | `NEXT_PUBLIC_SANITY_DATASET` | yes | The dataset from Step 2 |
 | `SANITY_API_READ_TOKEN` | recommended | Viewer token |
 | `SANITY_REVALIDATE_SECRET` | recommended | A random string: `openssl rand -hex 32`. The webhook signs with it, so production must have the same value. Without it a published change waits for the 30-day cache |
-| `SANITY_PREVIEW_TOKEN` | recommended | Viewer token, live preview |
 | `NEXT_PUBLIC_BASE_URL` | no | Unset falls back to the Vercel URL, else `http://localhost:3000` (`web/src/setup/base-url.ts`). Set it to the real domain once known. **No trailing slash** |
 | `SANITY_API_WRITE_TOKEN` | scripts only | Editor token |
 | `NEXT_PUBLIC_SANITY_API_VERSION` | no | Defaults to `2024-12-01` |

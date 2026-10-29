@@ -7,7 +7,7 @@ const PreviewTokenBanner = () => (
   >
     <VscWarning className="size-4 shrink-0" aria-hidden />
     <span>
-      Sanity preview token is invalid or expired — live preview updates are disabled.
+      Sanity read token is invalid or expired — live preview updates are disabled.
       Please contact the tech team to check this.
     </span>
   </div>

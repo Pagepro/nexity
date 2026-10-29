@@ -160,11 +160,7 @@ export async function doctor(project, { url = "http://localhost:3000" } = {}) {
             : "Missing or empty; configure the package environment.",
         );
     }
-    for (const name of [
-      "SANITY_API_READ_TOKEN",
-      "SANITY_REVALIDATE_SECRET",
-      "SANITY_PREVIEW_TOKEN",
-    ]) {
+    for (const name of ["SANITY_API_READ_TOKEN", "SANITY_REVALIDATE_SECRET"]) {
       add(
         `env:web:${name}`,
         web[name]?.trim() ? "pass" : "warn",

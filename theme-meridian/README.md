@@ -82,8 +82,7 @@ first real deploy.
    and the `Meridian` display name. [`docs/agents/template-setup.md`](docs/agents/template-setup.md)
    lists every file.
 2. **Set the remaining env vars** that `sanity init` can't create:
-   `SANITY_REVALIDATE_SECRET` (`openssl rand -hex 32`) and, for live preview
-   updates, `SANITY_PREVIEW_TOKEN`. `pnpm --filter @meridian/web envs:validate`
+   `SANITY_REVALIDATE_SECRET` (`openssl rand -hex 32`). `pnpm --filter @meridian/web envs:validate`
    and the Next steps screen list what is still missing.
 3. **Link the Sanity blueprint** (CORS + revalidate webhook). First check the
    two blueprint variables in `web/.env.local`, because the blueprint reads them
@@ -185,8 +184,7 @@ Create them in [sanity.io/manage](https://www.sanity.io/manage) → your project
 
 | Token | Permission | Variable | Needed for |
 |---|---|---|---|
-| Read token | **Viewer** | `SANITY_API_READ_TOKEN` | Recommended. Draft mode and the visual editor, and reading a private dataset. Without it the site still runs on a public dataset, with draft mode off |
-| Preview token | **Viewer** | `SANITY_PREVIEW_TOKEN` | Optional. Live updates in the visual editor. Without it the preview still renders, it just doesn't refresh live |
+| Read token | **Viewer** | `SANITY_API_READ_TOKEN` | Recommended. Draft mode, the visual editor with its live updates, and reading a private dataset. Without it the site still runs on a public dataset, with draft mode off |
 | Write token | **Editor** | `SANITY_API_WRITE_TOKEN` | Only the seed script (`pnpm seed`). The older name `SANITY_API_TOKEN` still works. Revoke it once seeding is done |
 
 `sanity init` (Option A) creates the read and the write token for you.
@@ -203,9 +201,8 @@ NEXT_PUBLIC_SANITY_PROJECT_ID=your-project-id
 NEXT_PUBLIC_SANITY_DATASET=production
 
 # Recommended: the site runs without them, `envs:validate` and the Next steps screen warn
-SANITY_API_READ_TOKEN=your-read-token          # Viewer token: draft mode, visual editor, private datasets
+SANITY_API_READ_TOKEN=your-read-token          # Viewer token: draft mode, visual editor + live updates, private datasets
 SANITY_REVALIDATE_SECRET=your-secret          # Webhook signing secret: `openssl rand -hex 32`; same value on Vercel
-SANITY_PREVIEW_TOKEN=your-preview-token       # Viewer token for live updates in the visual editor (src/sanity/lib/token.ts)
 
 # Optional
 NEXT_PUBLIC_SANITY_API_VERSION=2024-12-01    # Unset: 2024-12-01 (src/sanity/lib/env.ts)
