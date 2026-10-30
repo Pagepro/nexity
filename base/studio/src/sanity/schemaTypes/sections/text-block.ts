@@ -55,33 +55,4 @@ export default defineType({
       subtitle: "Text block",
     }),
   },
-  initialValue: {
-    content: [
-      {
-        _key: "block_1",
-        _type: "block",
-        style: "normal",
-        children: [
-          {
-            _key: "block_1_span_1",
-            _type: "span",
-            text: "Your text content goes here.",
-          },
-        ],
-      },
-    ],
-    ctas: [
-      {
-        _key: "cta_1",
-        _type: "cta",
-        link: {
-          label: "Learn More",
-          _type: "link",
-          type: "external",
-          external: "https://www.google.com",
-        },
-        variant: "primary",
-      },
-    ],
-  },
 });

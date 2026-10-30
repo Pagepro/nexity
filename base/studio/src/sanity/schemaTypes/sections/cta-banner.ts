@@ -24,7 +24,7 @@ export default defineType({
       name: "content",
       title: "Content",
       description:
-        "Heading and supporting copy shown on the left of the banner. Use the heading-2 block style for the heading.",
+        "Heading and supporting copy shown on the left of the banner. Use the “Section Heading L” style for the heading.",
       type: "simpleRichText",
       group: "content",
     }),
@@ -64,57 +64,5 @@ export default defineType({
       subtitle: "CTA banner",
       media: media?.image,
     }),
-  },
-  initialValue: {
-    content: [
-      {
-        _key: "block_1",
-        _type: "block",
-        style: "heading-2",
-        children: [
-          {
-            _key: "block_1_span_1",
-            _type: "span",
-            text: "Your pipeline shouldn't feel like a desert",
-          },
-        ],
-      },
-      {
-        _key: "block_2",
-        _type: "block",
-        style: "body-2",
-        children: [
-          {
-            _key: "block_2_span_1",
-            _type: "span",
-            text: "Connect your CRM and get your first win/loss report in under 24 hours.",
-          },
-        ],
-      },
-    ],
-    ctas: [
-      {
-        _key: "cta_1",
-        _type: "cta",
-        link: {
-          label: "Start free trial",
-          _type: "link",
-          type: "external",
-          external: "https://www.google.com",
-        },
-        variant: "primary",
-      },
-      {
-        _key: "cta_2",
-        _type: "cta",
-        link: {
-          label: "Book free demo",
-          _type: "link",
-          type: "external",
-          external: "https://www.google.com",
-        },
-        variant: "ghost",
-      },
-    ],
   },
 });

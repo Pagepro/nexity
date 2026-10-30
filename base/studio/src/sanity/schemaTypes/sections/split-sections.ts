@@ -56,7 +56,7 @@ export default defineType({
               name: "content",
               title: "Content",
               description:
-                "Heading and supporting copy. Use the heading-2 block style for the heading and body-2 for the description.",
+                "Heading and supporting copy. Use the “Section Heading L” style for the heading and “Text Medium” for the description.",
               type: "simpleRichText",
               validation: (Rule) => Rule.required().error("Each row needs heading copy."),
             }),

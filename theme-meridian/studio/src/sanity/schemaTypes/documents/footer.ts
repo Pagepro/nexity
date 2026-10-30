@@ -17,7 +17,7 @@ export default defineType({
       title: "Subscribe heading",
       type: "simpleRichText",
       description:
-        "Headline for the top call-to-action band (use the heading-2 block style). Short copy, no lists.",
+        "Headline for the top call-to-action band (use the “Section Heading L” style). Short copy, no lists.",
       group: "subscribe",
     }),
     defineField({

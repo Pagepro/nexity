@@ -53,7 +53,7 @@ export default defineType({
       name: "content",
       title: "Section title",
       description:
-        "Heading and supporting copy shown in the left column (Grid layout only). Use the heading-2 block style for the heading.",
+        "Heading and supporting copy shown in the left column (Grid layout only). Use the “Section Heading L” style for the heading.",
       type: "simpleRichText",
       group: "content",
       hidden: ({ parent }) => parent?.layout === "band",

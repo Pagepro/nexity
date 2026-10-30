@@ -35,6 +35,7 @@ export default defineType({
           { title: "Product hero", value: "product-hero" },
         ],
       },
+      initialValue: "product-hero",
     }),
     defineField({
       name: "pretitle",
@@ -146,61 +147,5 @@ export default defineType({
       subtitle: "Hero",
       media: media?.image,
     }),
-  },
-  initialValue: {
-    layout: "product-hero",
-    pretitle: "Acme",
-    content: [
-      {
-        _key: "block_1",
-        _type: "block",
-        style: "heading-1",
-        children: [
-          {
-            _key: "block_1_span_1",
-            _type: "span",
-            text: "Build Something Amazing",
-          },
-        ],
-      },
-      {
-        _key: "block_2",
-        _type: "block",
-        style: "normal",
-        children: [
-          {
-            _key: "block_2_span_1",
-            _type: "span",
-            text: "Create exceptional digital experiences with our powerful platform. Everything you need to bring your vision to life.",
-          },
-        ],
-      },
-    ],
-    ctas: [
-      {
-        _key: "cta_1",
-        _type: "cta",
-        link: {
-          label: "Get Started",
-          _type: "link",
-          type: "external",
-          external: "https://www.google.com",
-        },
-        variant: "primary",
-      },
-      {
-        _key: "cta_2",
-        _type: "cta",
-        link: {
-          label: "Learn More",
-          _type: "link",
-          type: "external",
-          external: "https://www.google.com",
-        },
-        variant: "primary-outline",
-      },
-    ],
-    textAlign: "center",
-    alignItems: "center",
   },
 });

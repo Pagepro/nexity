@@ -43,7 +43,7 @@ export default defineType({
       name: "content",
       title: "Content",
       description:
-        "Section heading and optional supporting copy. Use the heading-2 block style for the heading.",
+        "Section heading and optional supporting copy. Use the “Section Heading L” style for the heading.",
       type: "simpleRichText",
       group: "content",
     }),

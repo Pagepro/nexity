@@ -27,7 +27,7 @@ export default defineType({
       name: "content",
       title: "Content",
       description:
-        "Section heading and supporting copy. Use the heading-2 block style for the heading.",
+        "Section heading and supporting copy. Use the “Section Heading L” style for the heading.",
       type: "simpleRichText",
       group: "content",
     }),
@@ -84,67 +84,5 @@ export default defineType({
       title: getPlainText(content) || "FAQ",
       subtitle: items?.length ? formatCount(items, "question") : "FAQ",
     }),
-  },
-  initialValue: {
-    pretitle: "FAQ",
-    content: [
-      {
-        _key: "block_1",
-        _type: "block",
-        style: "heading-2",
-        children: [
-          { _key: "block_1_span_1", _type: "span", text: "Questions, answered" },
-        ],
-      },
-      {
-        _key: "block_2",
-        _type: "block",
-        style: "body-2",
-        children: [
-          {
-            _key: "block_2_span_1",
-            _type: "span",
-            text: "We've answered the ones we hear most. If yours isn't here, talk to us.",
-          },
-        ],
-      },
-    ],
-    items: [
-      {
-        _key: "item_1",
-        _type: "faqItem",
-        question: "How does Meridian connect to my CRM?",
-        answer:
-          "We integrate directly with Cumulo and Harborline via native connectors. Setup takes under 30 minutes with no engineering required.",
-      },
-      {
-        _key: "item_2",
-        _type: "faqItem",
-        question: "What data does Meridian need to get started?",
-        answer:
-          "CRM deal data is enough to generate your first win/loss report. Content attribution and deal signals improve as you connect additional sources like email, calls, and your CMS.",
-      },
-      {
-        _key: "item_3",
-        _type: "faqItem",
-        question: "How long before I see results?",
-        answer:
-          "Most teams have their first insight report within 24 hours of connecting their CRM. Trend data becomes meaningful after 30–60 days.",
-      },
-      {
-        _key: "item_4",
-        _type: "faqItem",
-        question: "Is my data secure?",
-        answer:
-          "Yes. Meridian is SOC 2 Type II certified and GDPR compliant. Your data is never used to train models or shared with third parties.",
-      },
-      {
-        _key: "item_5",
-        _type: "faqItem",
-        question: "Can I cancel anytime?",
-        answer:
-          "Yes. Month-to-month plans can be cancelled at any time. Annual plans are refunded on a pro-rata basis within the first 30 days.",
-      },
-    ],
   },
 });
