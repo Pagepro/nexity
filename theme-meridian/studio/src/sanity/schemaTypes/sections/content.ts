@@ -31,7 +31,4 @@ export default defineType({
       subtitle: "Content section (Rich Text)",
     }),
   },
-  initialValue: {
-    content: [],
-  },
 });
