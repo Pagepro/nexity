@@ -100,6 +100,13 @@ are intent, not markup to paste. A **Figma link**: read it through whatever Figm
 session has and map literal values to the nearest token. **Only a description**: propose a
 look built from `DESIGN.md` recipes and confirm it before writing markup.
 
+**The user asks for several variants** to choose from: when the `impeccable` skill is
+installed, use it to develop them, with `DESIGN.md` and `BRAND.md` still binding over its
+defaults. Without it, draw them yourself from `DESIGN.md` recipes. Say which path you took.
+Either way, show each variant in the page it will sit in, on a temporary uncommitted route,
+and write no schema, query or registry entry until the user has picked one. Delete the route
+before Phase 3.
+
 Where the reference and `DESIGN.md` disagree, follow `DESIGN.md` and raise the conflict;
 change `DESIGN.md` (with `web/src/styles/app.css`, and `web/src/ui/fonts.ts` for fonts) only
 when the user confirms the reference is the new rule. A reference that departs from every
