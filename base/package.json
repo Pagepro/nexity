@@ -34,7 +34,7 @@
   "devDependencies": {
     "@sanity/blueprints": "^0.29.0",
     "@sanity/cli": "^8.22.1",
-    "dotenv": "^17.4.2",
+    "dotenv": "^18.0.9",
     "husky": "^9.1.7",
     "oxfmt": "^0.74.0",
     "oxlint": "~1.89.0",
