@@ -1,11 +1,11 @@
 # Nexity
 
-Nexity is a Next.js 16 and Sanity starter for marketing sites. Each starter is a pnpm monorepo with two packages:
+Nexity is a migration framework for AI-native websites, built on Next.js 16 and Sanity 6. Its starter, [`base/`](base/), is a pnpm monorepo with two packages:
 
 - **`web/`**: the Next.js 16 app (App Router, Tailwind CSS 4, TypeScript), with the Sanity Studio embedded at `/admin`.
 - **`studio/`**: a standalone Sanity Studio with the same schemas. Schemas live here and `web/` imports them.
 
-This repository holds two starters and, in `.agents/`, the agent layer that works with them: skills and read-only agents (reviewers, auditors) for any coding agent (Claude Code, Codex, Cursor and others).
+This repository holds the starter, a demo site built on it (`theme-meridian/`) and, in `.agents/`, the agent layer that works with them: skills and read-only agents (reviewers, auditors) for any coding agent (Claude Code, Codex, Cursor and others).
 
 ## Stack
 

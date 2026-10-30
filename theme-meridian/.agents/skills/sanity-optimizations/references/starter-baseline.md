@@ -1,4 +1,4 @@
-# Nexity starter baseline (checked 2026-10-28)
+# Nexity baseline (checked 2026-10-28)
 
 What the starter's data layer already does right, and the gaps known when this was last
 checked. Both starters share the same data layer. On a project built from one, each auditor

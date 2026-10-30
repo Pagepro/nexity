@@ -8,7 +8,7 @@ export const API_VERSION = "2025-02-19";
 
 /** Link annotation shapes. `$id` is the target document's id, `$path` its site path, `$url` its full URL. */
 export const LINK_TEMPLATES = {
-  // The Nexity starter's `link` annotation (simpleLink): a reference survives slug changes.
+  // A Nexity project's `link` annotation (simpleLink): a reference survives slug changes.
   reference: { _type: "link", type: "internal", internal: { _type: "reference", _ref: "$id" } },
   // Sanity's default annotation and most custom ones.
   href: { _type: "link", href: "$path" },
