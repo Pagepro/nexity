@@ -229,7 +229,7 @@ node $IL sanity-check --documents=<file>      # MCP route: documents read throug
 ```
 
 Prints what the dataset's link annotations look like and saves the shape new links take:
-`reference` (`{_type: "link", type: "internal", internal: {_ref}}`, the Nexity starter's
+`reference` (`{_type: "link", type: "internal", internal: {_ref}}`, a Nexity project's
 `link`) or `href` (`{_type: "link", href: "/path"}`, Sanity's default), or
 `--link='<JSON with $id, $path or $url>'` for a custom schema. A shape the schema does not
 know makes an invalid draft: **show the user the shapes found and confirm the choice**. It

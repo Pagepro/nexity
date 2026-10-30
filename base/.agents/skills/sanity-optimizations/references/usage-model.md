@@ -63,7 +63,7 @@ Function, so each matched request is an invocation plus CPU time.
 - **Page views / month** = visitors × pages per visit × 30.
 - **Fetches per page** (F) = distinct Sanity queries one cold server render of a typical
   route makes, counted from the code (layout + page + `generateMetadata` + nested
-  components), duplicates that Next does not dedupe included. In the Nexity starter a
+  components), duplicates that Next does not dedupe included. In a Nexity project a
   catch-all page makes 8 distinct queries (setup status, site, header, footer, page,
   global-before, global-after, site schema) and repeats the page query in
   `generateMetadata`.

@@ -1,6 +1,6 @@
 # Agent skills and read-only agents
 
-Skills and agents that know the Nexity starters' conventions. They are written for any
+Skills and agents that know the conventions of Nexity projects. They are written for any
 coding agent, not one vendor: skills use the open Agent Skills format
 (`skills/<name>/SKILL.md` with `name` and `description` frontmatter), agents are plain
 Markdown checklists (`agents/<name>.md`). Both read the project's `AGENTS.md`, `DESIGN.md`
