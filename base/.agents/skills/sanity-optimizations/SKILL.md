@@ -23,7 +23,7 @@ Each check lives in exactly one auditor file; change it there.
 
 Settle these before the audit and put them at the top of the report:
 
-- **Project and Next app path** (`web/` in the starter). Built from the Nexity starter? Then
+- **Project and Next app path** (`web/` in the starter). A Nexity project? Then
   the auditors check `references/starter-baseline.md` instead of rediscovering it.
 - **Versions** of `next`, `next-sanity`, `@sanity/client` (the app's `package.json`).
 - **Data layer map**, one line each: client(s), fetch helper, tag map and webhook, image path,
