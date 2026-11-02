@@ -113,6 +113,10 @@ comments are the per-section spec — follow them exactly. Rules that override f
   fabricated ranges, no rule-of-three padding). Verbatim quotes from the client's writing
   are evidence and stay untouched even when they break a rule; punctuation the templates
   themselves mandate (the `# Brand kit — <name>` title) is exempt.
+- A figure that has a conflict row in `claims.md` never appears in the kit's prose as an
+  outcome, proof point or promise ("Promised outcome: … doubled in 90 days"). If the prose
+  has to mention it, say it is unresolved and link it to its evidence row; the HTML view
+  marks it in red so a writer cannot copy it by accident.
 - When the client's strongest writing itself relies on a device the base rules ban
   (signature em dashes, negative parallelism), keep the base rule in the kit and add a
   question to the gap questionnaire — the client decides whether their signature device
@@ -131,15 +135,26 @@ as this skill; its design is documented in `DESIGN-NOTES.md` — do not restyle 
    `{{CLAIM_COUNT}}` (their sum).
 2. Fill each `<!-- SLOT: ... -->` region with the corresponding content from
    `brand-kit.md`, `evidence.md` and `gap-questionnaire.md`, using only the markup
-   patterns the template's slot comments show (`.prose p`, `.field`, `.rulegroup`,
-   `.aud`, `.sub`, evidence `<tr id="eN">`, `blockquote`, `.gapgroup`/`.gap`).
+   patterns the template's slot comments show (`.prose p`, `.rulegroup`, `.aud`, `.sub`,
+   evidence `<tr id="eN">`, `blockquote`, `.gapgroup`/`.gap`, `.brief-list li`).
+   `SLOT:BRIEF`, under the masthead, holds the 3 to 5 conflicts a writer is most likely to
+   repeat, most damaging first, one plain sentence each naming both values and where they
+   appear; link each to its conflict as `#c1`, `#c2`... Conflict titles in the claims
+   register end with one full stop (`<strong>Customer count.</strong>`), never two.
+   Write cross-references as plain text, "gap question 5" and "C2": the page's script
+   numbers the conflict and question rows, turns those references into links both ways,
+   marks every fact link by the status of its evidence (conflict, tension, unverified),
+   adds a way back from an evidence row and the Copy buttons. Do not add any of that by
+   hand.
 3. Provenance links are the point of the page: wrap every claim in the kit prose that
    has an evidence row in `<a class="fact" href="#eN">...</a>`, where `eN` is that
    row's id (rows are numbered in evidence order). Tag evidence rows that record a
    public contradiction with `<span class="tag">conflict</span>` after the fact text.
 4. Self-check before publishing: no `{{` or `SLOT:` left in the file; every
-   `href="#e..."` resolves to an existing row id (grep both sides); the nav counts
-   match the real section counts.
+   `href="#e..."` resolves to an existing row id (grep both sides); every brief item
+   points to a conflict that exists (`#cN` for N up to the conflict count); no doubled
+   punctuation (`..`, `""`); the nav counts match the real section counts. The template
+   is a complete document (doctype, `lang`, viewport): keep its head as it is.
 
 If your agent can publish an artifact (Claude's Artifact tool), publish `brand-kit.html`:
 favicon `📇`, title from the file's `<title>`. First publish of a client gets a new URL; a
