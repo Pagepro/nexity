@@ -25,7 +25,7 @@ evidence row, and ends at the questions only the company's own people can answer
 FIRST VIEWPORT: 56px topbar (Nexity wordmark + "Skills", the `/brand-kit` pill, run date).
 240px left nav: five kit sections, then the appendix (Claims register, Evidence, Gap
 questionnaire) with mono counts and a dot on the active item. The reading column opens on
-a masthead: company name in Caslon at 60px, one line with the domain, then four figures
+a masthead: "<company> brand kit" in Caslon at 60px, one line with the domain, then four figures
 (facts with a source, audiences, conflicts, open questions), each linking to its
 section. Column max 880px, prose at ~68ch.
 
