@@ -18,15 +18,15 @@ system's destructive red, for conflicts and tension only. Open gaps are neutral 
 Print turns light. The Nexity wordmark sits in the topbar and in the footer ("Made with
 Nexity Skills", linking nexity.build).
 
-STORY: A marketer, an editor or the client opens the page, understands who the company is
+STORY: A marketer, an editor or someone from product or sales opens the page, understands who the company is
 within one viewport, walks the five kit sections, clicks any number to land on its
-evidence row, and ends at the questions only the client can answer.
+evidence row, and ends at the questions only the company's own people can answer.
 
 FIRST VIEWPORT: 56px topbar (Nexity wordmark + "Skills", the `/brand-kit` pill, run date).
 240px left nav: five kit sections, then the appendix (Claims register, Evidence, Gap
 questionnaire) with mono counts and a dot on the active item. The reading column opens on
-a masthead: client name in Caslon at 60px, one line with the domain, then four figures
-(facts with a source, audiences, conflicts, questions for the client), each linking to its
+a masthead: company name in Caslon at 60px, one line with the domain, then four figures
+(facts with a source, audiences, conflicts, open questions), each linking to its
 section. Column max 880px, prose at ~68ch.
 
 FORM: Read mode surface inside an established world; precise brief, no concept seed.

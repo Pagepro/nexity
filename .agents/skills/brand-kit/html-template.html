@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{CLIENT_NAME}} brand kit &middot; Nexity Skills</title>
+<title>{{COMPANY_NAME}} brand kit &middot; Nexity Skills</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&family=Inter:wght@300..500&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap">
@@ -260,17 +260,17 @@ details.sources[open] summary::after{content:"Hide"}
   <main class="main">
     <div class="sheet">
     <div class="masthead">
-      <h1>{{CLIENT_NAME}}</h1>
-      <p class="lede">Brand kit for <a href="https://{{CLIENT_DOMAIN}}" target="_blank" rel="noopener">{{CLIENT_DOMAIN}}</a>, built from public sources only. Every fact links to its source.</p>
+      <h1>{{COMPANY_NAME}}</h1>
+      <p class="lede">Brand kit for <a href="https://{{COMPANY_DOMAIN}}" target="_blank" rel="noopener">{{COMPANY_DOMAIN}}</a>, built from public sources only. Every fact links to its source.</p>
       <div class="figures">
         <a href="#evidence"><span class="v">{{FACT_COUNT}}</span><span class="l">facts with a source</span></a>
         <a href="#audiences"><span class="v">{{AUDIENCE_COUNT}}</span><span class="l">audiences</span></a>
         <a href="#claims"><span class="v">{{CONFLICT_COUNT}}</span><span class="l">conflicts between pages</span></a>
-        <a href="#gaps"><span class="v">{{GAP_COUNT}}</span><span class="l">questions for the client</span></a>
+        <a href="#gaps"><span class="v">{{GAP_COUNT}}</span><span class="l">open questions</span></a>
       </div>
       <div class="brief">
         <h2>Before you write anything</h2>
-        <p class="brief-lede">These figures disagree across the site. Do not reuse them until the client confirms which one is right.</p>
+        <p class="brief-lede">These figures disagree across the site. Do not reuse them until the person who owns the fact confirms which one is right.</p>
         <ol class="brief-list">
           <!-- SLOT:BRIEF — the 3 to 5 conflicts from claims.md a writer is most likely to repeat,
                most damaging first. One plain sentence each, naming both values and where they
@@ -301,9 +301,9 @@ details.sources[open] summary::after{content:"Hide"}
 
     <section id="rules">
       <h2>Global Writing Rules</h2>
-      <p class="helper">The rules every piece of content for this brand follows, one per line. The base rules stop the most common AI writing habits, and the client rules come from this site, specific enough that an editor can check a draft against them.</p>
+      <p class="helper">The rules every piece of content for this brand follows, one per line. The base rules stop the most common AI writing habits, and the brand rules come from this site, specific enough that an editor can check a draft against them.</p>
       <!-- SLOT:RULES — one .rulegroup per rule group, base groups verbatim from template.md,
-           then the optional Client-specific group. Pattern:
+           then the optional Brand-specific group. Pattern:
       <div class="rulegroup"><div class="k">GROUP NAME</div>
         <ul>
           <li>rule text</li>
@@ -403,7 +403,7 @@ details.sources[open] summary::after{content:"Hide"}
 
     <section id="gaps">
       <h2>Gap questionnaire</h2>
-      <p class="helper">Questions only the client can answer, because public research could not. Send the list as it is: the answers resolve the conflicts above and fill in what the site does not say, and it is the whole ask beyond the URL.</p>
+      <p class="helper">Questions only your own team can answer, because the public site does not. Send each one to whoever owns it (product, sales, legal, leadership): the answers resolve the conflicts above and fill in what the site does not say.</p>
       <!-- SLOT:GAPS — one .gapgroup per question group, numbering continuous across groups. Pattern:
       <div class="gapgroup"><div class="k">Group name</div>
         <div class="gap"><div class="no">1</div><div class="q">The question?</div><p class="why">Why it matters, one line.</p></div>
@@ -448,7 +448,7 @@ details.sources[open] summary::after{content:"Hide"}
       var fc=t.querySelector('td.fact'),qc=t.querySelector('td.quote'),sc=t.querySelector('td.src a');
       if(!fc)return false;
       var st=window.__bkStatus&&window.__bkStatus[t.id];
-      if(st){var sd=document.createElement('div');sd.className='t-status'+(st.kind==='conflict'?'':' soft');sd.textContent=st.kind==='conflict'?('Conflict'+(st.c.length?' '+st.c.join(', '):'')+'. Do not reuse until the client confirms.'):st.kind==='tension'?'Tension with another figure. Check before citing.':'Unverified. Do not cite without the method.';card.appendChild(sd);}
+      if(st){var sd=document.createElement('div');sd.className='t-status'+(st.kind==='conflict'?'':' soft');sd.textContent=st.kind==='conflict'?('Conflict'+(st.c.length?' '+st.c.join(', '):'')+'. Do not reuse until it is settled.'):st.kind==='tension'?'Tension with another figure. Check before citing.':'Unverified. Do not cite without the method.';card.appendChild(sd);}
       var f=document.createElement('div');f.className='t-fact';f.innerHTML=fc.innerHTML;card.appendChild(f);
       if(qc&&qc.textContent.trim()){var q=document.createElement('div');q.className='t-quote';q.textContent=qc.textContent.trim();card.appendChild(q);}
       if(sc){var s=document.createElement('div');s.className='t-src';var a=document.createElement('a');a.href=sc.href;a.target='_blank';a.rel='noopener';a.textContent=sc.href;s.appendChild(a);card.appendChild(s);}

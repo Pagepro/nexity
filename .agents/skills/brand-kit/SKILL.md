@@ -1,6 +1,6 @@
 ---
 name: brand-kit
-description: Use when asked to build, generate, or reverse-engineer a brand kit, brand foundations, brand voice profile, or content-platform onboarding profile for a company from its website URL — "zrób brand kit", "brand kit for <company>", "what data do we need from this client", or when preparing a prospect for AI content production. Needs only a public URL to start. Also a starting point for the project's `BRAND.md`.
+description: Use when asked to build, generate, or reverse-engineer a brand kit, brand foundations, brand voice profile, or content-platform onboarding profile for a company from its website URL — "zrób brand kit", "brand kit for <company>", "what does our site actually say about us", or when preparing a company's site for AI content production. Written for the team that owns the site; works on any company's site. Needs only a public URL to start. Also a starting point for the project's `BRAND.md`.
 ---
 
 # Brand Kit Generator
@@ -9,24 +9,24 @@ Reverse-engineer a complete brand kit for any company from public sources alone:
 sections Foundations, Brand Voice & Tone, Global Writing Rules,
 Audiences, and Product Lines, in the exact structure of `template.md` (same directory as
 this skill). The second deliverable is a **gap questionnaire**: the short list of
-questions the client must answer because no public source could.
+questions only the company's own people can answer, because no public source could.
 
-**Core principle: nothing enters the kit without a source.** Every number, client name,
+**Core principle: nothing enters the kit without a source.** Every number, customer name,
 partnership, and claim in the kit must appear in `evidence.md` with the URL it came
 from. A fact you cannot source goes to the gap questionnaire, never into the kit. A kit
 with honest gaps beats a fluent kit with invented retention rates.
 
 ## 0. Setup
 
-Input: the client's website URL. That is all that's required; extra materials (decks,
+Input: the company's website URL, usually your own. That is all that's required; extra materials (decks,
 docs) are welcome additions to the evidence base.
 
-Create the run directory: `.brand-kits/<client-slug>/` in the project root (slug = bare
+Create the run directory: `.brand-kits/<company-slug>/` in the project root (slug = bare
 domain without TLD, e.g. `acme`). All outputs land there. It is working material about a
-client: add `/.brand-kits/` to the project's `.gitignore` if it is missing. If the
+company: add `/.brand-kits/` to the project's `.gitignore` if it is missing. If the
 directory already exists from a previous run, ask whether to refresh (overwrite) or stop.
 
-When the client is the company that owns the project, its own materials (case studies,
+When the company is the one that owns the project, its own materials (case studies,
 internal docs the user hands over) count as sources too; cite them in `evidence.md` like
 any page.
 
@@ -82,7 +82,7 @@ From the voice samples (never from your impression of the industry), write a
 register; how claims are backed (numbers? named clients? cited sources?); recurring
 phrases worth quoting; where the strongest writing lives; which words from the template's
 banned list the brand itself overuses. These notes feed the Brand Voice & Tone section and any
-client-specific writing rules.
+brand-specific writing rules.
 
 ## 2b. Claims register
 
@@ -95,8 +95,8 @@ denominators), `unverified` (a strong claim with no named source), `third-party`
 only off-site, e.g. a Clutch listing), `corroborated` (2+ independent sources agree),
 `single source`. A claim lives in the C-list or the table, never both (the HTML's
 `{{CLAIM_COUNT}}` is their sum, so duplication double-counts). Every conflict must map
-to a gap-questionnaire question or name its concrete fix. This file is what the client
-resolves first; the kit's "do not reuse conflicting figures" rule and §4 both draw on it.
+to a gap-questionnaire question or name its concrete fix. This file is what the company's own people
+resolve first; the kit's "do not reuse conflicting figures" rule and §4 both draw on it.
 
 ## 3. Generate the kit
 
@@ -104,22 +104,22 @@ Write `brand-kit.md` by filling `template.md` top to bottom. The template's plac
 comments are the per-section spec — follow them exactly. Rules that override fluency:
 
 - The Global Writing Rules base block is copied verbatim from the template for every
-  client; only the optional client-specific rules vary.
+  company; only the optional brand-specific rules vary.
 - Every audience maps to at least one product line and vice versa; flag mismatches in
   the gap questionnaire instead of papering over them.
-- Write the kit in English regardless of the client's site language, unless asked
+- Write the kit in English regardless of the site's language, unless asked
   otherwise.
 - The kit's own prose must obey the writing rules it contains (no "seamless", no
-  fabricated ranges, no rule-of-three padding). Verbatim quotes from the client's writing
+  fabricated ranges, no rule-of-three padding). Verbatim quotes from the company's writing
   are evidence and stay untouched even when they break a rule; punctuation the templates
   themselves mandate (the `# Brand kit — <name>` title) is exempt.
 - A figure that has a conflict row in `claims.md` never appears in the kit's prose as an
   outcome, proof point or promise ("Promised outcome: … doubled in 90 days"). If the prose
   has to mention it, say it is unresolved and link it to its evidence row; the HTML view
   marks it in red so a writer cannot copy it by accident.
-- When the client's strongest writing itself relies on a device the base rules ban
+- When the company's strongest writing itself relies on a device the base rules ban
   (signature em dashes, negative parallelism), keep the base rule in the kit and add a
-  question to the gap questionnaire — the client decides whether their signature device
+  question to the gap questionnaire — the team that owns the brand decides whether its signature device
   overrides AI-tell hygiene.
 
 ## 3b. HTML view
@@ -128,7 +128,7 @@ Render the kit as a single self-contained page from `html-template.html` (same d
 as this skill; its design is documented in `DESIGN-NOTES.md` — do not restyle it, fill it):
 
 1. Copy the template to the run directory as `brand-kit.html` and replace every
-   `{{...}}` token: `{{CLIENT_NAME}}`, `{{CLIENT_DOMAIN}}`, `{{RUN_DATE}}`,
+   `{{...}}` token: `{{COMPANY_NAME}}`, `{{COMPANY_DOMAIN}}`, `{{RUN_DATE}}`,
    `{{FACT_COUNT}}`, `{{GAP_COUNT}}`, `{{AUDIENCE_COUNT}}`, `{{PRODUCT_COUNT}}`,
    `{{SOURCE_COUNT}}` (pages under evidence.md's `## Sources checked`),
    `{{CONFLICT_COUNT}}`, `{{CLAIM_ROW_COUNT}}` (claims.md conflicts / table rows) and
@@ -157,7 +157,7 @@ as this skill; its design is documented in `DESIGN-NOTES.md` — do not restyle 
    is a complete document (doctype, `lang`, viewport): keep its head as it is.
 
 If your agent can publish an artifact (Claude's Artifact tool), publish `brand-kit.html`:
-favicon `📇`, title from the file's `<title>`. First publish of a client gets a new URL; a
+favicon `📇`, title from the file's `<title>`. First publish for a company gets a new URL; a
 refresh passes the existing artifact URL as `url` so the link stays stable. The artifact
 is private until the user shares it — say so when handing over the link. Without an
 artifact tool, the handover is the local file: give its path and suggest opening it in a
@@ -165,11 +165,12 @@ browser.
 
 ## 4. Gap questionnaire
 
-Write `gap-questionnaire.md`: the questions only the client can answer, grouped, each
+Write `gap-questionnaire.md`: the questions only the company's own people can answer (product, sales,
+legal, leadership), grouped, each
 with one line on why it matters for content. Typical gaps (ask only what the research
 actually failed to answer):
 
-- **Proof metrics**: client retention, NPS, project counts, internal benchmarks.
+- **Proof metrics**: customer retention, NPS, project counts, internal benchmarks.
 - **Positioning choices**: what they deliberately don't do; which service is the
   flagship; the "we believe X" behind each line.
 - **Flagship engagements**: the one project with numbers they want content anchored to,
@@ -178,8 +179,8 @@ actually failed to answer):
   audience they serve but don't advertise.
 - **House writing rules**: banned words, naming conventions, claims legal won't allow.
 
-Keep it under ~15 questions. This file is the direct answer to "what data do we need
-from a potential customer": a URL up front, and afterwards only the gaps.
+Keep it under ~15 questions. This file is the direct answer to "what does the site not tell us": the URL is enough to
+start, and afterwards only the gaps need an owner.
 
 ## 5. Self-check before delivering
 
@@ -187,7 +188,7 @@ from a potential customer": a URL up front, and afterwards only the gaps.
    matching `evidence.md` row (numbers must match the evidence exactly; surrounding prose
    may paraphrase). Remove or move to the questionnaire anything unmatched. Exempt:
    fit-criteria thresholds you authored in ICP sections ("10+ editors") — they are
-   guidance, not claims about the client; keep them clearly round.
+   guidance, not claims about the company; keep them clearly round.
 2. **Template audit**: the file starts with `# Brand kit — <Brand Name>` (the template's
    instruction preamble must not appear), all five sections present, italic helper lines
    intact where the template has them, no `<...>` placeholder left.
@@ -203,7 +204,7 @@ the whole kit into chat.
 `brand-kit compare <slug-a> <slug-b>` (`/brand-kit compare …` in Claude Code) — a competitive comparison of two finished runs,
 judged through slug-a's lens (slug-a is "us"). Both `.brand-kits/<slug>/` runs
 must exist; generate any missing one with the normal pipeline first. The comparison is
-**internal working material**, never client-facing.
+**internal working material**, never published.
 
 1. Read both runs' `brand-kit.md`, `claims.md`, `evidence.md`, `gap-questionnaire.md`.
 2. When slug-a is the user's own company, ask for any internal competitive notes and
@@ -234,4 +235,4 @@ must exist; generate any missing one with the normal pipeline first. The compari
 | Describing voice with adjectives ("professional, friendly") | Quote real sentences; derive the description from them |
 | Inventing audiences to fill the section | 2 well-evidenced audiences beat 4 guessed ones |
 | Padding the questionnaire with nice-to-knows | Ask only what research failed to answer, cap ~15 |
-| Polishing the client's jargon into the kit | The voice section reports jargon; the kit's own prose avoids it |
+| Polishing the company's jargon into the kit | The voice section reports jargon; the kit's own prose avoids it |

@@ -62,8 +62,8 @@ No fabricated stats, dates, or ranges.
 Each paragraph should depend on the one before it. If you can reorder paragraphs and the reader would not notice, you wrote a list, not an argument. Add a through-line.
 Every paragraph advances the point. If more than 40% could be cut with no information lost, the prose is restating itself. Cut it.
 
-<Optional: client-specific rules discovered during voice analysis, one per line, appended
-under a "**Client-specific**" heading. Only add a rule the evidence supports (e.g. a word
+<Optional: brand-specific rules discovered during voice analysis, one per line, appended
+under a "**Brand-specific**" heading. Only add a rule the evidence supports (e.g. a word
 the brand demonstrably overuses, a construction their best writing avoids). If none,
 append nothing.>
 
