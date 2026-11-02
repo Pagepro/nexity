@@ -1,6 +1,6 @@
 ---
 name: marketing-setup
-description: Walk a marketer with no terminal experience through setting up the marketing skills (source-review, brand-kit, blog-post-quality-review, internal-links, blog-post-update) step by step, by their preferences, whether they came as the Claude Code plugin `marketing-skills`, through `npx skills add Pagepro/nexity`, or in a downloaded ZIP of the repository. Checks where the skills are, says what to install and how (click by click), installs and builds what it can itself with permission, runs a short test of each chosen skill, and ends with what the person can now ask for. Use when someone says "Help me setup these skills for marketers", "set up the marketing skills", "skonfiguruj skille marketingowe", "pomóż mi to uruchomić", or has just installed the marketing skills and asks how to start.
+description: Walk a marketer with no terminal experience through setting up the marketing skills (brand-kit, site-contradictions, blog-post-quality-review, internal-links, blog-post-update, and source-review, which blog-post-update uses) step by step, by their preferences, whether they came as the Claude Code plugin `marketing-skills`, through `npx skills add Pagepro/nexity`, or in a downloaded ZIP of the repository. Checks where the skills are, says what to install and how (click by click), installs and builds what it can itself with permission, runs a short test of each chosen skill, and ends with what the person can now ask for. Use when someone says "Help me setup these skills for marketers", "set up the marketing skills", "skonfiguruj skille marketingowe", "pomóż mi to uruchomić", or has just installed the marketing skills and asks how to start.
 ---
 
 # Marketing skills setup
@@ -27,7 +27,7 @@ can. The person only installs apps, clicks through dialogs and answers your ques
   files or key files. If a skill needs a key later, say where it goes, not what it is.
 - **Do not edit the skills' files.** The exceptions are the `source-review` build (step 3)
   and, in a ZIP, repairing `.claude/skills` (step 1). Working folders the skills create
-  (`.brand-kits/`, `.source-review/`, `.internal-links/`, `.blog-updates/`) are expected.
+  (`.brand-kits/`, `.site-contradictions/`, `.source-review/`, `.internal-links/`, `.blog-updates/`) are expected.
 - **Stop at the first failure**, explain it in one or two sentences and say exactly what the
   person should do, or what you will try next. Don't pile up errors.
 - When a step is fine, say so briefly and move on. Don't explain what already works.
@@ -43,12 +43,12 @@ Ask these together, in one short message, and offer the defaults:
    |---|---|---|
    | `brand-kit` | A brand kit (voice, audiences, facts with sources) from a company's website | nothing extra |
    | `blog-post-quality-review` | A critical review of one post or draft, with a 0–10 score and the three fixes that matter most | nothing extra |
-   | `source-review` | Checks every claim in an article against real sources: PASS, warnings or BLOCKED | Node.js, a one-time build |
+   | `site-contradictions` | Finds every place where the site says two different things about the same fact (prices, numbers, plans, names), with a fix or a question for each | nothing extra |
    | `internal-links` | Finds links between the site's own articles that are missing, for the editor to add | Node.js |
-   | `blog-post-update` | Why a post lost traffic and what to change in it, as a change list for the editor | Node.js; Chrome or Edge for images; Google data optional. Uses `source-review`, `blog-post-quality-review` and `work-humanizer` |
+   | `blog-post-update` | Why a post lost traffic and what to change in it, as a change list for the editor | Node.js and a one-time build of `source-review`, which it uses to check facts; Chrome or Edge for images; Google data optional. Also uses `blog-post-quality-review` and `work-humanizer` |
 
 2. **Which website** should the tests use? Their own company site is best. Ask for one blog
-   post URL too, if they picked `source-review`, `blog-post-quality-review` or
+   post URL too, if they picked `blog-post-quality-review` or
    `blog-post-update`.
 3. **For `blog-post-update` only:** Search Console and GA4 data are optional. Don't set up
    Google access now; say that the skill asks about it on its first run and that it works
@@ -107,7 +107,7 @@ nothing besides the agent, and the agent's web access (step 4 tests it).
 - After an install, the agent app often does not see Node until it is restarted. Ask them to
   quit the app completely, open it again in the same folder, and write "continue the setup".
   Check `node --version` again before moving on.
-- `npm` comes with Node; check `npm --version` when `source-review` is picked.
+- `npm` comes with Node; check `npm --version` when `blog-post-update` is picked (its `source-review` needs a build).
 
 **Chrome or Edge** (only for `blog-post-update`, which renders images through the installed
 browser). Ask whether they have one; if not, the skill still works, only without images.
@@ -116,7 +116,7 @@ The skills do not need Git.
 
 ## Step 3: build
 
-Only when `source-review` is picked (or `blog-post-update`, which uses it), and
+Only when `blog-post-update` is picked (it uses `source-review` to check facts), and
 `<skills>/source-review/ts/dist/cli.js` does not exist yet. Ask, then run:
 
 ```bash
@@ -136,8 +136,8 @@ are checking in plain words and report "works" or what failed.
 | Skill | Test | Works when |
 |---|---|---|
 | any | List the skills you can see (Claude Code: type `/` and look, or your own skill list) | Every picked skill is listed |
-| `brand-kit`, `blog-post-quality-review` | Open the test site's home page with your web tool | You can read its text (these skills need web access, not Node) |
-| `source-review` | `node "<skills>/source-review/ts/dist/cli.js" help` | It prints the command list |
+| `brand-kit`, `site-contradictions`, `blog-post-quality-review` | Open the test site's home page with your web tool | You can read its text (these skills need web access, not Node) |
+| `source-review` (with `blog-post-update`) | `node "<skills>/source-review/ts/dist/cli.js" help` | It prints the command list |
 | `internal-links` | `node "<skills>/internal-links/scripts/internal-links.mjs" check --site=<their site>` | It finds the sitemap and prints a sample article. Show them the first lines of the sample: if it is the menu or a cookie banner, that is fine for now; the skill fixes it on the first real run |
 | `blog-post-update` | `node "<skills>/blog-post-update/scripts/blog-post-update.mjs" setup` | It prints what is configured. "No Google access" is a valid answer |
 
@@ -157,12 +157,12 @@ End with a short summary in their language:
 2. **What to ask for**, as sentences they can copy, one or two per skill they picked, e.g.:
    - "Make a brand kit for https://company.com"
    - "Review this post: https://company.com/blog/…" (or paste the text)
-   - "Check the sources in this article: https://…"
+   - "Find contradictions on https://company.com"
    - "Find missing internal links on https://company.com/blog/"
    - "This post dropped in Google, what should we change? https://…"
    In Claude Code they can also type `/` and the skill's name.
-3. **Where results land:** in the working folder, in `.brand-kits/`, `.source-review/`,
-   `.internal-links/` and `.blog-updates/` (hidden folders: the agent opens the reports for
+3. **Where results land:** in the working folder, in `.brand-kits/`, `.site-contradictions/`,
+   `.internal-links/`, `.blog-updates/` and `.source-review/` (hidden folders: the agent opens the reports for
    them on request). Reports are HTML pages that open in the browser.
 4. **Nothing is published.** The skills read public pages and propose; a person makes the
    change in the CMS. `internal-links` can write Sanity drafts only when asked and given access.
