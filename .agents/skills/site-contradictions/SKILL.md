@@ -1,6 +1,6 @@
 ---
 name: site-contradictions
-description: Find the places where a website contradicts itself, on any site and any CMS. Reads the site's pages, collects every checkable claim with its verbatim quote and URL (prices, plans and seats, trials, setup times, customer counts, integration counts, statistics, names and titles of people and customers, product capabilities, guarantees, legal and company facts), compares claims about the same thing across pages, and reports each contradiction with both quotes, how much it matters, and either a concrete fix or a question for the client. Read-only. Use when asked to "find contradictions on <site>", "where does our site contradict itself", "are our prices and numbers the same everywhere", "check the site for inconsistent claims", "what would a buyer notice doesn't add up", or before a relaunch, a migration or a pricing change.
+description: Find the places where a website contradicts itself, on any site and any CMS. Reads the site's pages, collects every checkable claim with its verbatim quote and URL (prices, plans and seats, trials, setup times, customer counts, integration counts, statistics, names and titles of people and customers, product capabilities, guarantees, legal and company facts), compares claims about the same thing across pages, and reports each contradiction with both quotes, how much it matters, and either a concrete fix or a question for whoever owns the fact. Written for the team that owns the site. Read-only. Use when asked to "find contradictions on <site>", "where does our site contradict itself", "are our prices and numbers the same everywhere", "check the site for inconsistent claims", "what would a buyer notice doesn't add up", or before a relaunch, a migration or a pricing change.
 ---
 
 # Site contradictions
@@ -12,7 +12,7 @@ hand the editor a short list to fix. A buyer who sees $499 on the homepage and $
 **Core principle: a contradiction is two quotes, never an impression.** Each one needs
 two verbatim quotes, each with the URL it came from, that cannot both be true at the same
 time. Do not decide which one is right unless the site itself says so (see §4). That is
-the client's call, so it becomes a question. Nothing is written to the site or its CMS.
+for the people who own the fact to decide (product, sales, legal, leadership), so it becomes a question. Nothing is written to the site or its CMS.
 
 ## 0. Setup
 
@@ -20,7 +20,7 @@ Input: the site's address. A list of URLs works too (one section, one product li
 
 Create the run directory `.site-contradictions/<site-slug>/` in the project root (slug =
 bare domain without TLD, e.g. `acme`). All outputs land there. It is working material
-about a client: add `/.site-contradictions/` to the project's `.gitignore` if it is
+about a company: add `/.site-contradictions/` to the project's `.gitignore` if it is
 missing. If the directory exists from an earlier run, ask whether to refresh or stop.
 
 ## 1. Read the site
@@ -116,7 +116,7 @@ For each contradiction decide one of two routes, and say which in the report:
   facts) states it, and the other value sits on a less authoritative or older page.
   Write the fix as a change for the editor: page, old text, new text.
 - **Question:** nothing on the site says which value is right. Write one question for
-  the client that names both values and where they appear.
+  whoever owns the fact (product, sales, legal, leadership) that names both values and where they appear.
 
 Never invent the right value. Never mark a page "wrong" because it is less polished.
 
@@ -126,7 +126,7 @@ Never invent the right value. Never mark a page "wrong" because it is less polis
    full stop, severity, the values as quotes with their pages and evidence ids, and the
    fix or the question), then a table of the other findings
    `| claim | on record / note | status | evidence refs |` with status `stale`,
-   `tension` or `consistent`, then the questions for the client grouped by subject.
+   `tension` or `consistent`, then the open questions grouped by subject and owner.
 2. `contradictions.html` from `report-template.html` (same directory as this skill; do
    not restyle it, fill it):
    1. Copy the template to the run directory and replace every `{{...}}` token:
@@ -151,15 +151,15 @@ user shares it; say so). Otherwise give the file path and suggest opening it in 
 ## 6. Deliver
 
 In chat, five lines at most: how many pages were read, how many contradictions (by
-severity), the top three in one line each, how many are fixes and how many are questions
-for the client, and the path or link to the report. Do not paste the report into chat.
+severity), the top three in one line each, how many are fixes and how many are open
+questions, and the path or link to the report. Do not paste the report into chat.
 
 ## Common mistakes
 
 | Mistake | Instead |
 |---|---|
 | Flagging monthly vs yearly, per seat vs per account, or a range and a value inside it | Check the scope first; unclear scope is tension, not a contradiction |
-| Picking the "right" value yourself | Fix only when the canonical page states it; otherwise ask the client |
+| Picking the "right" value yourself | Fix only when the canonical page states it; otherwise ask whoever owns the fact |
 | Paraphrasing a quote to make the conflict clearer | Quote exactly; the editor searches the page for that text |
 | Reading only the commercial pages | Old values survive in the blog and in case studies; read them |
 | Reporting tone, style or wording | Out of scope: only facts that can be checked |

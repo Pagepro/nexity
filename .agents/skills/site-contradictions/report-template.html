@@ -253,7 +253,7 @@ details.sources[open] summary::after{content:"Hide"}
     <nav class="nav">
       <a href="#claims">Contradictions <span class="n">{{CONTRADICTION_COUNT}}</span></a>
       <a href="#findings">Other findings <span class="n">{{FINDING_COUNT}}</span></a>
-      <a href="#gaps">Questions for the client <span class="n">{{QUESTION_COUNT}}</span></a>
+      <a href="#gaps">Open questions <span class="n">{{QUESTION_COUNT}}</span></a>
     </nav>
     <div class="nav-group">Appendix</div>
     <nav class="nav">
@@ -265,12 +265,12 @@ details.sources[open] summary::after{content:"Hide"}
     <div class="sheet">
     <div class="masthead">
       <h1>{{SITE_NAME}}</h1>
-      <p class="lede">Where <a href="https://{{SITE_DOMAIN}}" target="_blank" rel="noopener">{{SITE_DOMAIN}}</a> says two different things about the same fact. Every value is quoted from the page it came from, and every contradiction ends in a fix or a question for the client.</p>
+      <p class="lede">Where <a href="https://{{SITE_DOMAIN}}" target="_blank" rel="noopener">{{SITE_DOMAIN}}</a> says two different things about the same fact. Every value is quoted from the page it came from, and every contradiction ends in a fix or a question for whoever owns the fact.</p>
       <div class="figures">
         <a href="#evidence"><span class="v">{{PAGE_COUNT}}</span><span class="l">pages read</span></a>
         <a href="#evidence"><span class="v">{{FACT_COUNT}}</span><span class="l">claims collected</span></a>
         <a href="#claims"><span class="v">{{CONTRADICTION_COUNT}}</span><span class="l">contradictions</span></a>
-        <a href="#gaps"><span class="v">{{QUESTION_COUNT}}</span><span class="l">questions for the client</span></a>
+        <a href="#gaps"><span class="v">{{QUESTION_COUNT}}</span><span class="l">open questions</span></a>
       </div>
       <div class="brief">
         <h2>Fix these first</h2>
@@ -285,7 +285,7 @@ details.sources[open] summary::after{content:"Hide"}
 
     <section id="claims">
       <h2>Contradictions</h2>
-      <p class="helper">Facts the site states with two or more values that cannot all be true. A strong entry quotes each value exactly with its page, says why it matters, and ends in a fix when the site's own canonical page settles it, or in a question for the client when nothing does.</p>
+      <p class="helper">Facts the site states with two or more values that cannot all be true. A strong entry quotes each value exactly with its page, says why it matters, and ends in a fix when the site's own canonical page settles it, or in a question for whoever owns the fact when nothing does.</p>
       <div class="gapgroup">
         <!-- SLOT:CONTRADICTIONS — one .gap per contradiction, C1.. by severity. Title ends in one
              full stop. Severity tag: high uses .tag, medium and low use .tag soft. Values link to
@@ -316,8 +316,8 @@ details.sources[open] summary::after{content:"Hide"}
     </section>
 
     <section id="gaps">
-      <h2>Questions for the client</h2>
-      <p class="helper">Only what the site cannot settle by itself. Send the list as it is: each answer closes one or more contradictions and tells the editor which value to keep.</p>
+      <h2>Open questions</h2>
+      <p class="helper">Only what the site cannot settle by itself. Send each one to whoever owns the fact (product, sales, legal, leadership): each answer closes one or more contradictions and tells the editor which value to keep.</p>
       <!-- SLOT:QUESTIONS — one .gapgroup per subject, numbering continuous. Pattern:
       <div class="gapgroup"><div class="k">Pricing</div>
         <div class="gap"><div class="no">1</div><div class="q">The question?</div><p class="why">Which contradictions it closes (C1, C2) and why it matters.</p></div>
@@ -388,7 +388,7 @@ details.sources[open] summary::after{content:"Hide"}
       var fc=t.querySelector('td.fact'),qc=t.querySelector('td.quote'),sc=t.querySelector('td.src a');
       if(!fc)return false;
       var st=window.__bkStatus&&window.__bkStatus[t.id];
-      if(st){var sd=document.createElement('div');sd.className='t-status'+(st.kind==='conflict'?'':' soft');sd.textContent=st.kind==='conflict'?('Conflict'+(st.c.length?' '+st.c.join(', '):'')+'. Do not reuse until the client confirms.'):st.kind==='tension'?'Tension with another figure. Check before citing.':'Unverified. Do not cite without the method.';card.appendChild(sd);}
+      if(st){var sd=document.createElement('div');sd.className='t-status'+(st.kind==='conflict'?'':' soft');sd.textContent=st.kind==='conflict'?('Conflict'+(st.c.length?' '+st.c.join(', '):'')+'. Do not reuse until it is settled.'):st.kind==='tension'?'Tension with another figure. Check before citing.':'Unverified. Do not cite without the method.';card.appendChild(sd);}
       var f=document.createElement('div');f.className='t-fact';f.innerHTML=fc.innerHTML;card.appendChild(f);
       if(qc&&qc.textContent.trim()){var q=document.createElement('div');q.className='t-quote';q.textContent=qc.textContent.trim();card.appendChild(q);}
       if(sc){var s=document.createElement('div');s.className='t-src';var a=document.createElement('a');a.href=sc.href;a.target='_blank';a.rel='noopener';a.textContent=sc.href;s.appendChild(a);card.appendChild(s);}

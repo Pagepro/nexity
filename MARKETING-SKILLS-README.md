@@ -7,7 +7,7 @@ write what you need in plain words and get back a report.
 |---|---|
 | `brand-kit` | A brand kit (voice, audiences, facts with sources) from a company's website |
 | `blog-post-quality-review` | A critical review of a post or draft: a 0–10 score and the three fixes that matter most |
-| `site-contradictions` | Every place where the site says two different things about the same fact, with both quotes and a fix or a question for the client |
+| `site-contradictions` | Every place where the site says two different things about the same fact, with both quotes and a fix or a question for whoever owns the fact |
 | `internal-links` | The links between your own articles that are missing, as a list for the editor |
 | `blog-post-update` | Why a post lost traffic and what to change in it, as a change list for the editor |
 
