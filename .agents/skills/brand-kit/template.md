@@ -38,17 +38,6 @@ the strongest writing lives (blog? case studies?) and, honestly, where the marke
 surface is weaker or leans on jargon the writing rules would flag. Name the offending
 words. This section critiques the brand's own site where the evidence supports it.>
 
-## Author Persona
-
-*Imagine you have an AI ghost writer at your disposal. Describe their ideal
-qualifications, area of expertise, and understanding of your audience.*
-
-<One paragraph, written in the second person ("You are a senior..."). A practitioner, not
-a marketer: name the discipline, the seniority, and the kind of work they've led. Say
-whose fears they understand and name 1–2 of those fears plainly. Describe the writing
-style they use (sentence shape, proof habits, honesty about trade-offs) and require that
-technical decisions are tied back to business outcomes.>
-
 ## Global Writing Rules
 
 *Add guidelines you'd like to apply to all content. Use one rule per line.*
