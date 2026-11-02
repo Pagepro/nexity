@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{SITE_NAME}} contradictions &middot; Nexity Skills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&family=Inter:wght@300..500&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap">
+<style>
+/* Nexity Skills report. The tokens and type are nexity.build's DESIGN.md (shadcn neutral, dark). */
+:root{
+  color-scheme:dark;
+  --bg:#0a0a0a; --card:#171717; --secondary:#262626;
+  --fg:#fafafa; --muted:#a1a1a1; --faint:#8a8a8a;
+  --border:rgba(255,255,255,.1); --input:rgba(255,255,255,.15); --ring:#737373;
+  --destructive:#ff6467; --destructive-soft:rgba(255,100,103,.14);
+  --heading:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --topbar:56px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
+body{margin:0;background:var(--bg);color:var(--fg);font:350 15px/1.65 var(--sans);font-feature-settings:"tnum" 1;-webkit-font-smoothing:antialiased}
+::selection{background:var(--fg);color:var(--bg)}
+:focus-visible{outline:none;box-shadow:0 0 0 1px var(--ring),0 0 0 4px rgba(115,115,115,.3);border-radius:6px}
+*{scrollbar-width:thin;scrollbar-color:var(--secondary) transparent}
+a{color:var(--fg);text-decoration:underline;text-decoration-color:var(--input);text-underline-offset:4px;transition:text-decoration-color 150ms}
+a:hover{text-decoration-color:var(--fg)}
+strong{font-weight:500;color:var(--fg)}
+
+/* ---------- shell ---------- */
+.app{display:grid;grid-template-rows:var(--topbar) 1fr;grid-template-columns:240px minmax(0,1fr);min-height:100vh}
+.topbar{position:sticky;top:0;z-index:30;grid-column:1/-1;display:flex;align-items:center;gap:14px;padding:0 24px;background:rgba(10,10,10,.85);backdrop-filter:saturate(1.2) blur(12px);-webkit-backdrop-filter:saturate(1.2) blur(12px);border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:12px;white-space:nowrap;text-decoration:none;color:var(--fg)}
+.brand svg{height:18px;width:auto;display:block}
+.brand .of{font-size:13px;color:var(--muted)}
+.skill{display:inline-flex;align-items:center;height:26px;padding:0 10px;border:1px solid var(--border);border-radius:999px;background:var(--secondary);font:400 12px/1 var(--mono);color:var(--fg);white-space:nowrap}
+.spacer{flex:1}
+.runmeta{font-size:13px;color:var(--muted);white-space:nowrap}
+
+/* ---------- nav ---------- */
+.sidenav{position:sticky;top:var(--topbar);height:calc(100vh - var(--topbar));overflow-y:auto;border-right:1px solid var(--border);padding:28px 16px 40px 24px}
+.nav-group{margin:28px 0 8px;font-size:13px;color:var(--faint)}
+.nav-group:first-child{margin-top:0}
+.nav a{position:relative;display:flex;align-items:baseline;gap:8px;padding:6px 0 6px 14px;color:var(--muted);font-size:14px;line-height:1.35;text-decoration:none;transition:color 150ms}
+.nav a::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--fg);opacity:0;transition:opacity 150ms}
+.nav a:hover{color:var(--fg)}
+.nav a[aria-current="true"]{color:var(--fg)}
+.nav a[aria-current="true"]::before{opacity:1}
+.nav a .n{margin-left:auto;font:400 12px var(--mono);color:var(--faint)}
+
+/* ---------- main ---------- */
+.main{padding:0 56px 96px;min-width:0}
+.sheet{max-width:880px;margin:0 auto}
+.masthead{padding:64px 0 48px;border-bottom:1px solid var(--border)}
+.masthead h1{margin:0;font:400 60px/1 var(--heading);letter-spacing:-.025em;text-wrap:balance}
+.masthead .lede{margin:20px 0 0;max-width:56ch;font-size:18px;line-height:1.55;color:var(--muted)}
+.masthead .lede a{color:var(--fg)}
+.figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:40px 0 0;padding:0}
+.figures a{display:block;text-decoration:none;color:var(--fg)}
+.figures .v{display:block;font:400 36px/1 var(--heading);letter-spacing:-.025em;transition:opacity 150ms}
+.figures .l{display:block;margin-top:8px;font-size:13px;line-height:1.4;color:var(--muted)}
+.figures a:hover .l{color:var(--fg)}
+
+section{padding:64px 0 56px;border-top:1px solid var(--border);scroll-margin-top:calc(var(--topbar) + 8px)}
+.masthead + section{border-top:0}
+tr[id],blockquote[id]{scroll-margin-top:calc(var(--topbar) + 56px)}
+h2{margin:0;font:400 36px/1.05 var(--heading);letter-spacing:-.025em;text-wrap:balance}
+/* Section guide: what the section is for and what a strong one holds. Template copy, not the skill's output,
+   so it reads as a note: dashed frame, info icon, smaller faint text. */
+.helper{display:flex;gap:10px;align-items:flex-start;margin:16px 0 0;max-width:68ch;padding:12px 14px;border:1px dashed var(--input);border-radius:10px;font-size:13px;line-height:1.55;color:var(--faint)}
+.helper::before{content:"";flex:none;width:16px;height:16px;margin-top:1px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0'/%3E%3Cpath d='M12 9h.01'/%3E%3Cpath d='M11 12h1v4h1'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0'/%3E%3Cpath d='M12 9h.01'/%3E%3Cpath d='M11 12h1v4h1'/%3E%3C/svg%3E") center/contain no-repeat}
+.prose{max-width:68ch}
+.prose p{margin:18px 0 0;color:var(--muted)}
+.prose p strong{color:var(--fg)}
+.field{margin:28px 0 0}
+.field + .field{margin-top:16px}
+.field .k{font-size:13px;color:var(--faint)}
+.field .v{margin:4px 0 0;font:400 24px/1.25 var(--heading);letter-spacing:-.02em}
+.field .v a{color:var(--fg)}
+h3{margin:48px 0 0;font:400 24px/1.25 var(--heading);letter-spacing:-.02em}
+h3:first-of-type{margin-top:32px}
+.sub{margin:18px 0 0}
+.sub .k{font-size:14px;font-weight:450;color:var(--fg)}
+.sub p{margin:6px 0 0;color:var(--muted)}
+.rulegroup{margin:32px 0 0;max-width:68ch}
+.rulegroup .k{font:400 18px/1.4 var(--heading);letter-spacing:-.01em;color:var(--fg)}
+.rulegroup ul{margin:10px 0 0;padding:0;list-style:none;border-top:1px solid var(--border)}
+.rulegroup li{padding:10px 0 10px 22px;position:relative;color:var(--muted);border-bottom:1px solid var(--border)}
+.rulegroup li::before{content:"";position:absolute;left:4px;top:21px;width:8px;height:1px;background:var(--faint)}
+.aud{margin:28px 0 0;padding:24px 0 0;border-top:1px solid var(--border)}
+.aud:first-child{margin-top:24px}
+.aud .k{font:400 20px/1.3 var(--heading);letter-spacing:-.015em;color:var(--fg)}
+.aud p{margin:8px 0 0;color:var(--muted)}
+.aud .maps{margin-top:12px;font:400 12px/1.5 var(--mono);color:var(--faint)}
+
+/* fact links: provenance, one click away */
+a.fact{color:var(--fg);font-weight:400;text-decoration:underline dotted;text-decoration-color:rgba(255,255,255,.28);text-decoration-thickness:1px;text-underline-offset:4px}
+a.fact:hover{text-decoration-style:solid;text-decoration-color:var(--fg)}
+
+/* ---------- tables ---------- */
+.tablewrap{margin:28px 0 0;overflow-x:auto;border:1px solid var(--border);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.55}
+th{background:var(--card);text-align:left;font-size:12px;font-weight:400;color:var(--faint);padding:12px 14px;border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:12px 14px;border-top:1px solid var(--border);vertical-align:top}
+tr:first-child td{border-top:0}
+td.idx{color:var(--faint);font:400 12px/1.9 var(--mono);text-align:right;white-space:nowrap;padding-right:4px}
+td.fact{color:var(--fg);min-width:170px}
+td.src{white-space:nowrap;font:400 12px/1.9 var(--mono);color:var(--muted)}
+td.src a{color:var(--muted)}
+td.quote{color:var(--muted);min-width:220px}
+tbody tr{transition:background 150ms}
+tbody tr:hover{background:rgba(255,255,255,.03)}
+tr.flash,blockquote.flash{animation:rowflash 1.6s var(--ease)}
+@keyframes rowflash{0%,45%{background:var(--secondary)}100%{background:transparent}}
+td .tag{margin-left:8px}
+.tag{display:inline-flex;align-items:center;height:20px;margin-left:8px;padding:0 8px;border-radius:999px;font:400 12px/1 var(--sans);background:var(--destructive-soft);color:var(--destructive);vertical-align:1px;white-space:nowrap}
+.srcwrap{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.srcchip{display:inline-flex;align-items:center;gap:10px;height:30px;padding:0 12px;border:1px solid var(--border);border-radius:999px;font-size:12px}
+.srcchip a{font-family:var(--mono);color:var(--fg);text-decoration:none}
+.srcchip a:hover{text-decoration:underline;text-decoration-color:var(--fg)}
+.srcchip .ct{color:var(--faint);white-space:nowrap}
+.notelist{margin:14px 0 0;padding:0 0 0 18px;color:var(--muted);max-width:68ch}
+.notelist li{margin:6px 0}
+.qgroup{margin:40px 0 0}
+.qgroup .k{font:400 20px/1.3 var(--heading);letter-spacing:-.015em;color:var(--fg)}
+blockquote{margin:16px 0 0;padding:4px 0 4px 20px;border-left:1px solid var(--input);font:italic 400 17px/1.55 var(--heading);color:var(--fg);max-width:64ch;border-radius:0 8px 8px 0}
+blockquote .cite{display:block;margin-top:8px;font:normal 350 12px/1.4 var(--sans);color:var(--faint)}
+blockquote .cite a{color:var(--muted)}
+blockquote.weak{border-left-style:dashed;color:var(--muted)}
+
+/* ---------- gaps and conflicts ---------- */
+.gapgroup{margin:36px 0 0}
+.gapgroup .k{font:400 20px/1.3 var(--heading);letter-spacing:-.015em;color:var(--fg)}
+.gap{display:grid;grid-template-columns:40px minmax(0,1fr);gap:0 16px;padding:18px 0;border-top:1px solid var(--border)}
+.gapgroup .gap:first-of-type{margin-top:14px}
+.gap .no{font:400 18px/1.4 var(--heading);color:var(--faint);text-align:right}
+.gap .q{color:var(--fg);max-width:64ch}
+.gap .why{grid-column:2;margin:6px 0 0;font-size:14px;color:var(--muted);max-width:64ch}
+#claims .gap .no{color:var(--destructive)}
+
+/* ---------- footer ---------- */
+.footer{max-width:880px;margin:0 auto;padding:28px 0 0;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
+.footer .made{display:inline-flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none}
+.footer .made svg{height:14px;width:auto}
+.footer .made:hover span{text-decoration:underline;text-underline-offset:4px}
+.footer .divider{display:none}
+
+/* fact tooltip */
+.tipcard{position:fixed;z-index:60;max-width:380px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;font-size:13.5px;line-height:1.55;opacity:0;transform:scale(.97);transform-origin:top left;transition:opacity 150ms var(--ease),transform 150ms var(--ease);pointer-events:none;visibility:hidden}
+.tipcard.show{opacity:1;transform:none;pointer-events:auto;visibility:visible}
+.tipcard .t-fact{color:var(--fg)}
+.tipcard .t-quote{margin-top:8px;color:var(--muted);font:italic 400 14px/1.55 var(--heading)}
+.tipcard .t-src{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font:400 12px/1.5 var(--mono)}
+.tipcard .t-src a{word-break:break-all;color:var(--muted)}
+
+/* ---------- mobile ---------- */
+@media (max-width: 920px){
+  :root{--topbar:auto}
+  .app{grid-template-columns:1fr;grid-template-rows:auto auto 1fr}
+  .topbar{position:static;flex-wrap:wrap;min-height:56px;padding:12px 16px;gap:10px}
+  .runmeta{display:none}
+  .sidenav{position:sticky;top:0;z-index:20;height:auto;display:flex;gap:4px;overflow-x:auto;padding:8px 16px;border-right:0;border-bottom:1px solid var(--border);background:rgba(10,10,10,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .nav-group{display:none}
+  .nav{display:flex;gap:4px}
+  .nav a{white-space:nowrap;padding:6px 12px;border-radius:999px;font-size:13px}
+  .nav a::before{display:none}
+  .nav a[aria-current="true"]{background:var(--secondary)}
+  .nav a .n{margin-left:6px}
+  .main{padding:0 16px 64px}
+  .masthead{padding:40px 0 32px}
+  .masthead h1{font-size:44px}
+  .masthead .lede{font-size:16px}
+  .figures{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .figures .v{font-size:30px}
+  section{padding:44px 0 36px;scroll-margin-top:56px}
+  tr[id],blockquote[id]{scroll-margin-top:72px}
+  h2{font-size:28px}
+  .gap{grid-template-columns:28px minmax(0,1fr);gap:0 10px}
+}
+
+/* ---------- 2026-11-02: brief, trust status, copy, back link, sources, mobile cards ---------- */
+.brief{margin:40px 0 0;padding:24px 24px 12px;border:1px solid var(--border);border-radius:14px;background:var(--card)}
+.brief h2{font-size:24px;line-height:1.25}
+.brief-lede{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--muted);max-width:62ch}
+.brief-list{margin:16px 0 0;padding:0;list-style:none}
+.brief-list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--border);color:var(--fg)}
+.brief-list .xref{font:400 18px/1.45 var(--heading);color:var(--destructive);text-decoration:none}
+.brief-list .xref:hover{text-decoration:underline;text-decoration-color:var(--destructive)}
+a.xref{color:var(--fg);text-decoration-color:var(--faint)}
+a.fact.is-conflict{background:rgba(255,100,103,.24);box-shadow:0 0 0 2px rgba(255,100,103,.24);border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone;text-decoration-color:rgba(255,100,103,.55);text-decoration-style:solid;transition:background 150ms}
+a.fact.is-conflict:hover{background:rgba(255,100,103,.34);box-shadow:0 0 0 2px rgba(255,100,103,.34);text-decoration-color:var(--destructive)}
+a.fact.is-unverified,a.fact.is-tension{color:var(--muted);text-decoration-style:dashed}
+.tipcard .t-status{margin:0 0 8px;font-size:12px;line-height:1.45;color:var(--destructive)}
+.tipcard .t-status.soft{color:var(--muted)}
+.sechead{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.copybtn{flex:none;display:inline-flex;align-items:center;gap:6px;height:28px;margin-top:6px;padding:0 12px;border:1px solid var(--border);border-radius:999px;background:transparent;color:var(--muted);font:400 12px/1 var(--sans);cursor:pointer;transition:color 150ms,border-color 150ms}
+.copybtn:hover{color:var(--fg);border-color:var(--input)}
+.copybtn svg{width:14px;height:14px}
+.backlink{display:flex;align-items:center;width:max-content;height:26px;margin-top:10px;padding:0 10px;border:1px solid var(--input);border-radius:999px;background:var(--secondary);color:var(--fg);font:400 12px/1 var(--sans);cursor:pointer}
+details.sources summary{display:flex;align-items:center;gap:12px;cursor:pointer;list-style:none}
+details.sources summary::-webkit-details-marker{display:none}
+details.sources summary::after{content:"Show";font:400 12px/1 var(--sans);color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:6px 10px}
+details.sources[open] summary::after{content:"Hide"}
+@media (max-width: 920px){
+  .tablewrap{border:0;border-radius:0;overflow:visible}
+  .tablewrap table,.tablewrap tbody,.tablewrap tr,.tablewrap td{display:block;width:auto}
+  .tablewrap thead{display:none}
+  .tablewrap tr{margin:0 0 10px;padding:12px 14px;border:1px solid var(--border);border-radius:14px}
+  .tablewrap tr:first-child td{border-top:0}
+  .tablewrap td{padding:3px 0;border:0;min-width:0;white-space:normal;text-align:left}
+  .tablewrap td.src{word-break:break-word}
+  .sechead{flex-direction:column;gap:4px}
+  .brief{padding:18px 16px 8px}
+  .brief-list li{grid-template-columns:36px minmax(0,1fr);gap:8px}
+}
+
+.tag.soft{background:var(--secondary);color:var(--muted)}
+.gap .q .tag{margin-left:10px}
+.vals{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.vals li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--card)}
+.vals li a.fact{font:400 17px/1.4 var(--heading);letter-spacing:-.01em;text-decoration:none}
+.vals li a.fact:hover{text-decoration:underline}
+.vals .where{font:400 12px/1.5 var(--mono);color:var(--faint)}
+
+/* ---------- print: light, no chrome ---------- */
+@media print{
+  a.fact.is-conflict{background:#fde6e7;box-shadow:0 0 0 2px #fde6e7}
+  :root{color-scheme:light;--bg:#fff;--card:#f5f5f5;--secondary:#f5f5f5;--fg:#0a0a0a;--muted:#404040;--faint:#5c5c5c;--border:#e5e5e5;--input:#d4d4d4;--destructive:#c70036;--destructive-soft:#fde6e7}
+  .topbar,.sidenav{display:none}
+  .app{display:block}
+  .main{padding:0}
+  .tablewrap{max-height:none;overflow:visible}
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header class="topbar">
+    <a class="brand" href="https://nexity.build" target="_blank" rel="noopener"><svg viewBox="27 100 201 56" fill="currentColor" role="img" aria-label="Nexity"><path d="M35.0244 142.933H27V110.578H35.1489L34.2158 114.809H34.4024C35.2733 113.274 36.8699 112.071 39.1922 111.2C41.556 110.287 44.293 109.831 47.4032 109.831C50.6379 109.831 53.4164 110.35 55.7387 111.387C58.1025 112.382 59.9272 113.813 61.2128 115.68C62.4983 117.505 63.1411 119.683 63.1411 122.213V142.933H55.1167V124.889C55.1167 122.317 54.2458 120.284 52.5041 118.791C50.7623 117.256 48.3778 116.489 45.3505 116.489C42.1987 116.489 39.6898 117.36 37.8237 119.102C35.9575 120.803 35.0244 123.147 35.0244 126.133V142.933Z"/><path d="M107.083 132.48C106.668 134.679 105.57 136.628 103.786 138.329C102.045 140.03 99.8052 141.357 97.0681 142.311C94.3727 143.265 91.3659 143.742 88.0484 143.742C84.0673 143.742 80.5422 143.037 77.4735 141.627C74.4049 140.175 72.0201 138.184 70.32 135.653C68.6198 133.082 67.7696 130.095 67.7696 126.693C67.7696 123.375 68.5988 120.45 70.2578 117.92C71.9579 115.39 74.3011 113.419 77.2869 112.009C80.3144 110.557 83.7769 109.831 87.6752 109.831C91.4903 109.831 94.8494 110.495 97.7524 111.822C100.697 113.15 102.978 114.996 104.595 117.36C106.212 119.724 107.021 122.462 107.021 125.573V128.436H76.5405C76.5821 130.302 77.0797 131.961 78.0334 133.413C78.9871 134.824 80.3144 135.944 82.0145 136.773C83.7563 137.561 85.7468 137.956 87.9862 137.956C90.9304 137.956 93.4186 137.458 95.4508 136.462C97.483 135.425 98.6649 134.098 98.9965 132.48H107.083ZM76.7271 123.831H98.4988C98.4988 122.172 98.0428 120.741 97.1303 119.538C96.2595 118.293 94.9948 117.339 93.3358 116.676C91.7185 115.97 89.8317 115.618 87.6752 115.618C84.6065 115.618 82.0561 116.385 80.024 117.92C78.0334 119.413 76.9343 121.384 76.7271 123.831Z"/><path d="M108.646 110.578H119.097L127.868 120.533L136.639 110.578H147.089L132.782 126.756L147.214 142.933H136.763L127.93 132.978L119.097 142.933H108.646L123.016 126.756L108.646 110.578Z"/><path d="M160.744 110.578V142.933H152.72V110.578H160.744ZM152.72 100H160.744V106.907H152.72V100Z"/><path d="M170.466 131.982V116.862H165.365V110.391L170.466 110.702V103.796H178.49V110.578H186.515V116.862H178.49V131.298C178.49 133.081 179.071 134.513 180.232 135.591C181.434 136.67 182.969 137.209 184.835 137.209C185.706 137.209 186.556 137.147 187.386 137.022C188.256 136.856 188.941 136.649 189.438 136.4V142.996C188.941 143.203 188.235 143.369 187.323 143.493C186.452 143.659 185.54 143.742 184.586 143.742C181.766 143.742 179.299 143.265 177.184 142.311C175.069 141.316 173.41 139.926 172.208 138.142C171.046 136.358 170.466 134.305 170.466 131.982Z"/><path d="M212.282 146.418C211.203 148.948 210.001 150.898 208.674 152.267C207.347 153.636 205.854 154.569 204.195 155.067C202.578 155.564 200.732 155.813 198.659 155.813C197.29 155.813 196.108 155.647 195.113 155.316V148.596C195.486 148.762 196.046 148.886 196.793 148.969C197.539 149.093 198.327 149.156 199.156 149.156C200.318 149.156 201.313 148.782 202.142 148.036C202.971 147.33 203.677 146.356 204.257 145.111L206.123 141.129L190.385 110.578H199.53L209.918 131.049H210.042L218.875 110.578H227.771L212.282 146.418Z"/></svg><span class="of">Skills</span></a>
+    <span class="skill">/site-contradictions</span>
+    <span class="spacer"></span>
+    <span class="runmeta">Generated {{RUN_DATE}} &middot; read-only</span>
+  </header>
+
+  <aside class="sidenav" aria-label="Sections">
+    <div class="nav-group">Report</div>
+    <nav class="nav">
+      <a href="#claims">Contradictions <span class="n">{{CONTRADICTION_COUNT}}</span></a>
+      <a href="#findings">Other findings <span class="n">{{FINDING_COUNT}}</span></a>
+      <a href="#gaps">Questions for the client <span class="n">{{QUESTION_COUNT}}</span></a>
+    </nav>
+    <div class="nav-group">Appendix</div>
+    <nav class="nav">
+      <a href="#evidence">Evidence <span class="n">{{FACT_COUNT}}</span></a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="sheet">
+    <div class="masthead">
+      <h1>{{SITE_NAME}}</h1>
+      <p class="lede">Where <a href="https://{{SITE_DOMAIN}}" target="_blank" rel="noopener">{{SITE_DOMAIN}}</a> says two different things about the same fact. Every value is quoted from the page it came from, and every contradiction ends in a fix or a question for the client.</p>
+      <div class="figures">
+        <a href="#evidence"><span class="v">{{PAGE_COUNT}}</span><span class="l">pages read</span></a>
+        <a href="#evidence"><span class="v">{{FACT_COUNT}}</span><span class="l">claims collected</span></a>
+        <a href="#claims"><span class="v">{{CONTRADICTION_COUNT}}</span><span class="l">contradictions</span></a>
+        <a href="#gaps"><span class="v">{{QUESTION_COUNT}}</span><span class="l">questions for the client</span></a>
+      </div>
+      <div class="brief">
+        <h2>Fix these first</h2>
+        <p class="brief-lede">The contradictions a buyer is most likely to notice. Each one links to both quotes and to the fix or the question.</p>
+        <ol class="brief-list">
+          <!-- SLOT:BRIEF — the 3 to 5 contradictions an editor should fix first, most damaging first.
+               One plain sentence each, naming both values and where they appear. Pattern:
+          <li><a class="xref" href="#c1">C1</a><span>Starter price: $499 a month on the homepage, $49 a month on /pricing.</span></li> -->
+        </ol>
+      </div>
+    </div>
+
+    <section id="claims">
+      <h2>Contradictions</h2>
+      <p class="helper">Facts the site states with two or more values that cannot all be true. A strong entry quotes each value exactly with its page, says why it matters, and ends in a fix when the site's own canonical page settles it, or in a question for the client when nothing does.</p>
+      <div class="gapgroup">
+        <!-- SLOT:CONTRADICTIONS — one .gap per contradiction, C1.. by severity. Title ends in one
+             full stop. Severity tag: high uses .tag, medium and low use .tag soft. Values link to
+             evidence rows. Pattern:
+        <div class="gap"><div class="no">C1</div><div class="q"><strong>Starter price.</strong><span class="tag">high</span>
+          <ul class="vals">
+            <li><a class="fact" href="#e18">"$499/mo"</a><span class="where">homepage, pricing section</span></li>
+            <li><a class="fact" href="#e20">"$49/mo"</a><span class="where">/pricing</span></li>
+          </ul></div>
+          <p class="why">Fix: /pricing is the canonical page, so change the homepage to $49/mo. Or: Question 3.</p></div> -->
+      </div>
+    </section>
+
+    <section id="findings">
+      <h2>Other findings</h2>
+      <p class="helper">Stale values, tensions and the facts the site states consistently. Stale and tension rows are worth a look before the next edit; consistent rows are what content can safely repeat.</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Claim</th><th>On record / note</th><th>Status</th><th>Evidence</th></tr></thead>
+          <tbody>
+            <!-- SLOT:FINDINGS — stale and tension rows first, then consistent ones. Status: stale and
+                 tension use the .tag pill, consistent is plain text. Pattern:
+            <tr><td class="fact">Claim</td><td class="quote">note</td><td class="src"><span class="tag">stale</span></td><td class="src"><a class="fact" href="#e31">e31</a> &middot; <a class="fact" href="#e9">e9</a></td></tr>
+            <tr><td class="fact">Claim</td><td class="quote">note</td><td class="src">consistent</td><td class="src"><a class="fact" href="#e4">e4</a> &middot; <a class="fact" href="#e12">e12</a></td></tr> -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="gaps">
+      <h2>Questions for the client</h2>
+      <p class="helper">Only what the site cannot settle by itself. Send the list as it is: each answer closes one or more contradictions and tells the editor which value to keep.</p>
+      <!-- SLOT:QUESTIONS — one .gapgroup per subject, numbering continuous. Pattern:
+      <div class="gapgroup"><div class="k">Pricing</div>
+        <div class="gap"><div class="no">1</div><div class="q">The question?</div><p class="why">Which contradictions it closes (C1, C2) and why it matters.</p></div>
+      </div> -->
+    </section>
+
+    <section id="evidence">
+      <h2>Evidence</h2>
+      <p class="helper">One row per claim per page: nothing entered the report without a row here. Run date {{RUN_DATE}}, read-only.</p>
+      <details class="qgroup sources"><summary class="k">Pages read: {{PAGE_COUNT}}</summary>
+        <div class="srcwrap">
+          <!-- SLOT:SOURCES — one chip per page read, sorted by claims yielded. Pattern:
+          <span class="srcchip"><a href="https://acme.com/pricing" target="_blank" rel="noopener">/pricing</a><span class="ct">12 claims</span></span> -->
+        </div>
+      </details>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th></th><th>Claim</th><th>Page</th><th>Verbatim quote</th></tr></thead>
+          <tbody>
+            <!-- SLOT:EVIDENCE_ROWS — one row per claim per page, ids e1..eN in file order. Rows that
+                 take part in a contradiction get the conflict tag. Pattern:
+            <tr id="e1"><td class="idx">1</td><td class="fact">Claim<span class="tag">conflict</span></td><td class="src"><a href="https://..." target="_blank" rel="noopener">short.host/path</a></td><td class="quote">"verbatim quote"</td></tr> -->
+          </tbody>
+        </table>
+      </div>
+      <div class="qgroup"><div class="k">Not fetched or not read</div>
+        <ul class="notelist">
+          <!-- SLOT:NOT_FOUND — one <li> per page that failed or was left out, with the reason. -->
+        </ul>
+      </div>
+    </section>
+
+    </div>
+    <div class="footer"><a class="made" href="https://nexity.build" target="_blank" rel="noopener"><svg viewBox="27 100 201 56" fill="currentColor" role="img" aria-label="Nexity"><path d="M35.0244 142.933H27V110.578H35.1489L34.2158 114.809H34.4024C35.2733 113.274 36.8699 112.071 39.1922 111.2C41.556 110.287 44.293 109.831 47.4032 109.831C50.6379 109.831 53.4164 110.35 55.7387 111.387C58.1025 112.382 59.9272 113.813 61.2128 115.68C62.4983 117.505 63.1411 119.683 63.1411 122.213V142.933H55.1167V124.889C55.1167 122.317 54.2458 120.284 52.5041 118.791C50.7623 117.256 48.3778 116.489 45.3505 116.489C42.1987 116.489 39.6898 117.36 37.8237 119.102C35.9575 120.803 35.0244 123.147 35.0244 126.133V142.933Z"/><path d="M107.083 132.48C106.668 134.679 105.57 136.628 103.786 138.329C102.045 140.03 99.8052 141.357 97.0681 142.311C94.3727 143.265 91.3659 143.742 88.0484 143.742C84.0673 143.742 80.5422 143.037 77.4735 141.627C74.4049 140.175 72.0201 138.184 70.32 135.653C68.6198 133.082 67.7696 130.095 67.7696 126.693C67.7696 123.375 68.5988 120.45 70.2578 117.92C71.9579 115.39 74.3011 113.419 77.2869 112.009C80.3144 110.557 83.7769 109.831 87.6752 109.831C91.4903 109.831 94.8494 110.495 97.7524 111.822C100.697 113.15 102.978 114.996 104.595 117.36C106.212 119.724 107.021 122.462 107.021 125.573V128.436H76.5405C76.5821 130.302 77.0797 131.961 78.0334 133.413C78.9871 134.824 80.3144 135.944 82.0145 136.773C83.7563 137.561 85.7468 137.956 87.9862 137.956C90.9304 137.956 93.4186 137.458 95.4508 136.462C97.483 135.425 98.6649 134.098 98.9965 132.48H107.083ZM76.7271 123.831H98.4988C98.4988 122.172 98.0428 120.741 97.1303 119.538C96.2595 118.293 94.9948 117.339 93.3358 116.676C91.7185 115.97 89.8317 115.618 87.6752 115.618C84.6065 115.618 82.0561 116.385 80.024 117.92C78.0334 119.413 76.9343 121.384 76.7271 123.831Z"/><path d="M108.646 110.578H119.097L127.868 120.533L136.639 110.578H147.089L132.782 126.756L147.214 142.933H136.763L127.93 132.978L119.097 142.933H108.646L123.016 126.756L108.646 110.578Z"/><path d="M160.744 110.578V142.933H152.72V110.578H160.744ZM152.72 100H160.744V106.907H152.72V100Z"/><path d="M170.466 131.982V116.862H165.365V110.391L170.466 110.702V103.796H178.49V110.578H186.515V116.862H178.49V131.298C178.49 133.081 179.071 134.513 180.232 135.591C181.434 136.67 182.969 137.209 184.835 137.209C185.706 137.209 186.556 137.147 187.386 137.022C188.256 136.856 188.941 136.649 189.438 136.4V142.996C188.941 143.203 188.235 143.369 187.323 143.493C186.452 143.659 185.54 143.742 184.586 143.742C181.766 143.742 179.299 143.265 177.184 142.311C175.069 141.316 173.41 139.926 172.208 138.142C171.046 136.358 170.466 134.305 170.466 131.982Z"/><path d="M212.282 146.418C211.203 148.948 210.001 150.898 208.674 152.267C207.347 153.636 205.854 154.569 204.195 155.067C202.578 155.564 200.732 155.813 198.659 155.813C197.29 155.813 196.108 155.647 195.113 155.316V148.596C195.486 148.762 196.046 148.886 196.793 148.969C197.539 149.093 198.327 149.156 199.156 149.156C200.318 149.156 201.313 148.782 202.142 148.036C202.971 147.33 203.677 146.356 204.257 145.111L206.123 141.129L190.385 110.578H199.53L209.918 131.049H210.042L218.875 110.578H227.771L212.282 146.418Z"/></svg><span>Made with Nexity Skills</span></a><span>/site-contradictions &middot; read-only &middot; {{RUN_DATE}}</span></div>
+  </main>
+</div>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.nav a'));
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var sections=[].slice.call(document.querySelectorAll('section[id]'));
+  function setActive(id){links.forEach(function(a){a.removeAttribute('aria-current');});if(map[id]){map[id].setAttribute('aria-current','true');if(window.matchMedia('(max-width: 920px)').matches){var nv=document.querySelector('.sidenav');if(nv)nv.scrollTo({left:map[id].offsetLeft-16,behavior:'smooth'});}}}
+  var visible={};
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){visible[e.target.id]=e.isIntersecting;});
+    for(var i=0;i<sections.length;i++){if(visible[sections[i].id]){setActive(sections[i].id);break;}}
+  },{rootMargin:'-56px 0px -60% 0px',threshold:0});
+  sections.forEach(function(s){io.observe(s);});
+  function flashHash(){var t=location.hash&&document.getElementById(location.hash.slice(1));if(t&&(t.tagName==='TR'||t.tagName==='BLOCKQUOTE')){t.classList.remove('flash');void t.offsetWidth;t.classList.add('flash');}}
+  window.addEventListener('load',flashHash);window.addEventListener('hashchange',flashHash);
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a[href^="#"]');
+    if(!a)return;
+    var t=document.getElementById(a.getAttribute('href').slice(1));
+    if(t&&(t.tagName==='TR'||t.tagName==='BLOCKQUOTE')){t.classList.remove('flash');void t.offsetWidth;t.classList.add('flash');}
+  });
+})();
+(function(){
+  if(!window.matchMedia||!matchMedia('(hover: hover)').matches)return;
+  var card=document.createElement('div');card.className='tipcard';card.id='tipcard';card.setAttribute('role','tooltip');document.body.appendChild(card);
+  var hideT,showT,current=null;
+  function quoteText(bq){var s='';bq.childNodes.forEach(function(n){if(!(n.classList&&n.classList.contains('cite')))s+=n.textContent;});return s.trim();}
+  function fill(t){
+    card.innerHTML='';
+    if(t.tagName==='TR'){
+      var fc=t.querySelector('td.fact'),qc=t.querySelector('td.quote'),sc=t.querySelector('td.src a');
+      if(!fc)return false;
+      var st=window.__bkStatus&&window.__bkStatus[t.id];
+      if(st){var sd=document.createElement('div');sd.className='t-status'+(st.kind==='conflict'?'':' soft');sd.textContent=st.kind==='conflict'?('Conflict'+(st.c.length?' '+st.c.join(', '):'')+'. Do not reuse until the client confirms.'):st.kind==='tension'?'Tension with another figure. Check before citing.':'Unverified. Do not cite without the method.';card.appendChild(sd);}
+      var f=document.createElement('div');f.className='t-fact';f.innerHTML=fc.innerHTML;card.appendChild(f);
+      if(qc&&qc.textContent.trim()){var q=document.createElement('div');q.className='t-quote';q.textContent=qc.textContent.trim();card.appendChild(q);}
+      if(sc){var s=document.createElement('div');s.className='t-src';var a=document.createElement('a');a.href=sc.href;a.target='_blank';a.rel='noopener';a.textContent=sc.href;s.appendChild(a);card.appendChild(s);}
+      return true;
+    }
+    if(t.tagName==='BLOCKQUOTE'){
+      var q2=document.createElement('div');q2.className='t-quote';q2.textContent=quoteText(t);card.appendChild(q2);
+      var c=t.querySelector('.cite a');
+      if(c){var s2=document.createElement('div');s2.className='t-src';var a2=document.createElement('a');a2.href=c.href;a2.target='_blank';a2.rel='noopener';a2.textContent=c.href;s2.appendChild(a2);card.appendChild(s2);}
+      return true;
+    }
+    return false;
+  }
+  function show(link){
+    var id=link.getAttribute('href').slice(1);var t=document.getElementById(id);
+    if(!t||!fill(t))return;
+    card.style.left='0px';card.style.top='0px';card.classList.add('show');
+    var r=link.getBoundingClientRect(),w=card.offsetWidth,h=card.offsetHeight;
+    var x=Math.min(Math.max(8,r.left),window.innerWidth-w-8);
+    var y=r.bottom+8;if(y+h>window.innerHeight-8)y=r.top-h-8;
+    card.style.left=x+'px';card.style.top=y+'px';
+    link.setAttribute('aria-describedby','tipcard');current=link;
+  }
+  function hide(){card.classList.remove('show');if(current)current.removeAttribute('aria-describedby');current=null;}
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a.fact');
+    if(a){clearTimeout(hideT);clearTimeout(showT);showT=setTimeout(function(){show(a);},120);return;}
+    if(e.target.closest&&e.target.closest('.tipcard'))clearTimeout(hideT);
+  });
+  document.addEventListener('mouseout',function(e){
+    if(e.target.closest&&(e.target.closest('a.fact')||e.target.closest('.tipcard'))){clearTimeout(showT);hideT=setTimeout(hide,160);}
+  });
+  document.addEventListener('focusin',function(e){var a=e.target.closest&&e.target.closest('a.fact');if(a)show(a);});
+  document.addEventListener('focusout',function(e){if(e.target.closest&&e.target.closest('a.fact'))hide();});
+  window.addEventListener('scroll',function(){if(current)hide();},true);
+})();
+</script>
+<script>
+(function(){
+  /* ids for conflicts (c1..) and gap questions (q1..), then two-way links between them */
+  [].forEach.call(document.querySelectorAll('#claims .gap'),function(g){var n=g.querySelector('.no');var t=n&&n.textContent.trim();if(t&&/^C\d+$/.test(t)&&!g.id)g.id=t.toLowerCase();});
+  [].forEach.call(document.querySelectorAll('#gaps .gap'),function(g){var n=g.querySelector('.no');var t=n&&n.textContent.trim();if(t&&/^\d+$/.test(t)&&!g.id)g.id='q'+t;});
+  function linkify(el){
+    var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+    nodes.forEach(function(n){
+      if(n.parentNode.closest('a'))return;
+      var s=n.nodeValue,re=/((?:gap )?[Qq]uestions? )(\d+)|\b(C\d{1,2})\b/g;if(!re.test(s))return;re.lastIndex=0;
+      var f=document.createDocumentFragment(),last=0,m;
+      while((m=re.exec(s))){
+        f.appendChild(document.createTextNode(s.slice(last,m.index)));
+        var id=m[2]?'q'+m[2]:m[3].toLowerCase(),label=m[2]?m[2]:m[3];
+        if(m[2])f.appendChild(document.createTextNode(m[1]));
+        if(document.getElementById(id)){var a=document.createElement('a');a.href='#'+id;a.className='xref';a.textContent=label;f.appendChild(a);}
+        else f.appendChild(document.createTextNode(label));
+        last=re.lastIndex;
+      }
+      f.appendChild(document.createTextNode(s.slice(last)));n.parentNode.replaceChild(f,n);
+    });
+  }
+  [].forEach.call(document.querySelectorAll('#claims .gap .why, #gaps .gap .why'),linkify);
+
+  /* trust status of every evidence row: conflict (tag or a conflict row cites it), tension, unverified */
+  var status={};
+  function mark(id,kind){if(!status[id])status[id]={kind:kind,c:[]};else if(kind==='conflict')status[id].kind='conflict';return status[id];}
+  [].forEach.call(document.querySelectorAll('#evidence tr[id] .tag'),function(t){if(/conflict/i.test(t.textContent))mark(t.closest('tr').id,'conflict');});
+  [].forEach.call(document.querySelectorAll('#findings tbody tr'),function(r){var t=r.querySelector('.tag');if(!t)return;var k=/unverified|stale/i.test(t.textContent)?'unverified':/tension/i.test(t.textContent)?'tension':null;if(!k)return;[].forEach.call(r.querySelectorAll('a.fact'),function(a){mark(a.getAttribute('href').slice(1),k);});});
+  [].forEach.call(document.querySelectorAll('#claims .gap[id]'),function(g){var c=g.id.toUpperCase();[].forEach.call(g.querySelectorAll('a.fact'),function(a){var s=mark(a.getAttribute('href').slice(1),'conflict');if(s.c.indexOf(c)<0)s.c.push(c);});});
+  [].forEach.call(document.querySelectorAll('a.fact'),function(a){if(a.closest('#claims')||a.closest('#evidence'))return;var s=status[a.getAttribute('href').slice(1)];if(s)a.classList.add('is-'+s.kind);});
+  window.__bkStatus=status;
+
+  /* back link: after jumping from the text to a row, offer the way back */
+  var origin=null;
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.fact, a.xref');if(!a)return;
+    var t=document.getElementById(a.getAttribute('href').slice(1));if(!t||t.contains(a))return;
+    origin=a;var old=document.querySelector('.backlink');if(old)old.parentNode.removeChild(old);
+    var b=document.createElement('button');b.type='button';b.className='backlink';b.textContent='Back to where you were';
+    b.addEventListener('click',function(){var o=origin;b.parentNode.removeChild(b);if(o){o.scrollIntoView({block:'center'});o.focus({preventScroll:true});}});
+    var host=t.tagName==='TR'?(t.querySelector('td.fact')||t.lastElementChild):t;host.appendChild(b);
+  });
+
+  /* copy: each kit section as plain Markdown, the questionnaire as a numbered list */
+  var icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"/><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"/></svg>';
+  function clean(el){return el.textContent.replace(/\s+/g,' ').replace(/Back to where you were/g,'').trim();}
+  function toText(sec){
+    var out=[];
+    [].forEach.call(sec.querySelectorAll('h2,h3,.k,.prose p,.sub p,.aud p,li,.gap'),function(el){
+      if(el.closest('.helper')||el.closest('.sechead')&&el.tagName!=='H2')return;
+      if(el.tagName==='LI'&&el.closest('.notelist'))return;
+      var t;
+      if(el.classList.contains('gap')){var n=el.querySelector('.no'),q=el.querySelector('.q'),y=el.querySelector('.why');t=(n?clean(n)+'. ':'')+(q?clean(q):'')+(y?'\n   '+clean(y):'');}
+      else{t=clean(el);if(!t)return;if(el.tagName==='H2')t='## '+t;else if(el.tagName==='H3')t='### '+t;else if(el.tagName==='LI')t='- '+t;else if(el.classList.contains('k'))t='**'+t+'**';}
+      out.push(t);
+    });
+    return out.join('\n\n');
+  }
+  ['claims','gaps'].forEach(function(id){
+    var sec=document.getElementById(id);if(!sec)return;var h=sec.querySelector('h2');if(!h||h.parentNode.classList.contains('sechead'))return;
+    var head=document.createElement('div');head.className='sechead';h.parentNode.insertBefore(head,h);head.appendChild(h);
+    var b=document.createElement('button');b.type='button';b.className='copybtn';var label=id==='gaps'?'Copy questions':'Copy list';b.innerHTML=icon+'<span>'+label+'</span>';
+    b.addEventListener('click',function(){var txt=toText(sec);var done=function(){b.querySelector('span').textContent='Copied';setTimeout(function(){b.querySelector('span').textContent=label;},1600);};if(navigator.clipboard)navigator.clipboard.writeText(txt).then(done,function(){});});
+    head.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>

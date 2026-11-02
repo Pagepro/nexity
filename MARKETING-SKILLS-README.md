@@ -7,7 +7,7 @@ write what you need in plain words and get back a report.
 |---|---|
 | `brand-kit` | A brand kit (voice, audiences, facts with sources) from a company's website |
 | `blog-post-quality-review` | A critical review of a post or draft: a 0–10 score and the three fixes that matter most |
-| `source-review` | Every claim in an article checked against real sources: PASS, warnings or BLOCKED |
+| `site-contradictions` | Every place where the site says two different things about the same fact, with both quotes and a fix or a question for the client |
 | `internal-links` | The links between your own articles that are missing, as a list for the editor |
 | `blog-post-update` | Why a post lost traffic and what to change in it, as a change list for the editor |
 
@@ -63,7 +63,7 @@ Open the Claude app, the **Code** tab, the same folder, and write what you need:
 
 - "Make a brand kit for https://company.com"
 - "Review this post: https://company.com/blog/…" (or paste the text)
-- "Check the sources in this article: https://…"
+- "Find contradictions on https://company.com"
 - "Find missing internal links on https://company.com/blog/"
 - "This post dropped in Google, what should we change? https://…"
 
@@ -81,8 +81,8 @@ marketers" once more.
 npx skills add Pagepro/nexity
 ```
 
-and pick the five skills above plus `marketing-setup` and `work-humanizer` from the list it
-shows. Then type "Help me setup these skills for marketers".
+and pick the five skills above plus `marketing-setup`, `work-humanizer` and `source-review`
+(`blog-post-update` uses the last two) from the list it shows. Then type "Help me setup these skills for marketers".
 
 **Without installing anything into the agent:** on this repository's GitHub page, click the
 green **Code** button, then **Download ZIP**. Unzip it, open the unzipped folder (the top one,
