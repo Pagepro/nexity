@@ -5,8 +5,8 @@ description: Use when asked to build, generate, or reverse-engineer a brand kit,
 
 # Brand Kit Generator
 
-Reverse-engineer a complete brand kit for any company from public sources alone: the six
-sections Foundations, Brand Voice & Tone, Author Persona, Global Writing Rules,
+Reverse-engineer a complete brand kit for any company from public sources alone: the five
+sections Foundations, Brand Voice & Tone, Global Writing Rules,
 Audiences, and Product Lines, in the exact structure of `template.md` (same directory as
 this skill). The second deliverable is a **gap questionnaire**: the short list of
 questions the client must answer because no public source could.
@@ -81,8 +81,8 @@ From the voice samples (never from your impression of the industry), write a
 `## Voice analysis` section at the end of `evidence.md` covering: sentence length and
 register; how claims are backed (numbers? named clients? cited sources?); recurring
 phrases worth quoting; where the strongest writing lives; which words from the template's
-banned list the brand itself overuses. These notes feed the Brand Voice & Tone and Author
-Persona sections and any client-specific writing rules.
+banned list the brand itself overuses. These notes feed the Brand Voice & Tone section and any
+client-specific writing rules.
 
 ## 2b. Claims register
 
@@ -174,7 +174,7 @@ from a potential customer": a URL up front, and afterwards only the gaps.
    fit-criteria thresholds you authored in ICP sections ("10+ editors") — they are
    guidance, not claims about the client; keep them clearly round.
 2. **Template audit**: the file starts with `# Brand kit — <Brand Name>` (the template's
-   instruction preamble must not appear), all six sections present, italic helper lines
+   instruction preamble must not appear), all five sections present, italic helper lines
    intact where the template has them, no `<...>` placeholder left.
 3. **Rules audit**: the kit passes its own Global Writing Rules.
 

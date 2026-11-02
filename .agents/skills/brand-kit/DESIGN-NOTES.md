@@ -16,11 +16,11 @@ selection, and active nav. One additional hue only: amber for unresolved things
 light is default (viewer theme respected per artifact spec).
 
 STORY: A marketer, an editor or the client opens the page, understands who the company is
-within one viewport, walks the six kit sections, clicks any number to land on its
+within one viewport, walks the five kit sections, clicks any number to land on its
 evidence row, and ends at the questions only the client can answer.
 
 FIRST VIEWPORT: 52px topbar (tool wordmark, client domain chip, run date, two count
-chips: sourced facts, open gaps). 248px left nav: six kit sections, then the appendix (Claims register, Evidence, Gap
+chips: sourced facts, open gaps). 248px left nav: five kit sections, then the appendix (Claims register, Evidence, Gap
 questionnaire) with counts. Reading pane opens on Foundations at ~70ch measure.
 
 FORM: Read mode surface inside an established world; precise brief, no concept seed.
