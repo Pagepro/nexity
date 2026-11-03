@@ -63,8 +63,9 @@ Reload the site and continue with [Next steps after init](#next-steps-after-init
 
 ### Option B: Deploy with Vercel
 
-See [Deploy to Vercel](#deploy-to-vercel). The deployed site shows the same Next
-steps screen until you add content.
+Push the project to your own GitHub repository (Option A or C), then
+[Deploy to Vercel](#deploy-to-vercel). The deployed site shows the same Next steps
+screen until you add content.
 
 ### Option C: clone by hand
 
@@ -132,10 +133,10 @@ first real deploy.
 
 ### Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPagepro%2Fnexity%2Ftree%2Fmain%2Ftheme-meridian&root-directory=web&env=NEXT_PUBLIC_SANITY_PROJECT_ID,NEXT_PUBLIC_SANITY_DATASET,SANITY_API_READ_TOKEN,SANITY_REVALIDATE_SECRET&envDescription=Sanity%20project%20id%20and%20dataset%2C%20a%20Viewer%20token%2C%20and%20a%20random%20secret%20for%20the%20revalidate%20webhook%20(openssl%20rand%20-hex%2032).&envLink=https%3A%2F%2Fwww.sanity.io%2Fmanage)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone)
 
-The button clones the repo into your GitHub account and creates a Vercel project
-with **Root Directory `web`**. It asks for four variables:
+The button opens Vercel's import screen. Pick your project's repository, set
+**Root Directory** to `web` and add these four variables before you deploy:
 
 | Variable | Value |
 |---|---|
@@ -155,14 +156,17 @@ After the first deploy:
    `/admin` can't log in: set `SANITY_BLUEPRINT_SITE_URL` to the site's URL
    (`https://<project>.vercel.app` or your domain, with `https://`, no trailing
    slash) and deploy the blueprint ([`docs/guides/sanity-blueprints.md`](docs/guides/sanity-blueprints.md)).
-   That also creates the revalidate webhook.
+   That also creates the revalidate webhook. Without the blueprint, add the origin
+   by hand in [sanity.io/manage](https://www.sanity.io/manage) → API → CORS origins
+   with **Allow credentials** on; a later `blueprints:deploy` then fails with
+   `409 Duplicate origin` until you delete it ([Link the Sanity blueprint](#next-steps-after-init), step 3).
 2. **Add content**: the deployed site shows the Next steps screen on an empty
    dataset. Run `pnpm seed` locally against the same project and dataset, or
    publish the documents in `/admin`.
 3. **Pull the env locally** if you cloned after deploying: `vercel env pull web/.env.local`.
 
-> The button and `sanity init` both need the repository to be public, or access
-> for the account that runs them. `sanity init` downloads only the starter
+> `sanity init` needs the repository to be public, or access for the account
+> that runs it. It downloads only the starter
 > folder, so the template's CI (at the template repository root) never reaches your project.
 
 ### 1. Clone and Install Dependencies
