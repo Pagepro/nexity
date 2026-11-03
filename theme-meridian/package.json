@@ -34,12 +34,12 @@
     "agent:doctor": "node .agents/tooling/cli.mjs doctor"
   },
   "devDependencies": {
-    "@sanity/blueprints": "^0.29.0",
-    "@sanity/cli": "^8.22.1",
+    "@sanity/blueprints": "^0.31.0",
+    "@sanity/cli": "^8.25.0",
     "dotenv": "^18.0.9",
     "husky": "^9.1.7",
-    "oxfmt": "^0.74.0",
-    "oxlint": "~1.89.0",
+    "oxfmt": "^0.75.0",
+    "oxlint": "~1.90.0",
     "oxlint-tsgolint": "^7.0.2005"
   }
 }
