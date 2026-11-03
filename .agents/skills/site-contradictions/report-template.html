@@ -74,6 +74,9 @@ h2{margin:0;font:400 36px/1.05 var(--heading);letter-spacing:-.025em;text-wrap:b
    so it reads as a note: dashed frame, info icon, smaller faint text. */
 .helper{display:flex;gap:10px;align-items:flex-start;margin:16px 0 0;max-width:68ch;padding:12px 14px;border:1px dashed var(--input);border-radius:10px;font-size:13px;line-height:1.55;color:var(--faint)}
 .helper::before{content:"";flex:none;width:16px;height:16px;margin-top:1px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0'/%3E%3Cpath d='M12 9h.01'/%3E%3Cpath d='M11 12h1v4h1'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0'/%3E%3Cpath d='M12 9h.01'/%3E%3Cpath d='M11 12h1v4h1'/%3E%3C/svg%3E") center/contain no-repeat}
+.helper ul{margin:6px 0 0;padding-left:18px}
+.helper li+li{margin-top:2px}
+.helper b{font-weight:500;color:var(--muted)}
 .prose{max-width:68ch}
 .prose p{margin:18px 0 0;color:var(--muted)}
 .prose p strong{color:var(--fg)}
@@ -220,6 +223,7 @@ details.sources[open] summary::after{content:"Hide"}
 }
 
 .tag.soft{background:var(--secondary);color:var(--muted)}
+.tag[data-tip]{cursor:help}
 .gap .q .tag{margin-left:10px}
 .vals{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
 .vals li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--card)}
@@ -285,7 +289,13 @@ details.sources[open] summary::after{content:"Hide"}
 
     <section id="claims">
       <h2>Contradictions</h2>
-      <p class="helper">Facts the site states with two or more values that cannot all be true. A strong entry quotes each value exactly with its page, says why it matters, and ends in a fix when the site's own canonical page settles it, or in a question for whoever owns the fact when nothing does.</p>
+      <div class="helper"><div>Your site gives two or more different values for the same fact, and they can't all be true. Each one shows:
+        <ul>
+          <li>the exact quote and the page it's on, for every value</li>
+          <li>why it matters</li>
+          <li>a fix, if your source-of-truth page settles it</li>
+          <li>or a question for whoever owns the fact, if nothing does</li>
+        </ul></div></div>
       <div class="gapgroup">
         <!-- SLOT:CONTRADICTIONS — one .gap per contradiction, C1.. by severity. Title ends in one
              full stop. Severity tag: high uses .tag, medium and low use .tag soft. Values link to
@@ -301,15 +311,21 @@ details.sources[open] summary::after{content:"Hide"}
 
     <section id="findings">
       <h2>Other findings</h2>
-      <p class="helper">Stale values, tensions and the facts the site states consistently. Stale and tension rows are worth a look before the next edit; consistent rows are what content can safely repeat.</p>
+      <div class="helper"><div>Things that aren't contradictions but are still worth knowing.
+        <ul>
+          <li><b>Stale:</b> one value is current and another is older. Check it before your next edit.</li>
+          <li><b>Tension:</b> the values can both be true, but they clash when quoted together. Check it before your next edit.</li>
+          <li><b>Consistent:</b> the same value on every page that states it. You can safely repeat it.</li>
+        </ul></div></div>
       <div class="tablewrap">
         <table>
           <thead><tr><th>Claim</th><th>On record / note</th><th>Status</th><th>Evidence</th></tr></thead>
           <tbody>
             <!-- SLOT:FINDINGS — stale and tension rows first, then consistent ones. Status: stale and
-                 tension use the .tag pill, consistent is plain text. Pattern:
+                 tension use the .tag pill, consistent uses .tag soft. The page's script adds the
+                 hover explanation of each status. Pattern:
             <tr><td class="fact">Claim</td><td class="quote">note</td><td class="src"><span class="tag">stale</span></td><td class="src"><a class="fact" href="#e31">e31</a> &middot; <a class="fact" href="#e9">e9</a></td></tr>
-            <tr><td class="fact">Claim</td><td class="quote">note</td><td class="src">consistent</td><td class="src"><a class="fact" href="#e4">e4</a> &middot; <a class="fact" href="#e12">e12</a></td></tr> -->
+            <tr><td class="fact">Claim</td><td class="quote">note</td><td class="src"><span class="tag soft">consistent</span></td><td class="src"><a class="fact" href="#e4">e4</a> &middot; <a class="fact" href="#e12">e12</a></td></tr> -->
           </tbody>
         </table>
       </div>
@@ -317,7 +333,12 @@ details.sources[open] summary::after{content:"Hide"}
 
     <section id="gaps">
       <h2>Open questions</h2>
-      <p class="helper">Only what the site cannot settle by itself. Send each one to whoever owns the fact (product, sales, legal, leadership): each answer closes one or more contradictions and tells the editor which value to keep.</p>
+      <div class="helper"><div>Things your site can't settle by itself. For each one:
+        <ul>
+          <li>send it to whoever owns the fact (product, sales, legal or leadership)</li>
+          <li>the answer closes one or more contradictions</li>
+          <li>and tells the editor which value to keep</li>
+        </ul></div></div>
       <!-- SLOT:QUESTIONS — one .gapgroup per subject, numbering continuous. Pattern:
       <div class="gapgroup"><div class="k">Pricing</div>
         <div class="gap"><div class="no">1</div><div class="q">The question?</div><p class="why">Which contradictions it closes (C1, C2) and why it matters.</p></div>
@@ -380,10 +401,13 @@ details.sources[open] summary::after{content:"Hide"}
 (function(){
   if(!window.matchMedia||!matchMedia('(hover: hover)').matches)return;
   var card=document.createElement('div');card.className='tipcard';card.id='tipcard';card.setAttribute('role','tooltip');document.body.appendChild(card);
-  var hideT,showT,current=null;
+  var hideT,showT,current=null,SEL='a.fact,.tag[data-tip]';
+  var tips={stale:'One value is current and another is older. Check it before your next edit.',tension:'The values can both be true, but they clash when quoted together. Check it before your next edit.',consistent:'The same value on every page that states it. You can safely repeat it.'};
+  [].forEach.call(document.querySelectorAll('#findings td .tag'),function(t){var k=tips[t.textContent.trim().toLowerCase()];if(k){t.setAttribute('data-tip',k);t.tabIndex=0;}});
   function quoteText(bq){var s='';bq.childNodes.forEach(function(n){if(!(n.classList&&n.classList.contains('cite')))s+=n.textContent;});return s.trim();}
   function fill(t){
     card.innerHTML='';
+    if(t.hasAttribute('data-tip')){var d=document.createElement('div');d.className='t-fact';d.textContent=t.getAttribute('data-tip');card.appendChild(d);return true;}
     if(t.tagName==='TR'){
       var fc=t.querySelector('td.fact'),qc=t.querySelector('td.quote'),sc=t.querySelector('td.src a');
       if(!fc)return false;
@@ -403,7 +427,7 @@ details.sources[open] summary::after{content:"Hide"}
     return false;
   }
   function show(link){
-    var id=link.getAttribute('href').slice(1);var t=document.getElementById(id);
+    var t=link.hasAttribute('data-tip')?link:document.getElementById(link.getAttribute('href').slice(1));
     if(!t||!fill(t))return;
     card.style.left='0px';card.style.top='0px';card.classList.add('show');
     var r=link.getBoundingClientRect(),w=card.offsetWidth,h=card.offsetHeight;
@@ -414,15 +438,15 @@ details.sources[open] summary::after{content:"Hide"}
   }
   function hide(){card.classList.remove('show');if(current)current.removeAttribute('aria-describedby');current=null;}
   document.addEventListener('mouseover',function(e){
-    var a=e.target.closest&&e.target.closest('a.fact');
+    var a=e.target.closest&&e.target.closest(SEL);
     if(a){clearTimeout(hideT);clearTimeout(showT);showT=setTimeout(function(){show(a);},120);return;}
     if(e.target.closest&&e.target.closest('.tipcard'))clearTimeout(hideT);
   });
   document.addEventListener('mouseout',function(e){
-    if(e.target.closest&&(e.target.closest('a.fact')||e.target.closest('.tipcard'))){clearTimeout(showT);hideT=setTimeout(hide,160);}
+    if(e.target.closest&&(e.target.closest(SEL)||e.target.closest('.tipcard'))){clearTimeout(showT);hideT=setTimeout(hide,160);}
   });
-  document.addEventListener('focusin',function(e){var a=e.target.closest&&e.target.closest('a.fact');if(a)show(a);});
-  document.addEventListener('focusout',function(e){if(e.target.closest&&e.target.closest('a.fact'))hide();});
+  document.addEventListener('focusin',function(e){var a=e.target.closest&&e.target.closest(SEL);if(a)show(a);});
+  document.addEventListener('focusout',function(e){if(e.target.closest&&e.target.closest(SEL))hide();});
   window.addEventListener('scroll',function(){if(current)hide();},true);
 })();
 </script>
