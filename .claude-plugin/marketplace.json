@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "marketing-skills",
-      "displayName": "Marketing skills",
+      "displayName": "Nexity Marketing Skills",
       "source": "./.agents/skills",
       "description": "Brand kit from a URL, the places where a site contradicts itself, a scored blog post review, a diagnosis and update plan for a post that dropped, and missing internal links. Read-only: they propose, a person publishes. Start with \"Help me setup these skills for marketers\".",
       "author": {
