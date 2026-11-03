@@ -1,6 +1,6 @@
 # Nexity
 
-Nexity is a migration framework for AI-native websites, built on Next.js 16 and Sanity 6. Its starter, [`base/`](base/), is a pnpm monorepo with two packages:
+Nexity is an open source system for starting and growing AI-native websites on Next.js + Sanity. Its starter, [`base/`](base/), is a pnpm monorepo with two packages:
 
 - **`web/`**: the Next.js 16 app (App Router, Tailwind CSS 4, TypeScript), with the Sanity Studio embedded at `/admin`.
 - **`studio/`**: a standalone Sanity Studio with the same schemas. Schemas live here and `web/` imports them.
