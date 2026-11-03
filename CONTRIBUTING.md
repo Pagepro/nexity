@@ -75,6 +75,12 @@ Node built-ins only). Commit the generated `.agents/` snapshots in both starters
 with the source. The catalog records skill/agent
 dependencies; each snapshot lock records its version and content hashes.
 
+The marketing skills also ship as the Claude plugin `marketing-skills` (`.claude-plugin/marketplace.json`).
+When a pull request changes a skill listed there, bump the plugin's `version` (semver: patch for a
+fix, minor for a new skill or feature, major when a skill is removed or renamed). Claude offers an
+update only when that number changes, so a change merged without a bump never reaches people who
+installed the plugin.
+
 ## Pull requests
 
 - One topic per pull request. Fill in the template: which starter, whether the change was ported to the other one, a test plan.
