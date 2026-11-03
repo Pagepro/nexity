@@ -1,4 +1,4 @@
-# Marketing skills: start here
+# Nexity Marketing Skills: start here
 
 This repository has five skills for marketers. An AI agent (Claude) runs them for you: you
 write what you need in plain words and get back a report.
