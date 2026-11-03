@@ -33,8 +33,14 @@ and `docs/guides/agent-tools.md` covers optional MCP servers.
 
 - **Never read, print or `cat` a `.env` file**, and never echo a token or secret back.
   Check a file exists with `test -f web/.env.local && echo yes`; check variables with
-  `pnpm --filter <scope>/web envs:validate`. When the user gives you a value, write it
-  into the file without quoting it back.
+  `pnpm --filter <scope>/web envs:validate`. When the user gives you a value that is not
+  a secret (project ID, dataset, domain), write it into the file without quoting it back.
+- **Never ask the user to paste a token or secret into the chat.** Anything typed into
+  the conversation leaves their machine and stays in the transcript. Tell them which line
+  of which file to paste it into in their own editor, then confirm it with
+  `envs:validate`, which never prints values. If they paste one into the chat anyway,
+  write it into the file without quoting it back and suggest they rotate it at
+  sanity.io/manage.
 - Commands that change Sanity access, content or deployed infrastructure are the
   user's: `sanity login`, `sanity cors …`, `sanity tokens …`, `sanity dataset …`,
   `sanity deploy`, `pnpm blueprints:deploy`, `pnpm seed`. You may run
@@ -102,7 +108,8 @@ New project: sanity.io/manage → **Create new project**, note the project ID. C
 dataset if the wizard didn't: `! pnpm --filter <scope>/studio exec sanity dataset create production`.
 
 Tokens: sanity.io/manage → project → **API → Tokens → Add API token**. The user creates
-them and pastes each when you ask (Step 3 writes them):
+them and keeps them at hand for Step 3, where they paste them into `web/.env.local`
+themselves. Never ask for them in the chat:
 
 | Token | Permission | Variable | Why |
 |---|---|---|---|
@@ -124,9 +131,17 @@ cp web/.env.example web/.env.local
 cp studio/.env.example studio/.env.local
 ```
 
-After copying, have the user check the `SANITY_BLUEPRINT_*` lines at the end of
-`web/.env.local`: empty both unless they already know the values (Step 4), and keep
-a single `SANITY_REVALIDATE_SECRET` line.
+After copying, write the project ID and dataset into both files yourself (they are not
+secrets). Then have the user open `web/.env.local` in their own editor and:
+
+- paste the tokens from Step 2 on the `SANITY_API_READ_TOKEN` and
+  `SANITY_API_WRITE_TOKEN` lines;
+- set `SANITY_REVALIDATE_SECRET` to the output of `openssl rand -hex 32`, run in their
+  own terminal, not with `!` (that prints it into the chat); keep a single line of it;
+- check the `SANITY_BLUEPRINT_*` lines at the end: empty both unless they already know
+  the values (Step 4).
+
+When they say it's done, run `envs:validate` to confirm the variables are set.
 
 **`web/.env.local`** (or `web/.env`; both are read and `.env.local` wins, as in Next).
 `web/src/setup/envVariables.ts` validates it: `pnpm dev` and `pnpm build` refuse to
