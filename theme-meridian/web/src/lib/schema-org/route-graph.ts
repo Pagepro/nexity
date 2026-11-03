@@ -73,9 +73,7 @@ interface AuthorFragmentLike {
   avatar: ImageFragment | null;
 }
 
-const graphAuthor = (
-  author: AuthorFragmentLike | null | undefined,
-): GraphAuthor | null =>
+const graphAuthor = (author: AuthorFragmentLike | null | undefined): GraphAuthor | null =>
   author?._id
     ? {
         id: author._id,
