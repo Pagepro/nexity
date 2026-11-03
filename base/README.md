@@ -1,6 +1,6 @@
 # Nexity Starter
 
-> The starter of Nexity, a migration framework for AI-native websites: an opinionated Next.js and Sanity template with the features every project needs built in.
+> The starter of Nexity, an open source system for starting and growing AI-native websites: an opinionated Next.js and Sanity template with the features every project needs built in.
 
 ## Stack
 
