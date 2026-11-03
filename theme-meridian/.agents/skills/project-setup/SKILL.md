@@ -349,9 +349,15 @@ and `DESIGN.md` (how it looks):
 **Check:** a Vercel project exists and `pnpm blueprints:plan` with the production
 values below shows no pending changes.
 
-No Vercel project yet: create one from the repo with **Root Directory `web`**, or use
-the README's Deploy with Vercel button. To work locally on a project created that way,
-clone it and `! vercel env pull web/.env.local`.
+No Vercel project yet: import the project's repository on Vercel (the README's Deploy
+with Vercel button opens that screen) with **Root Directory `web`** and the env vars from
+item 1 set before the first deploy. Then tell the user to add the Vercel domain
+(`https://<project>.vercel.app`) to the Sanity CORS origins: item 2, or by hand in
+sanity.io/manage → API → CORS origins with **Allow credentials** on. Without it `/admin`
+can't log in. A hand-made origin makes a later `blueprints:deploy` fail with
+`409 Duplicate origin` until it is deleted (README → "Next steps after init", step 3).
+To work locally on a project created that way, clone it and
+`! vercel env pull web/.env.local`.
 
 1. **Vercel → Project → Settings → Environment Variables**: the required and
    recommended `web/` vars, `NEXT_PUBLIC_BASE_URL` set to the domain,

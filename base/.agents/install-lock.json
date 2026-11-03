@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": {
     "version": "1.3.0",
-    "digest": "d73bf7ace516c8c7489daec13804c80b757bfc4443df1cd25910a0fcbfcb55d1"
+    "digest": "c3479d2d7d57bdc78388b3a760dfd66d99b99a0710dc927010bffd6b044d8ccc"
   },
   "selected": [
     "create-section",
@@ -45,7 +45,7 @@
     ".agents/skills/pr-writeup/scripts/crop.py": "65206bb9bff243515a7c4ee5a6e8af1fcaf7aca2eee0056551c83e0dd5d0244f",
     ".agents/skills/pr-writeup/scripts/prepare.js": "3ca52160776176e7eb75c5c456d512b636b7dafaa912b235a0c0260305e7ee3f",
     ".agents/skills/pr-writeup/scripts/region.js": "40248d66a418d98cf063449601575fa666bf545ebea0515e272f80a89398b159",
-    ".agents/skills/project-setup/SKILL.md": "f143e7809200a0042fcf04bb845a0463eda283c9764e665d961b256ed75dd495",
+    ".agents/skills/project-setup/SKILL.md": "d1d3252f58a168edc6237764d5b21ad7185334ed2cd775b1c66f7a23c45c1d7f",
     ".agents/skills/sanity-module-catalog/SKILL.md": "352f69deeeb006f80d1b6403219de86aea789f13a6b27e92d9d01bfbfa762d4d",
     ".agents/skills/sanity-module-catalog/references/live-catalog.md": "5a3b48c831d8d653c96678a2092606c3bbb725b8fea1b49c0c19c30c1677c793",
     ".agents/skills/sanity-module-catalog/scripts/capture.mjs": "0a6c5fff88265808c303bbb111266a210f64341ddef3f2e75524afc50bcc0901",
