@@ -3,7 +3,7 @@ name: marketing-setup
 description: Walk a marketer with no terminal experience through setting up the marketing skills (brand-kit, site-contradictions, blog-post-quality-review, internal-links, blog-post-update, and source-review, which blog-post-update uses) step by step, by their preferences, whether they came as the Claude Code plugin `marketing-skills`, through `npx skills add Pagepro/nexity`, or in a downloaded ZIP of the repository. Checks where the skills are, says what to install and how (click by click), installs and builds what it can itself with permission, runs a short test of each chosen skill, and ends with what the person can now ask for. Use when someone says "Help me setup these skills for marketers", "set up the marketing skills", "skonfiguruj skille marketingowe", "pomóż mi to uruchomić", or has just installed the marketing skills and asks how to start.
 ---
 
-# Marketing skills setup
+# Nexity Marketing Skills setup
 
 The person in front of you is a marketer, not a developer. They installed the marketing skills
 (as a plugin, with `npx skills`, or by downloading the repository as a ZIP) and typed a
