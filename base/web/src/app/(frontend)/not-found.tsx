@@ -6,6 +6,7 @@ import { fetchGlobalSections } from "@/sanity/lib/queries/global-sections";
 import { getSite } from "@/sanity/lib/queries/site";
 import { SANITY_TAGS, pageTag } from "@/sanity/lib/tags";
 import type { NotFoundQueryResult } from "@/types/sanity.types";
+import { ErrorState } from "@/ui/error-state";
 import Sections from "@/ui/sections";
 
 import { NotFoundQuery } from "./query";
@@ -49,9 +50,11 @@ const NotFound = async () => {
 
   if (!page)
     return (
-      <h1 className="section flex min-h-[50vh] items-center justify-center text-36 leading-tight font-medium tracking-tight md:text-44">
-        404
-      </h1>
+      <ErrorState
+        code="404"
+        title="Page not found"
+        description="The link may be broken, or the page was moved or removed. Check the address or start over from the homepage."
+      />
     );
 
   const globals = await fetchGlobalSections(NOT_FOUND_SLUG);
