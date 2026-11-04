@@ -1,12 +1,23 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { buildSitemapXml, SITEMAP_PATH, SITEMAP_REWRITE } from "./sitemap.ts";
+import {
+  buildSitemapXml,
+  SITEMAP_PATH,
+  SITEMAP_REDIRECT,
+  SITEMAP_REWRITE,
+} from "./sitemap.ts";
 
 test("the public /sitemap.xml is rewritten to a path that does not end in sitemap.xml", () => {
   assert.equal(SITEMAP_REWRITE.source, "/sitemap.xml");
   assert.equal(SITEMAP_REWRITE.destination, SITEMAP_PATH);
   assert.ok(!SITEMAP_PATH.endsWith("sitemap.xml"));
+});
+
+test("the rewrite target redirects to the public URL, so only one sitemap URL is public", () => {
+  assert.equal(SITEMAP_REDIRECT.source, SITEMAP_REWRITE.destination);
+  assert.equal(SITEMAP_REDIRECT.destination, SITEMAP_REWRITE.source);
+  assert.equal(SITEMAP_REDIRECT.statusCode, 301);
 });
 
 test("renders a urlset with loc, lastmod and priority", () => {

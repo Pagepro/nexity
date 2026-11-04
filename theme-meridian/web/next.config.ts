@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 import { SANITY_CDN_REWRITE } from "./src/lib/sanity-cdn-proxy";
-import { SITEMAP_REWRITE } from "./src/lib/sitemap";
+import { SITEMAP_REDIRECT, SITEMAP_REWRITE } from "./src/lib/sitemap";
 import { resolveBaseUrl } from "./src/setup/base-url";
 
 export default {
@@ -20,6 +20,9 @@ export default {
 
   // No CMS redirects here: src/proxy.ts resolves them per request. Config redirects
   // run first and would keep a deleted redirect alive until the next deploy.
+  async redirects() {
+    return [SITEMAP_REDIRECT];
+  },
 
   async rewrites() {
     return [SANITY_CDN_REWRITE, SITEMAP_REWRITE];

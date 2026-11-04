@@ -8,6 +8,14 @@ export const SITEMAP_REWRITE = {
   destination: SITEMAP_PATH,
 };
 
+// Keeps `SITEMAP_PATH` from being a second public sitemap URL. Redirects match the incoming path
+// only, so the rewrite above never meets this rule.
+export const SITEMAP_REDIRECT = {
+  source: SITEMAP_PATH,
+  destination: SITEMAP_REWRITE.source,
+  statusCode: 301 as const,
+};
+
 export type SitemapEntry = {
   url: string;
   lastModified?: string | null;
