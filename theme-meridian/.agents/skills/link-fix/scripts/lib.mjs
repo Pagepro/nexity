@@ -1,4 +1,4 @@
-// Mirrors the starter's routing: KEEP IN SYNC with web/src/lib/resolveUrl.ts, web/src/app/sitemap.ts
+// Mirrors the starter's routing: KEEP IN SYNC with web/src/lib/resolveUrl.ts, web/src/app/sitemaps/all.xml/route.ts
 // and the catch-all page route, which matches `metadata.slug.current` without a leading slash.
 
 /** Types the `internal` reference field accepts (partials/linkBaseSchema.ts `to`). */
@@ -34,7 +34,7 @@ const CODE_ROUTES = [
   "/icon.svg",
   "/apple-icon.png",
 ];
-const CODE_ROUTE_PREFIXES = ["/admin", "/styleguide", "/api/", "/cdn-sanity/", "/_next/"];
+const CODE_ROUTE_PREFIXES = ["/admin", "/styleguide", "/sitemaps/", "/api/", "/cdn-sanity/", "/_next/"];
 
 const SKIPPED_STRING_KEYS = new Set(["text", "_type", "_key", "_ref", "_id", "_rev", "_weak"]);
 

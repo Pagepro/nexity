@@ -536,7 +536,7 @@ See [`docs/agents/new-document-type.md`](docs/agents/new-document-type.md) for t
    - Add the new type to the catchall page `web/src/app/(frontend)/[[...slug]]/page.tsx` if appropriate
 
 7. **Update SEO Files**
-   - Update `web/src/app/sitemap.ts` with the new document type if it's publicly discoverable
+   - Update `web/src/app/sitemaps/all.xml/route.ts` with the new document type (its query and its type tag) if it's publicly discoverable
    - Update `web/src/app/llms.txt/route.ts` (`LLMS_DATA_QUERY`) to include this document type if it's public
    - If it has its own route, give it a Markdown version: a template in `web/src/lib/markdown/documents.ts` and a loader in `load-markdown.ts` (see `docs/agents/new-document-type.md`, step 9)
 
@@ -752,7 +752,7 @@ pnpm --filter @meridian/web ts:generate
 │       │   ├── (styleguide)/ # /styleguide and the Sections Gallery
 │       │   ├── actions/      # Server actions (contact form)
 │       │   ├── api/          # API routes (draft-mode, revalidate, redirects, markdown, og, newsletter, listings)
-│       │   ├── sitemap.ts    # Sitemap generation
+│       │   ├── sitemaps/     # Sitemap at /sitemaps/all.xml, served as /sitemap.xml by a rewrite
 │       │   ├── robots.ts     # Robots.txt generation
 │       │   └── llms.txt/     # llms.txt, built from the CMS, links to the .md pages
 │       ├── proxy.ts          # Next 16 proxy: basic auth, request-time CMS redirects, .md / Accept: text/markdown

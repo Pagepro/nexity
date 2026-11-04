@@ -16,7 +16,7 @@ Links stored in the dataset (what editors typed in the Studio) are out of scope:
 - `web/next.config.*`: `trailingSlash` (unset or `false` = no trailing slash, Next 308-redirects `/x/` to `/x`; `true` = always `/x/`, except the root and paths ending in a file extension), and the note that CMS redirects live in `web/src/proxy.ts`, not in `redirects()`
 - `web/src/lib/resolveUrl.ts` (type → path, `ensureLeadingSlash`, `base` option), `web/src/lib/env.ts` (`BASE_URL`) and `web/src/setup/base-url.ts` (`NEXT_PUBLIC_BASE_URL`)
 - `web/src/ui/components/Link/BaseLink/index.tsx` and `utils.ts` (`internalPathHref`, `opensInNewTab`: http(s) opens in a new tab with `rel="noopener noreferrer"`, `mailto:`/`tel:` never)
-- the absolute-URL builders: `web/src/app/sitemap.ts`, `web/src/lib/seo-robots.ts` (canonical, hreflang, Markdown alternate), `web/src/lib/markdown/negotiation.ts` and `server-context.ts`, `web/src/app/llms.txt/route.ts`, `web/src/lib/redirect-map.ts`
+- the absolute-URL builders: `web/src/app/sitemaps/all.xml/route.ts`, `web/src/lib/seo-robots.ts` (canonical, hreflang, Markdown alternate), `web/src/lib/markdown/negotiation.ts` and `server-context.ts`, `web/src/app/llms.txt/route.ts`, `web/src/lib/redirect-map.ts`
 - `studio/src/sanity/schemaTypes/partials/linkBaseSchema.ts` (link `type`: `internal` | `path` | `external` | `download`) and `externalLinkValidator` / `internalPathValidator` in `studio/src/sanity/lib/validation-utils.ts`
 - the files under review, plus any gallery fixture (`web/src/ui/sections/*/gallery-fixture.ts`) and seed script or data they touch
 
