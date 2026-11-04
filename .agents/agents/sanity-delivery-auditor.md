@@ -25,7 +25,7 @@ findings with the query and image auditors and applies fixes.
   `sanity.blueprint.ts`
 - draft mode: `web/src/app/api/draft-mode/*`, `web/src/ui/VisualEditingControls.tsx`
 - routes: `web/src/app/(frontend)/layout.tsx` and every `page.tsx` under it,
-  `web/src/app/sitemap.ts`, `web/src/app/robots.ts`, `web/src/app/llms.txt/route.ts`,
+  `web/src/app/sitemaps/all.xml/route.ts`, `web/src/app/robots.ts`, `web/src/app/llms.txt/route.ts`,
   `web/src/app/api/**/route.ts`, `web/src/proxy.ts`, `web/src/lib/redirect-loader.ts`
 - bundles: `web/src/app/(studio)/`, `web/scripts/check-client-boundaries.mjs` (`pnpm check:client`)
 - `.agents/skills/sanity-optimizations/references/starter-baseline.md`, rows with a `C`, `K` or
@@ -89,7 +89,9 @@ Each finding needs a file and line.
   route statically from K5 and say so.
 - **K8. Edge cache on route handlers.** `s-maxage` sits in front of the Data Cache and a tag purge
   cannot reach it: keep it ≤ the acceptable staleness, or make the handler static. Check sitemap,
-  llms.txt, Markdown, redirects, OG and listing APIs.
+  llms.txt, Markdown, redirects, OG and listing APIs. On Vercel a cached route at `/sitemap.xml`
+  itself (the `app/sitemap.ts` convention) is never purged by `revalidateTag`: the sitemap must
+  live under another path with a rewrite (`SITEMAP_REWRITE`), or it stays stale for 30 days.
 - **K9. Proxy / middleware.** Runs on every matched request (one function invocation per page view
   on Vercel); anything it fetches must be memoized, and its matcher should skip static assets.
 - **K10. `revalidate` as safety net.** With tags in place a long `revalidate` (days) is right; a

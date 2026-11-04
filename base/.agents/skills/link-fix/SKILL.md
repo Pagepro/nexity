@@ -101,7 +101,7 @@ don't) counts too. Each finding gets a status:
 | `not convertible` | A plain URL field, not a link object. A canonical or a feed URL is meant to be absolute | None (the http and slash rules still apply) |
 
 Path → document follows the starter's routing (`web/src/lib/resolveUrl.ts`,
-`web/src/app/sitemap.ts`): `page` = `metadata.slug` as the full path, `post` =
+`web/src/app/sitemaps/all.xml/route.ts`): `page` = `metadata.slug` as the full path, `post` =
 `/blog/<slug>`, `case-study` = `/case-studies/<slug>`, `podcast-episode` =
 `/podcast/<slug>`, listing pages = `/blog`, `/case-studies`, `/podcast`. If the
 project added a routed type, add it to `REFERENCEABLE_TYPES` and the path maps at

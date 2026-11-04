@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 import { SANITY_CDN_REWRITE } from "./src/lib/sanity-cdn-proxy";
+import { SITEMAP_REWRITE } from "./src/lib/sitemap";
 import { resolveBaseUrl } from "./src/setup/base-url";
 
 export default {
@@ -21,7 +22,7 @@ export default {
   // run first and would keep a deleted redirect alive until the next deploy.
 
   async rewrites() {
-    return [SANITY_CDN_REWRITE];
+    return [SANITY_CDN_REWRITE, SITEMAP_REWRITE];
   },
 
   turbopack: {

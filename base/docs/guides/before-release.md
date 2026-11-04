@@ -93,7 +93,7 @@ Nothing in it is hand-written, so what can go wrong is the data.
 
 ### 2.1 `sitemap.xml` and `robots.txt` carry the production domain
 
-Both are built from `NEXT_PUBLIC_BASE_URL` (`web/src/app/sitemap.ts`,
+Both are built from `NEXT_PUBLIC_BASE_URL` (`web/src/app/sitemaps/all.xml/route.ts`,
 `web/src/app/robots.ts`). If that variable is unset, or set to the `vercel.app`
 host, for the Production environment, the files point search engines at the
 wrong host. **Verify with `curl` against the deployed URL. Reading the config
