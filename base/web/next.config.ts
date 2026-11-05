@@ -52,6 +52,7 @@ export default {
   reactCompiler: true,
   experimental: {
     inlineCss: true,
+    globalNotFound: true,
     turbopackFileSystemCacheForDev: true,
   },
 } satisfies NextConfig;
