@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping. This file covers how the repository is laid out, how to run each starter and what a pull request needs.
+Thanks for helping. This file covers how the repository is laid out, how to run each starter and what a pull request needs. Everyone taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Layout
 
