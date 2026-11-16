@@ -19,15 +19,18 @@ Print turns light. The Nexity wordmark sits in the topbar and in the footer ("Ma
 Nexity Skills", linking nexity.build).
 
 STORY: A marketer, an editor or someone from product or sales opens the page, understands who the company is
-within one viewport, walks the five kit sections, clicks any number to land on its
-evidence row, and ends at the questions only the company's own people can answer.
+within one viewport, reads four short brand sections (At a glance, Audiences, Voice,
+Offer), clicks any number to land on its evidence row, and ends at the two lists that
+need a person: the conflicts between pages, each with one action, and the questions only
+the company's own people can answer.
 
 FIRST VIEWPORT: 56px topbar (Nexity wordmark + "Skills", the `/brand-kit` pill, run date).
-240px left nav: five kit sections, then the appendix (Claims register, Evidence, Gap
-questionnaire) with mono counts and a dot on the active item. The reading column opens on
+240px left nav in three groups: Brand (At a glance, Audiences, Voice, Offer), To settle
+(Conflicts, Questions), Appendix (Claims, Evidence), with mono counts and a dot on the
+active item. The reading column opens on
 a masthead: "<company> brand kit" in Caslon at 60px, one line with the domain, then four figures
-(facts with a source, audiences, conflicts, open questions), each linking to its
-section. Column max 880px, prose at ~68ch.
+(claims you can use, claims to check first, conflicts between pages, questions for the
+team), each linking to its section. Column max 880px, prose at ~68ch.
 
 FORM: Read mode surface inside an established world; precise brief, no concept seed.
 Signature interaction: fact links in prose (dotted hairline underline) scroll to and
@@ -49,6 +52,44 @@ names and scripts unchanged, group labels in sentence case; checked desktop and 
 detector run once (contrast fix for small faint text; print-token contrast hits are false
 positives).
 The template IS the design system here — fills replace slot comments and never restyle.
+
+## Restructure 2026-11-16: shorter top half, actions on conflicts
+
+The report now mirrors `BRAND.md` instead of a five-section essay. What changed and why:
+the Foundations prose became one sentence plus three two-sentence fields and a proof
+list; Product Lines became one table row per line; the base Global Writing Rules block is
+gone (it was the same for every company and belongs to `work-humanizer`), leaving only
+this brand's rules; the voice section shows verbatim "write like this / not like this"
+pairs; the masthead counts claims by what a writer may do with them, not facts collected.
+Conflicts moved out of the appendix into their own section, each with one action line
+(`.act` with an `.owner` pill: "Fix now" or "Ask <role>") and the interim wording.
+Additions to the world, all from existing tokens: `.owner` (neutral pill), `.act`,
+`.inferred` (faint text with a dashed "inferred" pill, for audience sentences with no
+source), `td.pair` (Caslon italic voice pairs), `.note`. The file itself is on the page: a "Copy BRAND.md" button under the masthead lede and
+a BRAND.md section closing the Brand group, with the whole file in a scrolling mono box
+(`.filebox`). A viewer's sandbox blocks downloads, so the
+button copies, and selects the text when the clipboard is refused. No new colour. Not yet inspected
+in a browser at 390px after this change: do that before the next release.
+
+## Offer table headings by company type (2026-11-16)
+
+The Offer table keeps four columns and its markup; only the four headings change with
+the company type (services, software, shop, local business, organisation), through
+`SLOT:OFFER_HEAD`. No other part of the surface depends on the type.
+
+## BRAND.md box: Preview and Markdown (2026-11-16)
+
+The box opens on a rendered preview and switches to the Markdown source with a two-button
+control in its top right corner (`.filetabs`). The page's own script renders the preview
+from the source text: headings, paragraphs, lists with one nested level, tables, bold and
+inline code, which is all `brand-template.md` uses. Without script the source shows and
+the control stays hidden. The Copy buttons always copy the source.
+
+## Filled by build.py (2026-11-16)
+
+The slots are filled by `build.py` from a run's `kit.json`, not by hand. A change to a
+slot's markup pattern is a change to the script's output for that slot: edit both
+together, and run it on `kit.example.json` to see the result.
 
 ## Compare surface (`compare-template.html`, added 2026-09-19)
 

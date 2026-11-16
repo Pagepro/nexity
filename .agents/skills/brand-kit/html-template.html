@@ -41,6 +41,7 @@ strong{font-weight:500;color:var(--fg)}
 .skill{display:inline-flex;align-items:center;height:26px;padding:0 10px;border:1px solid var(--border);border-radius:999px;background:var(--secondary);font:400 12px/1 var(--mono);color:var(--fg);white-space:nowrap}
 .spacer{flex:1}
 .runmeta{font-size:13px;color:var(--muted);white-space:nowrap}
+.skill .ver{margin-left:8px;padding-left:8px;border-left:1px solid var(--input);color:var(--muted)}
 
 /* ---------- nav ---------- */
 .sidenav{position:sticky;top:var(--topbar);height:calc(100vh - var(--topbar));overflow-y:auto;border-right:1px solid var(--border);padding:28px 16px 40px 24px}
@@ -141,7 +142,49 @@ blockquote.weak{border-left-style:dashed;color:var(--muted)}
 .gap .no{font:400 18px/1.4 var(--heading);color:var(--faint);text-align:right}
 .gap .q{color:var(--fg);max-width:64ch}
 .gap .why{grid-column:2;margin:6px 0 0;font-size:14px;color:var(--muted);max-width:64ch}
-#claims .gap .no{color:var(--destructive)}
+#fixes .gap .no{color:var(--destructive)}
+
+/* ---------- 2026-11-16: short fields, sourced audiences, voice pairs, owners ---------- */
+.field p.v{margin-bottom:0;max-width:34em}
+.gap .act{grid-column:2;margin:8px 0 0;font-size:14px;color:var(--fg);max-width:64ch}
+.owner{display:inline-flex;align-items:center;height:22px;margin-right:10px;padding:0 9px;border:1px solid var(--input);border-radius:999px;background:var(--secondary);font:400 12px/1 var(--sans);color:var(--fg);white-space:nowrap;vertical-align:1px}
+.inferred{color:var(--faint)}
+.inferred::after{content:"inferred";margin-left:6px;padding:1px 7px;border:1px dashed var(--input);border-radius:999px;font:400 12px/1.4 var(--sans);color:var(--faint);white-space:nowrap}
+.aud blockquote{font-size:15px;margin-top:14px}
+td.pair{width:50%;font:italic 400 15px/1.55 var(--heading);color:var(--fg)}
+td.pair.not{color:var(--muted)}
+td.pair a.fact{text-decoration:none}
+td.pair a.fact:hover{text-decoration:underline;text-decoration-color:var(--input)}
+.getfile{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:24px 0 0;font-size:14px;color:var(--muted)}
+.getfile .copybtn{margin-top:0;height:32px;padding:0 14px;color:var(--fg);border-color:var(--input);background:var(--secondary)}
+.getfile code{font:400 12px var(--mono);color:var(--fg)}
+.filebox{margin:20px 0 0;max-height:560px;overflow:auto;padding:18px 20px;border:1px solid var(--border);border-radius:14px;background:var(--card);font:400 12.5px/1.7 var(--mono);color:var(--muted);white-space:pre-wrap;overflow-wrap:anywhere;tab-size:2}
+@media print{.filebox{max-height:none}}
+.filebox[hidden],.filetabs[hidden]{display:none}
+.filewrap{position:relative;margin:20px 0 0}
+.filewrap .filebox{margin:0;padding-top:52px}
+.filetabs{position:absolute;z-index:2;top:10px;right:14px;display:flex;gap:2px;padding:3px;border:1px solid var(--border);border-radius:10px;background:var(--bg)}
+.filetabs button{height:26px;padding:0 10px;border:0;border-radius:7px;background:transparent;color:var(--muted);font:400 12px/1 var(--sans);cursor:pointer;transition:color 150ms,background 150ms}
+.filetabs button:hover{color:var(--fg)}
+.filetabs button[aria-selected="true"]{background:var(--secondary);color:var(--fg)}
+.filepreview{font:350 14px/1.65 var(--sans);color:var(--muted);white-space:normal}
+.filepreview > :first-child{margin-top:0}
+.filepreview .md-h1{margin:0 0 12px;font:400 26px/1.2 var(--heading);letter-spacing:-.02em;color:var(--fg)}
+.filepreview .md-h2{margin:28px 0 10px;padding-top:20px;border-top:1px solid var(--border);font:400 20px/1.3 var(--heading);letter-spacing:-.015em;color:var(--fg)}
+.filepreview .md-h3{margin:20px 0 8px;font:450 14px/1.4 var(--sans);color:var(--fg)}
+.filepreview p{margin:10px 0 0;max-width:72ch}
+.filepreview ul,.filepreview ol{margin:10px 0 0;padding-left:20px;max-width:72ch}
+.filepreview li{margin:6px 0}
+.filepreview li > ul,.filepreview li > ol{margin-top:6px}
+.filepreview strong{color:var(--fg);font-weight:500}
+.filepreview code{font:400 12px var(--mono);color:var(--fg);background:var(--secondary);padding:1px 5px;border-radius:5px}
+.filepreview .md-table{margin:12px 0 0;overflow-x:auto;border:1px solid var(--border);border-radius:10px}
+.filepreview table{font-size:13px}
+.filepreview th{white-space:normal}
+.filepreview td{color:var(--muted)}
+@media print{.filetabs{display:none}}
+.note{margin:28px 0 0;max-width:68ch;font-size:13px;line-height:1.55;color:var(--faint)}
+.note code{font:400 12px var(--mono);color:var(--muted)}
 
 /* ---------- footer ---------- */
 .footer{max-width:880px;margin:0 auto;padding:28px 0 0;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
@@ -235,25 +278,29 @@ details.sources[open] summary::after{content:"Hide"}
 <div class="app">
   <header class="topbar">
     <a class="brand" href="https://nexity.build" target="_blank" rel="noopener"><svg viewBox="27 100 201 56" fill="currentColor" role="img" aria-label="Nexity"><path d="M35.0244 142.933H27V110.578H35.1489L34.2158 114.809H34.4024C35.2733 113.274 36.8699 112.071 39.1922 111.2C41.556 110.287 44.293 109.831 47.4032 109.831C50.6379 109.831 53.4164 110.35 55.7387 111.387C58.1025 112.382 59.9272 113.813 61.2128 115.68C62.4983 117.505 63.1411 119.683 63.1411 122.213V142.933H55.1167V124.889C55.1167 122.317 54.2458 120.284 52.5041 118.791C50.7623 117.256 48.3778 116.489 45.3505 116.489C42.1987 116.489 39.6898 117.36 37.8237 119.102C35.9575 120.803 35.0244 123.147 35.0244 126.133V142.933Z"/><path d="M107.083 132.48C106.668 134.679 105.57 136.628 103.786 138.329C102.045 140.03 99.8052 141.357 97.0681 142.311C94.3727 143.265 91.3659 143.742 88.0484 143.742C84.0673 143.742 80.5422 143.037 77.4735 141.627C74.4049 140.175 72.0201 138.184 70.32 135.653C68.6198 133.082 67.7696 130.095 67.7696 126.693C67.7696 123.375 68.5988 120.45 70.2578 117.92C71.9579 115.39 74.3011 113.419 77.2869 112.009C80.3144 110.557 83.7769 109.831 87.6752 109.831C91.4903 109.831 94.8494 110.495 97.7524 111.822C100.697 113.15 102.978 114.996 104.595 117.36C106.212 119.724 107.021 122.462 107.021 125.573V128.436H76.5405C76.5821 130.302 77.0797 131.961 78.0334 133.413C78.9871 134.824 80.3144 135.944 82.0145 136.773C83.7563 137.561 85.7468 137.956 87.9862 137.956C90.9304 137.956 93.4186 137.458 95.4508 136.462C97.483 135.425 98.6649 134.098 98.9965 132.48H107.083ZM76.7271 123.831H98.4988C98.4988 122.172 98.0428 120.741 97.1303 119.538C96.2595 118.293 94.9948 117.339 93.3358 116.676C91.7185 115.97 89.8317 115.618 87.6752 115.618C84.6065 115.618 82.0561 116.385 80.024 117.92C78.0334 119.413 76.9343 121.384 76.7271 123.831Z"/><path d="M108.646 110.578H119.097L127.868 120.533L136.639 110.578H147.089L132.782 126.756L147.214 142.933H136.763L127.93 132.978L119.097 142.933H108.646L123.016 126.756L108.646 110.578Z"/><path d="M160.744 110.578V142.933H152.72V110.578H160.744ZM152.72 100H160.744V106.907H152.72V100Z"/><path d="M170.466 131.982V116.862H165.365V110.391L170.466 110.702V103.796H178.49V110.578H186.515V116.862H178.49V131.298C178.49 133.081 179.071 134.513 180.232 135.591C181.434 136.67 182.969 137.209 184.835 137.209C185.706 137.209 186.556 137.147 187.386 137.022C188.256 136.856 188.941 136.649 189.438 136.4V142.996C188.941 143.203 188.235 143.369 187.323 143.493C186.452 143.659 185.54 143.742 184.586 143.742C181.766 143.742 179.299 143.265 177.184 142.311C175.069 141.316 173.41 139.926 172.208 138.142C171.046 136.358 170.466 134.305 170.466 131.982Z"/><path d="M212.282 146.418C211.203 148.948 210.001 150.898 208.674 152.267C207.347 153.636 205.854 154.569 204.195 155.067C202.578 155.564 200.732 155.813 198.659 155.813C197.29 155.813 196.108 155.647 195.113 155.316V148.596C195.486 148.762 196.046 148.886 196.793 148.969C197.539 149.093 198.327 149.156 199.156 149.156C200.318 149.156 201.313 148.782 202.142 148.036C202.971 147.33 203.677 146.356 204.257 145.111L206.123 141.129L190.385 110.578H199.53L209.918 131.049H210.042L218.875 110.578H227.771L212.282 146.418Z"/></svg><span class="of">Skills</span></a>
-    <span class="skill">/brand-kit</span>
+    <span class="skill">/brand-kit{{VERSION_PILL}}</span>
     <span class="spacer"></span>
     <span class="runmeta">Generated {{RUN_DATE}} &middot; public sources only</span>
   </header>
 
   <aside class="sidenav" aria-label="Sections">
-    <div class="nav-group">Brand kit</div>
+    <div class="nav-group">Brand</div>
     <nav class="nav">
-      <a href="#foundations">Foundations</a>
-      <a href="#voice">Brand Voice &amp; Tone</a>
-      <a href="#rules">Global Writing Rules</a>
+      <a href="#brand">At a glance</a>
       <a href="#audiences">Audiences <span class="n">{{AUDIENCE_COUNT}}</span></a>
-      <a href="#products">Product Lines <span class="n">{{PRODUCT_COUNT}}</span></a>
+      <a href="#voice">Voice</a>
+      <a href="#offer">Offer <span class="n">{{PRODUCT_COUNT}}</span></a>
+      <a href="#brandmd">BRAND.md</a>
+    </nav>
+    <div class="nav-group">To settle</div>
+    <nav class="nav">
+      <a href="#fixes">Conflicts <span class="n">{{CONFLICT_COUNT}}</span></a>
+      <a href="#questions">Questions <span class="n">{{GAP_COUNT}}</span></a>
     </nav>
     <div class="nav-group">Appendix</div>
     <nav class="nav">
-      <a href="#claims">Claims register <span class="n">{{CLAIM_COUNT}}</span></a>
+      <a href="#claims">Claims <span class="n">{{CLAIM_ROW_COUNT}}</span></a>
       <a href="#evidence">Evidence <span class="n">{{FACT_COUNT}}</span></a>
-      <a href="#gaps">Gap questionnaire <span class="n">{{GAP_COUNT}}</span></a>
     </nav>
   </aside>
 
@@ -261,100 +308,183 @@ details.sources[open] summary::after{content:"Hide"}
     <div class="sheet">
     <div class="masthead">
       <h1>{{COMPANY_NAME}} brand kit</h1>
-      <p class="lede">Built from the public pages of <a href="https://{{COMPANY_DOMAIN}}" target="_blank" rel="noopener">{{COMPANY_DOMAIN}}</a> only. Every fact links to the page it came from.</p>
+      <p class="lede">Built from {{SOURCE_COUNT}} public pages of <a href="https://{{COMPANY_DOMAIN}}" target="_blank" rel="noopener">{{COMPANY_DOMAIN}}</a> and its listings. Every fact links to the page it came from.</p>
+      <p class="getfile"><button type="button" class="copybtn" data-copy="brandmd-src" data-label="Copy BRAND.md"></button><span>The same brand as one file for people and AI agents. <a href="#brandmd">Read it below</a>.</span></p>
       <div class="figures">
-        <a href="#evidence"><span class="v">{{FACT_COUNT}}</span><span class="l">facts with a source</span></a>
-        <a href="#audiences"><span class="v">{{AUDIENCE_COUNT}}</span><span class="l">audiences</span></a>
-        <a href="#claims"><span class="v">{{CONFLICT_COUNT}}</span><span class="l">conflicts between pages</span></a>
-        <a href="#gaps"><span class="v">{{GAP_COUNT}}</span><span class="l">open questions</span></a>
+        <a href="#claims"><span class="v">{{USABLE_COUNT}}</span><span class="l">claims you can use</span></a>
+        <a href="#claims"><span class="v">{{CHECK_COUNT}}</span><span class="l">claims to check first</span></a>
+        <a href="#fixes"><span class="v">{{CONFLICT_COUNT}}</span><span class="l">conflicts between pages</span></a>
+        <a href="#questions"><span class="v">{{GAP_COUNT}}</span><span class="l">questions for the team</span></a>
       </div>
       <div class="brief">
         <h2>Before you write anything</h2>
         <p class="brief-lede">These figures disagree across the site. Do not reuse them until the person who owns the fact confirms which one is right.</p>
         <ol class="brief-list">
           <!-- SLOT:BRIEF — the 3 to 5 conflicts from claims.md a writer is most likely to repeat,
-               most damaging first. One plain sentence each, naming both values and where they
+               most damaging first; all of them when there are fewer than three. With no
+               conflict at all, replace the paragraph above with "No figure on this site
+               contradicts another. These claims have no source a reader can check: do not
+               repeat them as fact." and list the 3 to 5 unverified claims a writer would
+               reach for, each linked to its evidence row with <a class="fact">. One plain sentence each, naming both values and where they
                appear. Pattern:
           <li><a class="xref" href="#c1">C1</a><span>Customer count: 200+ teams on the homepage, 2,400+ on /features.</span></li> -->
         </ol>
       </div>
     </div>
 
-    <section id="foundations">
-      <h2>Foundations</h2>
-      <p class="helper">What the company is, who it serves and what sets it apart, in plain words. A strong version names the category, the customer and the problem it solves, says what the company does not do, and backs every claim with a source.</p>
+    <section id="brand">
+      <h2>At a glance</h2>
+      <p class="helper">The company in the fewest words that are still true. Each field is short on purpose: the detail lives in the evidence, one click away.</p>
+      <!-- SLOT:ONE_LINER — one sentence, 30 words at most: what the company is, for whom.
+           Prefer the company's own sentence when the site has one. Pattern:
+      <div class="field"><div class="k">In one sentence</div><p class="v"><a class="fact" href="#e1">Acme is a ... for ...</a></p></div> -->
       <div class="prose">
-        <!-- SLOT:FOUNDATIONS — the About paragraphs from brand-kit.md, one <p> each.
+        <!-- SLOT:BRAND_FIELDS — these blocks, two sentences each at most. The third only when
+             the site or the team says what the company does not do; never infer it.
              Wrap every claim that has an evidence row in <a class="fact" href="#eN">...</a>.
-             Example: <p>Acme is a ... with <a class="fact" href="#e12">92% retention</a>.</p> -->
+        <div class="sub"><div class="k">What it does</div><p>...</p></div>
+        <div class="sub"><div class="k">What sets it apart</div><p>...</p></div>
+        <div class="sub"><div class="k">What it does not do</div><p>...</p></div> -->
       </div>
-    </section>
-
-    <section id="voice">
-      <h2>Brand Voice &amp; Tone</h2>
-      <p class="helper">How the brand sounds, read from its own best writing, so that content written by people or by AI sounds like the company. A strong version quotes real lines, shows how the brand proves its claims, and names the words and habits to avoid.</p>
-      <div class="prose">
-        <!-- SLOT:VOICE — the voice paragraphs, one <p> each; link quoted jargon examples to
-             their voice-sample blockquote ids (#e-v11 ...) with <a class="fact">. -->
-      </div>
-    </section>
-
-    <section id="rules">
-      <h2>Global Writing Rules</h2>
-      <p class="helper">The rules every piece of content for this brand follows, one per line. The base rules stop the most common AI writing habits, and the brand rules come from this site, specific enough that an editor can check a draft against them.</p>
-      <!-- SLOT:RULES — one .rulegroup per rule group, base groups verbatim from template.md,
-           then the optional Brand-specific group. Pattern:
-      <div class="rulegroup"><div class="k">GROUP NAME</div>
+      <div class="rulegroup"><div class="k">Proof you can cite</div>
         <ul>
-          <li>rule text</li>
+          <!-- SLOT:PROOF — 3 to 6 lines, the strongest proof a writer may repeat today: only
+               claims with status corroborated, or single source with a named client, a tool and
+               a date. Never a conflict, a tension or an unverified claim. Pattern:
+          <li><a class="fact" href="#e54">4.9 on Clutch</a>, confirmed on the Clutch profile.</li> -->
         </ul>
-      </div> -->
+      </div>
     </section>
 
     <section id="audiences">
       <h2>Audiences</h2>
-      <p class="helper">Who the content is written for, and which product line each audience maps to. A strong audience names a role and a situation, the worry that makes them act, and what they need to see before they trust the company.</p>
+      <p class="helper">Who the content is written for. Each audience is a role in a situation, in the customer's words where a review or a case study gives them. A sentence marked "inferred" is a reading of the site, not something a customer or the company said.</p>
       <div class="prose">
-        <!-- SLOT:AUDIENCES — one .aud block per audience. Pattern:
-        <div class="aud"><div class="k">Audience name</div>
-          <p>Situation and fears.</p>
-          <p class="maps">Maps to: Product line &middot; Product line</p>
+        <!-- SLOT:AUDIENCES — 2 to 4 blocks. Each: the situation in two sentences (sourced), one
+             verbatim customer quote when the research has one, what they need to see, the
+             product lines they buy. A sentence with no evidence row is wrapped in
+             <span class="inferred">...</span>, one per audience at most. Pattern:
+        <div class="aud"><div class="k">Role and situation</div>
+          <p>Their situation, with <a class="fact" href="#e88">sourced details</a>. <span class="inferred">A reading with no source.</span></p>
+          <blockquote>"What a customer said."<span class="cite">Role, Company &middot; <a href="https://..." target="_blank" rel="noopener">source</a></span></blockquote>
+          <p><strong>Needs to see:</strong> ...</p>
+          <p class="maps">Buys: Product line &middot; Product line</p>
         </div> -->
       </div>
     </section>
 
-    <section id="products">
-      <h2>Product Lines</h2>
-      <p class="helper">What the company sells, one block per product line. A strong block says what the product does and for whom, how it is positioned against the alternatives, and which customer fits it best, with every figure sourced.</p>
+    <section id="voice">
+      <h2>Voice</h2>
+      <p class="helper">How the brand sounds, shown with its own sentences. Every line in the table is copied from the site: the left column is the writing to imitate, the right column is the writing to replace.</p>
+      <!-- SLOT:VOICE_LINE — one sentence that describes the voice, derived from the samples. Pattern:
+      <div class="field"><div class="k">Sounds like</div><p class="v">A senior practitioner talking to a peer, with numbers and no warm-up.</p></div> -->
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Write like this</th><th>Not like this</th></tr></thead>
+          <tbody>
+            <!-- SLOT:VOICE_PAIRS — 4 to 6 rows. Both cells are verbatim sentences from the site,
+                 each linked to its voice sample. Pair them by job (headline with headline, proof
+                 with proof) when the samples allow it. Pattern:
+            <tr><td class="pair"><a class="fact" href="#e-v1">"Strong sentence."</a></td><td class="pair not"><a class="fact" href="#e-v11">"Weak sentence."</a></td></tr> -->
+          </tbody>
+        </table>
+      </div>
+      <div class="rulegroup"><div class="k">Rules for this brand</div>
+        <ul>
+          <!-- SLOT:VOICE_RULES — 4 to 6 rules found in this brand's own best writing, each
+               specific enough to check a sentence against. No general AI-writing rules here. Pattern:
+          <li>Give every result its measuring tool and its date.</li> -->
+        </ul>
+      </div>
+      <div class="rulegroup"><div class="k">Words to cut</div>
+        <ul>
+          <!-- SLOT:VOICE_WORDS — the filler words this site overuses, with counts from the pages
+               read, one line. Then one line per banned device the site uses, with a count. Pattern:
+          <li><a class="fact" href="#e176">"seamless" 56 times, "streamline" 30, "leverage" 21</a> across the pages read.</li> -->
+        </ul>
+      </div>
       <div class="prose">
-        <!-- SLOT:PRODUCTS — one block per product line. Pattern:
-        <h3>Product line name</h3>
-        <div class="sub"><div class="k">Details</div>
-          <p>...</p></div>
-        <div class="sub"><div class="k">Key Differentiators &amp; Positioning</div>
-          <p>...</p></div>
-        <div class="sub"><div class="k">Ideal Customer Profile</div>
-          <p>...</p></div> -->
+        <!-- SLOT:VOICE_PAGES — two blocks, one line each, naming real pages.
+        <div class="sub"><div class="k">Pages to imitate</div><p>...</p></div>
+        <div class="sub"><div class="k">Pages to rewrite first</div><p>...</p></div> -->
+      </div>
+      <p class="note">General rules against AI writing habits are not repeated here. Run the <code>work-humanizer</code> skill on a draft for those.</p>
+    </section>
+
+    <section id="offer">
+      <h2>Offer</h2>
+      <p class="helper">What the company sells today, in the shape it sells in. Prices and terms are the ones published on the run date.</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr>
+            <!-- SLOT:OFFER_HEAD — four <th>, the set that fits the company type:
+                 services  <th>Service line</th><th>What it is</th><th>Best for</th><th>Proof and price</th>
+                 software  <th>Plan or product</th><th>What it includes</th><th>Best for</th><th>Price and limits</th>
+                 shop      <th>Category</th><th>What is in it</th><th>Bought for</th><th>Price range and proof</th>
+                 local     <th>Service</th><th>What it is</th><th>For whom, and where</th><th>Price and hours</th>
+                 organisation <th>Programme</th><th>What it does</th><th>For whom</th><th>Results and how to take part</th> -->
+          </tr></thead>
+          <tbody>
+            <!-- SLOT:OFFER_ROWS — 3 to 8 rows, the main one first. One or two sentences per cell.
+                 The last cell holds the strongest usable proof and the published price, or
+                 "No published price". A row no audience maps to says so in the third cell.
+                 What applies to every purchase (delivery and returns, contract term, opening
+                 hours) is the last row. Pattern:
+            <tr><td class="fact">Line name</td><td class="quote">What the buyer gets.</td><td class="quote">Who, in which situation.</td><td class="quote"><a class="fact" href="#e118">From $1,300 a month</a>.</td></tr> -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="brandmd">
+      <div class="sechead"><h2>BRAND.md</h2><button type="button" class="copybtn" data-copy="brandmd-src" data-label="Copy BRAND.md"></button></div>
+      <p class="helper">Everything above as one short file. Save it as BRAND.md in the root of the project: people and AI agents read it before they write copy, build a page or work in another tool. Its last section, "To fill in", lists what only the team can add.</p>
+      <div class="filewrap">
+        <div class="filetabs" role="tablist" aria-label="How to show BRAND.md" hidden>
+          <button type="button" role="tab" id="brandmd-tab-preview" aria-controls="brandmd-view" aria-selected="false" data-view="preview">Preview</button>
+          <button type="button" role="tab" id="brandmd-tab-markdown" aria-controls="brandmd-src" aria-selected="true" data-view="markdown">Markdown</button>
+        </div>
+        <div class="filebox filepreview" id="brandmd-view" role="tabpanel" aria-labelledby="brandmd-tab-preview" tabindex="0" hidden></div>
+        <pre class="filebox" id="brandmd-src" role="tabpanel" aria-labelledby="brandmd-tab-markdown" tabindex="0"><!-- SLOT:BRAND_MD — the whole of the run's BRAND.md, character for character, HTML-escaped
+           (&amp; &lt; &gt;). No markup inside: the Copy button copies this text as is. --></pre>
+      </div>
+    </section>
+
+    <section id="fixes">
+      <h2>Conflicts</h2>
+      <p class="helper">Each row is one fact the public record states in two or more ways. "Fix now" means a source already settles it. "Ask" names who can settle it. Until a row is closed, use the wording under it.</p>
+      <div class="gapgroup">
+        <!-- SLOT:FIXES — one .gap row per conflict from claims.md, numbered C1.., most damaging
+             first. Link each competing figure to its evidence row with <a class="fact">, and name
+             the pages. Then exactly one action line: "Fix now" with the text to change and the
+             pages to change it on, or "Ask <role>" with one question. The .why line is what a
+             writer does in the meantime. Pattern:
+        <div class="gap"><div class="no">C1</div><div class="q"><strong>Short title.</strong> <a class="fact" href="#e8">"value A"</a> on the homepage and /pricing, <a class="fact" href="#e9">"value B"</a> on /about.</div><p class="act"><span class="owner">Ask sales lead</span>Which value is right, and from which date?</p><p class="why">Until then: write the claim with no number.</p></div>
+        <div class="gap"><div class="no">C2</div><div class="q"><strong>Short title.</strong> ...</div><p class="act"><span class="owner">Fix now</span>Change "34 reviews" to "35 reviews" on the homepage.</p></div> -->
+      </div>
+    </section>
+
+    <section id="questions">
+      <h2>Questions for the team</h2>
+      <p class="helper">What the public site does not say and content needs. One question per row, with the role best placed to answer it. Conflicts carry their own question in the section above.</p>
+      <div class="gapgroup">
+        <!-- SLOT:QUESTIONS — 8 rows at most, one question mark per row, most useful first. Pattern:
+        <div class="gap"><div class="no">1</div><div class="q"><span class="owner">CEO</span>The question?</div><p class="why">Why it matters, one line.</p></div> -->
       </div>
     </section>
 
     <section id="claims">
-      <h2>Claims register</h2>
-      <p class="helper">Every checkable factual claim on the public record, so contradictions surface before content repeats them. Statuses: corroborated (2+ independent sources agree) &middot; single source &middot; third-party (stated only off-site) &middot; tension (figures that collide when cited together) &middot; unverified.</p>
-      <div class="gapgroup"><div class="k">Conflicts to resolve: {{CONFLICT_COUNT}}</div>
-        <!-- SLOT:CLAIMS_CONFLICTS — one .gap row per conflict from claims.md, numbered C1..;
-             link each competing figure to its evidence row with <a class="fact">. Pattern:
-        <div class="gap"><div class="no">C1</div><div class="q"><strong>Short title.</strong> Statement: <a class="fact" href="#e8">"value A"</a> (where) vs <a class="fact" href="#e9">"value B"</a> (where).</div><p class="why">Resolution route (gap question N, or the concrete fix).</p></div> -->
-      </div>
-      <div class="qgroup"><div class="k">Claims on record: {{CLAIM_ROW_COUNT}}</div></div>
+      <h2>Claims</h2>
+      <p class="helper">Every checkable claim on the public record that is not a conflict, weakest first. Use: corroborated (two independent sources agree), single source, third-party (stated only off-site). Check first: tension (collides with another figure), unverified (no source a reader can check).</p>
       <div class="tablewrap">
         <table>
           <thead><tr><th>Claim</th><th>On record / note</th><th>Status</th><th>Evidence</th></tr></thead>
           <tbody>
-            <!-- SLOT:CLAIMS_ROWS — one row per non-conflict claim from claims.md. Status is
-                 plain text except tension/unverified, which use the .tag pill. Pattern:
-            <tr><td class="fact">Claim</td><td class="quote">note, may be empty</td><td class="src">single source</td><td class="src"><a class="fact" href="#e13">e13</a></td></tr>
-            <tr><td class="fact">Claim</td><td class="quote">note</td><td class="src"><span class="tag">tension</span></td><td class="src"><a class="fact" href="#e20">e20</a> &middot; <a class="fact" href="#e9">e9</a></td></tr> -->
+            <!-- SLOT:CLAIMS_ROWS — one row per non-conflict claim from claims.md: unverified
+                 first, then tension, then the rest. Status is plain text except
+                 tension/unverified, which use the .tag pill. Pattern:
+            <tr><td class="fact">Claim</td><td class="quote">note</td><td class="src"><span class="tag">unverified</span></td><td class="src"><a class="fact" href="#e20">e20</a> &middot; <a class="fact" href="#e9">e9</a></td></tr>
+            <tr><td class="fact">Claim</td><td class="quote">note, may be empty</td><td class="src">single source</td><td class="src"><a class="fact" href="#e13">e13</a></td></tr> -->
           </tbody>
         </table>
       </div>
@@ -362,7 +492,7 @@ details.sources[open] summary::after{content:"Hide"}
 
     <section id="evidence">
       <h2>Evidence</h2>
-      <p class="helper">One row per fact: nothing entered the kit without a row here, so check a figure here before you cite it. Run date {{RUN_DATE}}, public sources only.</p>
+      <p class="helper">One row per fact. Nothing entered the kit without a row here, so check a figure here before you cite it. Run date {{RUN_DATE}}, public sources only.</p>
       <details class="qgroup sources"><summary class="k">Sources checked: {{SOURCE_COUNT}} pages</summary>
         <div class="srcwrap">
           <!-- SLOT:SOURCES — one chip per page fetched in the sweep (from evidence.md's
@@ -401,17 +531,8 @@ details.sources[open] summary::after{content:"Hide"}
       </div>
     </section>
 
-    <section id="gaps">
-      <h2>Gap questionnaire</h2>
-      <p class="helper">Questions only your own team can answer, because the public site does not. Send each one to whoever owns it (product, sales, legal, leadership): the answers resolve the conflicts above and fill in what the site does not say.</p>
-      <!-- SLOT:GAPS — one .gapgroup per question group, numbering continuous across groups. Pattern:
-      <div class="gapgroup"><div class="k">Group name</div>
-        <div class="gap"><div class="no">1</div><div class="q">The question?</div><p class="why">Why it matters, one line.</p></div>
-      </div> -->
-    </section>
-
     </div>
-    <div class="footer"><a class="made" href="https://nexity.build" target="_blank" rel="noopener"><svg viewBox="27 100 201 56" fill="currentColor" role="img" aria-label="Nexity"><path d="M35.0244 142.933H27V110.578H35.1489L34.2158 114.809H34.4024C35.2733 113.274 36.8699 112.071 39.1922 111.2C41.556 110.287 44.293 109.831 47.4032 109.831C50.6379 109.831 53.4164 110.35 55.7387 111.387C58.1025 112.382 59.9272 113.813 61.2128 115.68C62.4983 117.505 63.1411 119.683 63.1411 122.213V142.933H55.1167V124.889C55.1167 122.317 54.2458 120.284 52.5041 118.791C50.7623 117.256 48.3778 116.489 45.3505 116.489C42.1987 116.489 39.6898 117.36 37.8237 119.102C35.9575 120.803 35.0244 123.147 35.0244 126.133V142.933Z"/><path d="M107.083 132.48C106.668 134.679 105.57 136.628 103.786 138.329C102.045 140.03 99.8052 141.357 97.0681 142.311C94.3727 143.265 91.3659 143.742 88.0484 143.742C84.0673 143.742 80.5422 143.037 77.4735 141.627C74.4049 140.175 72.0201 138.184 70.32 135.653C68.6198 133.082 67.7696 130.095 67.7696 126.693C67.7696 123.375 68.5988 120.45 70.2578 117.92C71.9579 115.39 74.3011 113.419 77.2869 112.009C80.3144 110.557 83.7769 109.831 87.6752 109.831C91.4903 109.831 94.8494 110.495 97.7524 111.822C100.697 113.15 102.978 114.996 104.595 117.36C106.212 119.724 107.021 122.462 107.021 125.573V128.436H76.5405C76.5821 130.302 77.0797 131.961 78.0334 133.413C78.9871 134.824 80.3144 135.944 82.0145 136.773C83.7563 137.561 85.7468 137.956 87.9862 137.956C90.9304 137.956 93.4186 137.458 95.4508 136.462C97.483 135.425 98.6649 134.098 98.9965 132.48H107.083ZM76.7271 123.831H98.4988C98.4988 122.172 98.0428 120.741 97.1303 119.538C96.2595 118.293 94.9948 117.339 93.3358 116.676C91.7185 115.97 89.8317 115.618 87.6752 115.618C84.6065 115.618 82.0561 116.385 80.024 117.92C78.0334 119.413 76.9343 121.384 76.7271 123.831Z"/><path d="M108.646 110.578H119.097L127.868 120.533L136.639 110.578H147.089L132.782 126.756L147.214 142.933H136.763L127.93 132.978L119.097 142.933H108.646L123.016 126.756L108.646 110.578Z"/><path d="M160.744 110.578V142.933H152.72V110.578H160.744ZM152.72 100H160.744V106.907H152.72V100Z"/><path d="M170.466 131.982V116.862H165.365V110.391L170.466 110.702V103.796H178.49V110.578H186.515V116.862H178.49V131.298C178.49 133.081 179.071 134.513 180.232 135.591C181.434 136.67 182.969 137.209 184.835 137.209C185.706 137.209 186.556 137.147 187.386 137.022C188.256 136.856 188.941 136.649 189.438 136.4V142.996C188.941 143.203 188.235 143.369 187.323 143.493C186.452 143.659 185.54 143.742 184.586 143.742C181.766 143.742 179.299 143.265 177.184 142.311C175.069 141.316 173.41 139.926 172.208 138.142C171.046 136.358 170.466 134.305 170.466 131.982Z"/><path d="M212.282 146.418C211.203 148.948 210.001 150.898 208.674 152.267C207.347 153.636 205.854 154.569 204.195 155.067C202.578 155.564 200.732 155.813 198.659 155.813C197.29 155.813 196.108 155.647 195.113 155.316V148.596C195.486 148.762 196.046 148.886 196.793 148.969C197.539 149.093 198.327 149.156 199.156 149.156C200.318 149.156 201.313 148.782 202.142 148.036C202.971 147.33 203.677 146.356 204.257 145.111L206.123 141.129L190.385 110.578H199.53L209.918 131.049H210.042L218.875 110.578H227.771L212.282 146.418Z"/></svg><span>Made with Nexity Skills</span></a><span>/brand-kit &middot; public sources only &middot; {{RUN_DATE}}</span></div>
+    <div class="footer"><a class="made" href="https://nexity.build" target="_blank" rel="noopener"><svg viewBox="27 100 201 56" fill="currentColor" role="img" aria-label="Nexity"><path d="M35.0244 142.933H27V110.578H35.1489L34.2158 114.809H34.4024C35.2733 113.274 36.8699 112.071 39.1922 111.2C41.556 110.287 44.293 109.831 47.4032 109.831C50.6379 109.831 53.4164 110.35 55.7387 111.387C58.1025 112.382 59.9272 113.813 61.2128 115.68C62.4983 117.505 63.1411 119.683 63.1411 122.213V142.933H55.1167V124.889C55.1167 122.317 54.2458 120.284 52.5041 118.791C50.7623 117.256 48.3778 116.489 45.3505 116.489C42.1987 116.489 39.6898 117.36 37.8237 119.102C35.9575 120.803 35.0244 123.147 35.0244 126.133V142.933Z"/><path d="M107.083 132.48C106.668 134.679 105.57 136.628 103.786 138.329C102.045 140.03 99.8052 141.357 97.0681 142.311C94.3727 143.265 91.3659 143.742 88.0484 143.742C84.0673 143.742 80.5422 143.037 77.4735 141.627C74.4049 140.175 72.0201 138.184 70.32 135.653C68.6198 133.082 67.7696 130.095 67.7696 126.693C67.7696 123.375 68.5988 120.45 70.2578 117.92C71.9579 115.39 74.3011 113.419 77.2869 112.009C80.3144 110.557 83.7769 109.831 87.6752 109.831C91.4903 109.831 94.8494 110.495 97.7524 111.822C100.697 113.15 102.978 114.996 104.595 117.36C106.212 119.724 107.021 122.462 107.021 125.573V128.436H76.5405C76.5821 130.302 77.0797 131.961 78.0334 133.413C78.9871 134.824 80.3144 135.944 82.0145 136.773C83.7563 137.561 85.7468 137.956 87.9862 137.956C90.9304 137.956 93.4186 137.458 95.4508 136.462C97.483 135.425 98.6649 134.098 98.9965 132.48H107.083ZM76.7271 123.831H98.4988C98.4988 122.172 98.0428 120.741 97.1303 119.538C96.2595 118.293 94.9948 117.339 93.3358 116.676C91.7185 115.97 89.8317 115.618 87.6752 115.618C84.6065 115.618 82.0561 116.385 80.024 117.92C78.0334 119.413 76.9343 121.384 76.7271 123.831Z"/><path d="M108.646 110.578H119.097L127.868 120.533L136.639 110.578H147.089L132.782 126.756L147.214 142.933H136.763L127.93 132.978L119.097 142.933H108.646L123.016 126.756L108.646 110.578Z"/><path d="M160.744 110.578V142.933H152.72V110.578H160.744ZM152.72 100H160.744V106.907H152.72V100Z"/><path d="M170.466 131.982V116.862H165.365V110.391L170.466 110.702V103.796H178.49V110.578H186.515V116.862H178.49V131.298C178.49 133.081 179.071 134.513 180.232 135.591C181.434 136.67 182.969 137.209 184.835 137.209C185.706 137.209 186.556 137.147 187.386 137.022C188.256 136.856 188.941 136.649 189.438 136.4V142.996C188.941 143.203 188.235 143.369 187.323 143.493C186.452 143.659 185.54 143.742 184.586 143.742C181.766 143.742 179.299 143.265 177.184 142.311C175.069 141.316 173.41 139.926 172.208 138.142C171.046 136.358 170.466 134.305 170.466 131.982Z"/><path d="M212.282 146.418C211.203 148.948 210.001 150.898 208.674 152.267C207.347 153.636 205.854 154.569 204.195 155.067C202.578 155.564 200.732 155.813 198.659 155.813C197.29 155.813 196.108 155.647 195.113 155.316V148.596C195.486 148.762 196.046 148.886 196.793 148.969C197.539 149.093 198.327 149.156 199.156 149.156C200.318 149.156 201.313 148.782 202.142 148.036C202.971 147.33 203.677 146.356 204.257 145.111L206.123 141.129L190.385 110.578H199.53L209.918 131.049H210.042L218.875 110.578H227.771L212.282 146.418Z"/></svg><span>Made with Nexity Skills</span></a><span>Nexity Marketing Skills{{VERSION_TEXT}} &middot; /brand-kit &middot; public sources only &middot; {{RUN_DATE}}</span></div>
   </main>
 </div>
 
@@ -489,13 +610,13 @@ details.sources[open] summary::after{content:"Hide"}
 <script>
 (function(){
   /* ids for conflicts (c1..) and gap questions (q1..), then two-way links between them */
-  [].forEach.call(document.querySelectorAll('#claims .gap'),function(g){var n=g.querySelector('.no');var t=n&&n.textContent.trim();if(t&&/^C\d+$/.test(t)&&!g.id)g.id=t.toLowerCase();});
-  [].forEach.call(document.querySelectorAll('#gaps .gap'),function(g){var n=g.querySelector('.no');var t=n&&n.textContent.trim();if(t&&/^\d+$/.test(t)&&!g.id)g.id='q'+t;});
+  [].forEach.call(document.querySelectorAll('#fixes .gap'),function(g){var n=g.querySelector('.no');var t=n&&n.textContent.trim();if(t&&/^C\d+$/.test(t)&&!g.id)g.id=t.toLowerCase();});
+  [].forEach.call(document.querySelectorAll('#questions .gap'),function(g){var n=g.querySelector('.no');var t=n&&n.textContent.trim();if(t&&/^\d+$/.test(t)&&!g.id)g.id='q'+t;});
   function linkify(el){
     var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[];while(w.nextNode())nodes.push(w.currentNode);
     nodes.forEach(function(n){
       if(n.parentNode.closest('a'))return;
-      var s=n.nodeValue,re=/(gap questions? )(\d+)|\b(C\d{1,2})\b/g;if(!re.test(s))return;re.lastIndex=0;
+      var s=n.nodeValue,re=/(questions? )(\d+)|\b(C\d{1,2})\b/g;if(!re.test(s))return;re.lastIndex=0;
       var f=document.createDocumentFragment(),last=0,m;
       while((m=re.exec(s))){
         f.appendChild(document.createTextNode(s.slice(last,m.index)));
@@ -508,15 +629,15 @@ details.sources[open] summary::after{content:"Hide"}
       f.appendChild(document.createTextNode(s.slice(last)));n.parentNode.replaceChild(f,n);
     });
   }
-  [].forEach.call(document.querySelectorAll('#claims .gap .why, #gaps .gap .why'),linkify);
+  [].forEach.call(document.querySelectorAll('#fixes .gap .why, #fixes .gap .act, #questions .gap .why, #claims td.quote, #offer td.quote, #brand .prose p'),linkify);
 
   /* trust status of every evidence row: conflict (tag or a conflict row cites it), tension, unverified */
   var status={};
   function mark(id,kind){if(!status[id])status[id]={kind:kind,c:[]};else if(kind==='conflict')status[id].kind='conflict';return status[id];}
   [].forEach.call(document.querySelectorAll('#evidence tr[id] .tag'),function(t){if(/conflict/i.test(t.textContent))mark(t.closest('tr').id,'conflict');});
   [].forEach.call(document.querySelectorAll('#claims tbody tr'),function(r){var t=r.querySelector('.tag');if(!t)return;var k=/unverified/i.test(t.textContent)?'unverified':/tension/i.test(t.textContent)?'tension':null;if(!k)return;[].forEach.call(r.querySelectorAll('a.fact'),function(a){mark(a.getAttribute('href').slice(1),k);});});
-  [].forEach.call(document.querySelectorAll('#claims .gap[id]'),function(g){var c=g.id.toUpperCase();[].forEach.call(g.querySelectorAll('a.fact'),function(a){var s=mark(a.getAttribute('href').slice(1),'conflict');if(s.c.indexOf(c)<0)s.c.push(c);});});
-  [].forEach.call(document.querySelectorAll('a.fact'),function(a){if(a.closest('#claims')||a.closest('#evidence'))return;var s=status[a.getAttribute('href').slice(1)];if(s)a.classList.add('is-'+s.kind);});
+  [].forEach.call(document.querySelectorAll('#fixes .gap[id]'),function(g){var c=g.id.toUpperCase();[].forEach.call(g.querySelectorAll('a.fact'),function(a){var s=mark(a.getAttribute('href').slice(1),'conflict');if(s.c.indexOf(c)<0)s.c.push(c);});});
+  [].forEach.call(document.querySelectorAll('a.fact'),function(a){if(a.closest('#claims')||a.closest('#evidence')||a.closest('#fixes'))return;var s=status[a.getAttribute('href').slice(1)];if(s)a.classList.add('is-'+s.kind);});
   window.__bkStatus=status;
 
   /* back link: after jumping from the text to a row, offer the way back */
@@ -530,25 +651,89 @@ details.sources[open] summary::after{content:"Hide"}
     var host=t.tagName==='TR'?(t.querySelector('td.fact')||t.lastElementChild):t;host.appendChild(b);
   });
 
-  /* copy: each kit section as plain Markdown, the questionnaire as a numbered list */
+  /* copy: each section as plain Markdown; conflicts and questions as numbered lists with their owner */
   var icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"/><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"/></svg>';
   function clean(el){return el.textContent.replace(/\s+/g,' ').replace(/Back to where you were/g,'').trim();}
   function toText(sec){
     var out=[];
-    [].forEach.call(sec.querySelectorAll('h2,h3,.k,.prose p,.sub p,.aud p,li,.gap'),function(el){
+    [].forEach.call(sec.querySelectorAll('h2,h3,.k,p.v,.prose p,.sub p,.aud p,.aud blockquote,li,tbody tr,.gap'),function(el){
       if(el.closest('.helper')||el.closest('.sechead')&&el.tagName!=='H2')return;
       if(el.tagName==='LI'&&el.closest('.notelist'))return;
       var t;
-      if(el.classList.contains('gap')){var n=el.querySelector('.no'),q=el.querySelector('.q'),y=el.querySelector('.why');t=(n?clean(n)+'. ':'')+(q?clean(q):'')+(y?'\n   '+clean(y):'');}
+      if(el.classList.contains('gap')){var n=el.querySelector('.no'),q=el.querySelector('.q'),ac=el.querySelector('.act'),y=el.querySelector('.why');var ow=function(x){var o=x.querySelector('.owner');var s=clean(x);return o?'['+clean(o)+'] '+s.slice(clean(o).length).trim():s;};t=(n?clean(n)+'. ':'')+(q?ow(q):'')+(ac?'\n   '+ow(ac):'')+(y?'\n   '+clean(y):'');}
+      else if(el.tagName==='TR'){t='- '+[].map.call(el.children,clean).filter(Boolean).join(' | ');}
+      else if(el.tagName==='BLOCKQUOTE'){t='> '+clean(el);}
       else{t=clean(el);if(!t)return;if(el.tagName==='H2')t='## '+t;else if(el.tagName==='H3')t='### '+t;else if(el.tagName==='LI')t='- '+t;else if(el.classList.contains('k'))t='**'+t+'**';}
       out.push(t);
     });
     return out.join('\n\n');
   }
-  ['foundations','voice','rules','audiences','products','gaps'].forEach(function(id){
+  /* BRAND.md: a rendered preview by default, the Markdown source one click away */
+  var mdSrc=document.getElementById('brandmd-src'),mdView=document.getElementById('brandmd-view'),mdTabs=document.querySelector('.filetabs');
+  function showMd(which){
+    if(!mdSrc||!mdView||!mdTabs)return;
+    var pre=which==='preview';mdView.hidden=!pre;mdSrc.hidden=pre;
+    [].forEach.call(mdTabs.querySelectorAll('button'),function(b){b.setAttribute('aria-selected',String(b.getAttribute('data-view')===which));});
+  }
+  function mdInline(s){
+    var e=s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return e.replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+  }
+  function mdRender(src){
+    var lines=src.replace(/\r/g,'').split('\n'),out=[],i=0,para=[];
+    function flush(){if(para.length){out.push('<p>'+mdInline(para.join(' '))+'</p>');para=[];}}
+    function item(l){var m=/^(\s*)(-|\d+\.)\s+(.*)$/.exec(l);return m?{indent:m[1].length,ordered:m[2]!=='-',text:m[3]}:null;}
+    while(i<lines.length){
+      var l=lines[i],h=/^(#{1,3})\s+(.*)$/.exec(l);
+      if(!l.trim()){flush();i++;continue;}
+      if(h){flush();out.push('<div class="md-h'+h[1].length+'" role="heading" aria-level="'+(h[1].length+2)+'">'+mdInline(h[2])+'</div>');i++;continue;}
+      if(/^\s*\|/.test(l)){
+        flush();var rows=[];while(i<lines.length&&/^\s*\|/.test(lines[i])){rows.push(lines[i]);i++;}
+        var cells=function(r){return r.trim().replace(/^\||\|$/g,'').split('|').map(function(c){return c.trim();});};
+        var head=rows.length>1&&/^[\s|:-]+$/.test(rows[1]),t='<div class="md-table"><table>';
+        rows.forEach(function(r,n){if(head&&n===1)return;var tag=head&&n===0?'th':'td';t+='<tr>'+cells(r).map(function(c){return '<'+tag+'>'+mdInline(c)+'</'+tag+'>';}).join('')+'</tr>';});
+        out.push(t+'</table></div>');continue;
+      }
+      var it=item(l);
+      if(it&&it.indent<2){
+        flush();var ordered=it.ordered,items=[];
+        while(i<lines.length){
+          var cur=lines[i],ci=item(cur);
+          if(!cur.trim())break;
+          if(ci&&ci.indent<2){if(ci.ordered!==ordered)break;items.push({text:ci.text,sub:[],subOrdered:false});}
+          else if(ci&&items.length){var last=items[items.length-1];last.subOrdered=ci.ordered;last.sub.push(ci.text);}
+          else if(/^\s+/.test(cur)&&items.length){var li=items[items.length-1];if(li.sub.length)li.sub[li.sub.length-1]+=' '+cur.trim();else li.text+=' '+cur.trim();}
+          else break;
+          i++;
+        }
+        var tag=ordered?'ol':'ul';
+        out.push('<'+tag+'>'+items.map(function(x){var s=x.sub.length?('<'+(x.subOrdered?'ol':'ul')+'>'+x.sub.map(function(y){return '<li>'+mdInline(y)+'</li>';}).join('')+'</'+(x.subOrdered?'ol':'ul')+'>'):'';return '<li>'+mdInline(x.text)+s+'</li>';}).join('')+'</'+tag+'>');
+        continue;
+      }
+      para.push(l.trim());i++;
+    }
+    flush();return out.join('');
+  }
+  if(mdSrc&&mdView&&mdTabs){
+    mdView.innerHTML=mdRender(mdSrc.textContent);
+    mdTabs.hidden=false;showMd('preview');
+    mdTabs.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button[data-view]');if(b)showMd(b.getAttribute('data-view'));});
+    mdTabs.addEventListener('keydown',function(e){if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;var next=mdSrc.hidden?'markdown':'preview';showMd(next);mdTabs.querySelector('[data-view="'+next+'"]').focus();});
+  }
+
+  [].forEach.call(document.querySelectorAll('button[data-copy]'),function(b){
+    var label=b.getAttribute('data-label')||'Copy';b.innerHTML=icon+'<span>'+label+'</span>';
+    b.addEventListener('click',function(){
+      var src=document.getElementById(b.getAttribute('data-copy'));if(!src)return;
+      var say=function(s){b.querySelector('span').textContent=s;setTimeout(function(){b.querySelector('span').textContent=label;},1800);};
+      var pick=function(){if(src===mdSrc)showMd('markdown');var r=document.createRange();r.selectNodeContents(src);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);src.scrollIntoView({block:'nearest'});say('Selected: press Ctrl or Cmd + C');};
+      if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(src.textContent).then(function(){say('Copied');},pick);else pick();
+    });
+  });
+  ['brand','audiences','voice','offer','fixes','questions'].forEach(function(id){
     var sec=document.getElementById(id);if(!sec)return;var h=sec.querySelector('h2');if(!h||h.parentNode.classList.contains('sechead'))return;
     var head=document.createElement('div');head.className='sechead';h.parentNode.insertBefore(head,h);head.appendChild(h);
-    var b=document.createElement('button');b.type='button';b.className='copybtn';var label=id==='gaps'?'Copy questionnaire':'Copy';b.innerHTML=icon+'<span>'+label+'</span>';
+    var b=document.createElement('button');b.type='button';b.className='copybtn';var label=id==='questions'?'Copy questions':id==='fixes'?'Copy conflicts':'Copy';b.innerHTML=icon+'<span>'+label+'</span>';
     b.addEventListener('click',function(){var txt=toText(sec);var done=function(){b.querySelector('span').textContent='Copied';setTimeout(function(){b.querySelector('span').textContent=label;},1600);};if(navigator.clipboard)navigator.clipboard.writeText(txt).then(done,function(){});});
     head.appendChild(b);
   });
