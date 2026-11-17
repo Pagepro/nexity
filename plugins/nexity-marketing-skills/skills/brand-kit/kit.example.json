@@ -1,0 +1,249 @@
+{
+ "name": "Acme",
+ "domain": "acme.com",
+ "slug": "acme",
+ "date": "2026-01-15",
+ "type": {
+  "sells": "project tracking software for construction firms",
+  "to": "businesses",
+  "how": "a self-serve plan, with a sales call for larger teams",
+  "type": "Software. The site links to G2 and to its app store listings, so those are the review sources read."
+ },
+ "offer_head": [
+  "Plan or product",
+  "What it includes",
+  "Best for",
+  "Price and limits"
+ ],
+ "evidence": [
+  {
+   "key": "pos",
+   "fact": "Homepage positioning sentence",
+   "url": "https://acme.com/",
+   "quote": "\"Acme keeps every construction project on one schedule.\""
+  },
+  {
+   "key": "teams_home",
+   "fact": "Customer count on the homepage: 200+ teams",
+   "url": "https://acme.com/",
+   "quote": "\"Trusted by 200+ teams\"",
+   "conflict": true
+  },
+  {
+   "key": "teams_about",
+   "fact": "Customer count on the about page: 2,400+ teams",
+   "url": "https://acme.com/about",
+   "quote": "\"2,400+ teams plan with Acme\"",
+   "conflict": true
+  },
+  {
+   "key": "price_team",
+   "fact": "Team plan price",
+   "url": "https://acme.com/pricing",
+   "quote": "\"Team / $49 per user / month\""
+  },
+  {
+   "key": "case_ridge",
+   "fact": "Ridgeline Builders: schedule overruns down from 9 days to 2 per project (2025)",
+   "url": "https://acme.com/customers/ridgeline",
+   "quote": "\"Average overrun fell from 9 days to 2 across 14 projects in 2025.\""
+  },
+  {
+   "key": "g2",
+   "fact": "G2 rating and review count",
+   "url": "https://www.g2.com/products/acme",
+   "quote": "4.6 from 212 reviews"
+  },
+  {
+   "key": "uptime",
+   "fact": "An uptime claim with no status page behind it",
+   "url": "https://acme.com/security",
+   "quote": "\"99.99% uptime\""
+  },
+  {
+   "key": "q_dana",
+   "fact": "Customer quote: Dana, site manager, G2 review",
+   "url": "https://www.g2.com/products/acme",
+   "quote": "\"I stopped phoning subcontractors to ask where they were.\"",
+   "customer": true
+  }
+ ],
+ "voice_strong": [
+  {
+   "quote": "\"A schedule nobody reads is a wish.\"",
+   "url": "https://acme.com/blog/schedules"
+  }
+ ],
+ "voice_weak": [
+  {
+   "quote": "\"Unlock seamless collaboration across your entire ecosystem.\"",
+   "url": "https://acme.com/features"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://acme.com/"
+  },
+  {
+   "url": "https://acme.com/about"
+  },
+  {
+   "url": "https://acme.com/pricing"
+  },
+  {
+   "url": "https://acme.com/customers/ridgeline"
+  },
+  {
+   "url": "https://acme.com/security"
+  },
+  {
+   "url": "https://www.g2.com/products/acme"
+  },
+  {
+   "url": "https://acme.com/features",
+   "yield": "voice only"
+  },
+  {
+   "url": "https://acme.com/blog/schedules",
+   "yield": "voice only"
+  }
+ ],
+ "sources_note": "Every page was read as HTML.",
+ "customer_note": "Ten recent G2 reviews were read.",
+ "not_found": [
+  "No status page was found behind the uptime claim."
+ ],
+ "voice_analysis": [
+  "**Decision: which pages are the model.** The blog and the customer stories."
+ ],
+ "conflicts": [
+  {
+   "title": "Customer count.",
+   "statement": "{teams_home|\"200+ teams\"} on the homepage; {teams_about|\"2,400+ teams\"} on the about page.",
+   "owner": "Ask sales lead",
+   "action": "How many teams are paying customers today?",
+   "until": "Until then: write \"construction teams\" with no count."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "99.99% uptime",
+   "note": "No status page or period.",
+   "status": "unverified",
+   "refs": [
+    "uptime"
+   ]
+  },
+  {
+   "claim": "Team plan at $49 per user a month",
+   "note": "Pricing page.",
+   "status": "single source",
+   "refs": [
+    "price_team"
+   ]
+  },
+  {
+   "claim": "4.6 on G2",
+   "note": "Stated on G2 only.",
+   "status": "third-party",
+   "refs": [
+    "g2"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "owner": "CTO",
+   "question": "Is there a public status page behind the uptime figure?",
+   "why": "The figure is on the security page with nothing a buyer can check."
+  }
+ ],
+ "later": [],
+ "one_liner": "{pos|Acme keeps every construction project on one schedule.}",
+ "fields": [
+  {
+   "label": "What it does",
+   "text": "Project tracking software for construction firms, sold as {price_team|a per-user plan}."
+  },
+  {
+   "label": "What sets it apart",
+   "text": "Measured results on named customers, such as {case_ridge|Ridgeline Builders}."
+  }
+ ],
+ "proof": [
+  "Ridgeline Builders: {case_ridge|average overrun from 9 days to 2 across 14 projects in 2025}.",
+  "{g2|4.6 on G2 from 212 reviews}.",
+  "{price_team|Published per-user pricing}."
+ ],
+ "audiences": [
+  {
+   "name": "Site manager chasing subcontractors by phone",
+   "situation": "They run {case_ridge|several projects at once} and lose days to late trades. [i]They fear a tool the crews will not open.[/i]",
+   "quote": {
+    "text": "{q_dana|\"I stopped phoning subcontractors to ask where they were.\"}",
+    "by": "Dana, site manager",
+    "url": "https://www.g2.com/products/acme",
+    "where": "G2 review"
+   },
+   "needs": "that it works on a phone on site.",
+   "buys": "Team plan"
+  },
+  {
+   "name": "Operations director comparing tools",
+   "situation": "They want {g2|proof from firms like theirs} before a rollout.",
+   "quote": null,
+   "needs": "{price_team|a price they can budget per user}.",
+   "buys": "Team plan"
+  }
+ ],
+ "voice_line": "A site foreman who has read the schedule: short, concrete, a little dry.",
+ "pairs": [
+  [
+   1,
+   11
+  ]
+ ],
+ "rules": [
+  "Give a result with its project count and its year, as {case_ridge|the Ridgeline story} does."
+ ],
+ "words": [
+  "Filler sits on the features page ({v11|\"Unlock seamless collaboration\"})."
+ ],
+ "pages": [
+  {
+   "label": "Pages to imitate",
+   "text": "/blog/schedules, /customers/ridgeline."
+  },
+  {
+   "label": "Pages to rewrite first",
+   "text": "/features."
+  }
+ ],
+ "offer": [
+  {
+   "name": "Team",
+   "what": "Scheduling, subcontractor updates and reports.",
+   "best_for": "Firms running several projects.",
+   "proof": "{price_team|$49 per user a month}."
+  },
+  {
+   "name": "Starter",
+   "what": "One project, up to five users.",
+   "best_for": "A small contractor trying it on one job.",
+   "proof": "No published price."
+  },
+  {
+   "name": "Enterprise",
+   "what": "Single sign-on and an account manager.",
+   "best_for": "Groups with many sites.",
+   "proof": "No published price."
+  },
+  {
+   "name": "For every plan",
+   "what": "Mobile apps and email support.",
+   "best_for": "All plans.",
+   "proof": "No contract term is stated.",
+   "shared": true
+  }
+ ]
+}

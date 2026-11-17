@@ -41,7 +41,7 @@ Ask these together, in one short message, and offer the defaults:
 
    | Skill | In plain words | Needs |
    |---|---|---|
-   | `brand-kit` | A brand kit (voice, audiences, facts with sources) from a company's website | nothing extra |
+   | `brand-kit` | A `BRAND.md` (voice, audiences, offer, facts with sources) and a report of what the site contradicts, from a company's website | Python 3 for the report builder; without it the skill fills the report by hand |
    | `blog-post-quality-review` | A critical review of one post or draft, with a 0–10 score and the three fixes that matter most | nothing extra |
    | `site-contradictions` | Finds every place where the site says two different things about the same fact (prices, numbers, plans, names), with a fix or a question for each | nothing extra |
    | `internal-links` | Finds links between the site's own articles that are missing, for the editor to add | Node.js |
