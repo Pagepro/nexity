@@ -1,7 +1,10 @@
 # Nexity Marketing Skills: start here
 
 This repository has five skills for marketers. An AI agent (Claude) runs them for you: you
-write what you need in plain words and get back a report.
+write what you need in plain words and get back a report. Three more skills do the groundwork
+and come with them, eight in all: `marketing-setup` guides you through the setup,
+`source-review` checks the facts in a post, and `work-humanizer` makes proposed text read like a
+person wrote it (`blog-post-update` uses the last two).
 
 | Skill | What you get |
 |---|---|
@@ -33,7 +36,7 @@ In the Code tab, type these two lines, one at a time, and confirm the install wh
 ```
 
 ```text
-/plugin install marketing-skills@nexity
+/plugin install nexity-marketing-skills@nexity
 ```
 
 Then start a new conversation in the same folder, so the agent sees the new skills.
@@ -73,6 +76,11 @@ Results are saved in your folder; ask the agent to open the report for you.
 it (you can turn on auto-update there too). Then write "Help me setup these skills for
 marketers" once more.
 
+**Installed the plugin before it was renamed?** Until November 2026 it was called
+`marketing-skills`, and that name no longer gets updates. Type `/plugin uninstall
+marketing-skills@nexity`, then `/plugin marketplace update nexity` and `/plugin install
+nexity-marketing-skills@nexity`, and start a new conversation.
+
 ## Other ways to install
 
 **Codex, Cursor and other agents** (needs Node.js): ask the agent to run
@@ -81,8 +89,7 @@ marketers" once more.
 npx skills add Pagepro/nexity
 ```
 
-and pick the five skills above plus `marketing-setup`, `work-humanizer` and `source-review`
-(`blog-post-update` uses the last two) from the list it shows. Then type "Help me setup these skills for marketers".
+and pick all eight skills named at the top of this page from the list it shows. Then type "Help me setup these skills for marketers".
 
 **Without installing anything into the agent:** on this repository's GitHub page, click the
 green **Code** button, then **Download ZIP**. Unzip it, open the unzipped folder (the top one,

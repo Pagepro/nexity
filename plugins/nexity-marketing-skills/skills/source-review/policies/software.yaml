@@ -1,0 +1,251 @@
+# Software policy pack.
+# This pack holds subjects and hosts for software technology articles.
+# Add a subject block to support a new technology.
+
+name: software
+version: 1
+
+domains:
+  - { pattern: "nodejs.org", source_type: official_docs, priority: 30 }
+  - { pattern: "react.dev", source_type: official_docs, priority: 30 }
+  # The versioned archives (18.react.dev, 19.react.dev) are the same docs.
+  - { pattern: "*.react.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "reactnative.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "expo.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "docs.expo.dev", source_type: official_docs, priority: 32 }
+  - { pattern: "vuejs.org", source_type: official_docs, priority: 30 }
+  - { pattern: "angular.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "svelte.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "nextjs.org", source_type: official_docs, priority: 30 }
+  - { pattern: "www.python.org", source_type: official_docs, priority: 30 }
+  - { pattern: "peps.python.org", source_type: standards_body, priority: 32 }
+  - { pattern: "go.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "www.rust-lang.org", source_type: official_docs, priority: 30 }
+  - { pattern: "blog.rust-lang.org", source_type: official_blog, priority: 30 }
+  - { pattern: "kubernetes.io", source_type: official_docs, priority: 30 }
+  - { pattern: "www.postgresql.org", source_type: official_docs, priority: 30 }
+  - { pattern: "dev.mysql.com", source_type: official_docs, priority: 30 }
+  - { pattern: "www.docker.com", source_type: official_blog, priority: 28 }
+  - { pattern: "aws.amazon.com", source_type: official_docs, priority: 28 }
+  - { pattern: "cloud.google.com", source_type: official_docs, priority: 28 }
+  - { pattern: "azure.microsoft.com", source_type: official_docs, priority: 28 }
+  - { pattern: "openai.com", source_type: official_blog, priority: 28 }
+  - { pattern: "www.anthropic.com", source_type: official_blog, priority: 28 }
+  - { pattern: "devblogs.microsoft.com", source_type: official_blog, priority: 30 }
+  - { pattern: "www.typescriptlang.org", source_type: official_docs, priority: 30 }
+  - { pattern: "wordpress.org", source_type: official_docs, priority: 30 }
+  - { pattern: "make.wordpress.org", source_type: official_blog, priority: 30 }
+  - { pattern: "www.npmjs.com", source_type: official_release, priority: 26 }
+  - { pattern: "pypi.org", source_type: official_release, priority: 26 }
+  - { pattern: "docs.cypress.io", source_type: official_docs, priority: 32 }
+  - { pattern: "www.cypress.io", source_type: official_blog, priority: 30 }
+  - { pattern: "playwright.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "jestjs.io", source_type: official_docs, priority: 30 }
+  - { pattern: "vitest.dev", source_type: official_docs, priority: 30 }
+  - { pattern: "testing-library.com", source_type: official_docs, priority: 30 }
+  - { pattern: "www.selenium.dev", source_type: official_docs, priority: 30 }
+  # Hosting platforms. An article that compares platforms needs each vendor.
+  - { pattern: "vercel.com", source_type: official_docs, priority: 30 }
+  - { pattern: "www.netlify.com", source_type: official_docs, priority: 30 }
+  - { pattern: "docs.netlify.com", source_type: official_docs, priority: 32 }
+  - { pattern: "developers.cloudflare.com", source_type: official_docs, priority: 32 }
+  - { pattern: "www.cloudflare.com", source_type: official_blog, priority: 28 }
+  - { pattern: "blog.cloudflare.com", source_type: official_blog, priority: 30 }
+  - { pattern: "www.heroku.com", source_type: official_docs, priority: 30 }
+  - { pattern: "devcenter.heroku.com", source_type: official_docs, priority: 32 }
+  - { pattern: "render.com", source_type: official_docs, priority: 30 }
+  - { pattern: "fly.io", source_type: official_docs, priority: 30 }
+  - { pattern: "endoflife.date", source_type: industry_source, priority: 20 }
+  - { pattern: "caniuse.com", source_type: industry_source, priority: 20 }
+  - { pattern: "www.stackoverflow.blog", source_type: industry_source, priority: 41 }
+  - { pattern: "survey.stackoverflow.co", source_type: industry_source, priority: 41 }
+  - { pattern: "octoverse.github.com", source_type: industry_source, priority: 41 }
+  - { pattern: "wpvip.com", source_type: official_docs, priority: 30 }
+  - { pattern: "docs.wpvip.com", source_type: official_docs, priority: 32 }
+  - { pattern: "create-react-app.dev", source_type: official_docs, priority: 32 }
+  - { pattern: "enzymejs.github.io", source_type: official_docs, priority: 32 }
+  - { pattern: "www.wpgraphql.com", source_type: official_docs, priority: 32 }
+  - { pattern: "*.drupal.org", source_type: official_docs, priority: 30 }
+  - { pattern: "drupal.org", source_type: official_docs, priority: 30 }
+  - { pattern: "nuxt.com", source_type: official_docs, priority: 30 }
+  - { pattern: "doc.sitecore.com", source_type: official_docs, priority: 32 }
+  - { pattern: "developers.sitecore.com", source_type: official_docs, priority: 32 }
+  - { pattern: "www.sitecore.com", source_type: official_docs, priority: 30 }
+  - { pattern: "doc.sitecorepowershell.com", source_type: official_docs, priority: 32 }
+
+trusted_repo_owners:
+  - nodejs
+  - facebook
+  - vercel
+  - vuejs
+  - angular
+  - sveltejs
+  - python
+  - golang
+  - rust-lang
+  - kubernetes
+  - docker
+  - microsoft
+  - google
+  - apache
+  - postgres
+  - mysql
+  - denoland
+  - netlify
+  # cypress-io is not here on purpose. The `cypress` subject block lists
+  # github.com/cypress-io, so the subject rule trusts that organisation.
+  # dmtrKovalenko owns cypress-real-events and belongs to no subject block.
+  - dmtrKovalenko
+  - expo
+  - react-native-community
+  - oven-sh
+  - vitejs
+  - WordPress
+  - openai
+  - anthropics
+
+subjects:
+  node.js:
+    aliases: ["node", "nodejs", "node.js"]
+    domains: ["nodejs.org", "github.com/nodejs"]
+    direct_urls:
+      - "https://nodejs.org/en/blog/release"
+      - "https://github.com/nodejs/node/blob/main/CHANGELOG.md"
+      - "https://endoflife.date/nodejs"
+  react:
+    aliases: ["react", "reactjs", "react.js"]
+    domains: ["react.dev", "legacy.reactjs.org", "github.com/facebook"]
+    direct_urls:
+      - "https://react.dev/blog"
+      - "https://github.com/facebook/react/releases"
+  react native:
+    aliases: ["react native", "react-native", "rn"]
+    domains: ["reactnative.dev", "github.com/facebook"]
+    direct_urls:
+      - "https://reactnative.dev/blog"
+      - "https://reactnative.dev/versions"
+      - "https://github.com/facebook/react-native/releases"
+      - "https://github.com/react-native-community/rn-diff-purge"
+  expo:
+    aliases: ["expo", "expo go"]
+    domains: ["expo.dev", "docs.expo.dev", "github.com/expo"]
+    direct_urls:
+      - "https://expo.dev/changelog"
+      - "https://docs.expo.dev/versions/latest/"
+  cypress:
+    aliases: ["cypress", "cypress.io", "cypress-real-events"]
+    domains: ["docs.cypress.io", "www.cypress.io", "github.com/cypress-io"]
+    direct_urls:
+      - "https://docs.cypress.io/app/references/changelog"
+      - "https://docs.cypress.io/app/references/migration-guide"
+      - "https://docs.cypress.io/app/get-started/install-cypress"
+  playwright:
+    aliases: ["playwright"]
+    domains: ["playwright.dev", "github.com/microsoft"]
+    direct_urls:
+      - "https://playwright.dev/docs/release-notes"
+  vercel:
+    aliases: ["vercel", "vercel.com"]
+    domains: ["vercel.com", "github.com/vercel"]
+    direct_urls:
+      - "https://vercel.com/docs"
+      - "https://vercel.com/changelog"
+      - "https://vercel.com/pricing"
+      - "https://vercel.com/docs/limits"
+  netlify:
+    aliases: ["netlify"]
+    domains: ["www.netlify.com", "docs.netlify.com"]
+    direct_urls:
+      - "https://docs.netlify.com"
+      - "https://www.netlify.com/pricing/"
+  next.js:
+    aliases: ["next.js", "nextjs"]
+    domains: ["nextjs.org", "vercel.com", "github.com/vercel"]
+    direct_urls:
+      - "https://nextjs.org/blog"
+      - "https://github.com/vercel/next.js/releases"
+  python:
+    aliases: ["python", "cpython"]
+    domains: ["www.python.org", "docs.python.org", "peps.python.org"]
+    direct_urls:
+      - "https://www.python.org/downloads/"
+      - "https://docs.python.org/3/whatsnew/"
+      - "https://endoflife.date/python"
+  kubernetes:
+    aliases: ["kubernetes", "k8s"]
+    domains: ["kubernetes.io", "github.com/kubernetes"]
+    direct_urls:
+      - "https://kubernetes.io/releases/"
+      - "https://kubernetes.io/blog/"
+  postgresql:
+    aliases: ["postgresql", "postgres"]
+    domains: ["www.postgresql.org"]
+    direct_urls:
+      - "https://www.postgresql.org/docs/release/"
+      - "https://www.postgresql.org/support/versioning/"
+  typescript:
+    aliases: ["typescript", "ts"]
+    domains: ["www.typescriptlang.org", "devblogs.microsoft.com", "github.com/microsoft"]
+    direct_urls:
+      - "https://devblogs.microsoft.com/typescript/"
+      - "https://github.com/microsoft/TypeScript/releases"
+  # The first direct URL was a template with no version number. It opened the
+  # 4.9 release page for every WordPress claim.
+  wordpress:
+    aliases: ["wordpress", "wp"]
+    domains: ["wordpress.org", "make.wordpress.org", "developer.wordpress.org"]
+    direct_urls:
+      - "https://wordpress.org/documentation/article/learn-about-wordpress-and-version-history/"
+      - "https://make.wordpress.org/core/"
+  # WordPress VIP is a product of Automattic with its own site. The longer alias
+  # wins over "wordpress", so a VIP claim no longer goes to wordpress.org, where
+  # the official VIP pages were refused as having no authority.
+  wordpress vip:
+    aliases: ["wordpress vip", "wpvip", "wp vip"]
+    domains: ["wpvip.com", "docs.wpvip.com"]
+    direct_urls: []
+  # Create React App publishes its own documentation. Without this subject, the
+  # alias "react" routed a CRA claim to react.dev only, and the authority gate
+  # refused the CRA documentation.
+  create react app:
+    aliases: ["create react app", "create-react-app"]
+    domains: ["create-react-app.dev", "react.dev", "github.com/facebook"]
+    direct_urls: []
+  # No bare "devtools" alias: it would also catch "React DevTools".
+  chrome devtools:
+    aliases: ["chrome devtools", "chrome dev tools"]
+    domains: ["developer.chrome.com"]
+    direct_urls: []
+  # Without these two subjects, "Enzyme needs the adapter ... React API" went
+  # to react.dev, and five claims about Jest and Enzyme had no domain at all.
+  jest:
+    aliases: ["jest"]
+    domains: ["jestjs.io", "github.com/jestjs"]
+    direct_urls: []
+  enzyme:
+    aliases: ["enzyme"]
+    domains: ["enzymejs.github.io", "github.com/enzymejs", "github.com/airbnb"]
+    direct_urls: []
+  # WPGraphQL is its own project. The alias "graphql" routed it to graphql.org.
+  wpgraphql:
+    aliases: ["wpgraphql", "wp-graphql"]
+    domains: ["www.wpgraphql.com", "wordpress.org"]
+    direct_urls: []
+  drupal:
+    aliases: ["drupal"]
+    domains: ["www.drupal.org", "drupal.org"]
+    direct_urls: []
+  nuxt:
+    aliases: ["nuxt", "nuxt.js", "nuxtjs"]
+    domains: ["nuxt.com"]
+    direct_urls: []
+  # SitecoreAI is the new name of XM Cloud (November 2025). Both names route here.
+  sitecore:
+    aliases: ["sitecore", "sitecoreai", "xm cloud", "sitecore xm cloud", "experience edge"]
+    domains: ["doc.sitecore.com", "developers.sitecore.com", "www.sitecore.com"]
+    direct_urls: []
+  # A community module with its own documentation. The longer alias wins over "sitecore".
+  sitecore powershell extensions:
+    aliases: ["sitecore powershell extensions", "powershell extensions"]
+    domains: ["doc.sitecorepowershell.com", "github.com/SitecorePowerShell"]
+    direct_urls: []

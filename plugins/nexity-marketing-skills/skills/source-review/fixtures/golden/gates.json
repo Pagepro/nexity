@@ -1,0 +1,5042 @@
+[
+  {
+    "id": "6d1819dac2472099",
+    "url": "https://ant.design/docs/react/introduce",
+    "positive_quote": "Following the Ant Design specification, we developed a React UI library antd (Pronunciation) that contains a set of high quality components and demos for building rich, interactive user interfaces.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "6553903fa74d139c"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "6553903fa74d139c"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "6553903fa74d139c"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "6553903fa74d139c"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "6553903fa74d139c"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "6553903fa74d139c"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "6553903fa74d139c"
+      }
+    }
+  },
+  {
+    "id": "1bfd5b4059a0f44a",
+    "url": "https://chakra-ui.com/docs/get-started/frameworks/vite",
+    "positive_quote": "Using Chakra in Vite A guide for installing Chakra UI with Vite.js projects Use the vite template below to get started quickly.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "73632849be3efbfe"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "73632849be3efbfe"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [],
+        "excerpt_sha": "73632849be3efbfe"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "73632849be3efbfe"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "73632849be3efbfe"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "73632849be3efbfe"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "73632849be3efbfe"
+      }
+    }
+  },
+  {
+    "id": "1d3a21d6e5fda9f8",
+    "url": "https://devblogs.microsoft.com/typescript/",
+    "positive_quote": "TypeScript The official blog of the TypeScript team.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "8d2dea8ab5476c76"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "8d2dea8ab5476c76"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [],
+        "excerpt_sha": "8d2dea8ab5476c76"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "8d2dea8ab5476c76"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "8d2dea8ab5476c76"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "8d2dea8ab5476c76"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "8d2dea8ab5476c76"
+      }
+    }
+  },
+  {
+    "id": "a2786133acd1426f",
+    "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/",
+    "positive_quote": "Today we’re excited to announce the release of TypeScript 5.5!",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "93ca18b8d06f39df"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "ee9ef37763020569"
+      },
+      "typescript-predicates": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "d2195c3fe888a637"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "172cc859d33725f9"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "172cc859d33725f9"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "172cc859d33725f9"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "172cc859d33725f9"
+      }
+    },
+    "value_probe": {
+      "present_missing": [],
+      "absent_missing": [
+        "5.9",
+        "62.3%"
+      ]
+    }
+  },
+  {
+    "id": "f144ae545e08f489",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections",
+    "positive_quote": "Redirections in HTTP URL redirection, also known as URL forwarding, is a technique to give more than one URL address to a page, a form, a whole website, or a web application.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "8b1ee235a6cefb1e"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "903f58ac0f9b09f0"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "903f58ac0f9b09f0"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "903f58ac0f9b09f0"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "903f58ac0f9b09f0"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "903f58ac0f9b09f0"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "903f58ac0f9b09f0"
+      }
+    }
+  },
+  {
+    "id": "1dd4660a01849f5a",
+    "url": "https://developers.google.com/search/docs/appearance/page-experience",
+    "positive_quote": "Understanding page experience in Google Search results Google's core ranking systems look to reward content that provides a good page experience.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "26f707f773afb1ba"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "26f707f773afb1ba"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "26f707f773afb1ba"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "26f707f773afb1ba"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "26f707f773afb1ba"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "26f707f773afb1ba"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "26f707f773afb1ba"
+      }
+    }
+  },
+  {
+    "id": "0959d8853bb4b330",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects",
+    "positive_quote": "Redirects and Google Search Redirecting URLs is the practice of resolving an existing URL to a different one, effectively telling your visitors and Google Search that a page has a new location.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "1dad1942e2d9985c"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "1dad1942e2d9985c"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "1dad1942e2d9985c"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "1dad1942e2d9985c"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "1dad1942e2d9985c"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "1dad1942e2d9985c"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "1dad1942e2d9985c"
+      }
+    }
+  },
+  {
+    "id": "cc224bed75fe5151",
+    "url": "https://developers.google.com/search/docs/essentials",
+    "positive_quote": "It doesn't cost any money to appear in Google Search results, no matter what anyone tries to tell you.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "ba01ba62c0531192"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "ba01ba62c0531192"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "ba01ba62c0531192"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "ba01ba62c0531192"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "ba01ba62c0531192"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "ba01ba62c0531192"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "ba01ba62c0531192"
+      }
+    }
+  },
+  {
+    "id": "6fe2317039f5942b",
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "positive_quote": "Optimizing your website for generative AI features on Google Search User preferences are rapidly evolving and people are increasingly gravitating to generative AI experiences to help them find information.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "3d66164b799490f0"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "75dc42a477282276"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "75dc42a477282276"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "75dc42a477282276"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "75dc42a477282276"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "75dc42a477282276"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "75dc42a477282276"
+      }
+    }
+  },
+  {
+    "id": "8060abc02cbcfb01",
+    "url": "https://developers.google.com/search/docs/guides/intro-structured-data",
+    "positive_quote": "Introduction to structured data markup in Google Search Google Search works hard to understand the content of a page.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "2807b93c9ae722e5"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "2807b93c9ae722e5"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "2807b93c9ae722e5"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "2807b93c9ae722e5"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "2807b93c9ae722e5"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "2807b93c9ae722e5"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "2807b93c9ae722e5"
+      }
+    }
+  },
+  {
+    "id": "2b30b6c3727997c5",
+    "url": "https://docs.astro.build/en/getting-started/",
+    "positive_quote": "Powered by Astro and our open-source contributors.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "ee9cc28e1e95f0e0"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "ee9cc28e1e95f0e0"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "ee9cc28e1e95f0e0"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "ee9cc28e1e95f0e0"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "ee9cc28e1e95f0e0"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "ee9cc28e1e95f0e0"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "ee9cc28e1e95f0e0"
+      }
+    }
+  },
+  {
+    "id": "f30f1032c838b67c",
+    "url": "https://docs.cypress.io/app/core-concepts/introduction-to-cypress",
+    "positive_quote": "This is the single most important guide for understanding how to test with Cypress.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "fbf6c955ec6a2875"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "330a5abffb81be96"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "330a5abffb81be96"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "330a5abffb81be96"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [],
+        "excerpt_sha": "dc901b50911b9fe7"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "330a5abffb81be96"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "330a5abffb81be96"
+      }
+    }
+  },
+  {
+    "id": "828ae9336b3e181b",
+    "url": "https://docs.cypress.io/app/get-started/install-cypress",
+    "positive_quote": "If you're using a Cypress Docker image, you'll find a fixed version of Node.js is pre-installed in the image.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "1513bb521bab95cc"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "8598adf88437edee"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "77c2d54bdc744edc"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "77c2d54bdc744edc"
+      },
+      "cypress-node-version": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "a3fa8bac3913ff4d"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "77c2d54bdc744edc"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "77c2d54bdc744edc"
+      }
+    }
+  },
+  {
+    "id": "78b0f662d40c408c",
+    "url": "https://docs.cypress.io/app/references/changelog",
+    "positive_quote": "15.21.1 Released Aug 25, 2026 Bugfixes: - Fixed an issue where Chrome and Firefox offered to translate the application under test, showing a translation prompt during the run.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "fcfc1040dae64c01"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "10d5c5352359a12e"
+      },
+      "typescript-predicates": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "f3333e7c61a83fd4"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "b315e79f1dad0c29"
+      },
+      "cypress-node-version": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "d3014aa359120759"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "b315e79f1dad0c29"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "b315e79f1dad0c29"
+      }
+    }
+  },
+  {
+    "id": "08fbb5203579425b",
+    "url": "https://docs.cypress.io/app/references/migration-guide",
+    "positive_quote": "Migrating away from Cypress.env() Migrate off Cypress.env() with your AI assistant Copies a ready-made prompt that walks your AI coding assistant through this migration.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "d4375dfc6dccb646"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "5374acdc50d60819"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [],
+        "excerpt_sha": "d10c7ff141084769"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "40b6206f26762090"
+      },
+      "cypress-node-version": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "f455af3c4186a375"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "40b6206f26762090"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "40b6206f26762090"
+      }
+    }
+  },
+  {
+    "id": "43a9cfb73df637fb",
+    "url": "https://docs.expo.dev/versions/latest/",
+    "positive_quote": "This documentation is available as Markdown for AI agents and LLMs.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "01130d7eb65028ee"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "20.19.4"
+        ],
+        "missing_terms": [],
+        "excerpt_sha": "855c296cf6c5fd8a"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "a0f0f8a4d41383e0"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "a0f0f8a4d41383e0"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "a0f0f8a4d41383e0"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "a0f0f8a4d41383e0"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "a0f0f8a4d41383e0"
+      }
+    }
+  },
+  {
+    "id": "879d9b407a996ede",
+    "url": "https://docs.flutter.dev",
+    "positive_quote": "To see changes to the site since our last release, see What's new.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "ca876aa4a8ec3e3b"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "ca876aa4a8ec3e3b"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "ca876aa4a8ec3e3b"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "ca876aa4a8ec3e3b"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "ca876aa4a8ec3e3b"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "ca876aa4a8ec3e3b"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "ca876aa4a8ec3e3b"
+      }
+    }
+  },
+  {
+    "id": "cb27f54a8c702df5",
+    "url": "https://docs.netlify.com",
+    "positive_quote": "For the complete Netlify documentation index, see llms.txt.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "c14cf48e87b273f1"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "c14cf48e87b273f1"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "c14cf48e87b273f1"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "c14cf48e87b273f1"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "c14cf48e87b273f1"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "c14cf48e87b273f1"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "c14cf48e87b273f1"
+      }
+    }
+  },
+  {
+    "id": "cfd8cd3405a047b1",
+    "url": "https://docs.python.org/3/whatsnew/",
+    "positive_quote": "What’s New in Python¶ The “What’s New in Python” series of essays takes tours through the most important changes between major Python versions.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "79c8ed10f655b449"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "79c8ed10f655b449"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "79c8ed10f655b449"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "79c8ed10f655b449"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "79c8ed10f655b449"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "79c8ed10f655b449"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "79c8ed10f655b449"
+      }
+    }
+  },
+  {
+    "id": "9f9e77dd8156cb6d",
+    "url": "https://docs.strapi.io",
+    "positive_quote": "Strapi 5 Documentation Build anything with Strapi.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "201475de7d700b00"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "201475de7d700b00"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "201475de7d700b00"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "201475de7d700b00"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "201475de7d700b00"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "201475de7d700b00"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "201475de7d700b00"
+      }
+    }
+  },
+  {
+    "id": "ad09b9b9dca87901",
+    "url": "https://endoflife.date/nodejs",
+    "positive_quote": "After six months, releases after 26 move to Active LTS status and are ready for general use.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL"
+        ],
+        "excerpt_sha": "a031c11533d5f1e3"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "b1f0bbf1c8a771b0"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "16e1dba62b28b619"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "16e1dba62b28b619"
+      },
+      "cypress-node-version": {
+        "missing_values": [],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "86a5997426589e21"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "16e1dba62b28b619"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "16e1dba62b28b619"
+      }
+    }
+  },
+  {
+    "id": "93a103a0fe6fa5bf",
+    "url": "https://endoflife.date/python",
+    "positive_quote": "Python 3.8 was the last version to support Windows 7.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL"
+        ],
+        "excerpt_sha": "e51b4bb08cb0c1ea"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "3c2f38bbb0858cd4"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "3c2f38bbb0858cd4"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "3c2f38bbb0858cd4"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "3c2f38bbb0858cd4"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "3c2f38bbb0858cd4"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "3c2f38bbb0858cd4"
+      }
+    }
+  },
+  {
+    "id": "93e898b265c5a97e",
+    "url": "https://expo.dev/changelog",
+    "positive_quote": "Introducing a new insights dashboard, showing you how every Maestro end-to-end test run performed over time, across your whole team.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "111088619b64e446"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "111088619b64e446"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "111088619b64e446"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "111088619b64e446"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "111088619b64e446"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "111088619b64e446"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "111088619b64e446"
+      }
+    }
+  },
+  {
+    "id": "31e9b02b9aee4fe0",
+    "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+    "positive_quote": "Bootstrap is a powerful, feature-packed frontend toolkit.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "6c2b0713f7e3bf80"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "3865996f98614b0b"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "3865996f98614b0b"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "3865996f98614b0b"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "3865996f98614b0b"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "3865996f98614b0b"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "3865996f98614b0b"
+      }
+    }
+  },
+  {
+    "id": "c8bd64db46255a53",
+    "url": "https://github.com/facebook/react-native/releases",
+    "positive_quote": "To help you upgrade to this version, you can use the Upgrade Helper ⚛️.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "f33cc2d90fdf68ec"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "6fe1789512ccbeac"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "05e53016ac0f0605"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "05e53016ac0f0605"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "05e53016ac0f0605"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "05e53016ac0f0605"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "05e53016ac0f0605"
+      }
+    }
+  },
+  {
+    "id": "176acb083040aba3",
+    "url": "https://github.com/gatsbyjs/gatsby/releases",
+    "positive_quote": "React 19 is now officially supported by Gatsby and all gatsby- packages maintained by the Gatsby team.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "c30854cf10d44645"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "c30854cf10d44645"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "ac2c0143a032fb50"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "ac2c0143a032fb50"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "ac2c0143a032fb50"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "ac2c0143a032fb50"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "ac2c0143a032fb50"
+      }
+    }
+  },
+  {
+    "id": "4ddb25bc16c1ed38",
+    "url": "https://github.com/microsoft/TypeScript/releases",
+    "positive_quote": "Downloads are available on: TypeScript 6.0 For release notes, check out the release announcement blog post. - fixed issues query for TypeScript 6.0.0 (Beta). - fixed issues query for TypeScript 6.0.1 (RC). - fixed issues query for TypeScript 6.0.2 (Stable).",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "a02ce72337f4565b"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "a02ce72337f4565b"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [],
+        "excerpt_sha": "a02ce72337f4565b"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "a02ce72337f4565b"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "a02ce72337f4565b"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "a02ce72337f4565b"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "a02ce72337f4565b"
+      }
+    }
+  },
+  {
+    "id": "63b4c7160b1fcdde",
+    "url": "https://github.com/nodejs/node/blob/main/CHANGELOG.md",
+    "positive_quote": "Select a Node.js version below to view the changelog history: Please use the following table to find the changelog for a specific Node.js release.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "ff4538112ebeab81"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "15decea0db89cc0b"
+      },
+      "typescript-predicates": {
+        "missing_values": [],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "bceae88e79d28263"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "8a8d25c42bf31190"
+      },
+      "cypress-node-version": {
+        "missing_values": [],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "0642004dae052f3e"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "8a8d25c42bf31190"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "8a8d25c42bf31190"
+      }
+    }
+  },
+  {
+    "id": "e743f45b917aaa16",
+    "url": "https://github.com/react-native-community/rn-diff-purge",
+    "positive_quote": "This repository exposes an untouched React Native app generated with the CLI npx @react-native-community/cli init RnDiffApp.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "544b94c1343297e9"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "544b94c1343297e9"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "544b94c1343297e9"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "544b94c1343297e9"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "544b94c1343297e9"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI"
+        ],
+        "excerpt_sha": "544b94c1343297e9"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "544b94c1343297e9"
+      }
+    }
+  },
+  {
+    "id": "eaf669f5a5a86e3e",
+    "url": "https://github.com/storybookjs/storybook/releases",
+    "positive_quote": "Releases: storybookjs/storybook\nReleases · storybookjs/storybook\nRelease list\nv10.6.0-beta.0\n10.6.0-beta.0\n- CLI plugins: Delegate to `storybook skills` / `stor",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL"
+        ],
+        "excerpt_sha": "59ee4fca5a733e90"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "4b80c6847c2e7cf9"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [],
+        "excerpt_sha": "bdf4d4faa28d92ef"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "4b80c6847c2e7cf9"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "4b80c6847c2e7cf9"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "4b80c6847c2e7cf9"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "4b80c6847c2e7cf9"
+      }
+    }
+  },
+  {
+    "id": "764a9c18b674f6f8",
+    "url": "https://github.com/tailwindlabs/tailwindcss/releases",
+    "positive_quote": "Releases: tailwindlabs/tailwindcss\nReleases · tailwindlabs/tailwindcss\nRelease list\nv4.3.3\nFixed\n- Support --watch --poll[=ms] in@tailwindcss/cli when filesyste",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "0f27f4c62531fdaa"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "be403e35d9c8ef0b"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "be403e35d9c8ef0b"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "be403e35d9c8ef0b"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "be403e35d9c8ef0b"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "be403e35d9c8ef0b"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "be403e35d9c8ef0b"
+      }
+    }
+  },
+  {
+    "id": "496a7f5337001d2c",
+    "url": "https://github.com/vercel/next.js/releases",
+    "positive_quote": "Releases: vercel/next.js\nRelease list\nv16.4.0-canary.12\nMisc Changes\n- [ci] Remove the popular workflow and its action: #97753\n- Store keys in key order in SST",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "9d2ca67400941862"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "4bf5d56b66e07f07"
+      },
+      "typescript-predicates": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "d6ccdd08ff6d4917"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "9d2ca67400941862"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "4bf5d56b66e07f07"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "4bf5d56b66e07f07"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "9d2ca67400941862"
+      }
+    }
+  },
+  {
+    "id": "95b3b560064897de",
+    "url": "https://github.com/withastro/astro/releases",
+    "positive_quote": "Responses carry anastro-version:<id> cache tag for version-specific purging, and responses that already sendLast-Modified get a weakETag that folds the version in.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "6a4d6fc2751c4c1d"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "9cba99c10439a7f9"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "7e1231e112662c40"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "7e1231e112662c40"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "7e1231e112662c40"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "7e1231e112662c40"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "7e1231e112662c40"
+      }
+    }
+  },
+  {
+    "id": "cadaa6343ad27486",
+    "url": "https://graphql.org/learn/",
+    "positive_quote": "Get a high-level overview of GraphQL and how it enables flexible, versionless APIs powered by a strong type system.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "52444748132e0647"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "52444748132e0647"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "52444748132e0647"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "52444748132e0647"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "52444748132e0647"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "52444748132e0647"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "52444748132e0647"
+      }
+    }
+  },
+  {
+    "id": "53c3bf94c296a9be",
+    "url": "https://ionicframework.com/docs",
+    "positive_quote": "Ionic is an open source UI toolkit for building performant, high-quality mobile apps using web technologies — HTML, CSS, and JavaScript — with integrations for popular frameworks like Angular, React, and Vue.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "36822918ee076026"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "a49b3e53252b8daf"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "a49b3e53252b8daf"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "a49b3e53252b8daf"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "a49b3e53252b8daf"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "a49b3e53252b8daf"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "a49b3e53252b8daf"
+      }
+    }
+  },
+  {
+    "id": "3f625379424f7a0e",
+    "url": "https://jamstack.org/what-is-jamstack/",
+    "positive_quote": "Jamstack is an architecture designed to make the web faster, more secure, and easier to scale.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "8977a05bcce06f72"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "8977a05bcce06f72"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "8977a05bcce06f72"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "8977a05bcce06f72"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "8977a05bcce06f72"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "8977a05bcce06f72"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "8977a05bcce06f72"
+      }
+    }
+  },
+  {
+    "id": "5f27add4419ace7c",
+    "url": "https://kubernetes.io/blog/",
+    "positive_quote": "Posts in 2026 - By Taahir Ahmed | Friday, August 28, 2026 in Blog Pod Certificate / Cluster Trust Bundles Blog PostKubernetes brings a wealth of features that make it easy to run your production workloads securely and reliably.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "b8757edaa204b175"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "b8757edaa204b175"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "b8757edaa204b175"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "b8757edaa204b175"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "b8757edaa204b175"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "b8757edaa204b175"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "b8757edaa204b175"
+      }
+    }
+  },
+  {
+    "id": "24c5e5e15e1b47cd",
+    "url": "https://kubernetes.io/releases/",
+    "positive_quote": "The Kubernetes project maintains release branches for the most recent three minor releases (1.37, 1.36, 1.35).",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "dba887194165976c"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "dba887194165976c"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "dba887194165976c"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "dba887194165976c"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "dba887194165976c"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "dba887194165976c"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "dba887194165976c"
+      }
+    }
+  },
+  {
+    "id": "d25db7d9b02799c0",
+    "url": "https://make.wordpress.org/core/",
+    "positive_quote": "WordPress has no first-class way to store a credential.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL"
+        ],
+        "excerpt_sha": "8ee7310e6fe7d0a1"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "35726707aaae7193"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "35726707aaae7193"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "35726707aaae7193"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "35726707aaae7193"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "35726707aaae7193"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "35726707aaae7193"
+      }
+    }
+  },
+  {
+    "id": "3062bb9287db3e31",
+    "url": "https://mui.com/material-ui/getting-started/",
+    "positive_quote": "Material UI - Overview Material UI is an open-source React component library that implements Google's Material Design.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL"
+        ],
+        "excerpt_sha": "40f40b3caec970fd"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "40f40b3caec970fd"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "40f40b3caec970fd"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "40f40b3caec970fd"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "40f40b3caec970fd"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "40f40b3caec970fd"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "40f40b3caec970fd"
+      }
+    }
+  },
+  {
+    "id": "cd47ae05c4cf1905",
+    "url": "https://nextjs.org/blog",
+    "positive_quote": "The August 2026 security release is now available.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL"
+        ],
+        "excerpt_sha": "f264c7eaef7dd0b7"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "2f345ba7d0db2e47"
+      },
+      "typescript-predicates": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "7ba4432b496198ff"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "11047ecf26d97a0d"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "11047ecf26d97a0d"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "11047ecf26d97a0d"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "11047ecf26d97a0d"
+      }
+    }
+  },
+  {
+    "id": "08e2f31281e3fc64",
+    "url": "https://nodejs.org/en/about/previous-releases",
+    "positive_quote": "Major Node.js versions enter Current release status for six months, which gives library authors time to add support for them.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "129815396bdbf55f"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "129815396bdbf55f"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "129815396bdbf55f"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "129815396bdbf55f"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "129815396bdbf55f"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "129815396bdbf55f"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "129815396bdbf55f"
+      }
+    }
+  },
+  {
+    "id": "d042269f67acf293",
+    "url": "https://playwright.dev/docs/release-notes",
+    "positive_quote": "Version 1.62 🧱 New component testing model Component testing moves to a stories and galleries model.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "ecc32cb4f7fbdf4a"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "729f76faa3c2a76f"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [],
+        "excerpt_sha": "01cd57c84f0c4954"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "b5002e295e0fad4b"
+      },
+      "cypress-node-version": {
+        "missing_values": [],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "6557323788fb9f25"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "b5002e295e0fad4b"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "b5002e295e0fad4b"
+      }
+    }
+  },
+  {
+    "id": "bb76adbd56370a61",
+    "url": "https://react.dev/blog",
+    "positive_quote": "This blog is the official source for the updates from the React team.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "bfe71f7fd14569df"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "417ba0ed32e3638f"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "bfe71f7fd14569df"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "bfe71f7fd14569df"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "bfe71f7fd14569df"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "bfe71f7fd14569df"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "bfe71f7fd14569df"
+      }
+    }
+  },
+  {
+    "id": "c655dabfdcfebec6",
+    "url": "https://reactnative.dev/blog",
+    "positive_quote": "React Native has always focused on helping developers reuse knowledge across platforms.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "d3c962cb6d8a22ea"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "d3c962cb6d8a22ea"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "d3c962cb6d8a22ea"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "d3c962cb6d8a22ea"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "d3c962cb6d8a22ea"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "d3c962cb6d8a22ea"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "d3c962cb6d8a22ea"
+      }
+    }
+  },
+  {
+    "id": "8535a2106491faee",
+    "url": "https://reactnative.dev/blog/2025/08/12/react-native-0.81",
+    "positive_quote": "Today we are excited to release React Native 0.81!",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "754c0c8e4f37578c"
+      },
+      "rn-node-requirement": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "d9b1e3ca22e7750e"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "98dbed5f6fa52978"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "98dbed5f6fa52978"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "98dbed5f6fa52978"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "98dbed5f6fa52978"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "98dbed5f6fa52978"
+      }
+    },
+    "value_probe": {
+      "present_missing": [],
+      "absent_missing": [
+        "27%",
+        "0.99"
+      ]
+    }
+  },
+  {
+    "id": "05f7d7c43f8c08aa",
+    "url": "https://reactnative.dev/blog/2025/10/08/react-native-0.82",
+    "positive_quote": "Today we're excited to release React Native 0.82: the first React Native that runs entirely on the New Architecture.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "a10acd7d5827ad24"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "27119c788c7f49f9"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "bf9481efe03d393c"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "bf9481efe03d393c"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "bf9481efe03d393c"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "bf9481efe03d393c"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "bf9481efe03d393c"
+      }
+    }
+  },
+  {
+    "id": "4094af38de8b3f82",
+    "url": "https://reactnative.dev/docs/react-native-devtools",
+    "positive_quote": "React Native DevTools is our modern debugging experience for React Native.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "3112cba6cc6d0750"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "Node.js"
+        ],
+        "excerpt_sha": "e26aaca8edfdbce7"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "a2ed5546ed577a76"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "a2ed5546ed577a76"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "a2ed5546ed577a76"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "a2ed5546ed577a76"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "a2ed5546ed577a76"
+      }
+    }
+  },
+  {
+    "id": "a32000dbac49f118",
+    "url": "https://reactnative.dev/versions",
+    "positive_quote": "Docs Versions Next version (Unreleased) Ahead of each stable release, React Native publishes a series of release candidates.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "f82a6a4e1e548ef8"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "f82a6a4e1e548ef8"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "f82a6a4e1e548ef8"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "f82a6a4e1e548ef8"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "f82a6a4e1e548ef8"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "f82a6a4e1e548ef8"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "f82a6a4e1e548ef8"
+      }
+    }
+  },
+  {
+    "id": "fcdfe484158f0757",
+    "url": "https://remix.run/docs/en/main",
+    "positive_quote": "npx create-remix@latest Start with the Technical Explanation.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "1574738f4e1caf0f"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "1574738f4e1caf0f"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "1574738f4e1caf0f"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "1574738f4e1caf0f"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "1574738f4e1caf0f"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "1574738f4e1caf0f"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "1574738f4e1caf0f"
+      }
+    }
+  },
+  {
+    "id": "c9c0bc5d581f50ed",
+    "url": "https://semantic-ui.com/introduction/getting-started.html",
+    "positive_quote": "Preface Using Build Tools Semantic UI packaged Gulp build tools so your project can preserve its own theme changes.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "cc1d5f905ea2dd0a"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "cc1d5f905ea2dd0a"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "cc1d5f905ea2dd0a"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "cc1d5f905ea2dd0a"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "cc1d5f905ea2dd0a"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "cc1d5f905ea2dd0a"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "cc1d5f905ea2dd0a"
+      }
+    }
+  },
+  {
+    "id": "6a980e3ea3d7e546",
+    "url": "https://shopify.dev/docs",
+    "positive_quote": "Shopify Dev Docs Learn how to build an app, or customize your storefront.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "8b0dd0f6d69ac145"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "8b0dd0f6d69ac145"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "8b0dd0f6d69ac145"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "8b0dd0f6d69ac145"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "8b0dd0f6d69ac145"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "8b0dd0f6d69ac145"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "8b0dd0f6d69ac145"
+      }
+    }
+  },
+  {
+    "id": "ae02cbf826a54d40",
+    "url": "https://storybook.js.org/docs",
+    "positive_quote": "Get started with Storybook Storybook is a frontend workshop for building UI components and pages in isolation.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "b508dc20f06f29b1"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "b508dc20f06f29b1"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "b508dc20f06f29b1"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "b508dc20f06f29b1"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "b508dc20f06f29b1"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "b508dc20f06f29b1"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "b508dc20f06f29b1"
+      }
+    }
+  },
+  {
+    "id": "77e29fecb428cda8",
+    "url": "https://strapi.io/pricing-self-hosted",
+    "positive_quote": "Community Free Forever Plan features Try Growth features for 30 days on your self-hosted project for free.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "8af708138ffe7234"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "8af708138ffe7234"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [],
+        "excerpt_sha": "8af708138ffe7234"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "8af708138ffe7234"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "8af708138ffe7234"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "8af708138ffe7234"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "8af708138ffe7234"
+      }
+    }
+  },
+  {
+    "id": "310b3e71be09852d",
+    "url": "https://tailwindcss.com/docs",
+    "positive_quote": "Installation Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "836f63e2611c9e9a"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "836f63e2611c9e9a"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "836f63e2611c9e9a"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "836f63e2611c9e9a"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "836f63e2611c9e9a"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "836f63e2611c9e9a"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "836f63e2611c9e9a"
+      }
+    }
+  },
+  {
+    "id": "12c99c068b6b2410",
+    "url": "https://vercel.com/blog/isr-on-vercel-is-now-faster-and-more-cost-efficient",
+    "positive_quote": "When Next.js introduced Incremental Static Regeneration (ISR) in 2020, it changed how developers build for the web.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "c6358c2d81c75410"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "c6358c2d81c75410"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "c6358c2d81c75410"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "c6358c2d81c75410"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "c6358c2d81c75410"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "c6358c2d81c75410"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "c6358c2d81c75410"
+      }
+    }
+  },
+  {
+    "id": "2b470a6bc8531d60",
+    "url": "https://vercel.com/docs",
+    "positive_quote": "[Learn more →](/docs/ai-gateway) **eve**: eve is a filesystem-first framework for building durable backend AI agents.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "692b7c3e41f69636"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "692b7c3e41f69636"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "692b7c3e41f69636"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "692b7c3e41f69636"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "692b7c3e41f69636"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "692b7c3e41f69636"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "692b7c3e41f69636"
+      }
+    }
+  },
+  {
+    "id": "5069d1a1c696d625",
+    "url": "https://vercel.com/docs/fundamentals/what-is-compute",
+    "positive_quote": "Compute is the work a server performs to respond to a request, such as rendering a page, querying a database, or running an AI workload.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "a62de5860c4ee21d"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "40fca3dc7697e733"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "6a8f16a6fb86a3a3"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "a62de5860c4ee21d"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "6a8f16a6fb86a3a3"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "6a8f16a6fb86a3a3"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "a62de5860c4ee21d"
+      }
+    }
+  },
+  {
+    "id": "3be9b22a45e168c1",
+    "url": "https://vercel.com/docs/limits",
+    "positive_quote": "Walk the diagnostic checklist covering authentication, commit author acces Full cross-link map for this page: [/docs/limits.graph.md](/docs/limits.graph.md?from=related&source_path=%2Fdocs%2Flimits&source_site=vercel-docs&relationship=graph) You can raise many of the limits on this page.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "40f150ffbc8686a4"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Xcode"
+        ],
+        "excerpt_sha": "fe9174cdf0059813"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "43071b031bbdd0d8"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "6053b81c2b29a363"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "43071b031bbdd0d8"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "43071b031bbdd0d8"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "6053b81c2b29a363"
+      }
+    }
+  },
+  {
+    "id": "b9a699318901a017",
+    "url": "https://vercel.com/docs/pricing",
+    "positive_quote": "Full cross-link map for this page: [/docs/pricing.graph.md](/docs/pricing.graph.md?from=related&source_path=%2Fdocs%2Fpricing&source_site=vercel-docs&relationship=graph) For a full breakdown of Vercel's pricing by plan, see the [pricing page](/pricing).",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "2dd545557da84de2"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "ce9dee3b883a2bed"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "ce9dee3b883a2bed"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "303cdad54f3ec99c"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "ce9dee3b883a2bed"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "ce9dee3b883a2bed"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "303cdad54f3ec99c"
+      }
+    }
+  },
+  {
+    "id": "ffdc467f08395bf3",
+    "url": "https://vercel.com/pricing",
+    "positive_quote": "Scale your app, control your costs The perfect starting place for your web app or personal project.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL"
+        ],
+        "excerpt_sha": "4deb1eda0ab491a5"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "5ff1c9c73ac47b62"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "5ff1c9c73ac47b62"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "1fa1fa1732b467ff"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "5ff1c9c73ac47b62"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "5ff1c9c73ac47b62"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "1fa1fa1732b467ff"
+      }
+    }
+  },
+  {
+    "id": "1f2734e7294c86f2",
+    "url": "https://web.dev/articles/vitals",
+    "positive_quote": "Optimizing for quality of user experience is key to the long-term success of any site on the web.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "f23ed0f417727c17"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "f23ed0f417727c17"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "f23ed0f417727c17"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "f23ed0f417727c17"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "f23ed0f417727c17"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "f23ed0f417727c17"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "f23ed0f417727c17"
+      }
+    }
+  },
+  {
+    "id": "73a5891f72b7ef43",
+    "url": "https://webflow.com/pricing",
+    "positive_quote": "Site plans Start building with Webflow's AI-native platform for free.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "6a0fb8601e373c53"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "9227fca9ee13fbe6"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "9227fca9ee13fbe6"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "9227fca9ee13fbe6"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "9227fca9ee13fbe6"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "9227fca9ee13fbe6"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "9227fca9ee13fbe6"
+      }
+    }
+  },
+  {
+    "id": "d4efbcc8c50676a0",
+    "url": "https://wordpress.org/documentation/wordpress-version/version-",
+    "positive_quote": "On November 15, 2017, WordPress Version 4.9, named for jazz musician Billy Tipton, was released to the public.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "4ebfca80c2cf4516"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "c7e63d684876c8cd"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "c7e63d684876c8cd"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "c7e63d684876c8cd"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "c7e63d684876c8cd"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "c7e63d684876c8cd"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "c7e63d684876c8cd"
+      }
+    }
+  },
+  {
+    "id": "e8da675455787f6a",
+    "url": "https://www.gatsbyjs.com/docs/",
+    "positive_quote": "Welcome to the Gatsby Way of Building Gatsby is a React-based open source framework for creating websites.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "d4a2ac00475e5f50"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "d4a2ac00475e5f50"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "d4a2ac00475e5f50"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "d4a2ac00475e5f50"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "d4a2ac00475e5f50"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "d4a2ac00475e5f50"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "d4a2ac00475e5f50"
+      }
+    }
+  },
+  {
+    "id": "f66bdfe757268ce5",
+    "url": "https://www.netlify.com/pricing/",
+    "positive_quote": "Free\n$0 forever\nDeploy any framework:\n-  Deploy from AI, Git, or API\n-  Private by default until you publish\n-  Unlimited deploy previews\n-  Build with Agent Ru",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "bb85d155e7a24c53"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "bb85d155e7a24c53"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "bb85d155e7a24c53"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "bb85d155e7a24c53"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "bb85d155e7a24c53"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "bb85d155e7a24c53"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "bb85d155e7a24c53"
+      }
+    }
+  },
+  {
+    "id": "21881118545d986e",
+    "url": "https://www.postgresql.org/docs/release/",
+    "positive_quote": "Below is the complete archive of release notes for every version of PostgreSQL.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "d8db25c88a3197a8"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "d8db25c88a3197a8"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "d8db25c88a3197a8"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "d8db25c88a3197a8"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "d8db25c88a3197a8"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "d8db25c88a3197a8"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "d8db25c88a3197a8"
+      }
+    }
+  },
+  {
+    "id": "5f3d9e732537b6d2",
+    "url": "https://www.postgresql.org/docs/release/16.0/",
+    "positive_quote": "A dump/restore using pg_dumpall or use of pg_upgrade or logical replication is required for those wishing to migrate data from any previous release.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [],
+        "excerpt_sha": "fd2a803343023f7c"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "f5fce0440e9b2ebb"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "f5fce0440e9b2ebb"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "f5fce0440e9b2ebb"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "f5fce0440e9b2ebb"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "f5fce0440e9b2ebb"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "f5fce0440e9b2ebb"
+      }
+    },
+    "value_probe": {
+      "present_missing": [],
+      "absent_missing": [
+        "99.9"
+      ]
+    }
+  },
+  {
+    "id": "544607d71e2f6ec1",
+    "url": "https://www.postgresql.org/support/versioning/",
+    "positive_quote": "The PostgreSQL Global Development Group releases a new major version containing new features about once a year.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "777ae9b8833cc420"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "777ae9b8833cc420"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "777ae9b8833cc420"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "777ae9b8833cc420"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "777ae9b8833cc420"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "777ae9b8833cc420"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "777ae9b8833cc420"
+      }
+    }
+  },
+  {
+    "id": "84ed1861359f79ce",
+    "url": "https://www.python.org/downloads/",
+    "positive_quote": "Python releases by version number: - Python 3.14.7 Aug.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [],
+        "missing_terms": [
+          "PostgreSQL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "6205bc582a08c5b6"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "886d117bb7c85b17"
+      },
+      "typescript-predicates": {
+        "missing_values": [],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "3c11f32ddd13e777"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "886d117bb7c85b17"
+      },
+      "cypress-node-version": {
+        "missing_values": [],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "ebe99b7489570d37"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "886d117bb7c85b17"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "886d117bb7c85b17"
+      }
+    }
+  },
+  {
+    "id": "68add3d6e1a17ef6",
+    "url": "https://www.sanity.io/pricing",
+    "positive_quote": "A seat is consumed by all user types except the ones with the Viewer role, which are free.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL"
+        ],
+        "excerpt_sha": "9f60488ffb91b5d7"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "9aeb04273913266e"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "9aeb04273913266e"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "9aeb04273913266e"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "9aeb04273913266e"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "9aeb04273913266e"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "9aeb04273913266e"
+      }
+    }
+  },
+  {
+    "id": "b9c758fb46f57fcf",
+    "url": "https://www.storyblok.com/docs",
+    "positive_quote": "Quickstarts (or calm, easy-going starts) Building blocks (not roadblocks) Content (as in “happy”) Content should be joyful.",
+    "positive_quote_accepted": true,
+    "fabricated_quote_accepted": false,
+    "claims": {
+      "postgres-parallel-joins": {
+        "missing_values": [
+          "16"
+        ],
+        "missing_terms": [
+          "PostgreSQL",
+          "FULL",
+          "RIGHT"
+        ],
+        "excerpt_sha": "178fb31de0f6c725"
+      },
+      "rn-node-requirement": {
+        "missing_values": [
+          "0.81",
+          "20.19.4",
+          "16.1"
+        ],
+        "missing_terms": [
+          "React Native",
+          "Node.js",
+          "Xcode"
+        ],
+        "excerpt_sha": "178fb31de0f6c725"
+      },
+      "typescript-predicates": {
+        "missing_values": [
+          "5.5"
+        ],
+        "missing_terms": [
+          "TypeScript"
+        ],
+        "excerpt_sha": "178fb31de0f6c725"
+      },
+      "vercel-usage-billing": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "178fb31de0f6c725"
+      },
+      "cypress-node-version": {
+        "missing_values": [
+          "12.0"
+        ],
+        "missing_terms": [
+          "Cypress"
+        ],
+        "excerpt_sha": "178fb31de0f6c725"
+      },
+      "rn-diff-purge": {
+        "missing_values": [],
+        "missing_terms": [
+          "React Native CLI",
+          "rn-diff-purge"
+        ],
+        "excerpt_sha": "178fb31de0f6c725"
+      },
+      "no-value-pricing-rule": {
+        "missing_values": [],
+        "missing_terms": [
+          "Vercel"
+        ],
+        "excerpt_sha": "178fb31de0f6c725"
+      }
+    }
+  }
+]

@@ -7,29 +7,11 @@
   },
   "plugins": [
     {
-      "name": "marketing-skills",
+      "name": "nexity-marketing-skills",
       "displayName": "Nexity Marketing Skills",
-      "version": "1.2.1",
-      "source": "./.agents/skills",
+      "source": "./plugins/nexity-marketing-skills",
       "description": "Skills that let marketers audit and improve their own website with an AI agent, without a developer. They read your site, tell you what is inconsistent, weak or missing, and prepare the fix for you to approve. Nothing is published without you. Works with any site and any CMS. Start with \"Help me setup these skills for marketers\".",
-      "author": {
-        "name": "Pagepro",
-        "url": "https://pagepro.co"
-      },
-      "homepage": "https://github.com/Pagepro/nexity/blob/main/MARKETING-SKILLS-README.md",
-      "repository": "https://github.com/Pagepro/nexity",
-      "license": "MIT",
-      "keywords": ["marketing", "content", "seo", "blog", "brand", "fact-checking", "consistency"],
-      "skills": [
-        "./marketing-setup",
-        "./brand-kit",
-        "./site-contradictions",
-        "./blog-post-quality-review",
-        "./source-review",
-        "./internal-links",
-        "./blog-post-update",
-        "./work-humanizer"
-      ]
+      "category": "marketing"
     }
   ]
 }
