@@ -64,5 +64,17 @@
     "sanity-optimization": "sanity-optimizations",
     "section-thumbnails": "sanity-module-catalog",
     "setup-project": "project-setup"
+  },
+  "plugins": {
+    "nexity-marketing-skills": [
+      "blog-post-quality-review",
+      "blog-post-update",
+      "brand-kit",
+      "internal-links",
+      "marketing-setup",
+      "site-contradictions",
+      "source-review",
+      "work-humanizer"
+    ]
   }
 }

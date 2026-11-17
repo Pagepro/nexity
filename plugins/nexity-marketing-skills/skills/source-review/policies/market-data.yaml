@@ -1,0 +1,31 @@
+# Market data policy pack.
+# This pack shows how to support a non-software article topic.
+# Load this pack with `CSR_POLICY_PACKS=["core","market-data"]`.
+
+name: market-data
+version: 1
+
+domains:
+  - { pattern: "ec.europa.eu", source_type: standards_body, priority: 30 }
+  - { pattern: "*.eurostat.ec.europa.eu", source_type: standards_body, priority: 30 }
+  - { pattern: "data.worldbank.org", source_type: standards_body, priority: 30 }
+  - { pattern: "www.oecd.org", source_type: standards_body, priority: 30 }
+  - { pattern: "www.imf.org", source_type: standards_body, priority: 30 }
+  - { pattern: "stat.gov.pl", source_type: standards_body, priority: 30 }
+  - { pattern: "www.census.gov", source_type: standards_body, priority: 30 }
+  - { pattern: "www.bls.gov", source_type: standards_body, priority: 30 }
+  - { pattern: "www.gartner.com", source_type: industry_source, priority: 20 }
+  - { pattern: "www.idc.com", source_type: industry_source, priority: 20 }
+  - { pattern: "www.statista.com", source_type: industry_source, priority: 20 }
+
+subjects:
+  eurostat:
+    aliases: ["eurostat", "european union statistics"]
+    domains: ["ec.europa.eu"]
+    direct_urls:
+      - "https://ec.europa.eu/eurostat/databrowser/"
+  world bank:
+    aliases: ["world bank", "worldbank"]
+    domains: ["data.worldbank.org"]
+    direct_urls:
+      - "https://data.worldbank.org/indicator"

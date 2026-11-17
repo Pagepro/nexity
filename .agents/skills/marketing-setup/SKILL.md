@@ -1,6 +1,6 @@
 ---
 name: marketing-setup
-description: Walk a marketer with no terminal experience through setting up the marketing skills (brand-kit, site-contradictions, blog-post-quality-review, internal-links, blog-post-update, and source-review, which blog-post-update uses) step by step, by their preferences, whether they came as the Claude Code plugin `marketing-skills`, through `npx skills add Pagepro/nexity`, or in a downloaded ZIP of the repository. Checks where the skills are, says what to install and how (click by click), installs and builds what it can itself with permission, runs a short test of each chosen skill, and ends with what the person can now ask for. Use when someone says "Help me setup these skills for marketers", "set up the marketing skills", "skonfiguruj skille marketingowe", "pomóż mi to uruchomić", or has just installed the marketing skills and asks how to start.
+description: Walk a marketer with no terminal experience through setting up the marketing skills (brand-kit, site-contradictions, blog-post-quality-review, internal-links, blog-post-update, and source-review, which blog-post-update uses) step by step, by their preferences, whether they came as the Claude Code plugin `nexity-marketing-skills`, through `npx skills add Pagepro/nexity`, or in a downloaded ZIP of the repository. Checks where the skills are, says what to install and how (click by click), installs and builds what it can itself with permission, runs a short test of each chosen skill, and ends with what the person can now ask for. Use when someone says "Help me setup these skills for marketers", "set up the marketing skills", "skonfiguruj skille marketingowe", "pomóż mi to uruchomić", or has just installed the marketing skills and asks how to start.
 ---
 
 # Nexity Marketing Skills setup
@@ -62,7 +62,7 @@ its absolute path in every command. Work out how they were installed from that p
 asking:
 
 - **Claude Code plugin** (a path under `~/.claude/plugins/`; the skills show as
-  `marketing-skills:<name>`): nothing to check here. Tell the person that a plugin update
+  `nexity-marketing-skills:<name>`): nothing to check here. Tell the person that a plugin update
   replaces this folder, so `source-review` has to be built again after one (step 3).
 - **`npx skills`** (a path under `.claude/skills/`, `.agents/skills/` or `~/.agents/skills/`
   outside a copy of the repository): check that every picked skill is there, plus

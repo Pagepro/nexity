@@ -1,0 +1,318 @@
+# Core policy pack.
+# This pack holds topic-neutral rules.
+# Load this pack first. Load a topic pack after it.
+
+name: core
+version: 1
+
+# Quality rule for each source type.
+# weight: rank weight, 0.0 to 1.0.
+# min_confidence: lowest entailment confidence that the pipeline accepts.
+# allowed: false rejects the source type as evidence.
+# fallback_only: true uses the source type only when no better candidate passed.
+source_types:
+  official_docs:
+    weight: 1.00
+    min_confidence: 0.70
+    allowed: true
+  official_release:
+    weight: 1.00
+    min_confidence: 0.70
+    allowed: true
+  official_advisory:
+    weight: 1.00
+    min_confidence: 0.70
+    allowed: true
+  standards_body:
+    weight: 0.95
+    min_confidence: 0.70
+    allowed: true
+  official_blog:
+    weight: 0.90
+    min_confidence: 0.75
+    allowed: true
+  industry_source:
+    weight: 0.70
+    min_confidence: 0.85
+    allowed: true
+  code_repository:
+    weight: 0.60
+    min_confidence: 0.85
+    allowed: true
+    fallback_only: true
+  # A general page is a last answer, never a first one. A run accepted a
+  # statistics blog over vendor documentation because the judge was confident.
+  general_web:
+    weight: 0.40
+    min_confidence: 0.92
+    fallback_only: true
+    allowed: true
+  user_generated:
+    weight: 0.10
+    min_confidence: 1.01
+    allowed: false
+
+# Host patterns. The loader uses shell glob syntax against the host name.
+# A higher priority wins over a lower priority.
+domains:
+  # Standards bodies.
+  - { pattern: "www.rfc-editor.org", source_type: standards_body, priority: 30 }
+  - { pattern: "datatracker.ietf.org", source_type: standards_body, priority: 30 }
+  - { pattern: "*.w3.org", source_type: standards_body, priority: 30 }
+  - { pattern: "www.iso.org", source_type: standards_body, priority: 30 }
+  - { pattern: "nvd.nist.gov", source_type: standards_body, priority: 30 }
+  - { pattern: "*.nist.gov", source_type: standards_body, priority: 25 }
+  - { pattern: "www.ecma-international.org", source_type: standards_body, priority: 30 }
+  - { pattern: "unicode.org", source_type: standards_body, priority: 30 }
+
+  # Advisory databases.
+  - { pattern: "cve.mitre.org", source_type: official_advisory, priority: 30 }
+  - { pattern: "www.cve.org", source_type: official_advisory, priority: 30 }
+  - { pattern: "osv.dev", source_type: official_advisory, priority: 30 }
+
+  # Generic documentation hosts.
+  - { pattern: "docs.*", source_type: official_docs, priority: 20 }
+  - { pattern: "developer.*", source_type: official_docs, priority: 20 }
+  - { pattern: "*.readthedocs.io", source_type: official_docs, priority: 20 }
+  - { pattern: "learn.microsoft.com", source_type: official_docs, priority: 30 }
+  - { pattern: "developer.mozilla.org", source_type: official_docs, priority: 30 }
+
+  # Code repositories.
+  - { pattern: "github.com", source_type: code_repository, priority: 15 }
+  - { pattern: "gitlab.com", source_type: code_repository, priority: 15 }
+  - { pattern: "sourceforge.net", source_type: code_repository, priority: 15 }
+  - { pattern: "bitbucket.org", source_type: code_repository, priority: 15 }
+
+  # User generated content. The pipeline rejects these hosts as evidence.
+  - { pattern: "*.reddit.com", source_type: user_generated, priority: 40 }
+  - { pattern: "reddit.com", source_type: user_generated, priority: 40 }
+  - { pattern: "*.stackexchange.com", source_type: user_generated, priority: 40 }
+  - { pattern: "stackoverflow.com", source_type: user_generated, priority: 40 }
+  - { pattern: "*.quora.com", source_type: user_generated, priority: 40 }
+  - { pattern: "*.medium.com", source_type: user_generated, priority: 40 }
+  - { pattern: "medium.com", source_type: user_generated, priority: 40 }
+  - { pattern: "dev.to", source_type: user_generated, priority: 40 }
+  - { pattern: "*.x.com", source_type: user_generated, priority: 40 }
+  - { pattern: "x.com", source_type: user_generated, priority: 40 }
+  - { pattern: "twitter.com", source_type: user_generated, priority: 40 }
+  - { pattern: "*.facebook.com", source_type: user_generated, priority: 40 }
+  - { pattern: "*.linkedin.com", source_type: user_generated, priority: 40 }
+  - { pattern: "*.youtube.com", source_type: user_generated, priority: 40 }
+  - { pattern: "*.wikipedia.org", source_type: user_generated, priority: 40 }
+  - { pattern: "*.fandom.com", source_type: user_generated, priority: 40 }
+  - { pattern: "hackernoon.com", source_type: user_generated, priority: 40 }
+  # Community-authored tutorial sites. Any reader may publish there, so the
+  # page carries no vendor authority.
+  - { pattern: "www.freecodecamp.org", source_type: user_generated, priority: 40 }
+  - { pattern: "freecodecamp.org", source_type: user_generated, priority: 40 }
+  - { pattern: "hashnode.dev", source_type: user_generated, priority: 40 }
+  - { pattern: "*.hashnode.dev", source_type: user_generated, priority: 40 }
+  - { pattern: "www.geeksforgeeks.org", source_type: user_generated, priority: 40 }
+  - { pattern: "www.tutorialspoint.com", source_type: user_generated, priority: 40 }
+  - { pattern: "news.ycombinator.com", source_type: user_generated, priority: 40 }
+
+  # A search engine result page is never evidence. A result list can name its
+  # own host, so the pipeline must reject that host.
+  #
+  # Name the search host exactly. An earlier version used `*.google.com`, which
+  # also blocked developers.google.com and cloud.google.com. Both are official
+  # documentation, so a whole topic lost its only authoritative source.
+  - { pattern: "*duckduckgo.com", source_type: user_generated, priority: 45 }
+  - { pattern: "duckduckgo.com", source_type: user_generated, priority: 45 }
+  - { pattern: "www.google.com", source_type: user_generated, priority: 45 }
+  - { pattern: "google.com", source_type: user_generated, priority: 45 }
+  - { pattern: "news.google.com", source_type: user_generated, priority: 45 }
+  - { pattern: "www.bing.com", source_type: user_generated, priority: 45 }
+  - { pattern: "bing.com", source_type: user_generated, priority: 45 }
+  - { pattern: "search.brave.com", source_type: user_generated, priority: 45 }
+  - { pattern: "search.yahoo.com", source_type: user_generated, priority: 45 }
+
+# Path fragments that refine an official host.
+# The loader uses the first rule that matches. Put the specific rule first.
+path_rules:
+  - { contains: "/release-notes", source_type: official_release }
+  - { contains: "/releases", source_type: official_release }
+  - { contains: "/release/", source_type: official_release }
+  - { contains: "/changelog", source_type: official_release }
+  - { contains: "/whats-new", source_type: official_release }
+  - { contains: "/security/advisor", source_type: official_advisory }
+  - contains: "/advisories"
+    source_type: official_advisory
+    applies_to: [official_docs, official_release, official_blog, code_repository]
+  - { contains: "/blog/", source_type: official_blog }
+  - { contains: "/news/", source_type: official_blog }
+
+# A living document has no fixed publication date. It states the current state
+# of a product, so it can contradict an article of any age.
+#
+# A dated page is a snapshot. It can contradict an article only when it is
+# newer than the article. A run marked a 2026 article stale with a 2024 blog
+# post. The post said nothing about the state in 2026.
+living_source_types:
+  - official_docs
+  - official_advisory
+  - standards_body
+
+# A path fragment that marks a living page, even on a blog host.
+living_path_markers:
+  - "/docs"
+  - "/documentation"
+  - "/reference"
+  - "/api/"
+  - "/pricing"
+  - "/plans"
+  - "/changelog"
+  - "/versions"
+  - "/limits"
+  - "/support/versioning"
+  - "/guide"
+
+# Regular expressions that mark a sentence as a claim.
+# A sentence with no signal is not a claim.
+claim_signals:
+  - name: semantic_version
+    kind: version
+    regex: '\bv?\d+\.\d+(\.\d+)?\b'
+  - name: version_word
+    kind: version
+    regex: '\b(version|release|v)\s?\d+(\.\d+)*\b'
+  - name: product_version
+    kind: version
+    regex: '\b[A-Z][A-Za-z0-9.+#-]{1,}\s+v?\d{1,3}(\.\d+)*\b'
+  - name: percentage
+    kind: statistic
+    regex: '\b\d{1,3}(\.\d+)?\s?%'
+  - name: large_number
+    kind: statistic
+    regex: '\b\d[\d,\. ]{2,}\s?(million|billion|thousand|k|m|bn|users|downloads|requests|stars)\b'
+  - name: money
+    kind: price
+    regex: '[$€£]\s?\d'
+  - name: iso_date
+    kind: date
+    regex: '\b(19|20)\d{2}-\d{2}-\d{2}\b'
+  - name: month_year
+    kind: date
+    regex: '\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(19|20)\d{2}\b'
+  - name: year_event
+    kind: date
+    regex: '\b(released|launched|published|announced|deprecated|removed|introduced|shipped)\b.{0,40}\b(19|20)\d{2}\b'
+  - name: standard_id
+    kind: standard
+    regex: '\b(RFC\s?\d{3,5}|ISO[/ ]?\d{4,5}|CVE-\d{4}-\d{4,7}|ECMA-\d{3})\b'
+  - name: superlative_fact
+    kind: statistic
+    regex: '\b(fastest|largest|most popular|first|only|highest|lowest)\b'
+  - name: measurement
+    kind: statistic
+    regex: '\b\d+(\.\d+)?\s?(ms|s|kb|mb|gb|tb|fps|hz|x faster|x slower)\b'
+
+# Phrases that mark prose, not a fact.
+#
+# The extractor drops a sentence that holds a marker. These markers name the
+# three shapes that a live run found: a second-person capability sentence, a
+# description of the article's own code example, and an evaluative statement.
+#
+# This list replaces an earlier rule that required a number in every claim.
+# That rule dropped real pricing facts such as "Vercel does not charge per
+# user", which state no number but still need a source.
+prose_markers:
+  # Second person. The sentence tells the reader what to do or what is possible.
+  - "you can"
+  - "you will be able"
+  - "you may"
+  - "you should"
+  - "you need to"
+  - "you have to"
+  - "you get"
+  - "let us"
+  - "let's"
+  # A description of the article's own example.
+  - "as you can see"
+  - "this line"
+  - "this file contains"
+  - "this folder"
+  - "in the example above"
+  - "the code above"
+  - "the code below"
+  - "in the snippet"
+  - "here we"
+  - "now we"
+  - "first we"
+  # An evaluative statement with no checkable content.
+  - "very easily"
+  - "is easy to"
+  - "is a great"
+  - "is the best"
+  - "worth noting"
+
+# Phrases that mark a statement about the author's own project, own client, or
+# own result. No external page can prove such a statement. The extractor drops
+# the sentence and records it in `dropped_unverifiable`.
+#
+# A case study wastes the whole search budget without this list. One run on a
+# real agency article spent 15 of 40 search calls on three such sentences.
+unverifiable_markers:
+  - "our client"
+  - "our clients"
+  - "our customer"
+  - "one of our"
+  - "we upgraded"
+  - "we migrated"
+  - "we built"
+  - "we delivered"
+  - "we managed to"
+  - "we decided"
+  - "we were able to"
+  - "their app"
+  - "their application"
+  - "their project"
+  - "in our project"
+  - "in our case"
+  - "our team"
+  - "our experience"
+  - "we've"
+  - "we have recorded"
+  - "across our"
+  - "to date, we"
+  # A sentence about the article itself has no external source either. A run on
+  # a tutorial article searched the web for "the article has been prepared for
+  # Cypress 9.x".
+  - "this article"
+  - "the article has been prepared"
+  - "this post"
+  - "this tutorial"
+  - "this guide"
+  - "in this section"
+
+# Phrases that mark an opinion. The extractor drops a sentence with a marker
+# unless the sentence also carries a strong value signal.
+opinion_markers:
+  - "we think"
+  - "we believe"
+  - "in our opinion"
+  - "i think"
+  - "arguably"
+  - "probably"
+  - "it seems"
+  - "you should"
+  - "you can"
+  - "let us"
+  - "for example"
+
+# Sections of an article that need no external source.
+#
+# The body of an article carries the argument, so a claim there needs a source.
+# An FAQ block answers a side question in two sentences, and the house style
+# gives it no citation. A run that puts every source on FAQ answers looks full
+# and helps nobody.
+#
+# The reviewer still checks a claim from such a section. It reports the claim
+# apart, and a missing source there is not a gap.
+no_source_sections:
+  - "faq"
+  - "faqs"
+  - "frequently asked questions"
+  - "common questions"
+  - "questions and answers"
+  - "q&a"

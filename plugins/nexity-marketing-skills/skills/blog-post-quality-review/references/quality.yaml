@@ -1,0 +1,34 @@
+# The editorial quality card. Report-only: the agent scores each criterion, then
+# weights, colours and ranks. Weights are percentages and are expected to sum to 100.
+criteria:
+  - id: title-match
+    label: "Title match"
+    weight: 25
+    what: "Does the body deliver what the title and the primary query promise? An article that answers the general version of its question rather than the one in the title scores low here, however good the general answer is. Test it: take the subject word out of the title (the platform, the technology) and read the body again; if it still fits any other subject, it is generic. Then list what someone typing the primary query came for and name what the body leaves out."
+  - id: logic
+    label: "Logical coherence"
+    weight: 20
+    what: "Does the argument hold up: sections in the order a reader needs them, no step referenced before it is described, no topic explained twice, no conclusion that does not follow from its section."
+  - id: heading-content
+    label: "Heading to content"
+    weight: 15
+    what: "Does each heading deliver what it promises? Judge every H2 in the `headings` table, and the FAQ as one row; the share of rows that fully deliver sets this score."
+  - id: depth
+    label: "Technical depth"
+    weight: 15
+    what: "Is there anything here a practitioner did not already know: named mechanisms, APIs, commands, numbers with their assumptions, and the specifics of the platform or subject in the title."
+  - id: marketer-value
+    label: "Value for the marketer"
+    weight: 10
+    what: "Does it answer what a non-engineer owner of the site needs: what changes for them, what they lose, and how they get it back."
+  - id: credibility
+    label: "Credibility and evidence"
+    weight: 10
+    what: "Are claims sourced, figures attributed with their assumptions, and examples relevant to the subject in the title. The author bio and the CTA are part of the evidence: a case study about a different subject, or a figure in the bio or CTA that disagrees with one in the body, pulls this down."
+  - id: editing
+    label: "Editing and SEO structure"
+    weight: 5
+    what: "TL;DR, headings, FAQ, metadata and internal structure, and whether a leftover note, stub, or internal aside survived into the article."
+thresholds:
+  red_below: 5
+  green_above: 7

@@ -44,11 +44,14 @@ find, review and propose, and a person makes the change. The one exception is op
 `internal-links` can put approved links into Sanity drafts when the user asks and gives access. They are listed under `rootOnly` in
 `catalog.json`, so the starter snapshots and projects made from them do not get them.
 
-They are also published as the Claude Code plugin `marketing-skills` (`.claude-plugin/marketplace.json`
-at the repository root lists their folders): `/plugin marketplace add Pagepro/nexity`, then
-`/plugin install marketing-skills@nexity`. Other agents install them with
-`npx skills add Pagepro/nexity`. A new marketing skill goes into `rootOnly` and into the
-manifest's `skills` list. Their `SKILL.md` files refer to scripts relative to the skill's own
+They are also published as the Claude Code plugin `nexity-marketing-skills`:
+`.claude-plugin/marketplace.json` at the repository root points to
+`plugins/nexity-marketing-skills/`, whose `skills/` folder `node .agents/export.mjs` generates
+from the skills listed under `plugins` in `catalog.json` (never edit it by hand). Install it with
+`/plugin marketplace add Pagepro/nexity`, then `/plugin install nexity-marketing-skills@nexity`.
+Other agents install them with `npx skills add Pagepro/nexity`. A new marketing skill goes into
+`rootOnly` and into the plugin's list in `catalog.json`; `export.mjs` fails when a listed skill
+depends on one that is not listed. Their `SKILL.md` files refer to scripts relative to the skill's own
 folder, never to `.agents/skills/…`, because an installed copy lives elsewhere.
 
 | Skill | What it is for |
