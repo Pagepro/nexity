@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 
-import { makeVisibleFieldValidator, requiredField } from "@/sanity/lib/validation-utils";
+import { makeVisibleFieldValidator, requiredLink } from "@/sanity/lib/validation-utils";
 
 export default defineType({
   name: "header",
@@ -46,7 +46,7 @@ export default defineType({
       description: "Link displayed in the header on mobile",
       group: "mobile",
       hidden: ({ parent }) => parent?.withMobileLink !== true,
-      validation: makeVisibleFieldValidator(requiredField),
+      validation: makeVisibleFieldValidator(requiredLink()),
     }),
   ],
   preview: {

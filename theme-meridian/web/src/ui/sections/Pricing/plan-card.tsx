@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 
 import { ButtonLink } from "@/ui/components/button/button-link";
+import { hasLinkTarget } from "@/ui/components/Link/BaseLink/utils";
 
 import { PlanPrice } from "./client-lazy";
 import { Plan } from "./types";
@@ -44,7 +45,7 @@ export const PlanCard = ({ plan }: PlanCardProps) => {
       />
 
       <div>
-        {cta?.link && (
+        {cta?.link && hasLinkTarget(cta.link) && (
           <ButtonLink
             className="block w-full"
             buttonClassName="w-full"

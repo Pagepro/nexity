@@ -246,6 +246,54 @@ export const makeVisibleFieldValidator =
     });
   };
 
+const isBlank = (value: unknown) =>
+  value === undefined ||
+  value === null ||
+  (typeof value === "string" && !value.trim()) ||
+  (isStringIndexable(value) &&
+    Object.keys(value).every((key) => key === "_type" || key === "_key"));
+
+// Studio can't unset an object field, so a link whose target was cleared stays as
+// `{ type: "internal" }`. Treat it as "no link" so an optional link can be emptied again.
+export const isEmptyLink = (value: unknown): boolean => {
+  if (!isStringIndexable(value)) {
+    return true;
+  }
+
+  const { internal, internalPath, external, file, params, label } = value;
+  const fileAsset = isStringIndexable(file) ? file.asset : undefined;
+
+  return [internal, internalPath, external, fileAsset, params, label].every(isBlank);
+};
+
+// A list item can be removed, a single object field can't, so only a field may stay empty.
+export const isArrayMember = (path: Path | undefined, ownerDepth: number) => {
+  const segment = path?.[path.length - ownerDepth];
+
+  return !!segment && isKeySegment(segment);
+};
+
+export const requiredLink =
+  (message = "Add a link") =>
+  <TRule extends RuleDef<TRule>>(rule: TRule): TRule =>
+    rule.custom((value) => (isEmptyLink(value) ? message : true)).error();
+
+// The link's own target field: required, except on an empty link that is a single field.
+export const linkTargetValidator = <TRule extends RuleDef<TRule>>(
+  validateFilled: (value: unknown) => CustomValidatorResult = () => true,
+) =>
+  makeVisibleFieldValidator<TRule>((rule) =>
+    rule.custom((value, context) => {
+      if (!isBlank(value)) {
+        return validateFilled(value);
+      }
+
+      return isEmptyLink(context.parent) && !isArrayMember(context.path, 2)
+        ? true
+        : "This field is required";
+    }),
+  );
+
 const VALID_SCHEMES = ["http", "https", "mailto", "tel"];
 
 export const externalLinkValidator = (value: unknown, validSchemes?: string[]) => {

@@ -2,11 +2,12 @@ import clsx from "clsx";
 import { FC } from "react";
 
 import { BaseLink } from "@/ui/components/Link/BaseLink";
+import { hasLinkTarget } from "@/ui/components/Link/BaseLink/utils";
 
 import { SearchActionProps } from "./types";
 
 const SearchAction: FC<SearchActionProps> = ({ searchLink, className }) => {
-  if (!searchLink?.type) return null;
+  if (!searchLink || !hasLinkTarget(searchLink)) return null;
 
   return (
     <BaseLink

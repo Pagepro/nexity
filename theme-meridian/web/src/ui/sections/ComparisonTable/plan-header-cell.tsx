@@ -3,6 +3,7 @@ import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ButtonLink } from "@/ui/components/button/button-link";
 import Image from "@/ui/components/image";
+import { hasLinkTarget } from "@/ui/components/Link/BaseLink/utils";
 
 import { Plan } from "./types";
 
@@ -55,7 +56,7 @@ export const PlanHeaderCell = ({ plan, featured }: PlanHeaderCellProps) => {
           </div>
         )}
 
-        {cta?.link && (
+        {cta?.link && hasLinkTarget(cta.link) && (
           <ButtonLink
             className="block w-full"
             buttonClassName="w-full"

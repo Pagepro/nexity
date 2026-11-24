@@ -1,5 +1,6 @@
 import { ButtonLink } from "@/ui/components/button/button-link";
 import Image from "@/ui/components/image";
+import { hasLinkTarget } from "@/ui/components/Link/BaseLink/utils";
 
 import RichText from "./index";
 import { CalloutValue } from "./types";
@@ -7,7 +8,7 @@ import { CalloutValue } from "./types";
 const RichTextCallout: React.FC<{ value: CalloutValue }> = ({ value }) => {
   const { content, cta, backgroundImage } = value;
 
-  if (!content?.length && !cta?.link) return null;
+  if (!content?.length && !hasLinkTarget(cta?.link)) return null;
 
   return (
     <div className="richtext-embed relative isolate overflow-hidden rounded-lg border border-foreground/10 p-8 md:-mx-8">
@@ -30,7 +31,7 @@ const RichTextCallout: React.FC<{ value: CalloutValue }> = ({ value }) => {
           </div>
         ) : null}
 
-        {cta?.link && (
+        {cta?.link && hasLinkTarget(cta.link) && (
           <ButtonLink
             link={cta.link}
             variant={cta.variant || "primary"}

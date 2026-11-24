@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FC } from "react";
 
 import Image from "@/ui/components/image";
+import { hasLinkTarget } from "@/ui/components/Link/BaseLink/utils";
 
 import HamburgerMenu from "./HamburgerMenu";
 import HeaderCta from "./HeaderCta";
@@ -46,7 +47,7 @@ const HeaderContent: FC<HeaderContentProps> = ({
           <div className="hidden items-center gap-2 lg:flex">
             <SearchAction searchLink={searchLink} />
 
-            {!!searchLink?.type && !!ctas?.length && (
+            {hasLinkTarget(searchLink) && !!ctas?.length && (
               <span className="h-6 w-px bg-border" aria-hidden />
             )}
 

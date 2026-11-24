@@ -4,6 +4,7 @@ import { stegaClean } from "next-sanity";
 import { cn } from "@/lib/utils";
 import { FeatureIcon } from "@/ui/components/feature-icon";
 import { BaseLink } from "@/ui/components/Link/BaseLink";
+import { hasLinkTarget } from "@/ui/components/Link/BaseLink/utils";
 
 import { BentoCard as BentoCardType } from "./types";
 
@@ -18,7 +19,7 @@ export type BentoCardStyle = "card" | "plain" | "compact";
 export const BentoCard = ({ card, linkStyle, cardStyle }: BentoCardProps) => {
   const { size, icon, statLabel, statValue, title, description, link } = card;
   const isWide = stegaClean(size) === "wide";
-  const hasLink = !!link;
+  const hasLink = !!link && hasLinkTarget(link);
   const showLabel = hasLink && linkStyle === "label";
   const isInPageLink = [link?.internalPath, link?.params, link?.external].some((part) =>
     stegaClean(part ?? "").includes("#"),

@@ -5,11 +5,12 @@ import { FC } from "react";
 
 import { ButtonLink } from "@/ui/components/button/button-link";
 import { BaseLink } from "@/ui/components/Link/BaseLink";
+import { hasLinkTarget } from "@/ui/components/Link/BaseLink/utils";
 
 import { HeaderCtaProps } from "./types";
 
 const HeaderCta: FC<HeaderCtaProps> = ({ cta, block = false }) => {
-  if (!cta?.link) return null;
+  if (!cta?.link || !hasLinkTarget(cta.link)) return null;
 
   const { link, variant } = cta;
   const cleanVariant = stegaClean(variant);
