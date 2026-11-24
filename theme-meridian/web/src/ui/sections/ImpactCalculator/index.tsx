@@ -1,5 +1,6 @@
 import sectionProps from "@/lib/sectionProps";
 import { ButtonLink } from "@/ui/components/button/button-link";
+import { hasLinkTarget } from "@/ui/components/Link/BaseLink/utils";
 import RichText from "@/ui/RichText";
 
 import { ImpactCalculatorClient } from "./client-lazy";
@@ -39,7 +40,7 @@ const ImpactCalculator = ({
         pipelineLabel={pipelineLabel}
         paybackLabel={paybackLabel}
         ctaSlot={
-          cta?.link ? (
+          cta?.link && hasLinkTarget(cta.link) ? (
             <ButtonLink
               className="block w-full"
               buttonClassName="w-full"

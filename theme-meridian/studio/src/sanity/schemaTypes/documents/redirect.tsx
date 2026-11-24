@@ -3,6 +3,7 @@ import { defineField, defineType } from "sanity";
 
 import { validateUnreservedSource } from "@/sanity/lib/reserved-paths";
 import resolveSlug from "@/sanity/lib/resolveSlug";
+import { requiredLink } from "@/sanity/lib/validation-utils";
 
 const regex = /^(\/|https?:\/\/)/;
 
@@ -26,7 +27,10 @@ export default defineType({
       name: "destination",
       description: "Redirect to",
       type: "simpleLink",
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) => [
+        Rule.required(),
+        requiredLink("Pick where to redirect to")(Rule),
+      ],
     }),
     defineField({
       name: "permanent",

@@ -2,7 +2,11 @@ import { VscFolderOpened } from "react-icons/vsc";
 import { defineField, defineType, StringRule } from "sanity";
 
 import { formatCount } from "@/sanity/lib/utils";
-import { makeVisibleFieldValidator, requiredField } from "@/sanity/lib/validation-utils";
+import {
+  makeVisibleFieldValidator,
+  requiredField,
+  requiredLink,
+} from "@/sanity/lib/validation-utils";
 
 export default defineType({
   name: "link.list",
@@ -27,6 +31,7 @@ export default defineType({
       name: "link",
       type: "link",
       hidden: ({ parent }) => parent?.withTitle,
+      validation: makeVisibleFieldValidator(requiredLink()),
     }),
     defineField({
       name: "links",

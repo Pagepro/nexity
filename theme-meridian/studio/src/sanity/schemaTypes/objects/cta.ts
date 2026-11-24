@@ -2,6 +2,7 @@ import { VscInspect } from "react-icons/vsc";
 import { defineField, defineType } from "sanity";
 
 import resolveSlug from "@/sanity/lib/resolveSlug";
+import { isArrayMember, isEmptyLink } from "@/sanity/lib/validation-utils";
 
 export default defineType({
   name: "cta",
@@ -23,6 +24,13 @@ export default defineType({
     defineField({
       name: "link",
       type: "link",
+      // In a list an empty button can be removed; as a single field it means "no button".
+      validation: (Rule) =>
+        Rule.custom((value, context) =>
+          isArrayMember(context.path, 2) && isEmptyLink(value)
+            ? "Add a link or remove this call-to-action"
+            : true,
+        ).error(),
       group: "content",
     }),
     defineField({

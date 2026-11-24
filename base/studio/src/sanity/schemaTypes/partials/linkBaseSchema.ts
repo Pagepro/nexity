@@ -3,8 +3,7 @@ import { defineField, FileRule, ReferenceRule, StringRule } from "sanity";
 import {
   externalLinkValidator,
   internalPathValidator,
-  makeVisibleFieldValidator,
-  requiredField,
+  linkTargetValidator,
 } from "@/sanity/lib/validation-utils";
 
 export const linkBaseFields = [
@@ -37,7 +36,7 @@ export const linkBaseFields = [
       { type: "podcast-episode" },
     ],
     hidden: ({ parent }) => parent?.type !== "internal",
-    validation: makeVisibleFieldValidator<ReferenceRule>(requiredField),
+    validation: linkTargetValidator<ReferenceRule>(),
   }),
   defineField({
     name: "internalPath",
@@ -47,9 +46,7 @@ export const linkBaseFields = [
     placeholder: "/contact",
     type: "string",
     hidden: ({ parent }) => parent?.type !== "path",
-    validation: makeVisibleFieldValidator<StringRule>((rule) =>
-      rule.custom((value) => internalPathValidator(value)).required(),
-    ),
+    validation: linkTargetValidator<StringRule>(internalPathValidator),
   }),
   defineField({
     name: "external",
@@ -57,9 +54,7 @@ export const linkBaseFields = [
     description: "URL must start with http | https | mailto | tel to be valid.",
     placeholder: "https://example.com",
     type: "string",
-    validation: makeVisibleFieldValidator<StringRule>((rule) =>
-      rule.custom((value) => externalLinkValidator(value)).required(),
-    ),
+    validation: linkTargetValidator<StringRule>((value) => externalLinkValidator(value)),
     hidden: ({ parent }) => parent?.type !== "external",
   }),
   defineField({
@@ -67,9 +62,7 @@ export const linkBaseFields = [
     title: "File",
     description: "Please select a file to download",
     type: "file",
-    validation: makeVisibleFieldValidator<FileRule>((rule) =>
-      rule.custom((value) => externalLinkValidator(value)).required(),
-    ),
+    validation: linkTargetValidator<FileRule>(),
     hidden: ({ parent }) => parent?.type !== "download",
   }),
   defineField({

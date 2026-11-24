@@ -3,6 +3,7 @@ import { defineField, defineType } from "sanity";
 
 import { validateUnreservedSource } from "@/sanity/lib/reserved-paths";
 import resolveSlug from "@/sanity/lib/resolveSlug";
+import { requiredLink } from "@/sanity/lib/validation-utils";
 
 export default defineType({
   name: "rewrite",
@@ -55,7 +56,10 @@ export default defineType({
         </>
       ),
       type: "simpleLink",
-      validation: (Rule) => Rule.required().error("A rewrite needs content to serve"),
+      validation: (Rule) => [
+        Rule.required().error("A rewrite needs content to serve"),
+        requiredLink("A rewrite needs content to serve")(Rule),
+      ],
     }),
   ],
   preview: {
