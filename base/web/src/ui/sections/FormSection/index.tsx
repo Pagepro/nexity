@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 
+import { IS_BOT_PROTECTED } from "@/lib/bot-protection";
 import sectionProps from "@/lib/sectionProps";
 import RichText from "@/ui/RichText";
 
@@ -56,6 +57,7 @@ const FormSection = ({
           messageField={messageField}
           submitLabel={submitLabel}
           successMessage={successMessage}
+          isBotProtected={IS_BOT_PROTECTED}
         />
       </div>
     </div>

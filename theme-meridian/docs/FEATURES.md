@@ -131,7 +131,7 @@ Dark, the transparent header on top of it switches to light text automatically.
 - **Google Tag Manager** — activates via a single configuration value, no code changes
 - **Blog & case-study listings** with search-as-you-type, category filter tabs, and
   pagination — all reflected in shareable, bookmarkable URLs
-- **Lead forms** (Form block, contact or gated content) — validated, spam-protected (honeypot), delivered via email (Resend) once `RESEND_API_KEY`, `CONTACT_FORM_RECIPIENT_EMAIL` and `CONTACT_FORM_FROM_EMAIL` are set
+- **Lead forms** (Form block, contact or gated content) — validated, spam-protected (honeypot; on Vercel also a BotID bot check and a WAF rate-limit rule, see `docs/guides/before-release.md` → 8.5), delivered via email (Resend) once `RESEND_API_KEY`, `CONTACT_FORM_RECIPIENT_EMAIL` and `CONTACT_FORM_FROM_EMAIL` are set
 
 ## ⚡ Site infrastructure marketers benefit from
 

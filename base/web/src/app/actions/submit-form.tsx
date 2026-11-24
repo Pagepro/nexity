@@ -1,9 +1,11 @@
 "use server";
 
+import { checkBotId } from "botid/server";
 import type { ReactNode } from "react";
 import { Resend } from "resend";
 import { z } from "zod";
 
+import { IS_BOT_PROTECTED } from "@/lib/bot-protection";
 import { FORM_LIMITS } from "@/lib/form-limits";
 import { fetchSanity } from "@/sanity/lib/fetch";
 import { GATED_RESOURCE_QUERY } from "@/sanity/lib/queries/gated-resource";
@@ -72,9 +74,21 @@ const sendLeadEmail = async (lead: Lead, subject: string): Promise<boolean> => {
   }
 };
 
-// No rate limiting yet: add it before heavy traffic, sooner for gated forms (bots want the files).
+// Fails open: a BotID outage, or OIDC turned off in the Vercel project, must not cost a lead.
+const isBotSubmission = async (): Promise<boolean> => {
+  if (!IS_BOT_PROTECTED) return false;
+
+  try {
+    return (await checkBotId()).isBot;
+  } catch (error) {
+    console.error("BotID check failed:", error);
+    return false;
+  }
+};
+
+// Rate limiting is a Vercel WAF rule, not code: docs/guides/before-release.md → 8.5.
 export async function submitForm(input: FormSubmission): Promise<FormSubmitResult> {
-  // Honeypot: succeed silently so bots don't learn about the trap.
+  // Honeypot and BotID: succeed silently so bots don't learn about the trap.
   if (input?.honeypot) {
     return { success: true };
   }
@@ -83,6 +97,10 @@ export async function submitForm(input: FormSubmission): Promise<FormSubmitResul
 
   if (!parsed.success) {
     return { success: false, error: "Please check your name, work email and company." };
+  }
+
+  if (await isBotSubmission()) {
+    return { success: true };
   }
 
   const lead = parsed.data;

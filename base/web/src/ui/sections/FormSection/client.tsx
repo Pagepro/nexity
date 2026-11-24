@@ -3,13 +3,14 @@
 import clsx from "clsx";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { stegaClean } from "next-sanity";
-import { type ReactNode, useId, useState } from "react";
+import { type ReactNode, useEffect, useId, useState } from "react";
 
 import { submitForm } from "@/app/actions/submit-form";
 import { isValidEmail } from "@/lib/email";
 import { FORM_LIMITS } from "@/lib/form-limits";
 import Button from "@/ui/components/button";
 
+import { protectFormSubmits } from "./bot-protection";
 import { FormSectionProps } from "./types";
 
 type SubmitStatus = "idle" | "submitting" | "success" | "error";
@@ -25,7 +26,7 @@ type FormSectionClientProps = Pick<
   | "messageField"
   | "submitLabel"
   | "successMessage"
->;
+> & { isBotProtected: boolean };
 
 // Text size lives on the field wrapper (16px on mobile, or iOS zooms on focus). No height
 // here: clsx doesn't resolve conflicts, so each control adds its own.
@@ -67,6 +68,7 @@ export const FormSectionClient = ({
   messageField,
   submitLabel,
   successMessage,
+  isBotProtected,
 }: FormSectionClientProps) => {
   const fieldId = useId();
   const errorId = `${fieldId}-error`;
@@ -82,6 +84,10 @@ export const FormSectionClient = ({
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [error, setError] = useState("");
   const [unlocked, setUnlocked] = useState<ReactNode>(null);
+
+  useEffect(() => {
+    if (isBotProtected) protectFormSubmits();
+  }, [isBotProtected]);
 
   const update =
     (key: keyof typeof values) =>
@@ -131,8 +137,9 @@ export const FormSectionClient = ({
         setError(result.error);
       }
     } catch {
+      // A Vercel WAF rate-limit 429 lands here too: the action call throws instead of returning.
       setStatus("error");
-      setError("Something went wrong. Please try again.");
+      setError("Something went wrong. Please wait a minute and try again.");
     }
   };
 
