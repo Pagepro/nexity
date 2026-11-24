@@ -6,6 +6,7 @@ import blogListingPage from "./documents/blog-listing-page";
 import caseStudiesListingPage from "./documents/case-studies-listing-page";
 import caseStudy from "./documents/case-study";
 import footer from "./documents/footer";
+import gatedResource from "./documents/gated-resource";
 import globalSection from "./documents/global-section";
 import header from "./documents/header";
 import integration from "./documents/integration";
@@ -42,12 +43,12 @@ import bentoGrid from "./sections/bento-grid";
 import blogListing from "./sections/blog-listing";
 import caseStudiesListing from "./sections/case-studies-listing";
 import comparisonTable from "./sections/comparison-table";
-import contactForm from "./sections/contact-form";
 import content from "./sections/content";
 import ctaBanner from "./sections/cta-banner";
 import faq from "./sections/faq";
 import featureBlock from "./sections/feature-block";
 import featureGrid from "./sections/feature-grid";
+import form from "./sections/form";
 import hero from "./sections/hero";
 import impactCalculator from "./sections/impact-calculator";
 import integrationsGrid from "./sections/integrations-grid";
@@ -77,6 +78,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   redirect,
   rewrite,
   testimonial,
+  gatedResource,
   integration,
   caseStudy,
   author,
@@ -107,7 +109,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   blogListing,
   caseStudiesListing,
   comparisonTable,
-  contactForm,
+  form,
   content,
   ctaBanner,
   faq,

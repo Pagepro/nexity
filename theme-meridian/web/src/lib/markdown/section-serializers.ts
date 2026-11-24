@@ -3,12 +3,12 @@ import { bentoGridToMarkdown } from "@/ui/sections/BentoGrid/markdown";
 import { blogListingToMarkdown } from "@/ui/sections/BlogListingSection/markdown";
 import { caseStudiesListingToMarkdown } from "@/ui/sections/CaseStudiesListingSection/markdown";
 import { comparisonTableToMarkdown } from "@/ui/sections/ComparisonTable/markdown";
-import { contactFormToMarkdown } from "@/ui/sections/ContactForm/markdown";
 import { contentToMarkdown } from "@/ui/sections/ContentSection/markdown";
 import { ctaBannerToMarkdown } from "@/ui/sections/CtaBanner/markdown";
 import { faqToMarkdown } from "@/ui/sections/FaqSection/markdown";
 import { featureBlockToMarkdown } from "@/ui/sections/FeatureBlockSection/markdown";
 import { featureGridToMarkdown } from "@/ui/sections/FeatureGrid/markdown";
+import { formToMarkdown } from "@/ui/sections/FormSection/markdown";
 import { heroToMarkdown } from "@/ui/sections/HeroSection/markdown";
 import { impactCalculatorToMarkdown } from "@/ui/sections/ImpactCalculator/markdown";
 import { integrationsGridToMarkdown } from "@/ui/sections/IntegrationsGrid/markdown";
@@ -34,12 +34,12 @@ export const SECTION_MARKDOWN_SERIALIZERS = {
   "blog-listing": blogListingToMarkdown,
   "case-studies-listing": caseStudiesListingToMarkdown,
   "comparison-table": comparisonTableToMarkdown,
-  "contact-form": contactFormToMarkdown,
   content: contentToMarkdown,
   "cta-banner": ctaBannerToMarkdown,
   faq: faqToMarkdown,
   "feature-block": featureBlockToMarkdown,
   "feature-grid": featureGridToMarkdown,
+  form: formToMarkdown,
   hero: heroToMarkdown,
   "impact-calculator": impactCalculatorToMarkdown,
   "integrations-grid": integrationsGridToMarkdown,

@@ -21,10 +21,18 @@ const formInput = (name: string, title: string, label: string, placeholder: stri
     ],
   });
 
-// The form fields are fixed in code (web/src/app/actions/sales-inquiry.ts); editors own only the copy.
+const FORM_TYPES = [
+  { title: "Contact: email the message to sales", value: "contact" },
+  { title: "Gated content: unlock a resource after submit", value: "gated" },
+];
+
+const isGated = (parent: unknown) =>
+  (parent as { formType?: string } | undefined)?.formType === "gated";
+
+// The form fields are fixed in code (web/src/app/actions/submit-form.tsx); editors own only the copy.
 export default defineType({
-  name: "contact-form",
-  title: "Contact form",
+  name: "form",
+  title: "Form",
   icon: VscMail,
   type: "object",
   groups: [
@@ -38,6 +46,34 @@ export default defineType({
       title: "Section options",
       type: "section-options",
       group: "options",
+    }),
+    defineField({
+      name: "formType",
+      title: "Form type",
+      description:
+        "Both types look the same and send the lead to sales. Gated content then shows the picked resource (thank-you copy and files) in place of the form.",
+      type: "string",
+      options: { list: FORM_TYPES, layout: "radio" },
+      initialValue: "contact",
+      group: "form",
+      validation: (Rule) =>
+        Rule.required().error("Pick what the form does after a submit."),
+    }),
+    defineField({
+      name: "resources",
+      title: "Gated resource",
+      description:
+        "What the form unlocks: thank-you copy and files to download. Edit it under Collections → Gated resources.",
+      type: "array",
+      of: [defineArrayMember({ type: "reference", to: [{ type: "gated-resource" }] })],
+      group: "form",
+      hidden: ({ parent }) => !isGated(parent),
+      validation: (Rule) =>
+        Rule.max(1).custom((value, context) =>
+          !isGated(context.parent) || (value?.length ?? 0) > 0
+            ? true
+            : "Pick the resource this form unlocks, or the visitor gets nothing after submitting.",
+        ),
     }),
     defineField({
       name: "pretitle",
@@ -112,13 +148,17 @@ export default defineType({
       type: "string",
       initialValue: "Thanks! Our team will get back to you within one business day.",
       group: "form",
+      hidden: ({ parent }) => isGated(parent),
     }),
   ],
   preview: {
-    select: { content: "content" },
-    prepare: ({ content }) => ({
-      title: getPlainText(content) || "Contact form",
-      subtitle: "Contact form",
+    select: { content: "content", formType: "formType", resource: "resources.0.title" },
+    prepare: ({ content, formType, resource }) => ({
+      title: getPlainText(content) || "Form",
+      subtitle:
+        formType === "gated"
+          ? `Gated content form${resource ? ` · ${resource}` : ""}`
+          : "Contact form",
     }),
   },
 });

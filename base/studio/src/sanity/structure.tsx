@@ -67,6 +67,7 @@ export const structure = structureTool({
         S.documentTypeListItem("testimonial").title("Testimonials"),
         S.documentTypeListItem("author").title("Authors"),
         S.documentTypeListItem("integration").title("Integrations"),
+        S.documentTypeListItem("gated-resource").title("Gated resources"),
         S.divider().title("Configuration"),
         S.listItem().singleton("header"),
         S.listItem().singleton("footer"),

@@ -216,7 +216,7 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX                # Google Tag Manager ID
 IS_INDEXABLE=                                 # "true" | "false" | unset — search-engine indexing switch (see below)
 VERCEL_AUTOMATION_BYPASS_SECRET=              # Vercel "Protection Bypass for Automation" — lets the redirect proxy read /api/redirects on protected previews
 
-# Optional - Contact form (Resend, used in web/src/app/actions/sales-inquiry.ts)
+# Optional - Contact form (Resend, used in web/src/app/actions/submit-form.tsx)
 RESEND_API_KEY=your-resend-key
 CONTACT_FORM_RECIPIENT_EMAIL=inbox@example.com
 CONTACT_FORM_FROM_EMAIL=noreply@example.com
@@ -741,7 +741,7 @@ pnpm --filter @nexity/web ts:generate
 │       │   ├── (frontend)/   # Public-facing routes (catchall [[...slug]])
 │       │   ├── (studio)/     # Embedded Studio at /admin
 │       │   ├── (styleguide)/ # /styleguide and the Sections Gallery
-│       │   ├── actions/      # Server actions (contact form)
+│       │   ├── actions/      # Server actions (form section)
 │       │   ├── api/          # API routes (draft-mode, revalidate, redirects, markdown, og, newsletter, listings)
 │       │   ├── sitemaps/     # Sitemap at /sitemaps/all.xml, served as /sitemap.xml by a rewrite
 │       │   ├── robots.ts     # Robots.txt generation

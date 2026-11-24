@@ -8,12 +8,12 @@ import { bentoGridFixture } from "@/ui/sections/BentoGrid/gallery-fixture";
 import { blogListingFixture } from "@/ui/sections/BlogListingSection/gallery-fixture";
 import { caseStudiesListingFixture } from "@/ui/sections/CaseStudiesListingSection/gallery-fixture";
 import { comparisonTableFixture } from "@/ui/sections/ComparisonTable/gallery-fixture";
-import { contactFormFixture } from "@/ui/sections/ContactForm/gallery-fixture";
 import { contentFixture } from "@/ui/sections/ContentSection/gallery-fixture";
 import { ctaBannerFixture } from "@/ui/sections/CtaBanner/gallery-fixture";
 import { faqFixture } from "@/ui/sections/FaqSection/gallery-fixture";
 import { featureBlockFixture } from "@/ui/sections/FeatureBlockSection/gallery-fixture";
 import { featureGridFixture } from "@/ui/sections/FeatureGrid/gallery-fixture";
+import { formFixture } from "@/ui/sections/FormSection/gallery-fixture";
 import { heroFixture } from "@/ui/sections/HeroSection/gallery-fixture";
 import { impactCalculatorFixture } from "@/ui/sections/ImpactCalculator/gallery-fixture";
 import { integrationsGridFixture } from "@/ui/sections/IntegrationsGrid/gallery-fixture";
@@ -45,7 +45,7 @@ export const SECTION_TYPES = [
   "logos-carousel",
   "integrations-grid",
   "impact-calculator",
-  "contact-form",
+  "form",
   "cta-banner",
   "newsletter",
   "pricing",
@@ -74,7 +74,7 @@ export const SECTION_FIXTURES: SectionFixtures = {
   "trust-badges": trustBadgesFixture,
   "integrations-grid": integrationsGridFixture,
   "impact-calculator": impactCalculatorFixture,
-  "contact-form": contactFormFixture,
+  form: formFixture,
   "split-sections": splitSectionsFixture,
   stats: statsFixture,
   "text-block": textBlockFixture,

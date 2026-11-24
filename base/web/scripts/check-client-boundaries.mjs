@@ -79,6 +79,10 @@ const readSource = (file) => {
 const isClientFile = (file) =>
   /^\s*(?:\/\/[^\n]*\n\s*)*["']use client["']/.test(readSource(file));
 
+// Client code gets only a reference to a "use server" module, never its imports.
+const isServerActionFile = (file) =>
+  /^\s*(?:\/\/[^\n]*\n\s*)*["']use server["']/.test(readSource(file));
+
 const DYNAMIC_IMPORT_PATTERN = /\bimport\(\s*["']([^"']+)["']\s*\)/g;
 
 const staticImports = (file) =>
@@ -144,7 +148,8 @@ for (const clientFile of boundaries) {
 
       if (
         resolved &&
-        !IGNORED_DIRECTORIES.some((directory) => resolved.startsWith(directory))
+        !IGNORED_DIRECTORIES.some((directory) => resolved.startsWith(directory)) &&
+        !isServerActionFile(resolved)
       ) {
         queue.push([resolved, [...chain, resolved]]);
       }
@@ -213,7 +218,8 @@ for (const clientFile of boundaries) {
 
       if (
         resolved &&
-        !IGNORED_DIRECTORIES.some((directory) => resolved.startsWith(directory))
+        !IGNORED_DIRECTORIES.some((directory) => resolved.startsWith(directory)) &&
+        !isServerActionFile(resolved)
       ) {
         queue.push([resolved, [...chain, resolved]]);
       }
