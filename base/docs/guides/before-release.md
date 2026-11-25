@@ -560,7 +560,7 @@ The Form section has a honeypot in code, and on Vercel also a BotID check
 limit is not in code: it is a Vercel WAF rule, so floods are stopped before a
 function runs and before Resend or Sanity is called.
 
-- **Do:** Vercel → the project → **Firewall** → **Configure** → **+ New Rule**:
+- **Do:** Vercel → the project → **Firewall** → **Add Rule**:
   - **If** *Method* equals `POST` **and** *Request Header* `next-action`
     *Exists*. Every server action call sends that header, and the form is the
     site's only server action.
@@ -570,9 +570,10 @@ function runs and before Resend or Sanity is called.
     Firewall overview, then switch it to 429. People behind one office NAT
     share an IP, so keep the limit generous.
   - **Review Changes** → **Publish**. Hobby allows one rate-limit rule.
-- **Check:** in the project's **Settings → Security**, *Secure backend access
-  with OIDC federation* is on (BotID's server check needs it; without it the
-  action logs `BotID check failed` and lets every submit through).
+- **Check:** *Secure backend access with OIDC federation* is on, in the
+  project's **Settings → Security** or once for the whole team. BotID's server
+  check needs it; without it the action logs `BotID check failed` and lets
+  every submit through.
 - **Good:** on production, a form submitted from the page arrives; a burst
   over the limit shows "Something went wrong. Please wait a minute and try
   again."; the Firewall overview lists the rule's matches and BotID's
