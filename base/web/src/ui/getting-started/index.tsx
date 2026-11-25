@@ -138,6 +138,18 @@ export const GettingStarted = ({ status }: GettingStartedProps) => {
             <Command>pnpm blueprints:deploy</Command>.
           </li>
           <li>Deploy: see “Deploy to Vercel” in the README.</li>
+          <li>
+            Like Nexity?{" "}
+            <a
+              className="font-medium text-foreground underline"
+              href="https://github.com/Pagepro/nexity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Star it on GitHub
+            </a>{" "}
+            so other teams can find it.
+          </li>
         </ul>
       </Step>
     </div>
