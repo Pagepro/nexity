@@ -1,5 +1,7 @@
 # Nexity
 
+[![GitHub stars](https://img.shields.io/github/stars/Pagepro/nexity?style=social)](https://github.com/Pagepro/nexity)
+
 Nexity is an open source system for starting and growing AI-native websites on Next.js + Sanity.
 
 It is for teams where every website change lands on a developer. Nexity gives coding agents (Claude Code, Codex, Cursor) the design system, the blocks and the Sanity schema, so marketing can build new sections with AI and a developer reviews the result before it goes live.
@@ -187,6 +189,8 @@ What the agent layer holds:
 
 - Docs: [`base/docs/README.md`](base/docs/README.md) and [`theme-meridian/docs/README.md`](theme-meridian/docs/README.md)
 - Bugs and questions: https://github.com/Pagepro/nexity/issues
+
+If Nexity saves you time, [star it on GitHub](https://github.com/Pagepro/nexity). It helps other teams find it.
 
 ## Contributing
 

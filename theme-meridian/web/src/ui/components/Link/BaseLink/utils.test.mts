@@ -5,7 +5,7 @@ import { describe, it } from "node:test";
 
 // Exact relative path with its extension: the stripper does no tsconfig path mapping,
 // so `@/` is unavailable in a `.mts` test.
-import { internalPathHref, opensInNewTab } from "./utils.ts";
+import { hasLinkTarget, internalPathHref, opensInNewTab } from "./utils.ts";
 
 describe("opensInNewTab", () => {
   it("opens an external page in a new tab", () => {
@@ -40,5 +40,35 @@ describe("internalPathHref", () => {
   it("returns an empty string when there is no path", () => {
     assert.equal(internalPathHref(null, "#form"), "");
     assert.equal(internalPathHref("   "), "");
+  });
+});
+
+describe("hasLinkTarget", () => {
+  it("is true for a link with a destination", () => {
+    assert.equal(hasLinkTarget({ type: "internal", internal: { _type: "page" } }), true);
+    assert.equal(hasLinkTarget({ type: "path", internalPath: "/contact" }), true);
+    assert.equal(
+      hasLinkTarget({ type: "external", external: "https://example.com" }),
+      true,
+    );
+    assert.equal(
+      hasLinkTarget({ type: "download", file: { asset: { url: "https://cdn/x.pdf" } } }),
+      true,
+    );
+  });
+
+  it("is false for a link whose destination was cleared in Studio", () => {
+    assert.equal(hasLinkTarget({ type: "internal", internal: null }), false);
+    assert.equal(hasLinkTarget({ type: "path", internalPath: "  " }), false);
+    assert.equal(hasLinkTarget({ type: "external" }), false);
+    assert.equal(hasLinkTarget({ type: "download", file: { asset: null } }), false);
+  });
+
+  it("is false for no link, or a destination of another type", () => {
+    assert.equal(hasLinkTarget(null), false);
+    assert.equal(
+      hasLinkTarget({ type: "internal", external: "https://example.com" }),
+      false,
+    );
   });
 });

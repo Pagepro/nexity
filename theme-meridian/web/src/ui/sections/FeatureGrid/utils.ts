@@ -1,5 +1,4 @@
-import { stegaClean } from "next-sanity";
-
+import { hasLinkTarget } from "@/ui/components/Link/BaseLink/utils";
 import { formatListingMeta } from "@/ui/listing/listing-utils";
 
 import { CaseStudyCardData, FeatureCardData, FeatureGridItem } from "./types";
@@ -14,7 +13,7 @@ export const caseStudyToCard = (caseStudy: CaseStudyCardData): FeatureCardData =
         : eyebrow || "Case study",
     title,
     image,
-    link: stegaClean(link?.type) ? link : slug ? `/case-studies/${slug}` : null,
+    link: hasLinkTarget(link) ? link : slug ? `/case-studies/${slug}` : null,
   };
 };
 
@@ -24,7 +23,7 @@ export const toFeatureCard = (item: FeatureGridItem): FeatureCardData | null => 
       label: item.eyebrow,
       title: item.title,
       image: item.image,
-      link: stegaClean(item.link?.type) ? item.link : null,
+      link: hasLinkTarget(item.link) ? item.link : null,
     };
   }
 
