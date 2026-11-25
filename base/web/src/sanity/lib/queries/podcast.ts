@@ -38,7 +38,7 @@ export const PodcastListingPageQuery = defineQuery(`
     },
     ${PLATFORM_LINKS_PROJECTION},
     "featuredEpisode": coalesce(
-      featuredEpisode[0]->{ ${EPISODE_CARD_PROJECTION} },
+      *[_type == 'podcast-episode' && _id == ^.featuredEpisode[0]._ref && defined(metadata.slug.current)][0]{ ${EPISODE_CARD_PROJECTION} },
       *[_type == 'podcast-episode' && defined(metadata.slug.current)] | order(publishedAt desc)[0]{ ${EPISODE_CARD_PROJECTION} }
     ),
     'sections': sections[]{ ${SECTIONS_QUERY} },
