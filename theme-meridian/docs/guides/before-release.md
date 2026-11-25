@@ -552,6 +552,33 @@ points, so take the median of three.
   reads per route, image widths and `sizes`, CDN use and caching, and
   estimates Sanity and Vercel usage at launch traffic.
 
+### 8.5 Form spam: rate limit and bot check
+
+The Form section has a honeypot in code, and on Vercel also a BotID check
+(`web/src/app/actions/submit-form.tsx`, switched on by `VERCEL=1`). The rate
+limit is not in code: it is a Vercel WAF rule, so floods are stopped before a
+function runs and before Resend or Sanity is called.
+
+- **Do:** Vercel → the project → **Firewall** → **Add Rule**:
+  - **If** *Method* equals `POST` **and** *Request Header* `next-action`
+    *Exists*. Every server action call sends that header, and the form is the
+    site's only server action.
+  - **Then** *Rate Limit*: Fixed Window, **60 s**, **10** requests, key **IP**,
+    action **Too Many Requests (429)**.
+  - Start with the action **Log** for a few days, look at the matches in the
+    Firewall overview, then switch it to 429. People behind one office NAT
+    share an IP, so keep the limit generous.
+  - **Review Changes** → **Publish**. Hobby allows one rate-limit rule.
+- **Check:** *Secure backend access with OIDC federation* is on, in the
+  project's **Settings → Security** or once for the whole team. BotID's server
+  check needs it; without it the action logs `BotID check failed` and lets
+  every submit through.
+- **Good:** on production, a form submitted from the page arrives; a burst
+  over the limit shows "Something went wrong. Please wait a minute and try
+  again."; the Firewall overview lists the rule's matches and BotID's
+  decisions. A `curl` POST to the action is treated as a bot (silent success,
+  no email).
+
 ## 9. Final smoke test (after the DNS switch)
 
 ```bash

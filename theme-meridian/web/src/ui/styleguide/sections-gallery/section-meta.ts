@@ -63,12 +63,12 @@ export const SECTION_META: Record<SectionType, SectionMeta> = {
     accepts: "pretitle, content, input labels, result labels, cta, note",
     group: "Conversion",
   },
-  "contact-form": {
-    title: "Contact form",
+  form: {
+    title: "Form",
     description:
-      "Contact-sales band: heading, copy and a checklist beside a lead form (name, work email, company, team size, message). Submits via a server action.",
+      "Lead band: heading, copy and a checklist beside a form (name, work email, company, team size, message). Contact type emails sales; gated type also unlocks a Gated resource (thank-you copy and files) in place of the form.",
     accepts:
-      "pretitle, content, bullets, field labels/placeholders, teamSizeField.choices, submitLabel, successMessage",
+      "formType, resources (gated-resource ref), pretitle, content, bullets, field labels/placeholders, teamSizeField.choices, submitLabel, successMessage",
     group: "Conversion",
   },
   "trust-badges": {

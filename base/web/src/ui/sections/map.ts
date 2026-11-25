@@ -2,12 +2,12 @@ import BentoGrid from "./BentoGrid";
 import BlogListingSection from "./BlogListingSection";
 import CaseStudiesListingSection from "./CaseStudiesListingSection";
 import ComparisonTable from "./ComparisonTable";
-import ContactForm from "./ContactForm";
 import ContentSection from "./ContentSection";
 import CtaBanner from "./CtaBanner";
 import FaqSection from "./FaqSection";
 import FeatureBlockSection from "./FeatureBlockSection";
 import FeatureGrid from "./FeatureGrid";
+import FormSection from "./FormSection";
 import HeroSection from "./HeroSection";
 import ImpactCalculator from "./ImpactCalculator";
 import IntegrationsGrid from "./IntegrationsGrid";
@@ -29,12 +29,12 @@ export const INNER_SECTION_MAP = {
   "podcast-listing": PodcastListingSection,
   "case-studies-listing": CaseStudiesListingSection,
   "comparison-table": ComparisonTable,
-  "contact-form": ContactForm,
   content: ContentSection,
   "cta-banner": CtaBanner,
   faq: FaqSection,
   "feature-block": FeatureBlockSection,
   "feature-grid": FeatureGrid,
+  form: FormSection,
   hero: HeroSection,
   "impact-calculator": ImpactCalculator,
   "integrations-grid": IntegrationsGrid,

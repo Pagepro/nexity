@@ -381,13 +381,13 @@ changes a route under `web/src/app/api/` or a server action in `web/src/app/acti
 CMS text as HTML, puts an editor URL into a `src`, or needs a third-party script or env var:
 
 1. **One Zod schema validates the input** (`zod` is a web dependency; see
-   `web/src/app/actions/sales-inquiry.ts`) and the server parses it again; never trust the
+   `web/src/app/actions/submit-form.tsx`) and the server parses it again; never trust the
    client. Cap string lengths.
 2. **No secret in code or logs.** Declare every new env var in `web/src/setup/envVariables.ts`.
    `NEXT_PUBLIC_*` ships to the browser; a token never carries that name.
 3. **Public forms carry a honeypot**: a hidden input in the form and a `honeypot` field in the
    Zod schema; when it is filled the server action returns success without doing anything (as
-   `ContactForm/client.tsx` + `sales-inquiry.ts` do). State a missing rate limit instead of
+   `FormSection/client.tsx` + `submit-form.tsx` do). State a missing rate limit instead of
    hiding it.
 4. **No `dangerouslySetInnerHTML`**, and an editor-supplied URL reaching a `src`/`href` passes
    an allowlist or `resolveUrl`.

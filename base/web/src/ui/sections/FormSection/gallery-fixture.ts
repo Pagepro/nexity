@@ -1,8 +1,10 @@
 import type { ExtractSectionProps } from "@/types/sections";
 
-export const contactFormFixture = {
-  _type: "contact-form",
-  _key: "gallery-fixture-contact-form",
+export const formFixture = {
+  _type: "form",
+  _key: "gallery-fixture-form",
+  formType: "contact",
+  resourceId: null,
   pretitle: "Contact sales",
   content: [
     {
@@ -43,4 +45,4 @@ export const contactFormFixture = {
   messageField: { label: "How can we help?", placeholder: "Tell us about your team." },
   submitLabel: "Talk to sales",
   successMessage: "Thanks! Our team will get back to you within one business day.",
-} satisfies ExtractSectionProps<"contact-form">;
+} satisfies ExtractSectionProps<"form">;

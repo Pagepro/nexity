@@ -7,7 +7,8 @@ import {
   type SectionMarkdownSerializer,
 } from "@/lib/markdown/sections";
 
-const formHint = (section: SectionData<"contact-form">): string => {
+// The gated resource never reaches this serializer: the page query carries only its id.
+const formHint = (section: SectionData<"form">): string => {
   const choices = (section.teamSizeField?.choices ?? []).map(cleanText).filter(Boolean);
   const teamSize = cleanText(section.teamSizeField?.label);
   const fields = [
@@ -21,7 +22,7 @@ const formHint = (section: SectionData<"contact-form">): string => {
 
   return presenceHint(
     [
-      "Contact form",
+      cleanText(section.formType) === "gated" ? "Download form" : "Contact form",
       fields.length ? `fields: ${fields.join(", ")}` : "",
       submit ? `button: ${submit}` : "",
     ]
@@ -31,9 +32,10 @@ const formHint = (section: SectionData<"contact-form">): string => {
   );
 };
 
-export const contactFormToMarkdown: SectionMarkdownSerializer<
-  SectionData<"contact-form">
-> = (section, context) =>
+export const formToMarkdown: SectionMarkdownSerializer<SectionData<"form">> = (
+  section,
+  context,
+) =>
   joinBlocks([
     pretitleLine(section.pretitle),
     portableTextToMarkdown(section.content, context),

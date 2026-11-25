@@ -79,7 +79,7 @@ test("fixtures: the text a visitor sees is in the Markdown", () => {
     "logos-carousel": ["Logos: Partner logo 1"],
     "trust-badges": ["- SOC 2 Type II"],
     stats: ["- **99.99%** Uptime across all regions"],
-    "contact-form": ["[Contact form; fields: Full name"],
+    form: ["[Contact form; fields: Full name"],
     "blog-listing": ["## Latest articles", "[All articles](https://example.com/blog)"],
     "podcast-listing": ["## Every conversation, by topic."],
     "shared-section-ref": ["## One bundle, every page"],

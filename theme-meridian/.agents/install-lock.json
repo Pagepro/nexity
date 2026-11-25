@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": {
     "version": "1.3.0",
-    "digest": "078cefbb2dac327adde37aa158af1e3bf4b53a0a2340c8eb332b2d0820306af5"
+    "digest": "00008fc568693b91919c30aecbbe3c60d10f8b272751e53960211888f6c2daa1"
   },
   "selected": [
     "create-section",
@@ -30,7 +30,7 @@
     ".agents/agents/sanity-schema-reviewer.md": "9ce9280283efe1faffe9160625766ca9c47d4fdd024ec7bad9b8fda604f2de15",
     ".agents/agents/styling-fidelity-reviewer.md": "7b739ea8853178ff6bc7c1b7840561d1144cad4d0e8441db4dd3c1e499b3d173",
     ".agents/catalog.json": "1232a6c3836e4301d8668369737031974a3d7534bdd6a66930312f0e052a3521",
-    ".agents/skills/create-section/SKILL.md": "8ba5734e31cffcbf386224c82ec0649707d7fd3a9b829977bb66e7a8d32f182d",
+    ".agents/skills/create-section/SKILL.md": "78fcb42b00c935d59986673e1d4103ef7db7fc4159851d7d09a851b05ef9a808",
     ".agents/skills/create-section/references/gotchas.md": "b8561934e2a72681d09bbfee7428559fc37813f015a35b5866d49765b1f9253c",
     ".agents/skills/generate-alts/SKILL.md": "d4b0fce0568c8f9dd5e6c084d4a2f9af84e34849a8f63712a9adf4b1aefdc2c4",
     ".agents/skills/generate-alts/scripts/alts.mjs": "5d0c4a4b7bfe963583967f5a49d1c1c5d0e4d7e3d0e48ff7b3ca274c0ef4256d",

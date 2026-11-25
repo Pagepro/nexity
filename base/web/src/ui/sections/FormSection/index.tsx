@@ -1,12 +1,15 @@
 import { Check } from "lucide-react";
 
+import { IS_BOT_PROTECTED } from "@/lib/bot-protection";
 import sectionProps from "@/lib/sectionProps";
 import RichText from "@/ui/RichText";
 
-import { ContactFormClient } from "./client-lazy";
-import { ContactFormProps } from "./types";
+import { FormSectionClient } from "./client-lazy";
+import { FormSectionProps } from "./types";
 
-const ContactForm = ({
+const FormSection = ({
+  formType,
+  resourceId,
   pretitle,
   content,
   bullets,
@@ -18,7 +21,7 @@ const ContactForm = ({
   submitLabel,
   successMessage,
   ...props
-}: ContactFormProps) => (
+}: FormSectionProps) => (
   <section className="bg-section-surface py-12 md:py-24" {...sectionProps(props)}>
     <div className="section grid gap-10 md:grid-cols-2 md:gap-16">
       <div className="flex flex-col gap-6">
@@ -44,7 +47,9 @@ const ContactForm = ({
       </div>
 
       <div className="relative overflow-hidden rounded-lg border border-border bg-background p-6 shadow-sm md:p-8">
-        <ContactFormClient
+        <FormSectionClient
+          formType={formType}
+          resourceId={resourceId}
           nameField={nameField}
           emailField={emailField}
           companyField={companyField}
@@ -52,10 +57,11 @@ const ContactForm = ({
           messageField={messageField}
           submitLabel={submitLabel}
           successMessage={successMessage}
+          isBotProtected={IS_BOT_PROTECTED}
         />
       </div>
     </div>
   </section>
 );
 
-export default ContactForm;
+export default FormSection;

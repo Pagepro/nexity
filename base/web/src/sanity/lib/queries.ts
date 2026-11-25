@@ -188,7 +188,10 @@ const SECTION_BRANCHES_QUERY = `
       link { ${LINK_FRAGMENT} }
     }
   },
-  _type == 'contact-form' => {
+  // Only the reference: the resource's copy and files reach the browser from submitForm after a submit.
+  _type == 'form' => {
+    formType,
+    "resourceId": resources[0]._ref,
     pretitle,
     content[] {
       ${RICHTEXT_QUERY}

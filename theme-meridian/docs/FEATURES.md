@@ -25,7 +25,7 @@ Dark, the transparent header on top of it switches to light text automatically.
 | **Logos carousel** | Auto-scrolling customer/partner logo strip with adjustable speed |
 | **Split sections** | Alternating text/image rows (image side flips automatically), or full-width text rows; optional outcome badge, before/after comparison cards, titled checklist, “example insight” callout, proof point and in-page anchor |
 | **Stats** | Headline stats tiles (value + label), up to 4 — as a grid beside a heading, or a single divided band (left or centred) |
-| **Contact form** | Contact-sales band: copy and checklist beside a lead form (name, work email, company, team size, message); validated, honeypot-protected, emailed via Resend |
+| **Form** | Lead band: copy and checklist beside a form (name, work email, company, team size, message); validated, honeypot-protected, emailed via Resend. Two types that look the same: **Contact** shows a thank-you line, **Gated content** swaps the form for a Gated resource (thank-you copy and files to download) |
 | **Impact calculator** | Interactive ROI estimate: team size, deal size and cycle length drive projected cycle reduction, pipeline recovered and payback |
 | **Integrations grid** | Filterable grid of integrations (category tabs + search) from a reusable integrations library — shows every integration automatically or a hand-picked list |
 | **CTA banner** | Promotional card with buttons, background image, product screenshot |
@@ -42,7 +42,7 @@ Dark, the transparent header on top of it switches to light text automatically.
 | **Content section** | Long-form prose for legal pages and articles |
 | **Shared section** | Inserts a reusable block bundle (see below) |
 
-## 📝 Content types editors manage (15)
+## 📝 Content types editors manage (16)
 
 - **Pages** — any marketing page (home, about, pricing…) built from the blocks above
 - **Blog** — posts with category, cover image, author, excerpt; plus a configurable
@@ -54,6 +54,8 @@ Dark, the transparent header on top of it switches to light text automatically.
   (show name, promise, host, cover art, where to listen, pinned latest episode) with a
   searchable, topic-filtered archive
 - **Reusable libraries** — authors (bylines), testimonials and integrations, written once, reused everywhere
+- **Gated resources** — thank-you copy and files (e-books, reports) that a gated Form unlocks after a
+  submit; the page never carries them, though the files stay public to anyone with their link
 - **Shared sections** — author a bundle of blocks once, reference it on many pages;
   edit it once and every page updates on the next publish
 - **Global sections** — auto-inject a section across whole URL areas (e.g. a banner on
@@ -129,7 +131,7 @@ Dark, the transparent header on top of it switches to light text automatically.
 - **Google Tag Manager** — activates via a single configuration value, no code changes
 - **Blog & case-study listings** with search-as-you-type, category filter tabs, and
   pagination — all reflected in shareable, bookmarkable URLs
-- **Contact-sales form** (Contact form block) — validated, spam-protected (honeypot), delivered via email (Resend) once `RESEND_API_KEY`, `CONTACT_FORM_RECIPIENT_EMAIL` and `CONTACT_FORM_FROM_EMAIL` are set
+- **Lead forms** (Form block, contact or gated content) — validated, spam-protected (honeypot; on Vercel also a BotID bot check and a WAF rate-limit rule, see `docs/guides/before-release.md` → 8.5), delivered via email (Resend) once `RESEND_API_KEY`, `CONTACT_FORM_RECIPIENT_EMAIL` and `CONTACT_FORM_FROM_EMAIL` are set
 
 ## ⚡ Site infrastructure marketers benefit from
 

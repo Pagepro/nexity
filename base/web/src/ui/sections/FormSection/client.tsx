@@ -3,19 +3,22 @@
 import clsx from "clsx";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { stegaClean } from "next-sanity";
-import { useId, useState } from "react";
+import { type ReactNode, useEffect, useId, useState } from "react";
 
-import { submitSalesInquiry } from "@/app/actions/sales-inquiry";
+import { submitForm } from "@/app/actions/submit-form";
 import { isValidEmail } from "@/lib/email";
-import { SALES_INQUIRY_LIMITS } from "@/lib/sales-inquiry";
+import { FORM_LIMITS } from "@/lib/form-limits";
 import Button from "@/ui/components/button";
 
-import { ContactFormProps } from "./types";
+import { protectFormSubmits } from "./bot-protection";
+import { FormSectionProps } from "./types";
 
 type SubmitStatus = "idle" | "submitting" | "success" | "error";
 
-type ContactFormClientProps = Pick<
-  ContactFormProps,
+type FormSectionClientProps = Pick<
+  FormSectionProps,
+  | "formType"
+  | "resourceId"
   | "nameField"
   | "emailField"
   | "companyField"
@@ -23,7 +26,7 @@ type ContactFormClientProps = Pick<
   | "messageField"
   | "submitLabel"
   | "successMessage"
->;
+> & { isBotProtected: boolean };
 
 // Text size lives on the field wrapper (16px on mobile, or iOS zooms on focus). No height
 // here: clsx doesn't resolve conflicts, so each control adds its own.
@@ -34,7 +37,7 @@ const {
   field: MAX_FIELD_LENGTH,
   email: MAX_EMAIL_LENGTH,
   message: MAX_MESSAGE_LENGTH,
-} = SALES_INQUIRY_LIMITS;
+} = FORM_LIMITS;
 
 const Field = ({
   id,
@@ -55,7 +58,9 @@ const Field = ({
   </div>
 );
 
-export const ContactFormClient = ({
+export const FormSectionClient = ({
+  formType,
+  resourceId,
   nameField,
   emailField,
   companyField,
@@ -63,7 +68,8 @@ export const ContactFormClient = ({
   messageField,
   submitLabel,
   successMessage,
-}: ContactFormClientProps) => {
+  isBotProtected,
+}: FormSectionClientProps) => {
   const fieldId = useId();
   const errorId = `${fieldId}-error`;
   const choices = (teamSizeField?.choices ?? []).map((choice) => stegaClean(choice));
@@ -77,6 +83,11 @@ export const ContactFormClient = ({
   });
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [error, setError] = useState("");
+  const [unlocked, setUnlocked] = useState<ReactNode>(null);
+
+  useEffect(() => {
+    if (isBotProtected) protectFormSubmits();
+  }, [isBotProtected]);
 
   const update =
     (key: keyof typeof values) =>
@@ -110,18 +121,40 @@ export const ContactFormClient = ({
     setError("");
 
     try {
-      const result = await submitSalesInquiry(values);
+      const result =
+        stegaClean(formType) === "gated"
+          ? await submitForm({
+              formType: "gated",
+              resourceId: stegaClean(resourceId) ?? "",
+              ...values,
+            })
+          : await submitForm({ formType: "contact", ...values });
       if (result.success) {
+        setUnlocked(result.unlocked ?? null);
         setStatus("success");
       } else {
         setStatus("error");
         setError(result.error);
       }
     } catch {
+      // A Vercel WAF rate-limit 429 lands here too: the action call throws instead of returning.
       setStatus("error");
-      setError("Something went wrong. Please try again.");
+      setError("Something went wrong. Please wait a minute and try again.");
     }
   };
+
+  if (status === "success" && unlocked) {
+    return (
+      <div
+        ref={(node) => node?.focus()}
+        tabIndex={-1}
+        role="status"
+        className="focus:outline-none"
+      >
+        {unlocked}
+      </div>
+    );
+  }
 
   if (status === "success") {
     return (
